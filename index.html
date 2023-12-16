@@ -31,14 +31,13 @@
 		<!-- Connecting style files -->
 		<link rel="stylesheet" href="css/swiper-bundle.min.css" async>
 		<link rel="stylesheet" href="css/swiper.css" async>
-		<link rel="stylesheet" href="css/fancybox.css" async>
 		<link rel="stylesheet" href="css/styles.css" async>
 
 		<link rel="stylesheet" href="css/response_1599.css" media="print, (max-width: 1599px)" async>
+		<link rel="stylesheet" href="css/response_1439.css" media="print, (max-width: 1439px)" async>
 		<link rel="stylesheet" href="css/response_1279.css" media="print, (max-width: 1279px)" async>
 		<link rel="stylesheet" href="css/response_1023.css" media="print, (max-width: 1023px)" async>
 		<link rel="stylesheet" href="css/response_767.css" media="print, (max-width: 767px)" async>
-		<link rel="stylesheet" href="css/response_479.css" media="(max-width: 479px)" async>
 	</head>
 
 	<body>
@@ -210,7 +209,7 @@
 				</section>
 
 
-				<section class="content_banner block">
+				<section class="content_banner block mob_hide">
 					<div class="cont">
 						<a href="/" class="banner">
 							<div class="info">
@@ -613,6 +612,7 @@
 							</div>
 
 							<img data-src="images/tmp/content_banner_img2.jpg" alt="" class="img lazyload">
+							<img data-src="images/tmp/mob_content_banner_img2.jpg" alt="" class="mob_img lazyload">
 						</a>
 					</div>
 				</section>
@@ -623,6 +623,8 @@
 						<div class="block_head">
 							<div class="title">справжні українські бренди</div>
 
+							<div class="mob_line"></div>
+
 							<div class="all_link">
 								<a href="/">
 									<span>всі бренди</span>
@@ -631,54 +633,73 @@
 							</div>
 						</div>
 
-						<div class="row">
-							<a href="/" class="brand">
-								<div class="logo">
-									<img data-src="images/tmp/brand_logo1.png" alt="" class="lazyload">
-								</div>
-							</a>
 
-							<a href="/" class="brand">
-								<div class="logo">
-									<img data-src="images/tmp/brand_logo2.png" alt="" class="lazyload">
+						<div class="swiper">
+							<div class="row">
+								<div>
+									<a href="/" class="brand">
+										<div class="logo">
+											<img src="images/tmp/brand_logo1.png" alt="" loading="lazy">
+										</div>
+									</a>
 								</div>
-							</a>
 
-							<a href="/" class="brand">
-								<div class="logo">
-									<img data-src="images/tmp/brand_logo3.png" alt="" class="lazyload">
+								<div>
+									<a href="/" class="brand">
+										<div class="logo">
+											<img src="images/tmp/brand_logo2.png" alt="" loading="lazy">
+										</div>
+									</a>
 								</div>
-							</a>
 
-							<a href="/" class="brand">
-								<div class="logo">
-									<img data-src="images/tmp/brand_logo4.png" alt="" class="lazyload">
+								<div>
+									<a href="/" class="brand">
+										<div class="logo">
+											<img src="images/tmp/brand_logo3.png" alt="" loading="lazy">
+										</div>
+									</a>
 								</div>
-							</a>
 
-							<a href="/" class="brand">
-								<div class="logo">
-									<img data-src="images/tmp/brand_logo5.png" alt="" class="lazyload">
+								<div>
+									<a href="/" class="brand">
+										<div class="logo">
+											<img src="images/tmp/brand_logo4.png" alt="" loading="lazy">
+										</div>
+									</a>
 								</div>
-							</a>
 
-							<a href="/" class="brand">
-								<div class="logo">
-									<img data-src="images/tmp/brand_logo6.png" alt="" class="lazyload">
+								<div>
+									<a href="/" class="brand">
+										<div class="logo">
+											<img src="images/tmp/brand_logo5.png" alt="" loading="lazy">
+										</div>
+									</a>
 								</div>
-							</a>
 
-							<a href="/" class="brand">
-								<div class="logo">
-									<img data-src="images/tmp/brand_logo7.png" alt="" class="lazyload">
+								<div>
+									<a href="/" class="brand">
+										<div class="logo">
+											<img src="images/tmp/brand_logo6.png" alt="" loading="lazy">
+										</div>
+									</a>
 								</div>
-							</a>
 
-							<a href="/" class="brand">
-								<div class="logo">
-									<img data-src="images/tmp/brand_logo8.png" alt="" class="lazyload">
+								<div>
+									<a href="/" class="brand">
+										<div class="logo">
+											<img src="images/tmp/brand_logo7.png" alt="" loading="lazy">
+										</div>
+									</a>
 								</div>
-							</a>
+
+								<div>
+									<a href="/" class="brand">
+										<div class="logo">
+											<img src="images/tmp/brand_logo8.png" alt="" loading="lazy">
+										</div>
+									</a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -858,7 +879,10 @@
 						</div>
 
 						<div class="links">
-							<div class="title">ПОКУПЦЯМ</div>
+							<div class="title">
+								<span>ПОКУПЦЯМ</span>
+								<div class="icon"></div>
+							</div>
 
 							<div class="items">
 								<div><a href="/">ДОСТАВКА</a></div>
@@ -869,7 +893,10 @@
 						</div>
 
 						<div class="links">
-							<div class="title">партнерам</div>
+							<div class="title">
+								<span>партнерам</span>
+								<div class="icon"></div>
+							</div>
 
 							<div class="items">
 								<div><a href="/">приєднатися до платформи</a></div>
@@ -936,7 +963,6 @@
 		<script src="js/jquery-3.6.3.min.js"></script>
 		<script src="js/functions.js"></script>
 		<script src="js/swiper-bundle.min.js"></script>
-		<script src="js/fancybox.js"></script>
 		<script src="js/imask.js"></script>
 		<script src="js/scripts.js"></script>
 	</body>

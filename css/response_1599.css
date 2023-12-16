@@ -1,0 +1,71 @@
+@media print,
+(max-width: 1599px)
+{
+    /*---------
+        New
+    ---------*/
+    .new .block_head .link
+    {
+        margin-top: 100px;
+    }
+
+
+
+    /*----------------------
+        Popular products
+    ----------------------*/
+    .popular_products .products
+    {
+        width: calc(100% - 680px);
+    }
+
+
+    .popular_products .swiper
+    {
+        height: 851px;
+    }
+
+
+    .popular_products .swiper-slide
+    {
+        height: 390px;
+    }
+
+
+    .popular_products .products .product .thumb
+    {
+        padding-bottom: 272px;
+    }
+
+
+
+    /*------------------
+        Top products
+    ------------------*/
+    .top_products .products
+    {
+        width: calc(100% - 680px);
+    }
+
+
+
+    /*---------------------
+        Products banner
+    ---------------------*/
+    .products_banner
+    {
+        width: 620px;
+        height: 753px;
+    }
+
+
+
+    /*--------------
+        Products
+    --------------*/
+    .products .product .favorite_btn
+    {
+        right: 16px;
+        bottom: 16px;
+    }
+}

@@ -1,25 +1,46 @@
 @media print,
-(max-width: 1279px)
+(max-width: 1439px)
 {
     /*-------------------
         Global styles
     -------------------*/
-    html.custom_scroll ::-webkit-scrollbar
+    .cont
     {
-        width: 5px;
-        height: 5px;
+        padding: 0 24px;
     }
 
 
-    .cont
+    .swiper-pagination-bullet + .swiper-pagination-bullet
     {
-        padding: 0 20px;
+        margin-left: 16px !important;
     }
 
 
     .block
     {
-        margin-bottom: 100px;
+        margin-bottom: 120px;
+    }
+
+
+
+    /*--------------
+        Controls
+    --------------*/
+    .controls > * + *
+    {
+        margin-left: 16px;
+    }
+
+
+
+    /*---------------
+        Page head
+    ---------------*/
+    .block_head .link
+    {
+        font-size: 14px;
+
+        width: 260px;
     }
 
 
@@ -29,18 +50,12 @@
     ----------------*/
     .block_head .all_link
     {
-        margin-left: 40px;
+        margin-left: 60px;
     }
 
     .block_head .all_link:after
     {
-        margin-left: 40px;
-    }
-
-
-    .block_head .link
-    {
-        width: 220px;
+        margin-left: 60px;
     }
 
 
@@ -50,44 +65,50 @@
     -----------------*/
     .main_slider .link
     {
-        height: 280px;
-        padding: 40px 60px;
+        height: 320px;
+        padding: 48px 80px;
     }
 
 
     .main_slider .title
     {
-        font-size: 36px;
+        font-size: 44px;
     }
 
 
     .main_slider .controls
     {
-        margin-right: 28px;
+        margin-right: 40px;
     }
 
 
     .main_slider .bottom
     {
-        margin-top: 40px;
+        margin-top: 48px;
     }
 
 
     .main_slider .bottom .title
     {
-        font-size: 24px;
+        font-size: 28px;
+    }
+
+
+    .main_slider .bottom .links
+    {
+        margin-right: 0;
     }
 
 
     .main_slider .bottom .links > * + *
     {
-        margin-left: 20px;
+        margin-left: 24px;
     }
 
 
     .main_slider .bottom .links a
     {
-        width: 220px;
+        width: 260px;
     }
 
 
@@ -97,26 +118,26 @@
     ---------*/
     .new .block_head
     {
-        width: 320px;
-        padding-top: 40px;
-    }
-
-
-    .new .block_head .desc
-    {
-        width: 268px;
+        width: 440px;
+        padding-top: 60px;
     }
 
 
     .new .block_head .link
     {
-        margin-top: 49px;
+        margin-top: 75px;
     }
 
 
     .new .categories
     {
-        width: calc(100% - 340px);
+        width: calc(100% - 464px);
+    }
+
+
+    .new .categories .category .thumb
+    {
+        margin-bottom: 20px;
     }
 
 
@@ -126,20 +147,20 @@
     --------------------*/
     .content_banner .banner
     {
-        height: 240px;
-        padding: 40px 60px;
+        height: 300px;
+        padding: 48px 100px;
     }
 
 
     .content_banner .banner .info
     {
-        width: 320px;
+        width: 440px;
     }
 
 
     .content_banner .banner .title
     {
-        font-size: 36px;
+        font-size: 44px;
     }
 
 
@@ -149,12 +170,18 @@
     -----------------------*/
     .categories_slider .controls
     {
-        margin-left: 48px;
+        margin-left: 60px;
     }
 
     .categories_slider .controls:after
     {
-        margin-left: 48px;
+        margin-left: 60px;
+    }
+
+
+    .categories_slider .category .thumb
+    {
+        margin-bottom: 20px;
     }
 
 
@@ -164,19 +191,32 @@
     --------------*/
     .products .controls
     {
-        margin-left: 48px;
+        margin-left: 60px;
     }
 
     .products .controls:after
     {
-        margin-left: 48px;
+        margin-left: 60px;
+    }
+
+
+    .products .product .thumb
+    {
+        margin-bottom: 20px;
     }
 
 
     .products .product .favorite_btn
     {
-        right: 16px;
-        bottom: 16px;
+        right: 12px;
+        bottom: 12px;
+    }
+
+
+    .products .product .desc,
+    .products .product .price
+    {
+        margin-top: 12px;
     }
 
 
@@ -186,24 +226,24 @@
     ----------------------*/
     .popular_products .products
     {
-        width: calc(50% - 10px);
+        width: calc(100% - 640px);
     }
 
 
     .popular_products .swiper
     {
-        height: 867px;
+        height: 775px;
     }
 
     .popular_products .swiper-slide
     {
-        height: 388px;
+        height: 352px;
     }
 
 
     .popular_products .products .product .thumb
     {
-        padding-bottom: 296px;
+        padding-bottom: 240px;
     }
 
 
@@ -213,7 +253,7 @@
     ------------------*/
     .top_products .products
     {
-        width: calc(50% - 10px);
+        width: calc(100% - 640px);
     }
 
 
@@ -223,22 +263,24 @@
     ---------------------*/
     .products_banner
     {
-        width: calc(50% - 10px);
-        height: 775px;
+        width: 596px;
+        height: 683px;
     }
 
 
     .products_banner .title
     {
-        font-size: 26px;
+        font-size: 28px;
     }
 
 
     .products_banner .btn
     {
-        bottom: 48px;
+        font-size: 14px;
 
-        width: 220px;
+        bottom: 60px;
+
+        width: 260px;
     }
 
 
@@ -249,8 +291,8 @@
     ------------*/
     .brands .brand .logo
     {
-        height: 120px;
-        padding: 31px;
+        height: 140px;
+        padding: 39px;
     }
 
 
@@ -258,21 +300,43 @@
     /*------------
         Footer
     ------------*/
+    footer .data
+    {
+        padding: 60px 0;
+    }
+
+
     footer .bottom
     {
-        padding: 20px 0;
+        padding: 24px 0;
+    }
+
+
+
+    footer .title
+    {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+
+
+    footer .pyament_methods
+    {
+        margin-top: 100px;
     }
 
 
 
     footer .links
     {
-        margin-left: 80px;
+        margin-left: 100px;
     }
 
 
-    footer .subscribe
+    footer .links .items,
+    footer .links .items > * + *
     {
-        margin-right: 0;
+        margin-top: 24px;
     }
 }

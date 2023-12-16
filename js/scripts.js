@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					spaceBetween: 20,
 					slidesPerView: 3
 				},
-				1280: {
+				1024: {
 					spaceBetween: 20,
 					slidesPerView: 4
 				}
@@ -129,16 +129,20 @@ document.addEventListener('DOMContentLoaded', function () {
 			},
 			breakpoints: {
 				0: {
-					spaceBetween: 12,
+					spaceBetween: 20,
 					slidesPerView: 'auto'
 				},
-				480: {
-					spaceBetween: 20,
-					slidesPerView: 2
-				},
 				768: {
-					spaceBetween: 30,
+					spaceBetween: 20,
 					slidesPerView: 3
+				},
+				1024: {
+					slidesPerView: 2,
+					grid: {
+						rows: 2,
+						fill: 'column'
+					},
+					spaceBetween: 20
 				},
 				1280: {
 					slidesPerView: 3,
@@ -190,16 +194,16 @@ document.addEventListener('DOMContentLoaded', function () {
 			},
 			breakpoints: {
 				0: {
-					spaceBetween: 12,
-					slidesPerView: 'auto'
-				},
-				480: {
 					spaceBetween: 20,
-					slidesPerView: 2
+					slidesPerView: 'auto'
 				},
 				768: {
 					spaceBetween: 20,
 					slidesPerView: 3
+				},
+				1024: {
+					spaceBetween: 20,
+					slidesPerView: 2
 				},
 				1280: {
 					slidesPerView: 3,
@@ -213,7 +217,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 	// Mob. menu
-	$('.mob_header .mob_menu_btn').click((e) => {
+	$('.mob_header .mob_menu_btn').click(e => {
 		e.preventDefault()
 
 		$('.mob_header .mob_menu_btn').addClass('active')
@@ -251,6 +255,18 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 		})
 	}
+
+
+	// Mob. footer
+	$('footer .links .title').click(function(e) {
+		e.preventDefault()
+
+		$(this).toggleClass('active').next().slideToggle(300)
+	})
+
+
+	// Brands
+	initBrandsSliders()
 })
 
 
@@ -263,6 +279,10 @@ window.addEventListener('resize', function () {
 	if (typeof WW !== 'undefined' && WW != windowW) {
 		// Overwrite window width
 		WW = window.innerWidth || document.clientWidth || document.getElementsByTagName('body')[0].clientWidth
+
+
+		// Brands
+		initBrandsSliders()
 
 
 		// Mob. version
@@ -283,3 +303,40 @@ window.addEventListener('resize', function () {
 		}
 	}
 })
+
+
+
+// Brands
+brandsSliders = []
+
+function initBrandsSliders() {
+	if ($(window).width() < 768) {
+		if ($('.brands .row').length) {
+			$('.brands .row > *').addClass('swiper-slide')
+			$('.brands .row').addClass('swiper-wrapper').removeClass('row')
+
+			$('.brands .swiper').each(function (i) {
+				$(this).addClass('brands_s' + i)
+
+				let options = {
+					loop: true,
+					speed: 500,
+					watchSlidesProgress: true,
+					slideActiveClass: 'active',
+					slideVisibleClass: 'visible',
+					slidesPerView: 'auto',
+					spaceBetween: 20
+				}
+
+				brandsSliders.push(new Swiper('.brands_s' + i, options))
+			})
+		}
+	} else {
+		brandsSliders.forEach(element => element.destroy(true, true))
+
+		brandsSliders = []
+
+		$('.brands .swiper-wrapper').addClass('row').removeClass('swiper-wrapper')
+		$('.brands .row > *').removeClass('swiper-slide')
+	}
+}

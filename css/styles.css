@@ -644,7 +644,6 @@ header .sub_menu a.active
 
 .block_head .link
 {
-    font-size: 15px;
     font-weight: 800;
     line-height: 24px;
 
@@ -673,6 +672,8 @@ header .sub_menu a.active
     align-items: flex-start;
     flex-wrap: wrap;
     justify-content: flex-start;
+
+    margin-left: 70px;
 }
 
 .block_head .all_link:after
@@ -702,10 +703,8 @@ header .sub_menu a.active
     display: flex;
     align-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: flex-start;
-
-    margin-left: 70px;
 
     text-decoration: none;
     text-transform: uppercase;
@@ -726,6 +725,18 @@ header .sub_menu a.active
     margin-left: 7px;
 
     transform: rotate(180deg);
+}
+
+
+.block_head .mob_line
+{
+    display: none;
+
+    width: 100%;
+    height: 1px;
+    margin: 0 20px;
+
+    background: #c8cbce;
 }
 
 
@@ -780,7 +791,7 @@ header .sub_menu a.active
 .form .input
 {
     font-family: var(--font_family);
-    font-size: 15px;
+    font-size: var(--font_size);
 
     display: block;
 
@@ -903,9 +914,7 @@ header .sub_menu a.active
 
 .form .submit_btn
 {
-    font-size: 15px;
     font-weight: 800;
-    line-height: 17px;
 
     display: block;
 
@@ -1061,7 +1070,6 @@ header .sub_menu a.active
 
 .main_slider .bottom .links a
 {
-    font-size: 15px;
     font-weight: 800;
     line-height: 24px;
 
@@ -1246,7 +1254,8 @@ header .sub_menu a.active
 }
 
 
-.content_banner .banner .img
+.content_banner .banner .img,
+.content_banner .banner .mob_img
 {
     position: absolute;
     z-index: 1;
@@ -1261,6 +1270,12 @@ header .sub_menu a.active
     pointer-events: none;
 
     object-fit: cover;
+    object-position: 0 50%;
+}
+
+.content_banner .banner .mob_img
+{
+    display: none;
 }
 
 
@@ -1399,13 +1414,18 @@ header .sub_menu a.active
 
 .popular_products .swiper
 {
-    height: 826px;
-    margin-bottom: -20px;
+    height: 877px;
 }
 
 .popular_products .swiper-slide
 {
     height: 403px;
+}
+
+
+.popular_products .products .product .thumb
+{
+    padding-bottom: 285px;
 }
 
 
@@ -1505,7 +1525,6 @@ header .sub_menu a.active
 
 .products_banner .btn
 {
-    font-size: 15px;
     font-weight: 800;
     line-height: 44px;
 
@@ -1697,15 +1716,24 @@ header .sub_menu a.active
     display: flex;
     align-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: flex-start;
+
+    white-space: nowrap;
 }
 
 
+.brands .swiper
+{
+    overflow: visible !important;
+}
 
-/*------------
-    Brands
-------------*/
+.brands .swiper-slide
+{
+    width: 160px;
+}
+
+
 .brands .row
 {
     align-content: stretch;
@@ -1827,7 +1855,6 @@ footer .pyament_methods img
 
 footer .title
 {
-    font-size: 15px;
     line-height: 17px;
 
     position: relative;
@@ -1836,6 +1863,52 @@ footer .title
     pointer-events: none;
 
     color: #333;
+}
+
+
+footer .title .icon
+{
+    position: absolute;
+    top: 0;
+    right: 24px;
+    bottom: 0;
+
+    display: none;
+    display: block;
+
+    width: 21px;
+    height: 21px;
+    margin: auto 0;
+}
+
+
+footer .title .icon:before,
+footer .title .icon:after
+{
+    position: absolute;
+
+    display: block;
+
+    width: 100%;
+    height: 1px;
+    margin: auto;
+
+    content: '';
+
+    background: #c8cbce;
+
+    inset: 0;
+}
+
+footer .title .icon:after
+{
+    width: 1px;
+    height: 100%;
+}
+
+footer .title.active .icon:after
+{
+    opacity: 0;
 }
 
 

@@ -4,15 +4,9 @@
     /*-------------------
         Global styles
     -------------------*/
-
-
-
-    /*--------------
-        Fancybox
-    --------------*/
-    .fancybox__slide
+    .block
     {
-        padding: 24px;
+        margin-bottom: 80px;
     }
 
 
@@ -20,111 +14,283 @@
     /*------------
         Header
     ------------*/
-    header
+    header .cont
     {
-        position: fixed;
-        z-index: 101;
+        padding: 0;
+    }
+
+
+
+    header .email
+    {
+        display: none;
+    }
+
+
+
+    header .logo
+    {
+        position: relative;
         top: 0;
         left: 0;
 
-        width: 310px;
-        height: 100%;
-        min-height: -moz-available;
-        min-height: -webkit-fill-available;
-        min-height:         fill-available;
-        margin: 0;
-        padding: 0;
+        margin-right: auto;
 
-        transition: transform .3s linear;
-        transform: translateX(-100%);
-
-        background: #fff;
+        transform: none;
     }
-
-    header.show
-    {
-        transform: translateX(0);
-    }
-
-
-    header .scroll
-    {
-        display: flex;
-        overflow: auto;
-
-        height: 100%;
-        min-height: -moz-available;
-        min-height: -webkit-fill-available;
-        min-height:         fill-available;
-        padding: 20px 0;
-
-        justify-content: flex-start;
-        align-items: flex-start;
-        align-content: flex-start;
-        flex-wrap: wrap;
-        overscroll-behavior-y: contain;
-    }
-
-    header .scroll > *
-    {
-        width: 100%;
-    }
-
-
-
-    /*-----------------
-        Mob. header
-    -----------------*/
-    .mob_header
-    {
-        display: block;
-    }
-
-
-
-    /*-------------
-        Sidebar
-    -------------*/
-
-
-
-    /*---------------
-        Page head
-    ---------------*/
 
 
 
     /*----------------
         Block head
     ----------------*/
-
-
-
-    /*------------------
-        Form elements
-    ------------------*/
-
-
-
-    /*----------------
-        Typography
-    ----------------*/
+    .block_head .desc
+    {
+        margin-top: 16px;
+    }
 
 
 
     /*-----------------
         Main slider
     -----------------*/
+    .main_slider .swiper-slide .cont
+    {
+        padding: 0;
+    }
+
+
+    .main_slider .link
+    {
+        height: 260px;
+        padding: 20px;
+
+        text-align: center;
+    }
+
+
+    .main_slider .info
+    {
+        width: 100%;
+    }
+
+
+    .main_slider .title
+    {
+        font-size: 30px;
+    }
+
+
+    .main_slider .controls
+    {
+        margin-right: 40px;
+    }
+
+
+    .main_slider .bottom .title
+    {
+        font-size: 22px;
+    }
+
+
+    .main_slider .bottom .title > * + *
+    {
+        margin-top: 8px;
+    }
+
+
+    .main_slider .bottom .links
+    {
+        width: 100%;
+        margin-top: 24px;
+    }
+
+    .main_slider .bottom .links > *
+    {
+        width: calc(50% - 10px);
+    }
+
+
+    .main_slider .bottom .links a
+    {
+        width: 100%;
+    }
+
+
+
+    /*---------
+        New
+    ---------*/
+    .new .block_head
+    {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+
+    .new .block_head .desc
+    {
+        width: 100%;
+    }
+
+
+    .new .block_head .link
+    {
+        width: 200px;
+        margin-top: 24px;
+    }
+
+
+    .new .categories
+    {
+        width: 100%;
+    }
+
+
+
+    /*--------------------
+        Content banner
+    --------------------*/
+    .content_banner .cont
+    {
+        padding: 0;
+    }
+
+
+    .content_banner .banner
+    {
+        height: 230px;
+        padding: 20px;
+    }
+
+
+    .content_banner .banner .info
+    {
+        width: 280px;
+    }
+
+
+    .content_banner .banner .title
+    {
+        font-size: 30px;
+    }
+
+
+    .content_banner .banner .img
+    {
+        object-position: -40px 50%;
+    }
+
+
+
+    /*----------------------
+        Popular products
+    ----------------------*/
+    .popular_products .products
+    {
+        width: 100%;
+    }
+
+
+    .popular_products .swiper
+    {
+        overflow: visible !important;
+
+        height: auto;
+    }
+
+    .popular_products .swiper-slide
+    {
+        height: auto;
+    }
+
+
+    .popular_products .products .product .thumb
+    {
+        padding-bottom: 129.545%;
+    }
+
+
+
+    /*------------------
+        Top products
+    ------------------*/
+    .top_products .products_banner
+    {
+        height: calc(100vw - 40px);
+    }
+
+
+    .top_products .products
+    {
+        width: 100%;
+    }
+
+
+
+    /*---------------------
+        Products banner
+    ---------------------*/
+    .products_banner
+    {
+        order: 2;
+
+        width: 100%;
+        height: calc(100vw - 40px);
+        margin-top: 40px;
+    }
+
+
+    .products_banner .title
+    {
+        font-size: 24px;
+    }
+
+
+    .products_banner .btn
+    {
+        width: 200px;
+    }
+
+
+
+
+    /*------------
+        Brands
+    ------------*/
+    .brands .brand .logo
+    {
+        height: 100px;
+        padding: 23px;
+    }
+
+
+    .brands .row > *
+    {
+        width: calc(33.333% - 20px);
+    }
 
 
 
     /*------------
         Footer
     ------------*/
+    footer .data
+    {
+        padding: 48px 0;
+    }
 
 
 
-    /*-----------
-        PopUp
-    -----------*/
+    footer .links
+    {
+        margin-left: auto;
+    }
+
+
+    footer .subscribe
+    {
+        width: 100%;
+        margin-top: 40px;
+    }
 }
