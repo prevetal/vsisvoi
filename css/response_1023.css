@@ -21,6 +21,13 @@
 
 
 
+    header .mob_menu_btn
+    {
+        display: flex;
+    }
+
+
+
     header .email
     {
         display: none;
@@ -215,7 +222,7 @@
     /*------------------
         Top products
     ------------------*/
-    .top_products .products_banner
+    .top_products .products_banners
     {
         height: calc(100vw - 40px);
     }
@@ -228,26 +235,31 @@
 
 
 
-    /*---------------------
-        Products banner
-    ---------------------*/
-    .products_banner
+    /*----------------------
+        Products banners
+    ----------------------*/
+    .products_banners
     {
         order: 2;
 
         width: 100%;
-        height: calc(100vw - 40px);
         margin-top: 40px;
     }
 
 
-    .products_banner .title
+    .products_banners .banner
+    {
+        height: calc(100vw - 40px);
+    }
+
+
+    .products_banners .banner .title
     {
         font-size: 24px;
     }
 
 
-    .products_banner .btn
+    .products_banners .banner .btn
     {
         width: 200px;
     }

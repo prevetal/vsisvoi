@@ -238,10 +238,22 @@
     }
 
 
+    .products .swiper
+    {
+        padding-bottom: 52px;
+    }
+
+
     .products .controls
     {
-        margin-top: 12px;
-        margin-left: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        justify-content: center;
+
+        width: 100%;
+        margin: 0;
     }
 
     .products .controls:after
@@ -254,6 +266,12 @@
     /*----------------------
         Popular products
     ----------------------*/
+    .popular_products.mob
+    {
+        display: block;
+    }
+
+
     .popular_products .products
     {
         order: 3;
@@ -272,7 +290,7 @@
     }
 
 
-    .popular_products .products_banner
+    .popular_products .products_banners
     {
         margin-top: 0;
         margin-bottom: 40px;
@@ -309,7 +327,7 @@
 
     .top_products .products .controls
     {
-        margin-bottom: 24px;
+        margin-bottom: 0;
     }
 
 
@@ -341,16 +359,16 @@
 
 
 
-    /*---------------------
-        Products banner
-    ---------------------*/
-    .products_banner .title
+    /*----------------------
+        Products banners
+    ----------------------*/
+    .products_banners .banner .title
     {
         font-size: 26px;
     }
 
 
-    .products_banner .btn
+    .products_banners .banner .btn
     {
         bottom: 40px;
 

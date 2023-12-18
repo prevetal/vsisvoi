@@ -152,6 +152,38 @@ document.addEventListener('DOMContentLoaded', function () {
 					},
 					spaceBetween: 20
 				}
+			},
+			on: {
+				activeIndexChange: swiper => {
+					let direction = '',
+						parent = $(swiper.$el).closest('.popular_products'),
+						nextBanner
+
+					swiper.activeIndex > swiper.previousIndex
+						? direction = 'right'
+						: direction = 'left'
+
+
+					// Change banner
+					if(direction == 'right') {
+						nextBanner = parent.find('.products_banners > *.active').next()
+
+						if(!nextBanner.length) {
+							nextBanner = parent.find('.products_banners  > *:first-child')
+						}
+					}
+
+					if(direction == 'left') {
+						nextBanner = parent.find('.products_banners > *.active').prev()
+
+						if(!nextBanner.length) {
+							nextBanner = parent.find('.products_banners  > *:last-child')
+						}
+					}
+
+					parent.find('.products_banners > *').removeClass('active').hide()
+					nextBanner.addClass('active').fadeIn(300)
+				}
 			}
 		}
 
@@ -209,6 +241,38 @@ document.addEventListener('DOMContentLoaded', function () {
 					slidesPerView: 3,
 					spaceBetween: 20
 				}
+			},
+			on: {
+				activeIndexChange: swiper => {
+					let direction = '',
+						parent = $(swiper.$el).closest('.top_products'),
+						nextBanner
+
+					swiper.activeIndex > swiper.previousIndex
+						? direction = 'right'
+						: direction = 'left'
+
+
+					// Change banner
+					if(direction == 'right') {
+						nextBanner = parent.find('.products_banners > *.active').next()
+
+						if(!nextBanner.length) {
+							nextBanner = parent.find('.products_banners  > *:first-child')
+						}
+					}
+
+					if(direction == 'left') {
+						nextBanner = parent.find('.products_banners > *.active').prev()
+
+						if(!nextBanner.length) {
+							nextBanner = parent.find('.products_banners  > *:last-child')
+						}
+					}
+
+					parent.find('.products_banners > *').removeClass('active').hide()
+					nextBanner.addClass('active').fadeIn(300)
+				}
 			}
 		}
 
@@ -217,13 +281,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 	// Mob. menu
-	$('.mob_header .mob_menu_btn').click(e => {
+	$('header .mob_menu_btn').click(e => {
 		e.preventDefault()
 
-		$('.mob_header .mob_menu_btn').addClass('active')
-		$('body').addClass('menu_open')
-		$('header').addClass('show')
-		$('.overlay').fadeIn(300)
+		// $('header .mob_menu_btn').addClass('active')
+		// $('body').addClass('menu_open')
+		// $('.mob_menu').addClass('show')
 	})
 
 
@@ -262,6 +325,38 @@ document.addEventListener('DOMContentLoaded', function () {
 		e.preventDefault()
 
 		$(this).toggleClass('active').next().slideToggle(300)
+	})
+
+
+	// Adding product to favorites
+	$('.product .favorite_btn').click(function(e) {
+		e.preventDefault()
+
+		let product = $(this).closest('.product')
+
+		$(this).toggleClass('active')
+
+		// Show message
+		product.find('.favorite_mes').hide()
+
+		$(this).hasClass('active')
+			? product.find('.favorite_mes.added').fadeIn(300)
+			: product.find('.favorite_mes.removed').fadeIn(300)
+
+		setTimeout(() => product.find('.favorite_mes').fadeOut(200), 2000)
+	})
+
+
+	// Subscribe
+	$('.subscribe .form').submit(function(e) {
+		e.preventDefault()
+
+		let form = $(this).closest('.subscribe')
+
+		form.find('.message.success').addClass('show')
+		// form.find('.message.error').addClass('show')
+
+		setTimeout(() => form.find('.message').fadeOut(200), 3000)
 	})
 
 

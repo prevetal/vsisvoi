@@ -49,12 +49,17 @@
 
 
 
-    /*---------------------
-        Products banner
-    ---------------------*/
-    .products_banner
+    /*----------------------
+        Products banners
+    ----------------------*/
+    .products_banners
     {
         width: 620px;
+    }
+
+
+    .products_banners .banner
+    {
         height: 753px;
     }
 

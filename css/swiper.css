@@ -15,6 +15,7 @@
     height: 31px;
     margin: 0;
 
+    transition: background .2s linear;
     transform: none;
 
     color: #2b3338;
@@ -54,6 +55,13 @@
     top: -2px;
 
     transform: rotate(180deg);
+}
+
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover
+{
+    background: #eee;
 }
 
 
@@ -97,6 +105,7 @@
     width: 5px;
     height: 5px;
 
+    text-align: center;
     pointer-events: auto;
 
     opacity: 1;
@@ -117,6 +126,7 @@
     margin: auto;
 
     content: '';
+    transition: background .2s linear;
 
     background: #c18c43;
 
@@ -135,10 +145,16 @@
 }
 
 
+.swiper-pagination-bullet:hover:before
+{
+    background: #2b3338;
+}
+
+
 .swiper-pagination-bullet.active
 {
-    width: auto;
-    height: auto;
+    width: 11px;
+    height: 19px;
 }
 
 .swiper-pagination-bullet.active:before

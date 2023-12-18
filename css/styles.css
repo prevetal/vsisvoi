@@ -310,6 +310,59 @@ header .cont
 
 
 
+header .mob_menu_btn
+{
+    display: none;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 46px;
+    height: 46px;
+    margin-right: 8px;
+    padding: 12px;
+
+    color: #fff;
+}
+
+
+header .mob_menu_btn span
+{
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    height: 2px;
+
+    background: currentColor;
+}
+
+header .mob_menu_btn span:before,
+header .mob_menu_btn span:after
+{
+    position: absolute;
+    top: -8px;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    content: '';
+
+    background: currentColor;
+}
+
+header .mob_menu_btn span:after
+{
+    top: 8px;
+}
+
+
+
 header .email a
 {
     white-space: nowrap;
@@ -654,12 +707,18 @@ header .sub_menu a.active
     margin-top: 20px;
     padding: 10px;
 
+    transition: background .2s linear;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
 
     color: #fff;
     background: #2b3338;
+}
+
+.block_head .link:hover
+{
+    background: #000;
 }
 
 
@@ -706,6 +765,7 @@ header .sub_menu a.active
     flex-wrap: nowrap;
     justify-content: flex-start;
 
+    transition: opacity .2s linear;
     text-decoration: none;
     text-transform: uppercase;
 
@@ -725,6 +785,12 @@ header .sub_menu a.active
     margin-left: 7px;
 
     transform: rotate(180deg);
+}
+
+
+.block_head .all_link a:hover
+{
+    opacity: .7;
 }
 
 
@@ -921,11 +987,21 @@ header .sub_menu a.active
     width: 100%;
     height: 44px;
 
-    text-transform: uppercase;
+    transition: background .2s linear;
     text-transform: uppercase;
 
     color: #fff;
     background: #2b3338;
+}
+
+.form .submit_btn:disabled
+{
+    cursor: not-allowed;
+}
+
+.form .submit_btn:hover
+{
+    background: #000;
 }
 
 
@@ -1079,12 +1155,18 @@ header .sub_menu a.active
     max-width: 100%;
     padding: 10px;
 
+    transition: background .2s linear;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
 
     color: #fff;
     background: #2b3338;
+}
+
+.main_slider .bottom .links a:hover
+{
+    background: #000;
 }
 
 
@@ -1400,6 +1482,12 @@ header .sub_menu a.active
 /*----------------------
     Popular products
 ----------------------*/
+.popular_products.mob
+{
+    display: none;
+}
+
+
 .popular_products .cont
 {
     justify-content: space-between;
@@ -1459,17 +1547,34 @@ header .sub_menu a.active
 }
 
 
-.top_products .products_banner
+.top_products .products_banners > *,
+.top_products .products_banners .banner
 {
-    height: auto;
+    height: 100%;
+    min-height: -moz-available;
+    min-height: -webkit-fill-available;
+    min-height:         fill-available;
 }
 
 
 
-/*---------------------
-    Products banner
----------------------*/
-.products_banner
+/*----------------------
+    Products banners
+----------------------*/
+.products_banners
+{
+    width: 645px;
+    max-width: 100%;
+}
+
+
+.products_banners > *
+{
+    display: none;
+}
+
+
+.products_banners .banner
 {
     position: relative;
 
@@ -1479,8 +1584,6 @@ header .sub_menu a.active
     flex-wrap: wrap;
     justify-content: center;
 
-    width: 645px;
-    max-width: 100%;
     height: 779px;
 
     text-align: center;
@@ -1491,7 +1594,7 @@ header .sub_menu a.active
 }
 
 
-.products_banner .img
+.products_banners .banner .img
 {
     position: absolute;
     z-index: 1;
@@ -1507,14 +1610,14 @@ header .sub_menu a.active
 }
 
 
-.products_banner .info
+.products_banners .banner .info
 {
     position: relative;
     z-index: 3;
 }
 
 
-.products_banner .title
+.products_banners .banner .title
 {
     font-size: 30px;
     font-weight: 800;
@@ -1523,7 +1626,7 @@ header .sub_menu a.active
 }
 
 
-.products_banner .btn
+.products_banners .banner .btn
 {
     font-weight: 800;
     line-height: 44px;
@@ -1539,9 +1642,15 @@ header .sub_menu a.active
     height: 44px;
     margin: 0 auto;
 
+    transition: background .2s linear;
     text-transform: uppercase;
 
     background: #2b3338;
+}
+
+.products_banners .banner .btn:hover
+{
+    background: #000;
 }
 
 
@@ -1621,6 +1730,8 @@ header .sub_menu a.active
     width: 100%;
     height: 100%;
 
+    transition: transform .2s linear;
+
     object-fit: cover;
 }
 
@@ -1641,6 +1752,8 @@ header .sub_menu a.active
     width: 32px;
     height: 32px;
 
+    transition: .2s linear;
+
     color: #fff;
 
     filter: drop-shadow(0px 2px 3px rgba(81, 81, 81, .80));
@@ -1653,6 +1766,38 @@ header .sub_menu a.active
 
     width: 26px;
     height: 25px;
+}
+
+
+.products .product .favorite_btn.active
+{
+    color: #000;
+
+    filter: none;
+}
+
+
+.products .product .favorite_mes
+{
+    font-size: 15px;
+    line-height: 22px;
+
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+
+    display: none;
+
+    min-width: 182px;
+    max-width: 100%;
+    padding: 10px;
+
+    transform: translate(-50%, -50%);
+    text-align: center;
+    white-space: nowrap;
+
+    background: #f8f8d9;
 }
 
 
@@ -1705,6 +1850,11 @@ header .sub_menu a.active
     text-transform: uppercase;
 }
 
+
+.products .product:hover .thumb img
+{
+    transform: scale(1.1);
+}
 
 
 
@@ -1772,6 +1922,8 @@ header .sub_menu a.active
     height: 160px;
     padding: 51px;
 
+    transition: border-color .2s linear;
+
     border: 1px solid #c8cbce;
 }
 
@@ -1782,6 +1934,12 @@ header .sub_menu a.active
 
     max-width: 100%;
     max-height: 100%;
+}
+
+
+.brands .brand:hover .logo
+{
+    border-color: #c18c43;
 }
 
 
@@ -1874,7 +2032,6 @@ footer .title .icon
     bottom: 0;
 
     display: none;
-    display: block;
 
     width: 21px;
     height: 21px;
@@ -1950,6 +2107,8 @@ footer .links .items a
 
 footer .subscribe
 {
+    position: relative;
+
     width: 280px;
     max-width: 100%;
     margin-right: auto;
@@ -1959,6 +2118,55 @@ footer .subscribe
 
 footer .subscribe .form
 {
+    margin-top: 20px;
+}
+
+
+footer .subscribe .message
+{
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    left: 0;
+
+    display: none;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+
+    text-align: center;
+
+    background: var(--bg);
+}
+
+footer .subscribe .message.show
+{
+    display: flex;
+}
+
+
+footer .subscribe .message .title
+{
+    font-size: var(--font_size_title);
+    font-weight: 800;
+    line-height: normal;
+
+    width: 100%;
+
+    text-transform: uppercase;
+
+    color: #2b3338;
+}
+
+
+footer .subscribe .message .desc
+{
+    width: 100%;
     margin-top: 20px;
 }
 

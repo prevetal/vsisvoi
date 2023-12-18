@@ -258,23 +258,28 @@
 
 
 
-    /*---------------------
-        Products banner
-    ---------------------*/
-    .products_banner
+    /*----------------------
+        Products banners
+    ----------------------*/
+    .products_banners
     {
         width: 596px;
+    }
+
+
+    .products_banners .banner
+    {
         height: 683px;
     }
 
 
-    .products_banner .title
+    .products_banners .banner .title
     {
         font-size: 28px;
     }
 
 
-    .products_banner .btn
+    .products_banners .banner .btn
     {
         font-size: 14px;
 
