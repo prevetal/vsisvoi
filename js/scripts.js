@@ -351,17 +351,71 @@ document.addEventListener('DOMContentLoaded', function () {
 	$('.subscribe .form').submit(function(e) {
 		e.preventDefault()
 
-		let form = $(this).closest('.subscribe')
+		// Show success modal
+		Fancybox.show([{
+			src: '#subscribe_success_modal',
+			type: 'inline'
+		}])
 
-		form.find('.message.success').addClass('show')
-		// form.find('.message.error').addClass('show')
-
-		setTimeout(() => form.find('.message').fadeOut(200), 3000)
+		// Show error modal
+		// Fancybox.show([{
+		// 	src: '#subscribe_error_modal',
+		// 	type: 'inline'
+		// }])
 	})
 
 
 	// Brands
 	initBrandsSliders()
+
+
+	// Fancybox
+	Fancybox.defaults.autoFocus = false
+	Fancybox.defaults.trapFocus = false
+	Fancybox.defaults.dragToClose = false
+	Fancybox.defaults.placeFocusBack = false
+	Fancybox.defaults.l10n = {
+		CLOSE: 'Закрити',
+		NEXT: 'Наступний',
+		PREV: 'Попередній',
+		MODAL: 'Ви можете закрити це модальне вікно натиснувши клавішу ESC'
+	}
+
+	Fancybox.defaults.template = {
+		closeButton: '<svg><use xlink:href="images/sprite.svg#ic_close"></use></svg>',
+		spinner: '<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="25 25 50 50" tabindex="-1"><circle cx="50" cy="50" r="20"/></svg>',
+		main: null
+	}
+
+
+	// Modals
+	const modalBtns = document.querySelectorAll('.modal_btn')
+
+	if (modalBtns) {
+		modalBtns.forEach(el => {
+			el.addEventListener('click', e => {
+				e.preventDefault()
+
+				Fancybox.close()
+
+				Fancybox.show([{
+					src: document.getElementById(el.getAttribute('data-modal')),
+					type: 'inline'
+				}])
+			})
+		})
+	}
+
+
+	// Zoom images
+	Fancybox.bind('.fancy_img', {
+		Image: {
+			zoom: false,
+		},
+		Thumbs: {
+			autoStart: false,
+		}
+	})
 })
 
 
