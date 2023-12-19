@@ -24,6 +24,52 @@
 
 
 
+    /*------------
+        Header
+    ------------*/
+    header .categories .sub .col
+    {
+        padding: 24px 30px 24px 0;
+    }
+
+    header .categories .sub .col.border
+    {
+        padding-left: 30px;
+    }
+
+    header .categories .sub .col.big
+    {
+        width: calc((100% - 480px) / 2);
+    }
+
+
+    header .categories .sub .links.columns
+    {
+        column-gap: 20px;
+        column-width: 140px;
+    }
+
+
+    header .categories .sub .links
+    {
+        font-size: 14px;
+    }
+
+
+    header .categories .banners
+    {
+        width: 480px;
+        padding: 24px 0;
+    }
+
+
+    header .categories .banners .title
+    {
+        font-size: 22px;
+    }
+
+
+
     /*----------------
         Block head
     ----------------*/

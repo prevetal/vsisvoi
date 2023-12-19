@@ -342,6 +342,9 @@ header .data
     font-size: 14px;
     font-weight: 700;
 
+    position: relative;
+    z-index: 3;
+
     color: #fff;
     background: #2b3338;
 }
@@ -586,85 +589,106 @@ header .cart_link .icon
 
 
 
-header .menu_item
+header .categories
 {
     position: relative;
+
+    border-top: 2px solid #eee;
+    border-bottom: 2px solid #eee;
 }
 
-header .menu_item + .menu_item
+
+header .categories nav
 {
-    margin-left: 20px;
-}
-
-
-header .menu_item > a
-{
-    font-size: var(--font_size);
-    line-height: normal;
-
-    display: flex;
-    align-content: center;
-    align-items: center;
-    flex-wrap: wrap;
     justify-content: center;
-
-    min-height: 40px;
-
-    transition: .2s linear;
-    text-align: center;
-    text-decoration: none;
-
-    color: var(--text_color);
 }
 
 
-header .menu_item > a .arr
+header .categories .item > a
 {
+    font-size: 12px;
+
+    position: relative;
+
     display: block;
 
-    width: 10px;
-    height: 5px;
-    margin-left: 8px;
+    padding: 13px 20px 15px;
 
-    opacity: .5;
-    border-top: 5px solid #fff;
-    border-right: 5px solid transparent;
-    border-left: 5px solid transparent;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: #333;
+    color: currentColor;
 }
 
-
-header .menu_item:hover > a,
-header .menu_item > a.active
+header .categories .item > a.red
 {
-    color: #000;
-    background: #fff;
+    color: #ce0c36;
 }
 
 
-header .sub_menu
+header .categories .item > a:after
+{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 0;
+    height: 1px;
+    margin: auto;
+
+    content: '';
+    transition: width .3s linear;
+
+    background: #ce0c36;
+}
+
+header .categories .item:hover > a:after,
+header .categories .item > a.active:after
+{
+    width: 100%;
+}
+
+
+header .categories .sub
 {
     position: absolute;
     z-index: 9;
-    top: calc(100% + 30px);
+    top: 100%;
     left: 0;
 
     visibility: hidden;
 
-    min-width: 100%;
-    padding: 4px 0;
+    width: 100%;
+    margin-top: 2px;
 
     transition: .2s linear;
     pointer-events: none;
 
     opacity: 0;
-    background: #000;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+    background: var(--bg);
+    box-shadow: 0 10px 19px 0 rgba(100, 86, 68, .20);
 }
 
-header .menu_item:hover > a.touch_link + .sub_menu
+header .categories .sub:before
 {
-    top: calc(100% + 30px);
+    position: absolute;
+    bottom: 100%;
+    left: 0;
 
+    display: block;
+
+    width: 100%;
+    height: 2px;
+
+    content: '';
+}
+
+
+header .categories .item:hover > a.touch_link + .sub
+{
     visibility: hidden;
 
     pointer-events: none;
@@ -672,11 +696,9 @@ header .menu_item:hover > a.touch_link + .sub_menu
     opacity: 0;
 }
 
-header .menu_item:hover .sub_menu,
-header .menu_item > a.touch_link + .sub_menu.show
+header .categories .item:hover .sub,
+header .categories .item > a.touch_link + .sub.show
 {
-    top: 100%;
-
     visibility: visible;
 
     pointer-events: auto;
@@ -685,25 +707,203 @@ header .menu_item > a.touch_link + .sub_menu.show
 }
 
 
-header .sub_menu a
+header .categories .sub .cont
 {
-    font-size: inherit;
-    line-height: inherit;
+    align-content: stretch;
+    align-items: stretch;
+}
 
-    display: block;
 
-    padding: 8px 20px;
+header .categories .sub .col
+{
+    padding: 36px 48px 36px 0;
+}
 
-    transition: background .2s linear;
+header .categories .sub .col.big
+{
+    width: calc((100% - 701px) / 2);
+}
+
+
+header .categories .sub .col.border
+{
+    padding-left: 48px;
+
+    border-left: 1px solid #eee;
+}
+
+
+header .categories .sub .col .title
+{
+    font-size: 14px;
+    font-weight: 500;
+
+    margin-bottom: 20px;
+
+    text-transform: uppercase;
+}
+
+
+header .categories .sub .links
+{
+    font-size: 15px;
+    line-height: 11px;
+
+    color: #2b3338;
+}
+
+
+header .categories .sub .links.columns
+{
+    column-gap: 30px;
+    column-count: 2;
+    column-width: 150px;
+}
+
+header .categories .sub .links.columns > *
+{
+    transform: translateZ(0);
+
+    --webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+
+header .categories .sub .links > * + *
+{
+    margin-top: 20px;
+}
+
+
+header .categories .sub .links a
+{
+    display: inline-block;
+
+    vertical-align: top;
     text-decoration: none;
 
     color: currentColor;
 }
 
-header .sub_menu a:hover,
-header .sub_menu a.active
+
+header .categories .sub .links a .sticker
 {
-    background: #f6f6f6;
+    font-size: 10px;
+    font-weight: 700;
+    font-style: normal;
+
+    display: inline-block;
+
+    margin-left: 1px;
+    padding: 1px 3px;
+
+    vertical-align: middle;
+
+    color: #fff;
+    background: #000;
+}
+
+header .categories .sub .links a .sticker.red
+{
+    background: #ce0c36;
+}
+
+
+header .categories .banners
+{
+    width: 701px;
+    max-width: 100%;
+    margin-left: auto;
+    padding: 30px 0;
+}
+
+
+header .categories .banners .row
+{
+    margin-bottom: -20px;
+    margin-left: -20px;
+}
+
+header .categories .banners .row > *
+{
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+
+header .categories .banners .banner
+{
+    position: relative;
+
+    display: block;
+
+    text-decoration: none;
+
+    color: #fff;
+}
+
+
+header .categories .banners .thumb
+{
+    position: relative;
+
+    overflow: hidden;
+
+    padding-bottom: 100%;
+
+    background: #ddd;
+}
+
+
+header .categories .banners .thumb img
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    transition: transform .2s linear;
+
+    object-fit: cover;
+}
+
+
+header .categories .banners .title
+{
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 20px;
+
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+header .categories .banners .banner:hover .thumb img
+{
+    transform: scale(1.1);
 }
 
 

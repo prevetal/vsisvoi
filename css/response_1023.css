@@ -48,6 +48,13 @@
 
 
 
+    header .categories
+    {
+        display: none;
+    }
+
+
+
     /*----------------
         Block head
     ----------------*/

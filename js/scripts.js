@@ -332,12 +332,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 	if (is_touch_device()) {
-		const subMenus = document.querySelectorAll('header .menu .sub_menu')
+		const subMenus = document.querySelectorAll('header .categories .item .sub')
 
 		// Submenu on the touch screens
-		$('header .menu_item > a.sub_link').addClass('touch_link')
+		$('header .categories .item > a.sub_link').addClass('touch_link')
 
-		$('header .menu_item > a.sub_link').click(function (e) {
+		$('header .categories .item > a.sub_link').click(function (e) {
 			const $dropdown = $(this).next()
 
 			if ($dropdown.css('visibility') === 'hidden') {
@@ -352,7 +352,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		// Close the under. menu when clicking outside of it
 		document.addEventListener('click', e => {
-			if ($(e.target).closest('.menu').length === 0) {
+			if ($(e.target).closest('.categories').length === 0) {
 				subMenus.forEach(el => el.classList.remove('show'))
 
 				BODY.style = 'cursor: default;'
