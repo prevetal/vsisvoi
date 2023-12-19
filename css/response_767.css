@@ -204,33 +204,30 @@
     /*--------------
         Products
     --------------*/
+    .mob_products
+    {
+        display: block;
+    }
+
+
     .products .block_head
     {
-        display: block;
-    }
-
-
-    .products .block_head .title
-    {
         position: relative;
-
-        display: inline-block;
-
-        vertical-align: top;
+        z-index: 3;
     }
 
-    .products .block_head .title:after
+    .products .block_head:before
     {
         position: absolute;
+        z-index: 1;
         top: 0;
         bottom: 0;
-        left: 100%;
 
         display: block;
 
-        width: 100vw;
+        width: 100%;
         height: 1px;
-        margin: auto 0 auto 20px;
+        margin: auto 0;
 
         content: '';
 
@@ -238,27 +235,49 @@
     }
 
 
-    .products .swiper
+    .products .block_head .title
     {
-        padding-bottom: 52px;
+        position: relative;
+        z-index: 3;
+
+        padding-right: 20px;
+
+        background: var(--bg);
+    }
+
+
+    .products .block_head .controls
+    {
+        position: relative;
+        z-index: 3;
+
+        padding-left: 20px;
+
+        background: var(--bg);
+    }
+
+
+    .products .swiper-slide
+    {
+        width: 190px;
     }
 
 
     .products .controls
     {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-
-        justify-content: center;
-
-        width: 100%;
-        margin: 0;
+        margin-left: auto;
     }
 
     .products .controls:after
     {
         display: none;
+    }
+
+
+    .products .product .favorite_mes
+    {
+        font-size: 14px;
+        line-height: 20px;
     }
 
 
@@ -301,12 +320,6 @@
     /*------------------
         Top products
     ------------------*/
-    .top_products .block_head
-    {
-        margin-bottom: 0;
-    }
-
-
     .top_products .swiper
     {
         overflow: visible !important;
@@ -327,7 +340,12 @@
 
     .top_products .products .controls
     {
-        margin-bottom: 0;
+        position: absolute;
+        top: auto;
+        right: 0;
+        bottom: 100%;
+
+        margin-bottom: 21px;
     }
 
 

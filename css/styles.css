@@ -1547,20 +1547,33 @@ header .sub_menu a.active
 }
 
 
-.popular_products .swiper
+.popular_products .products .swiper
 {
-    height: 877px;
-}
-
-.popular_products .swiper-slide
-{
-    height: 403px;
+    overflow: hidden !important;
 }
 
 
-.popular_products .products .product .thumb
+.popular_products .products .swiper-slide
 {
-    padding-bottom: 285px;
+    visibility: visible;
+
+    pointer-events: auto;
+
+    opacity: 1;
+}
+
+
+.popular_products .products .row
+{
+    margin-bottom: -40px;
+    margin-left: -20px;
+}
+
+.popular_products .products .row > *
+{
+    width: calc(33.333% - 20px);
+    margin-bottom: 40px;
+    margin-left: 20px;
 }
 
 
@@ -1578,6 +1591,8 @@ header .sub_menu a.active
 
 .top_products .products
 {
+    position: relative;
+
     width: calc(100% - 720px);
 }
 
@@ -1591,6 +1606,36 @@ header .sub_menu a.active
 .top_products .products .controls:after
 {
     display: none;
+}
+
+
+.top_products .products .swiper
+{
+    overflow: hidden !important;
+}
+
+
+.top_products .products .swiper-slide
+{
+    visibility: visible;
+
+    pointer-events: auto;
+
+    opacity: 1;
+}
+
+
+.top_products .products .row
+{
+    margin-bottom: -40px;
+    margin-left: -20px;
+}
+
+.top_products .products .row > *
+{
+    width: calc(33.333% - 20px);
+    margin-bottom: 40px;
+    margin-left: 20px;
 }
 
 
@@ -1702,10 +1747,15 @@ header .sub_menu a.active
 
 
 
-
 /*--------------
     Products
 --------------*/
+.mob_products
+{
+    display: none;
+}
+
+
 .products .block_head
 {
     display: flex;
@@ -1739,6 +1789,45 @@ header .sub_menu a.active
     content: '';
 
     background: #c8cbce;
+}
+
+
+.products .controls.hide
+{
+    margin: 0;
+}
+
+.products .controls.hide > *
+{
+    display: none;
+}
+
+
+.products .swiper
+{
+    overflow: visible !important;
+}
+
+
+.products .swiper-slide
+{
+    position: relative;
+
+    visibility: hidden;
+
+    transition: opacity .2s linear, visibility .2s linear;
+    pointer-events: none;
+
+    opacity: 0;
+}
+
+.products .swiper-slide.visible
+{
+    visibility: visible;
+
+    pointer-events: auto;
+
+    opacity: 1;
 }
 
 
@@ -1842,7 +1931,6 @@ header .sub_menu a.active
 
     transform: translate(-50%, -50%);
     text-align: center;
-    white-space: nowrap;
 
     background: #f8f8d9;
 }

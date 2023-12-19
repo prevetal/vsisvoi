@@ -190,20 +190,14 @@
     }
 
 
-    .popular_products .swiper
+    .popular_products .products .row > *
     {
-        height: 867px;
+        width: calc(50% - 20px);
     }
 
-    .popular_products .swiper-slide
+    .popular_products .products .row > *:nth-child(4) ~ *
     {
-        height: 388px;
-    }
-
-
-    .popular_products .products .product .thumb
-    {
-        padding-bottom: 296px;
+        display: none;
     }
 
 
@@ -214,6 +208,17 @@
     .top_products .products
     {
         width: calc(50% - 10px);
+    }
+
+
+    .top_products .products .row > *
+    {
+        width: calc(50% - 20px);
+    }
+
+    .top_products .products .row > *:nth-child(2) ~ *
+    {
+        display: none;
     }
 
 
@@ -229,7 +234,7 @@
 
     .products_banners .banner
     {
-        height: 775px;
+        height: 801px;
     }
 
 

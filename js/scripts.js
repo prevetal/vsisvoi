@@ -36,6 +36,10 @@ document.addEventListener('DOMContentLoaded', function () {
 				checkInView: true,
 				loadOnTransitionStart: true,
 				loadPrevNext: true
+			},
+			autoplay: {
+				delay: 4000,
+				disableOnInteraction: false
 			}
 		})
 	}
@@ -127,32 +131,12 @@ document.addEventListener('DOMContentLoaded', function () {
 					return '<div class="' + className + '"><span>' + (index + 1) + '</span></div>'
 				}
 			},
-			breakpoints: {
-				0: {
-					spaceBetween: 20,
-					slidesPerView: 'auto'
-				},
-				768: {
-					spaceBetween: 20,
-					slidesPerView: 3
-				},
-				1024: {
-					slidesPerView: 2,
-					grid: {
-						rows: 2,
-						fill: 'column'
-					},
-					spaceBetween: 20
-				},
-				1280: {
-					slidesPerView: 3,
-					grid: {
-						rows: 2,
-						fill: 'column'
-					},
-					spaceBetween: 20
-				}
+			autoplay: {
+				delay: 6000,
+				disableOnInteraction: false
 			},
+			slidesPerView: 1,
+			spaceBetween: 20,
 			on: {
 				activeIndexChange: swiper => {
 					let direction = '',
@@ -224,24 +208,12 @@ document.addEventListener('DOMContentLoaded', function () {
 					return '<div class="' + className + '"><span>' + (index + 1) + '</span></div>'
 				}
 			},
-			breakpoints: {
-				0: {
-					spaceBetween: 20,
-					slidesPerView: 'auto'
-				},
-				768: {
-					spaceBetween: 20,
-					slidesPerView: 3
-				},
-				1024: {
-					spaceBetween: 20,
-					slidesPerView: 2
-				},
-				1280: {
-					slidesPerView: 3,
-					spaceBetween: 20
-				}
+			autoplay: {
+				delay: 6000,
+				disableOnInteraction: false
 			},
+			slidesPerView: 1,
+			spaceBetween: 20,
 			on: {
 				activeIndexChange: swiper => {
 					let direction = '',
@@ -277,6 +249,75 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 
 		topProductsSliders.push(new Swiper('.top_products_s' + i, options))
+	})
+
+
+	// Products
+	const productsSliders = [],
+		products = document.querySelectorAll('.products .cont > .swiper')
+
+	products.forEach(function (el, i) {
+		el.classList.add('products_s' + i)
+
+		let options = {
+			loop: false,
+			speed: 500,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			},
+			preloadImages: false,
+			lazy: {
+				enabled: true,
+				checkInView: true,
+				loadOnTransitionStart: true,
+				loadPrevNext: true
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+				clickable: true,
+				bulletActiveClass: 'active',
+				renderBullet: (index, className) => {
+					return '<div class="' + className + '"><span>' + (index + 1) + '</span></div>'
+				}
+			},
+			breakpoints: {
+				0: {
+					spaceBetween: 20,
+					slidesPerView: 'auto'
+				},
+				768: {
+					spaceBetween: 20,
+					slidesPerView: 3
+				},
+				1024: {
+					spaceBetween: 20,
+					slidesPerView: 4
+				},
+				1280: {
+					slidesPerView: 6,
+					spaceBetween: 20
+				}
+			},
+			on: {
+				init: swiper => {
+					if(swiper.slides.length <= swiper.params.slidesPerView) {
+						$(swiper.$el).find('.controls').addClass('hide')
+					}
+				},
+				resize: swiper => {
+					swiper.slides.length <= swiper.params.slidesPerView
+						? $(swiper.$el).find('.controls').addClass('hide')
+						: $(swiper.$el).find('.controls').removeClass('hide')
+				}
+			}
+		}
+
+		productsSliders.push(new Swiper('.products_s' + i, options))
 	})
 
 
@@ -332,6 +373,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	$('.product .favorite_btn').click(function(e) {
 		e.preventDefault()
 
+		clearTimeout(timer)
+
 		let product = $(this).closest('.product')
 
 		$(this).toggleClass('active')
@@ -343,7 +386,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			? product.find('.favorite_mes.added').fadeIn(300)
 			: product.find('.favorite_mes.removed').fadeIn(300)
 
-		setTimeout(() => product.find('.favorite_mes').fadeOut(200), 2000)
+		var timer = setTimeout(() => product.find('.favorite_mes').fadeOut(200), 2000)
 	})
 
 

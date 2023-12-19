@@ -230,23 +230,6 @@
     }
 
 
-    .popular_products .swiper
-    {
-        height: 775px;
-    }
-
-    .popular_products .swiper-slide
-    {
-        height: 352px;
-    }
-
-
-    .popular_products .products .product .thumb
-    {
-        padding-bottom: 240px;
-    }
-
-
 
     /*------------------
         Top products
@@ -269,7 +252,7 @@
 
     .products_banners .banner
     {
-        height: 683px;
+        height: 680px;
     }
 
 
@@ -286,6 +269,20 @@
         bottom: 60px;
 
         width: 260px;
+    }
+
+
+
+    /*--------------
+        Products
+    --------------*/
+    .products .swiper-slide
+    {
+        visibility: visible;
+
+        pointer-events: auto;
+
+        opacity: 1;
     }
 
 

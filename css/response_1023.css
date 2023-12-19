@@ -193,28 +193,9 @@
     /*----------------------
         Popular products
     ----------------------*/
-    .popular_products .products
+    .popular_products
     {
-        width: 100%;
-    }
-
-
-    .popular_products .swiper
-    {
-        overflow: visible !important;
-
-        height: auto;
-    }
-
-    .popular_products .swiper-slide
-    {
-        height: auto;
-    }
-
-
-    .popular_products .products .product .thumb
-    {
-        padding-bottom: 129.545%;
+        display: none;
     }
 
 
@@ -222,15 +203,9 @@
     /*------------------
         Top products
     ------------------*/
-    .top_products .products_banners
+    .top_products
     {
-        height: calc(100vw - 40px);
-    }
-
-
-    .top_products .products
-    {
-        width: 100%;
+        display: none;
     }
 
 
@@ -244,6 +219,14 @@
 
         width: 100%;
         margin-top: 40px;
+    }
+
+    .mob_products .products_banners
+    {
+        order: 0;
+
+        margin-top: 0;
+        margin-bottom: 40px;
     }
 
 
@@ -264,6 +247,16 @@
         width: 200px;
     }
 
+
+
+    /*--------------
+        Products
+    --------------*/
+    .mob_popular_products,
+    .mob_top_products
+    {
+        display: block;
+    }
 
 
 
