@@ -2375,7 +2375,6 @@ header .categories .banners .banner:hover .thumb img
 .checkout .mob_head
 {
     display: none;
-    display: flex;
     align-content: center;
     align-items: center;
     flex-wrap: nowrap;
