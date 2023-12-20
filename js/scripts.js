@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	if (mainSlider) {
 		new Swiper('.main_slider .swiper', {
 			loop: true,
-			speed: 750,
+			speed: 500,
 			watchSlidesProgress: true,
 			slideActiveClass: 'active',
 			slideVisibleClass: 'visible',
@@ -19,9 +19,8 @@ document.addEventListener('DOMContentLoaded', function () {
 			slidesPerView: 1,
 			pagination: {
 				el: '.swiper-pagination',
-				type: 'bullets',
+				dynamicBullets: true,
 				clickable: true,
-				bulletActiveClass: 'active',
 				renderBullet: (index, className) => {
 					return '<div class="' + className + '"><span>' + (index + 1) + '</span></div>'
 				}
@@ -71,9 +70,8 @@ document.addEventListener('DOMContentLoaded', function () {
 			},
 			pagination: {
 				el: '.swiper-pagination',
-				type: 'bullets',
+				dynamicBullets: true,
 				clickable: true,
-				bulletActiveClass: 'active',
 				renderBullet: (index, className) => {
 					return '<div class="' + className + '"><span>' + (index + 1) + '</span></div>'
 				}
@@ -124,9 +122,8 @@ document.addEventListener('DOMContentLoaded', function () {
 			},
 			pagination: {
 				el: '.swiper-pagination',
-				type: 'bullets',
+				dynamicBullets: true,
 				clickable: true,
-				bulletActiveClass: 'active',
 				renderBullet: (index, className) => {
 					return '<div class="' + className + '"><span>' + (index + 1) + '</span></div>'
 				}
@@ -201,9 +198,8 @@ document.addEventListener('DOMContentLoaded', function () {
 			},
 			pagination: {
 				el: '.swiper-pagination',
-				type: 'bullets',
+				dynamicBullets: true,
 				clickable: true,
-				bulletActiveClass: 'active',
 				renderBullet: (index, className) => {
 					return '<div class="' + className + '"><span>' + (index + 1) + '</span></div>'
 				}
@@ -278,9 +274,8 @@ document.addEventListener('DOMContentLoaded', function () {
 			},
 			pagination: {
 				el: '.swiper-pagination',
-				type: 'bullets',
+				dynamicBullets: true,
 				clickable: true,
-				bulletActiveClass: 'active',
 				renderBullet: (index, className) => {
 					return '<div class="' + className + '"><span>' + (index + 1) + '</span></div>'
 				}

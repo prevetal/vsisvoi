@@ -251,7 +251,7 @@ button
 
 .block
 {
-    margin-bottom: 140px;
+    margin-bottom: 112px;
 }
 
 
@@ -315,9 +315,10 @@ button
     justify-content: flex-start;
 }
 
+
 .controls > * + *
 {
-    margin-left: 20px;
+    margin-left: 12px;
 }
 
 
@@ -1420,6 +1421,8 @@ header .categories .banners .banner:hover .thumb img
 
 .main_slider .controls
 {
+    position: relative;
+
     margin-right: 33px;
 }
 

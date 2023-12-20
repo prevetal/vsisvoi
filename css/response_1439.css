@@ -10,25 +10,9 @@
     }
 
 
-    .swiper-pagination-bullet + .swiper-pagination-bullet
-    {
-        margin-left: 16px !important;
-    }
-
-
     .block
     {
-        margin-bottom: 120px;
-    }
-
-
-
-    /*--------------
-        Controls
-    --------------*/
-    .controls > * + *
-    {
-        margin-left: 16px;
+        margin-bottom: 100px;
     }
 
 
