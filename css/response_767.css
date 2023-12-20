@@ -33,6 +33,37 @@
 
 
 
+    /*---------------
+        Page head
+    ---------------*/
+    .page_head
+    {
+        padding: 20px 0;
+    }
+
+
+    .page_head .back a .icon
+    {
+        margin: 0;
+    }
+
+
+    .page_head .back a span
+    {
+        display: none;
+    }
+
+
+
+    .page_title
+    {
+        padding-left: 34px;
+
+        text-align: left;
+    }
+
+
+
     /*----------------
         Block head
     ----------------*/
@@ -403,6 +434,87 @@
     {
         height: 76px;
         padding: 19px;
+    }
+
+
+
+    /*--------------
+        Checkout
+    --------------*/
+    .checkout .auth
+    {
+        padding: 20px 0 70px;
+    }
+
+
+
+    .checkout .cart_info
+    {
+        padding: 20px 0 48px;
+
+        border-bottom: 1px solid #eee;
+    }
+
+
+
+    /*---------------
+        Cart info
+    ---------------*/
+    .cart_info .product
+    {
+        padding-bottom: 20px;
+    }
+
+    .cart_info .product + .product
+    {
+        margin-top: 20px;
+    }
+
+
+    .cart_info .product .delete_btn,
+    .cart_info .product .favorite_btn
+    {
+        margin-left: 5px;
+    }
+
+
+
+    .cart_info .cart_total
+    {
+        font-size: 16px;
+        font-weight: 400;
+
+        margin-top: 20px;
+    }
+
+
+    .cart_info .cart_total .col
+    {
+        display: none;
+
+        width: 100%;
+    }
+
+    .cart_info .cart_total .col + .col
+    {
+        display: block;
+    }
+
+
+    .cart_info .cart_total .label
+    {
+        font-weight: 400;
+    }
+
+    .cart_info .cart_total .label b
+    {
+        font-weight: 800;
+    }
+
+
+    .cart_info .cart_total .total_price
+    {
+        font-size: 20px;
     }
 
 

@@ -64,6 +64,16 @@
 
 
 
+    /*---------------
+        Page head
+    ---------------*/
+    .page_head .back
+    {
+        left: 20px;
+    }
+
+
+
     /*----------------
         Block head
     ----------------*/
@@ -301,6 +311,63 @@
     {
         height: 120px;
         padding: 31px;
+    }
+
+
+
+    /*--------------
+        Checkout
+    --------------*/
+    .checkout .auth
+    {
+        padding: 48px 40px 60px 0;
+    }
+
+
+
+    .checkout .cart_info
+    {
+        padding: 48px 0 60px 40px;
+    }
+
+
+
+    /*---------------
+        Cart info
+    ---------------*/
+    .cart_info .product
+    {
+        padding-bottom: 24px;
+    }
+
+    .cart_info .product + .product
+    {
+        margin-top: 24px;
+    }
+
+
+    .cart_info .product .thumb + *
+    {
+        width: calc(100% - 135px);
+    }
+
+
+    .cart_info .product .delete_btn,
+    .cart_info .product .favorite_btn
+    {
+        margin-left: 10px;
+    }
+
+
+    .cart_info .cart_total
+    {
+        margin-top: 24px;
+    }
+
+
+    .cart_info .cart_total .col
+    {
+        width: calc(50% - 12px);
     }
 
 

@@ -284,6 +284,39 @@
 
 
 
+    /*--------------
+        Checkout
+    --------------*/
+    .checkout .mob_head
+    {
+        display: flex;
+    }
+
+
+    .checkout .auth
+    {
+        order: 2;
+
+        width: 100%;
+        padding: 40px 60px 70px;
+
+        border: none;
+    }
+
+
+    .checkout .cart_info
+    {
+        display: none;
+
+        width: 100%;
+        margin-left: 0;
+        padding: 40px 60px;
+
+        border: none;
+    }
+
+
+
     /*------------
         Footer
     ------------*/

@@ -454,6 +454,54 @@ document.addEventListener('DOMContentLoaded', function () {
 			autoStart: false,
 		}
 	})
+
+
+	// Product amount
+	$('body').on('click', '.amount .minus', function (e) {
+		e.preventDefault()
+
+		const $parent = $(this).closest('.amount'),
+			$input = $parent.find('.input'),
+			inputVal = parseFloat($input.val()),
+			minimum = parseFloat($input.data('minimum')),
+			step = parseFloat($input.data('step')),
+			unit = $input.data('unit')
+
+		if (inputVal > minimum) $input.val(inputVal - step + unit)
+	})
+
+	$('body').on('click', '.amount .plus', function (e) {
+		e.preventDefault()
+
+		const $parent = $(this).closest('.amount'),
+			$input = $parent.find('.input'),
+			inputVal = parseFloat($input.val()),
+			maximum = parseFloat($input.data('maximum')),
+			step = parseFloat($input.data('step')),
+			unit = $input.data('unit')
+
+		if (inputVal < maximum) $input.val(inputVal + step + unit)
+	})
+
+	$('.amount .input').keydown(function () {
+		const _self = $(this),
+			maximum = parseInt(_self.data('maximum'))
+
+		setTimeout(() => {
+			if (_self.val() == '' || _self.val() == 0) _self.val(parseInt(_self.data('minimum')))
+			if (_self.val() > maximum) _self.val(maximum)
+		})
+	})
+
+
+	// Mob. cart
+	$('.checkout .mob_head .spoler_btn').click(function(e) {
+		e.preventDefault()
+
+		$(this).toggleClass('active')
+
+		$('.checkout .cart_info').slideToggle(300)
+	})
 })
 
 

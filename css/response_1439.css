@@ -53,6 +53,16 @@
     /*---------------
         Page head
     ---------------*/
+    .page_head .back
+    {
+        left: 24px;
+    }
+
+
+
+    /*----------------
+        Block head
+    ----------------*/
     .block_head .link
     {
         font-size: 14px;
