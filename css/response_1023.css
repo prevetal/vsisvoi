@@ -282,15 +282,102 @@
     }
 
 
+
+    .checkout .mob_checkout_total
+    {
+        display: block;
+    }
+
+
+
+    .checkout .notice
+    {
+        display: none;
+    }
+
+    .checkout .notice .text
+    {
+        display: block;
+    }
+
+
+
+    .checkout .orders_cart_info .notice
+    {
+        display: block;
+
+        margin-bottom: 20px;
+    }
+
+
+    .checkout .orders_cart_info .cart_info
+    {
+        display: block;
+
+        padding: 0;
+    }
+
+
+
     .checkout .auth
     {
         order: 2;
 
         width: 100%;
-        padding: 40px 60px 70px;
+        padding: 40px 60px 60px;
 
         border: none;
     }
+
+
+
+    .checkout .orders
+    {
+        margin-top: 20px;
+
+        border-top: 1px solid #eee;
+    }
+
+
+    .checkout .order .head .title
+    {
+        font-size: 18px;
+    }
+
+
+    .checkout .order .head .col
+    {
+        display: none;
+    }
+
+
+    .checkout .order_form
+    {
+        width: 100%;
+        padding: 40px 0 60px;
+
+        border: none;
+    }
+
+
+    .checkout .order_form .form .callback,
+    .checkout .order_form .checkout_total
+    {
+        display: none;
+    }
+
+
+    .checkout .order_form .form .submit
+    {
+        padding-top: 10px;
+    }
+
+
+    .checkout .order_form .agree
+    {
+        margin-top: 22px;
+    }
+
 
 
     .checkout .cart_info

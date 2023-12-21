@@ -324,9 +324,17 @@
     /*--------------
         Checkout
     --------------*/
-    .checkout .auth
+    .checkout .auth,
+    .checkout .order_form
     {
         padding: 48px 40px 60px 0;
+    }
+
+
+
+    .checkout .order .head .col
+    {
+        padding-left: 41px;
     }
 
 

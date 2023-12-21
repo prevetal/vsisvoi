@@ -500,7 +500,53 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		$(this).toggleClass('active')
 
-		$('.checkout .cart_info').slideToggle(300)
+		if($('.checkout .orders_cart_info').length) {
+			$('.checkout .orders_cart_info').slideToggle(300)
+		} else {
+			$('.checkout .cart_info').slideToggle(300)
+		}
+	})
+
+
+	// Phone mask
+	const phoneInputs = document.querySelectorAll('input[type=tel]')
+
+	if (phoneInputs) {
+		phoneInputs.forEach(el => {
+			IMask(el, {
+				mask: '+{38} (000) 000 00 00',
+				lazy: true
+			})
+		})
+	}
+
+
+	// Custom select
+	const selects = document.querySelectorAll('select')
+
+	if (selects) {
+		selects.forEach(el => NiceSelect.bind(el, {
+			placeholder: el.getAttribute('data-placeholder')
+		}))
+	}
+
+
+	// Checkout form
+	$('.checkout .order_form .form .other_recipient_checkbox').click(function(e) {
+		console.log(e)
+		if(e.currentTarget.nodeName == 'LABEL') {
+			let parent = $(this).closest('.section')
+
+			parent.find('.current_recipient').addClass('hide')
+			parent.find('.other_recipient').removeClass('hide')
+		}
+	})
+
+
+	$('.checkout .order_form .form .add_btn').click(function(e) {
+		e.preventDefault()
+
+		$(this).addClass('hide').next().removeClass('hide')
 	})
 })
 

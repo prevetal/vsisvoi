@@ -448,6 +448,48 @@
 
 
 
+    .checkout .delivery_type label div
+    {
+        width: 220px;
+    }
+
+
+
+    .checkout .notice .text
+    {
+        font-size: 12px;
+        line-height: normal;
+    }
+
+
+
+    .checkout .orders_cart_info .order + .order
+    {
+        padding-top: 20px;
+    }
+
+
+
+    .checkout .order .head
+    {
+        padding: 10px 0;
+    }
+
+
+    .checkout .order .head .title
+    {
+        font-size: 15px;
+        line-height: 28px;
+    }
+
+
+    .checkout .order_form
+    {
+        padding-top: 20px;
+    }
+
+
+
     .checkout .cart_info
     {
         padding: 20px 0 48px;
