@@ -1,16 +1,6 @@
 @media print,
 (max-width: 1023px)
 {
-    /*-------------------
-        Global styles
-    -------------------*/
-    .block
-    {
-        margin-bottom: 80px;
-    }
-
-
-
     /*------------
         Header
     ------------*/
@@ -259,8 +249,7 @@
     /*--------------
         Products
     --------------*/
-    .mob_popular_products,
-    .mob_top_products
+    .mob_popular_products
     {
         display: block;
     }

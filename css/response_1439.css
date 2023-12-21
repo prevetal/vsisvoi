@@ -10,12 +10,6 @@
     }
 
 
-    .block
-    {
-        margin-bottom: 100px;
-    }
-
-
 
     /*------------
         Header
@@ -261,6 +255,12 @@
     /*------------------
         Top products
     ------------------*/
+    .top_products .products .controls
+    {
+        margin-left: 60px;
+    }
+
+
     .top_products .products
     {
         width: calc(100% - 640px);

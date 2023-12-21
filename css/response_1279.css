@@ -255,6 +255,12 @@
     /*------------------
         Top products
     ------------------*/
+    .top_products .products .controls
+    {
+        margin-left: auto;
+    }
+
+
     .top_products .products
     {
         width: calc(50% - 10px);
@@ -388,7 +394,8 @@
     }
 
 
-    footer .subscribe
+    footer .subscribe,
+    footer .creator
     {
         margin-right: 0;
     }
