@@ -548,6 +548,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		$(this).addClass('hide').next().removeClass('hide')
 	})
+
+
+	// Menu
+	$('header .categories .sub .main_links .links a').mouseover(function() {
+		let sub = $(this).data('sub'),
+			parent = $(this).closest('.sub')
+
+		parent.find('.main_links .links a').removeClass('active')
+		$(this).addClass('active')
+
+		parent.find('.sub_level2').removeClass('show')
+		parent.find(sub).addClass('show')
+	})
 })
 
 

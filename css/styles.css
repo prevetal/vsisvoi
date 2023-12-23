@@ -722,9 +722,36 @@ header .categories .sub .cont
 }
 
 
+header .categories .sub .sub_level2
+{
+    display: none;
+    align-content: stretch;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: calc(100% - 250px);
+    margin-left: auto;
+    padding-left: 48px;
+
+    border-left: 1px solid #eee;
+}
+
+header .categories .sub .sub_level2.show
+{
+    display: flex;
+}
+
+
 header .categories .sub .col
 {
     padding: 36px 48px 36px 0;
+}
+
+header .categories .sub .col.main_links
+{
+    width: 250px;
+    max-width: 100%;
 }
 
 header .categories .sub .col.big
@@ -788,6 +815,7 @@ header .categories .sub .links a
 {
     display: inline-block;
 
+    transition: color .2s linear;
     vertical-align: top;
     text-decoration: none;
 
@@ -815,6 +843,15 @@ header .categories .sub .links a .sticker
 header .categories .sub .links a .sticker.red
 {
     background: #ce0c36;
+}
+
+
+header .categories .sub .links a:hover,
+header .categories .sub .links a.active
+{
+    font-weight: 500;
+
+    color: #000;
 }
 
 
@@ -883,11 +920,10 @@ header .categories .banners .thumb img
 }
 
 
-header .categories .banners .title
+header .categories .banners .thumb + *
 {
-    font-size: 30px;
     font-weight: 800;
-    line-height: 20px;
+    line-height: 32px;
 
     position: absolute;
     z-index: 3;
@@ -906,6 +942,23 @@ header .categories .banners .title
 
     text-align: center;
     text-transform: uppercase;
+}
+
+
+header .categories .banners .percents
+{
+    font-size: 54px;
+
+    width: 100%;
+    margin-bottom: 22px;
+}
+
+
+header .categories .banners .title
+{
+    font-size: 30px;
+
+    width: 100%;
 }
 
 
