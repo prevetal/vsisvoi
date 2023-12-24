@@ -327,28 +327,40 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 	if (is_touch_device()) {
-		const subMenus = document.querySelectorAll('header .categories .item .sub')
+		const subMenus = $('header .categories .item .sub')
 
 		// Submenu on the touch screens
 		$('header .categories .item > a.sub_link').addClass('touch_link')
 
 		$('header .categories .item > a.sub_link').click(function (e) {
-			const $dropdown = $(this).next()
+			let $dropdown = $(this).next()
 
 			if ($dropdown.css('visibility') === 'hidden') {
 				e.preventDefault()
 
-				subMenus.forEach(el => el.classList.remove('show'))
+				subMenus.removeClass('show')
 				$dropdown.addClass('show')
 
 				BODY.style = 'cursor: pointer;'
 			}
 		})
 
+		// Submenu on the touch screens - level2
+		$('header .categories .sub .links a.sub_link').click(function (e) {
+			e.preventDefault()
+
+			let sub = $(this).data('sub'),
+				parent = $(this).closest('.sub'),
+				subMenusLevel2 = parent.find('.sub_level2')
+
+			subMenusLevel2.removeClass('show')
+			parent.find(sub).addClass('show')
+		})
+
 		// Close the under. menu when clicking outside of it
 		document.addEventListener('click', e => {
 			if ($(e.target).closest('.categories').length === 0) {
-				subMenus.forEach(el => el.classList.remove('show'))
+				subMenus.removeClass('show')
 
 				BODY.style = 'cursor: default;'
 			}

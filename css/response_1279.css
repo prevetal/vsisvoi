@@ -26,7 +26,8 @@
         padding: 24px 30px 24px 0;
     }
 
-    header .categories .sub .col.border
+    header .categories .sub .col.border,
+    header .categories .sub .sub_level2
     {
         padding-left: 30px;
     }
@@ -34,6 +35,18 @@
     header .categories .sub .col.big
     {
         width: calc((100% - 480px) / 2);
+    }
+
+
+    header .categories .sub .col.main_links
+    {
+        width: 220px;
+    }
+
+
+    header .categories .sub .sub_level2
+    {
+        width: calc(100% - 220px);
     }
 
 
@@ -57,9 +70,17 @@
     }
 
 
+    header .categories .banners .percents
+    {
+        font-size: 44px;
+
+        margin-bottom: 16px;
+    }
+
+
     header .categories .banners .title
     {
-        font-size: 22px;
+        font-size: 21px;
     }
 
 
