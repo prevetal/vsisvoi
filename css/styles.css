@@ -970,6 +970,319 @@ header .categories .banners .banner:hover .thumb img
 
 
 /*---------------
+    Mob. menu
+---------------*/
+.mob_menu
+{
+    position: fixed;
+    z-index: 90;
+    top: 0;
+    right: 100%;
+
+    width: 100%;
+    height: 100%;
+    min-height: -moz-available;
+    min-height: -webkit-fill-available;
+    min-height:         fill-available;
+
+    transition: transform .2s linear;
+
+    background: var(--bg);
+}
+
+.mob_menu.show
+{
+    transform: translateX(100%);
+}
+
+
+.mob_menu .close_btn
+{
+    position: absolute;
+    z-index: 9;
+    top: 18px;
+    right: 20px;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 28px;
+    height: 28px;
+
+    color: #1c1b1f;
+    background: var(--bg);
+}
+
+.mob_menu .close_btn .icon
+{
+    display: block;
+
+    width: 28px;
+    height: 28px;
+}
+
+
+.mob_menu .scroll
+{
+    display: flex;
+    overflow: auto;
+    flex-direction: column;
+
+    height: 100%;
+    min-height: -moz-available;
+    min-height: -webkit-fill-available;
+    min-height:         fill-available;
+
+    overscroll-behavior-y: contain;
+}
+
+
+.mob_menu .menu
+{
+    margin-bottom: auto;
+    padding-bottom: 86px;
+}
+
+
+.mob_menu .menu .title
+{
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 20px;
+
+    margin-bottom: 20px;
+    padding: 22px 72px 20px 20px;
+
+    text-transform: uppercase;
+    text-transform: uppercase;
+
+    color: #2b3338;
+}
+
+
+.mob_menu .menu .item > a
+{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 17px;
+
+    position: relative;
+
+    display: block;
+
+    padding: 20px 64px 20px 20px;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: #2b3338;
+}
+
+.mob_menu .menu .item > a.red
+{
+    color: #ce0c36;
+}
+
+
+.mob_menu .menu .item > a .icon
+{
+    position: absolute;
+    top: 0;
+    right: 20px;
+    bottom: 0;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 24px;
+    height: 24px;
+    margin: auto 0;
+
+    color: #c8cbce;
+}
+
+
+.mob_menu .menu .item > a .icon svg
+{
+    display: block;
+
+    width: 24px;
+    height: 24px;
+}
+
+.mob_menu .menu .item > a .icon svg + svg
+{
+    display: none;
+}
+
+
+.mob_menu .menu .item > a .sticker
+{
+    font-size: 10px;
+    font-weight: 700;
+    font-style: normal;
+
+    position: relative;
+    top: -2px;
+
+    margin-left: 4px;
+    padding: 1px 3px;
+
+    color: #fff;
+    background: #000;
+}
+
+.mob_menu .menu .item > a .sticker.red
+{
+    background: #ce0c36;
+}
+
+
+.mob_menu .menu .item > a.active
+{
+    background: #f6f6f6;
+}
+
+
+.mob_menu .menu .item > a.active .icon svg
+{
+    display: none;
+}
+
+.mob_menu .menu .item > a.active .icon svg + svg
+{
+    display: block;
+}
+
+
+.mob_menu .menu .sub
+{
+    display: none;
+}
+
+
+.mob_menu .menu .sub .item > a
+{
+    padding-left: 40px;
+}
+
+
+.mob_menu .menu .sub.level2 .item > a
+{
+    padding-left: 60px;
+
+    text-transform: none;
+}
+
+
+.mob_menu .banner
+{
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    margin-top: auto;
+    padding: 27px 20px 41px;
+
+    text-align: center;
+    text-decoration: none;
+
+    color: #fff;
+    background: #ad3f36;
+}
+
+
+.mob_menu .banner .title
+{
+    font-size: 20px;
+    font-weight: 800;
+
+    position: relative;
+    z-index: 3;
+
+    text-transform: uppercase;
+}
+
+
+.mob_menu .banner .desc
+{
+    position: relative;
+    z-index: 3;
+
+    margin-top: 10px;
+}
+
+
+.mob_menu .banner img
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+
+.mob_menu .links > *
+{
+    border-top: 1px solid #c8cbce;
+}
+
+
+.mob_menu .links a
+{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 17px;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding: 15px 20px;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: #333;
+}
+
+
+.mob_menu .links a .icon
+{
+    display: block;
+
+    width: 24px;
+    height: 24px;
+
+    color: #797f83;
+}
+
+
+.mob_menu .links a span
+{
+    width: calc(100% - 40px);
+}
+
+
+
+/*---------------
     Page head
 ---------------*/
 .page_head

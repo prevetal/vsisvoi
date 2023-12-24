@@ -317,12 +317,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 	// Mob. menu
-	$('header .mob_menu_btn').click(e => {
+	$('header .mob_menu_btn, .mob_menu .close_btn').click(e => {
 		e.preventDefault()
 
-		// $('header .mob_menu_btn').addClass('active')
-		// $('body').addClass('menu_open')
-		// $('.mob_menu').addClass('show')
+		$('body').toggleClass('menu_open')
+		$('.mob_menu').toggleClass('show')
 	})
 
 
@@ -366,6 +365,14 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 		})
 	}
+
+
+	// Mob. menu
+	$('.mob_menu .menu .item > a.sub_link').click(function (e) {
+		e.preventDefault()
+
+		$(this).toggleClass('active').next().slideToggle(300)
+	})
 
 
 	// Mob. footer
