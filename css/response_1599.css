@@ -44,15 +44,4 @@
     {
         height: 753px;
     }
-
-
-
-    /*--------------
-        Products
-    --------------*/
-    .products .product .favorite_btn
-    {
-        right: 16px;
-        bottom: 16px;
-    }
 }

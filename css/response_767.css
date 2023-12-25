@@ -693,4 +693,14 @@
         width: 100%;
         margin-top: 30px;
     }
+
+
+
+    /*------------------
+        PopUp - Cart
+    ------------------*/
+    #cart_modal
+    {
+        padding: 20px;
+    }
 }
