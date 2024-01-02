@@ -658,6 +658,28 @@ document.addEventListener('DOMContentLoaded', function () {
 		parent.find('.sub_level2').removeClass('show')
 		parent.find(sub).addClass('show')
 	})
+
+
+	// Filter
+	$('.filter .name').click(function(e) {
+		e.preventDefault()
+
+		$(this).toggleClass('active').next('.data').slideToggle(300)
+	})
+
+	$('.filter .spoler_btn').click(function(e) {
+		e.preventDefault()
+
+		$(this).toggleClass('active').closest('.data').find('.hide').slideToggle(300)
+	})
+
+
+	// Spoler in text
+	$('.text_block .spoler_btn').click(function(e) {
+		e.preventDefault()
+
+		$(this).toggleClass('active').closest('.text_block').find('.hide').slideToggle(300)
+	})
 })
 
 
