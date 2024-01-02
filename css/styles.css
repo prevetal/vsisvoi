@@ -4554,43 +4554,7 @@ footer .creator span
 }
 
 
-#cart_modal .cart_info .order + .order
-{
-    padding-top: 16px;
-
-    border-top: 1px solid #eee;
-}
-
-
-#cart_modal .cart_info .order .title
-{
-    font-size: 12px;
-    font-weight: 800;
-
-    display: none;
-
-    margin-bottom: 15px;
-
-    text-transform: uppercase;
-}
-
-
-#cart_modal .cart_info .order .title span
-{
-    display: inline-block;
-
-    vertical-align: top;
-}
-
-#cart_modal .cart_info .order .title span:before
-{
-    content: counter(number);
-    counter-increment: number;
-}
-
-
-#cart_modal .cart_info,
-#cart_modal .cart_info .product:last-child
+#cart_modal .cart_info
 {
     border: none;
 }
@@ -4631,11 +4595,22 @@ footer .creator span
 }
 
 
-#cart_modal .cart_info .product .delete_btn
+#cart_modal .cart_info .product .btns
 {
     position: absolute;
-    right: -10px;
-    bottom: -8px;
+    right: -12px;
+    bottom: -6px;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+#cart_modal .cart_info .product .btns > * + *
+{
+    margin-left: 7px;
 }
 
 
