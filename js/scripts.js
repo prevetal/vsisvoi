@@ -664,14 +664,55 @@ document.addEventListener('DOMContentLoaded', function () {
 	$('.filter .name').click(function(e) {
 		e.preventDefault()
 
-		$(this).toggleClass('active').next('.data').slideToggle(300)
+		$(this).toggleClass('active').next('.data').slideToggle(300, () => $('.filter').trigger('sticky_kit:recalc'))
 	})
 
 	$('.filter .spoler_btn').click(function(e) {
 		e.preventDefault()
 
-		$(this).toggleClass('active').closest('.data').find('.hide').slideToggle(300)
+		$(this).toggleClass('active').closest('.data').find('.hide').slideToggle(300, () => $('.filter').trigger('sticky_kit:recalc'))
 	})
+
+	$('.reset_filter_btn').click(function() {
+		$priceRange.reset()
+
+		$('.filter form').get(0).reset()
+
+		$('.products_head .filter_selected .row').html('')
+	})
+
+
+	$priceRange = $('.filter #price_range').ionRangeSlider({
+		type: 'double',
+		min: 0,
+		max: 10000,
+		from: 760,
+		to: 6400,
+		step: 10,
+		onChange: data => {
+			$('.filter .price_range input.from').val(data.from.toLocaleString())
+			$('.filter .price_range input.to').val(data.to.toLocaleString())
+		},
+		onUpdate: data => {
+			$('.filter .price_range input.from').val(data.from.toLocaleString())
+			$('.filter .price_range input.to').val(data.to.toLocaleString())
+		}
+	}).data('ionRangeSlider')
+
+	$('.filter .price_range .input').keyup(function () {
+		$priceRange.update({
+			from: parseInt($('.filter .price_range input.from').val().replace(/\s/g, '')),
+			to: parseInt($('.filter .price_range input.to').val().replace(/\s/g, ''))
+		})
+	})
+
+
+	// Sticky element
+	if (window.outerWidth > 1023) {
+		$('.filter').stick_in_parent({
+			offset_top: $('header').outerHeight() + $('.products_head').outerHeight() + 20
+		})
+	}
 
 
 	// Spoler in text

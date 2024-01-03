@@ -32,6 +32,7 @@
 		<link rel="stylesheet" href="css/swiper-bundle.min.css" async>
 		<link rel="stylesheet" href="css/swiper.css" async>
 		<link rel="stylesheet" href="css/fancybox.css" async>
+		<link rel="stylesheet" href="css/ion.rangeSlider.css" async>
 		<link rel="stylesheet" href="css/styles.css" async>
 
 		<link rel="stylesheet" href="css/response_1599.css" media="print, (max-width: 1599px)" async>
@@ -2592,6 +2593,66 @@
 									<span>етнічний одяг</span>
 									<svg class="icon"><use xlink:href="images/sprite.svg#ic_close"></use></svg>
 								</button></div>
+
+								<div><button class="btn">
+									<span>одяг</span>
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_close"></use></svg>
+								</button></div>
+
+								<div><button class="btn">
+									<span>етнічний одяг</span>
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_close"></use></svg>
+								</button></div>
+
+								<div><button class="btn">
+									<span>одяг</span>
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_close"></use></svg>
+								</button></div>
+
+								<div><button class="btn">
+									<span>етнічний одяг</span>
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_close"></use></svg>
+								</button></div>
+
+								<div><button class="btn">
+									<span>одяг</span>
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_close"></use></svg>
+								</button></div>
+
+								<div><button class="btn">
+									<span>етнічний одяг</span>
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_close"></use></svg>
+								</button></div>
+
+								<div><button class="btn">
+									<span>одяг</span>
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_close"></use></svg>
+								</button></div>
+
+								<div><button class="btn">
+									<span>етнічний одяг</span>
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_close"></use></svg>
+								</button></div>
+
+								<div><button class="btn">
+									<span>одяг</span>
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_close"></use></svg>
+								</button></div>
+
+								<div><button class="btn">
+									<span>етнічний одяг</span>
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_close"></use></svg>
+								</button></div>
+
+								<div><button class="btn">
+									<span>одяг</span>
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_close"></use></svg>
+								</button></div>
+
+								<div><button class="btn">
+									<span>етнічний одяг</span>
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_close"></use></svg>
+								</button></div>
 							</div>
 						</div>
 
@@ -2600,10 +2661,11 @@
 
 							<div class="field">
 								<select name="">
-									<option value="1" selected>По 36 товарів</option>
-									<option value="2">По 36 товарів</option>
-									<option value="3">По 36 товарів</option>
-									<option value="4">По 36 товарів</option>
+									<option value="1" selected>Популярні</option>
+									<option value="2">Новинки</option>
+									<option value="3">Від меншої ціни</option>
+									<option value="4">Від більшої ціни</option>
+									<option value="5">Максимальна знижка</option>
 								</select>
 
 								<div class="arr"></div>
@@ -2621,7 +2683,7 @@
 				<section class="content_flex block">
 					<div class="cont row">
 						<aside>
-							<div class="filter">
+							<div class="filter sticky">
 								<form action="" class="form">
 									<div class="section">
 										<div class="name active">категорії <span class="icon"></span></div>
@@ -2703,7 +2765,21 @@
 										<div class="name active">ціна <span class="icon"></span></div>
 
 										<div class="data range price_range" style="display: block;">
+											<div class="fields">
+												<div class="field">
+													<div class="label">Від</div>
+													<input type="text" name="" value="760" class="input from">
+												</div>
 
+												<div class="sep">—</div>
+
+												<div class="field">
+													<div class="label">До</div>
+													<input type="text" name="" value="6 400" class="input to">
+												</div>
+											</div>
+
+											<input type="hidden" id="price_range" name="price_range" value="">
 										</div>
 									</div>
 
@@ -4027,8 +4103,10 @@
 		<script src="js/functions.js"></script>
 		<script src="js/swiper-bundle.min.js"></script>
 		<script src="js/fancybox.js"></script>
-		<script src="js/imask.js"></script>
 		<script src="js/nice-select2.js"></script>
+		<script src="js/imask.js"></script>
+		<script src="js/sticky-kit.min.js"></script>
+		<script src="js/ion.rangeSlider.min.js"></script>
 		<script src="js/scripts.js"></script>
 	</body>
 </html>
