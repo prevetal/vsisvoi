@@ -1,6 +1,46 @@
 @media print,
 (max-width: 1023px)
 {
+    /*-------------------
+        Global styles
+    -------------------*/
+    :root
+    {
+        --sidebar_width: 100%;
+    }
+
+
+    .content_flex .content
+    {
+        width: 100%;
+    }
+
+
+
+    /*----------------
+        Pagination
+    ----------------*/
+    .pagination
+    {
+        margin-top: 48px;
+    }
+
+
+    .pagination .load_more_btn
+    {
+        width: 100%;
+        margin: 0;
+    }
+
+
+    .pagination .count,
+    .pagination .links
+    {
+        display: none;
+    }
+
+
+
     /*------------
         Header
     ------------*/
@@ -41,6 +81,112 @@
     header .categories
     {
         display: none;
+    }
+
+
+
+    /*---------------
+        Page head
+    ---------------*/
+    .page_head.mob_hide
+    {
+        display: none;
+    }
+
+
+
+    /*------------
+        Filter
+    ------------*/
+    .filter
+    {
+        position: fixed;
+        z-index: 20;
+        top: 0;
+        left: 0;
+
+        display: none;
+        overflow: auto;
+
+        width: 100%;
+        height: 100%;
+        min-height: -moz-available;
+        min-height: -webkit-fill-available;
+        min-height:         fill-available;
+        padding-top: 46px;
+        padding-bottom: 84px;
+
+        background: var(--bg);
+
+        overscroll-behavior-y: contain;
+    }
+
+
+    .filter .mob_head
+    {
+        display: flex;
+    }
+
+
+    .filter .filter_selected,
+    .filter .mob_back
+    {
+        display: block;
+    }
+
+
+    .filter .section + .section
+    {
+        margin-top: 0;
+
+        border-top: 1px solid #c8cbce;
+    }
+
+
+    .filter .name
+    {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        min-height: 58px;
+        padding: 15px 20px;
+    }
+
+
+    .filter .name .icon
+    {
+        top: 0;
+
+        width: 20px;
+        height: 20px;
+        margin-left: auto;
+
+        color: #c8cbce;
+    }
+
+    .filter .name .icon:before
+    {
+        height: 2px;
+    }
+
+    .filter .name .icon:after
+    {
+        width: 2px;
+    }
+
+
+    .filter .data
+    {
+        padding: 0 20px 20px;
+    }
+
+
+    .filter .search
+    {
+        width: 100%;
     }
 
 
@@ -389,6 +535,75 @@
         padding: 40px 60px;
 
         border: none;
+    }
+
+
+
+    /*-------------------
+        Products head
+    -------------------*/
+    .products_head
+    {
+        display: none;
+    }
+
+
+
+    /*------------------------
+        Mob. products head
+    ------------------------*/
+    .mob_products_head
+    {
+        display: block;
+    }
+
+
+
+    /*--------------
+        Products
+    --------------*/
+    .products .row > *,
+    .content .products .row > *
+    {
+        width: calc(33.333% - 20px);
+    }
+
+    .content .products .row > *.big,
+    .content .products .row > *.big
+    {
+        width: calc(66.666% - 20px);
+    }
+
+
+    .products .row .banner.big_h a div
+    {
+        padding-bottom: 155.9%;
+    }
+
+
+
+    /*-------------------
+        Category text
+    -------------------*/
+    .category_text
+    {
+        display: none;
+    }
+
+
+    /*----------------------
+        Category banners
+    ----------------------*/
+    .category_banners
+    {
+        margin-bottom: 0;
+    }
+
+
+    .category_banners .banner .title
+    {
+        font-size: 18px;
+        line-height: 24px;
     }
 
 

@@ -17,6 +17,16 @@
 
 
 
+    /*----------------
+        Pagination
+    ----------------*/
+    .pagination
+    {
+        margin-top: 40px;
+    }
+
+
+
     /*------------
         Header
     ------------*/
@@ -305,6 +315,35 @@
     }
 
 
+    .products .row > *,
+    .content .products .row > *
+    {
+        width: calc(50% - 20px);
+    }
+
+    .products .row > *.big,
+    .content .products .row > *.big
+    {
+        width: calc(100% - 20px);
+    }
+
+
+    .products .row .banner.big_h
+    {
+        display: none;
+    }
+
+    .products .row .banner.big_h a
+    {
+        padding-bottom: 155.9%;
+    }
+
+    .products .row .banner.big_h + * + *
+    {
+        margin-left: 20px;
+    }
+
+
     .products .product .favorite_mes
     {
         font-size: 14px;
@@ -557,6 +596,61 @@
     .cart_info .cart_total .total_price
     {
         font-size: 20px;
+    }
+
+
+    /*----------------------
+        Category banners
+    ----------------------*/
+    .category_banners .row
+    {
+        display: block;
+        overflow: auto;
+
+        width: calc(100% + 40px);
+        margin: 0 -20px;
+        padding: 0 20px;
+
+        white-space: nowrap;
+
+        scroll-padding: 0 20px;
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent !important;
+        scrollbar-width: thin !important;
+    }
+
+    .category_banners .row::-webkit-scrollbar
+    {
+        display: none !important;
+
+        width: 0 !important;
+        height: 0 !important;
+
+        background-color: transparent !important;
+    }
+
+    .category_banners .row::-webkit-scrollbar-thumb
+    {
+        background-color: transparent !important;
+    }
+
+
+    .category_banners .row > *
+    {
+        display: inline-block;
+
+        width: 180px;
+        max-width: none;
+        margin: 0;
+
+        vertical-align: top;
+
+        scroll-snap-align: start;
+    }
+
+    .category_banners .row > * + *
+    {
+        margin-left: 16px;
     }
 
 

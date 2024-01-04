@@ -11,6 +11,16 @@
 
 
 
+    /*----------------
+        Pagination
+    ----------------*/
+    .pagination
+    {
+        margin-top: 60px;
+    }
+
+
+
     /*------------
         Header
     ------------*/
@@ -75,6 +85,13 @@
 
 
 
+    .breadcrumbs
+    {
+        padding: 16px 0;
+    }
+
+
+
     /*----------------
         Block head
     ----------------*/
@@ -86,10 +103,6 @@
     }
 
 
-
-    /*----------------
-        Block head
-    ----------------*/
     .block_head .all_link
     {
         margin-left: 60px;
@@ -98,6 +111,59 @@
     .block_head .all_link:after
     {
         margin-left: 60px;
+    }
+
+
+
+    /*----------------
+        Typography
+    ----------------*/
+    .text_block > *,
+    .text_block .hide > *
+    {
+        margin-bottom: 20px;
+    }
+
+
+    .text_block .spoler_btn
+    {
+        height: 20px;
+    }
+
+
+
+    /*------------
+        Filter
+    ------------*/
+    .filter .field + .field,
+    .filter * + .hide
+    {
+        margin-top: 16px;
+    }
+
+
+    .filter .data
+    {
+        padding-top: 12px;
+    }
+
+
+    .filter .search
+    {
+        margin-bottom: 24px;
+    }
+
+
+    .filter .spoler_btn
+    {
+        height: 20px;
+        margin-top: 16px;
+    }
+
+
+    .irs
+    {
+        margin-top: 20px;
     }
 
 
@@ -242,6 +308,17 @@
     }
 
 
+    .products .row
+    {
+        margin-bottom: -40px;
+    }
+
+    .products .row > *
+    {
+        margin-bottom: 40px;
+    }
+
+
     .products .product .thumb
     {
         margin-bottom: 20px;
@@ -343,6 +420,68 @@
     {
         height: 140px;
         padding: 39px;
+    }
+
+
+
+    /*-------------------
+        Products head
+    -------------------*/
+    .products_head
+    {
+        margin-bottom: 24px;
+    }
+
+
+    .products_head .reset_filter_btn .icon
+    {
+        margin-right: 8px;
+    }
+
+
+    .products_head .filter_selected
+    {
+        max-width: calc(100% - 534px);
+        margin-left: 24px;
+    }
+
+
+    .products_head .filter_selected .btn
+    {
+        font-size: 10px;
+    }
+
+
+    .products_head .label
+    {
+        margin-right: 12px;
+    }
+
+
+    .products_head .limit
+    {
+        margin-left: 24px;
+    }
+
+    .products_head .limit > * + *
+    {
+        margin-left: 16px;
+    }
+
+
+    /*----------------------
+        Category banners
+    ----------------------*/
+    .category_banners
+    {
+        margin: 20px 0;
+    }
+
+
+    .category_banners .banner .title
+    {
+        font-size: 26px;
+        line-height: 30px;
     }
 
 

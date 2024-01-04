@@ -104,6 +104,22 @@
     }
 
 
+    .breadcrumbs
+    {
+        font-size: 10px;
+    }
+
+
+
+    /*------------
+        Filter
+    ------------*/
+    .filter .form .checkbox
+    {
+        font-size: 13px;
+    }
+
+
 
     /*----------------
         Block head
@@ -251,6 +267,50 @@
     .products .controls:after
     {
         margin-left: 48px;
+    }
+
+
+    .products .row > *
+    {
+        width: calc(25% - 20px);
+    }
+
+    .content .products .row > *.big
+    {
+        width: calc(50% - 20px);
+    }
+
+
+    .content .products .row > *
+    {
+        width: calc(33.333% - 20px);
+    }
+
+    .content .products .row > *.big
+    {
+        width: calc(66.666% - 20px);
+    }
+
+
+    .products .row .banner.big_h + * + *
+    {
+        margin-left: calc(66.666% + 20px);
+    }
+
+    .products .row .banner.big_h + * + * + *
+    {
+        margin-left: 20px;
+    }
+
+
+    .products .row .banner.big a
+    {
+        padding-bottom: 62.5%;
+    }
+
+    .products .row .banner.big_h a div
+    {
+        padding-bottom: 155.33%;
     }
 
 
@@ -413,6 +473,39 @@
     .cart_info .cart_total .col
     {
         width: calc(50% - 12px);
+    }
+
+
+
+    /*-------------------
+        Products head
+    -------------------*/
+    .products_head .filter_selected .row
+    {
+        margin-left: -12px;
+    }
+
+    .products_head .filter_selected .row > *
+    {
+        margin-left: 12px;
+    }
+
+
+    .products_head .filter_selected .btn .icon
+    {
+        width: 16px;
+        height: 16px;
+        margin-left: 4px;
+    }
+
+
+    /*----------------------
+        Category banners
+    ----------------------*/
+    .category_banners .banner .title
+    {
+        font-size: 22px;
+        line-height: 26px;
     }
 
 

@@ -661,6 +661,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 	// Filter
+	$('.mob_products_head .filter_btn').click(function(e) {
+		e.preventDefault()
+
+		$('.filter').fadeIn(300)
+
+		$('body').addClass('menu_open')
+	})
+
+	$('.filter .close_btn').click(function(e) {
+		e.preventDefault()
+
+		$('.filter').fadeOut(200)
+
+		$('body').removeClass('menu_open')
+	})
+
+
 	$('.filter .name').click(function(e) {
 		e.preventDefault()
 
@@ -678,7 +695,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		$('.filter form').get(0).reset()
 
-		$('.products_head .filter_selected .row').html('')
+		$('.filter_selected').html('')
 	})
 
 
