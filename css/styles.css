@@ -1515,9 +1515,15 @@ header .categories .banners .banner:hover .thumb img
 
 .breadcrumbs a
 {
+    transition: color .2s linear;
     text-decoration: none;
 
     color: currentColor;
+}
+
+.breadcrumbs a:hover
+{
+    color: #c18c43;
 }
 
 
