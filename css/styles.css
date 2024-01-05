@@ -5880,6 +5880,680 @@ aside
 
 
 
+/*-----------
+    Stock
+-----------*/
+.stock .exp
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+    margin-bottom: 15px;
+
+    text-align: right;
+
+    color: #c18c43;
+}
+
+
+.stock .exp .timer
+{
+    margin-left: 4px;
+}
+
+
+.stock .banner
+{
+    position: relative;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+    min-height: 330px;
+    padding: 65px 52px 55px;
+
+    text-decoration: none;
+
+    color: #fff;
+    background: #ddd;
+}
+
+
+.stock .banner .img
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.stock .banner .data
+{
+    position: relative;
+    z-index: 3;
+
+    width: 585px;
+    max-width: 100%;
+}
+
+
+.stock .banner .title
+{
+    font-size: 50px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+}
+
+
+.stock .banner .title2
+{
+    font-size: 35px;
+    font-weight: 800;
+
+    margin-top: 8px;
+
+    text-transform: uppercase;
+}
+
+
+.stock .banner .desc
+{
+    font-size: 23px;
+    font-weight: 800;
+
+    margin-top: 12px;
+
+    text-transform: uppercase;
+}
+
+
+.stock .banner .btn
+{
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 24px;
+
+    display: inline-block;
+
+    width: 280px;
+    max-width: 100%;
+    height: 44px;
+    margin-top: 30px;
+    padding: 10px;
+
+    transition: background .2s linear;
+    text-align: center;
+    vertical-align: top;
+    text-transform: uppercase;
+
+    background: #2b3338;
+}
+
+
+.stock .banner:hover .btn
+{
+    background: #000;
+}
+
+
+
+/*-------------
+    Reviews
+-------------*/
+.reviews .block_head
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    margin-bottom: 15px;
+}
+
+
+.reviews .total_rating
+{
+    position: relative;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    margin-left: 70px;
+}
+
+.reviews .total_rating:after
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+
+    display: block;
+
+    width: 100vw;
+    height: 1px;
+    margin: auto 0 auto 70px;
+
+    content: '';
+
+    background: #c8cbce;
+}
+
+
+.reviews .total_rating .val
+{
+    font-size: 14px;
+    font-weight: 500;
+
+    text-transform: uppercase;
+
+    color: #2b3338;
+}
+
+
+.reviews .total_rating .icon
+{
+    position: relative;
+    top: -1px;
+
+    display: block;
+
+    width: 12px;
+    height: 12px;
+    margin-left: 8px;
+
+    color: #c18c43;
+}
+
+
+.reviews .total_rating .count
+{
+    font-size: 10px;
+    font-weight: 500;
+
+    margin-left: 8px;
+}
+
+
+.reviews .head
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    margin-bottom: 34px;
+}
+
+
+.reviews .head .label
+{
+    font-size: 12px;
+
+    margin-right: 16px;
+
+    text-transform: uppercase;
+
+    color: #515151;
+}
+
+
+.reviews .head .field
+{
+    position: relative;
+}
+
+
+.reviews .head select
+{
+    display: none;
+}
+
+
+.reviews .head .nice-select
+{
+    position: relative;
+
+    display: block;
+
+    cursor: pointer;
+}
+
+
+.reviews .head .nice-select .current
+{
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 26px;
+
+    display: block;
+    overflow: hidden;
+
+    height: 28px;
+    padding: 0 31px 0 9px;
+
+    cursor: pointer;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    color: #444;
+    border: 1px solid #c8cbce;
+}
+
+
+.reviews .head .nice-select-dropdown
+{
+    position: absolute;
+    z-index: 9;
+    top: 100%;
+    left: 0;
+
+    visibility: hidden;
+    overflow: hidden;
+
+    width: 100%;
+    margin-top: -1px;
+    padding: 4px 0;
+
+    transition: .2s linear;
+
+    opacity: 0;
+    border: 1px solid #c8cbce;
+    background: var(--bg);
+}
+
+.reviews .head .nice-select.open .nice-select-dropdown
+{
+    visibility: visible;
+
+    opacity: 1;
+}
+
+
+.reviews .head .nice-select .list
+{
+    overflow: auto;
+
+    max-height: 180px;
+}
+
+.reviews .head .nice-select .list::-webkit-scrollbar
+{
+    width: 4px;
+    height: 4px;
+}
+
+
+.reviews .head .nice-select .list .option
+{
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 26px;
+
+    display: block;
+
+    padding: 0 9px;
+
+    list-style-type: none;
+
+    cursor: pointer;
+    transition: color .2s linear;
+    white-space: nowrap;
+
+    color: #444;
+}
+
+.reviews .head .nice-select .list .option:hover
+{
+    color: #c18c43;
+}
+
+.reviews .head .nice-select .list .option.selected,
+.reviews .head .nice-select .list .option:empty
+{
+    display: none;
+}
+
+
+.reviews .head .nice-select + .arr
+{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    bottom: 0;
+
+    display: block;
+
+    width: 8px;
+    height: 7px;
+    margin: auto 0;
+
+    transition: transform .2s linear;
+    pointer-events: none;
+
+    border-top: 7px solid #c8cbce;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+
+.reviews .head .nice-select.open + .arr
+{
+    transform: rotate(180deg);
+}
+
+
+.reviews .head .sort
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    align-self: flex-end;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    margin-left: auto;
+}
+
+
+.reviews .head .sort .field
+{
+    width: 146px;
+}
+
+
+
+.reviews .hide
+{
+    display: none;
+
+    margin-top: 40px;
+}
+
+
+.reviews .review
+{
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.reviews .review + .review
+{
+    margin-top: 40px;
+}
+
+
+.reviews .review .info
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 333px;
+    max-width: 100%;
+}
+
+
+.reviews .review .rating
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.reviews .review .rating > * + *
+{
+    margin-left: 6px;
+}
+
+
+.reviews .review .rating .icon
+{
+    display: block;
+
+    width: 12px;
+    height: 12px;
+
+    color: #c8cbce;
+}
+
+.reviews .review .rating .icon.active
+{
+    color: #c18c43;
+}
+
+
+.reviews .review .author
+{
+    font-size: 14px;
+    font-weight: 800;
+
+    margin-left: auto;
+
+    color: #797f83;
+}
+
+
+.reviews .review .date
+{
+    font-size: 14px;
+
+    width: 100%;
+    margin-top: 20px;
+
+    color: #797f83;
+}
+
+
+.reviews .review .data
+{
+    width: calc(100% - 533px);
+}
+
+
+.reviews .review .text
+{
+    font-size: 15px;
+    line-height: 22px;
+
+    color: #515151;
+}
+
+
+.reviews .review .reply
+{
+    margin-top: 15px;
+}
+
+
+.reviews .review .reply .btn
+{
+    font-size: 10px;
+    font-weight: 500;
+
+    color: #c18c43;
+}
+
+.reviews .review .reply .btn:hover
+{
+    text-decoration: underline;
+}
+
+
+.reviews .review .likes
+{
+    font-size: 10px;
+    font-weight: 500;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 100px;
+}
+
+
+.reviews .review .likes .btn
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+
+.reviews .review .likes .icon
+{
+    display: block;
+
+    width: 24px;
+    height: 24px;
+    margin-right: 6px;
+
+    transition: color .2s linear;
+
+    color: #797f83;
+}
+
+
+.reviews .review .likes .btn:hover .icon
+{
+    color: #c18c43;
+}
+
+
+.reviews .review .answer
+{
+    margin-top: 20px;
+    padding-left: 30px;
+}
+
+.reviews .review .answer .author
+{
+    margin: 0 0 15px;
+}
+
+
+.reviews .spoler_btn
+{
+    font-size: 15px;
+    line-height: 22px;
+
+    position: relative;
+
+    height: 28px;
+    margin-top: 40px;
+    padding-right: 12px;
+
+    color: #c18c43;
+}
+
+.reviews .spoler_btn:after
+{
+    position: absolute;
+    top: 2px;
+    right: 0;
+    bottom: 0;
+
+    display: block;
+
+    width: 6px;
+    height: 5px;
+    margin: auto 0;
+
+    content: '';
+    transition: transform .2s linear;
+    pointer-events: none;
+
+    border-top: 5px solid currentColor;
+    border-right: 3px solid transparent;
+    border-left: 3px solid transparent;
+}
+
+
+.reviews .spoler_btn span + span,
+.reviews .spoler_btn.active span
+{
+    display: none;
+}
+
+
+.reviews .spoler_btn:hover
+{
+    text-decoration: underline;
+}
+
+
+.reviews .spoler_btn.active span + span
+{
+    display: inline;
+}
+
+.reviews .spoler_btn.active:after
+{
+    transform: rotate(180deg);
+}
+
+
+
+.reviews .add_review_btn
+{
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 24px;
+
+    display: block;
+
+    width: 210px;
+    max-width: 100%;
+    height: 44px;
+    margin: 40px auto 0;
+    padding: 10px;
+
+    transition: background .2s linear;
+    text-transform: uppercase;
+
+    color: #fff;
+    background: #2b3338;
+}
+
+
+.reviews .add_review_btn:hover
+{
+    background: #000;
+}
+
+
+
 /*------------
     Footer
 ------------*/

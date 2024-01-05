@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					slidesPerView: 4
 				},
 				1280: {
-					slidesPerView: 6,
+					slidesPerView: el.classList.contains('big')  ? 4 : 6,
 					spaceBetween: 20
 				}
 			},
@@ -737,6 +737,14 @@ document.addEventListener('DOMContentLoaded', function () {
 		e.preventDefault()
 
 		$(this).toggleClass('active').closest('.text_block').find('.hide').slideToggle(300)
+	})
+
+
+	// Reviews
+	$('.reviews .spoler_btn').click(function(e) {
+		e.preventDefault()
+
+		$(this).toggleClass('active').closest('.reviews').find('.list .hide').slideToggle(300)
 	})
 })
 
