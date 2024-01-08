@@ -2577,7 +2577,7 @@
 				</section>
 
 
-				<section class="product_info">
+				<section class="product_info block">
 					<div class="cont small row">
 						<div class="images">
 							<div class="thumbs">
@@ -2607,9 +2607,9 @@
 								<div class="count">1 відгук</div>
 							</div>
 
-							<div class="info">
+							<div class="options">
 								<div class="price">
-									<div class="new">6 490 ₴</div>
+									<div class="red">6 490 ₴</div>
 									<div class="old">6 490 ₴</div>
 								</div>
 
@@ -2624,27 +2624,27 @@
 									<div class="vals">
 										<label data-name="Темно сірий">
 											<input type="radio" name="color" checked>
-											<div><img data-src="images/tmp/filter_color1.png" alt="" class="lazyload"></div>
+											<div><img data-src="images/tmp/filter_color2.png" alt="" class="lazyload"></div>
 										</label>
 
 										<label data-name="Темно сірий 2">
-											<input type="radio" name="color" checked>
+											<input type="radio" name="color">
 											<div><img data-src="images/tmp/filter_color1.png" alt="" class="lazyload"></div>
 										</label>
 
 										<label data-name="Темно сірий 3">
-											<input type="radio" name="color" checked>
-											<div><img data-src="images/tmp/filter_color1.png" alt="" class="lazyload"></div>
+											<input type="radio" name="color">
+											<div><img data-src="images/tmp/filter_color8.png" alt="" class="lazyload"></div>
 										</label>
 
 										<label data-name="Темно сірий 4">
-											<input type="radio" name="color" checked>
-											<div><img data-src="images/tmp/filter_color1.png" alt="" class="lazyload"></div>
+											<input type="radio" name="color">
+											<div><img data-src="images/tmp/filter_color3.png" alt="" class="border lazyload"></div>
 										</label>
 
 										<label data-name="Темно сірий 5">
-											<input type="radio" name="color" checked>
-											<div><img data-src="images/tmp/filter_color1.png" alt="" class="lazyload"></div>
+											<input type="radio" name="color">
+											<div><img data-src="images/tmp/filter_color9.png" alt="" class="lazyload"></div>
 										</label>
 									</div>
 								</div>
@@ -2664,37 +2664,47 @@
 									<div class="vals">
 										<label>
 											<input type="radio" name="size">
-											<div>XS</div>
+											<div class="size">XS</div>
 										</label>
 
 										<label>
 											<input type="radio" name="size">
-											<div>S</div>
+											<div class="size last">S</div>
+											<div class="count">1</div>
 										</label>
 
 										<label>
 											<input type="radio" name="size">
-											<div>M</div>
+											<div class="size">M</div>
 										</label>
 
 										<label>
 											<input type="radio" name="size">
-											<div>L</div>
+											<div class="size">L</div>
 										</label>
 
 										<label>
 											<input type="radio" name="size">
-											<div>XL</div>
+											<div class="size">XL</div>
 										</label>
 
-										<label>
+										<label class="disabled">
 											<input type="radio" name="size" disabled>
-											<div>XXL</div>
+
+											<div class="size">XXL</div>
+
+											<div class="notify">
+												<button class="btn">
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_email"></use></svg>
+												</button>
+
+												<div class="exp">Повідомити коли буде в наявності</div>
+											</div>
 										</label>
 
 										<label>
 											<input type="radio" name="size">
-											<div>2XL</div>
+											<div class="size">2XL</div>
 										</label>
 									</div>
 								</div>
@@ -2717,7 +2727,50 @@
 									</div>
 
 									<div class="data">
+										<div class="description">
+											<div class="label">Інформація про товар</div>
 
+											<div class="val">
+												<p>Трикотажний жіночий гольф DASTI чорного кольору - це стильний та зручний одяг. Тканина має гарну еластичність та рубчикову текстуру, що додає йому гарного вигляду та приємна на дотик. Це дозволяє гольфу лягати по фігурі, підкреслюючи її форми та забезпечуючи комфорт під час носіння.</p>
+											</div>
+										</div>
+
+										<div class="articul">
+											<div class="label">Артикул</div>
+
+											<div class="val">038-042-0483</div>
+										</div>
+
+										<div class="features">
+											<div class="label">Деталі</div>
+
+											<div class="items">
+												<div>
+													<div class="name">Довжина виробу:</div>
+													<div class="val">коротка</div>
+												</div>
+
+												<div>
+													<div class="name">Довжина рукава:</div>
+													<div class="val">довгий</div>
+												</div>
+
+												<div>
+													<div class="name">Фасон:</div>
+													<div class="val">гольф</div>
+												</div>
+
+												<div>
+													<div class="name">Колір:</div>
+													<div class="val">чорний</div>
+												</div>
+
+												<div>
+													<div class="name">Склад:</div>
+													<div class="val">23% Віскоза, 7% Еластан, 70% Поліестер</div>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 
@@ -2729,7 +2782,52 @@
 									</div>
 
 									<div class="data">
+										<div class="shops">
+											<div class="title">
+												<svg class="icon"><use xlink:href="images/sprite.svg#ic_shops"></use></svg>
+												<span>В магазинах Всі.Свої</span>
+											</div>
 
+											<div class="shop">
+												<div>
+													<div class="label">Адреса</div>
+
+													<div class="val">
+														<div>м. Київ, Lavina Mall, вул. Берковецька, 6Д</div>
+
+														<div><button class="map_btn">Показати на мапі</button></div>
+													</div>
+												</div>
+
+												<div>
+													<div class="label">Графік роботи</div>
+
+													<div class="val">
+														<div>щодня з 10:00 до 21:00</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="shop">
+												<div>
+													<div class="label">Адреса</div>
+
+													<div class="val">
+														<div>м. Київ, вул. Хрещатик, 27</div>
+
+														<div><button class="map_btn">Показати на мапі</button></div>
+													</div>
+												</div>
+
+												<div>
+													<div class="label">Графік роботи</div>
+
+													<div class="val">
+														<div>щодня з 10:00 до 21:00</div>
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 
@@ -2741,7 +2839,45 @@
 									</div>
 
 									<div class="data">
+										<div class="seller">
+											<div>
+												<div class="label">Продавець</div>
 
+												<div class="val">
+													<img data-src="images/tmp/seller_img.png" alt="" class="logo lazyload">
+
+													<div>Короткий опис бренду, якщо він існує.</div>
+												</div>
+											</div>
+
+											<div>
+												<div class="label">ФОП Марченко Тетяна Юріївна</div>
+											</div>
+
+											<div>
+												<div class="label">Контакти</div>
+
+												<div class="val">
+													<div>
+														<div class="small_label">Адреси:</div>
+
+														<div>Україна, 01034, м. Київ, вул. Прорізна, буд. 21, кв. 10</div>
+													</div>
+
+													<div>
+														<div class="small_label">Графік роботи:</div>
+
+														<div>Пн – Пт: 11:00 – 19:00 Сб – Нд: Вихідний</div>
+													</div>
+
+													<div>
+														<div class="small_label">Телефон:</div>
+
+														<div>+38 073 880 26 28</div>
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 
@@ -2753,7 +2889,100 @@
 									</div>
 
 									<div class="data">
+										<div class="delivery">
+											<div class="label">Доставка</div>
 
+											<div class="method">
+												<div class="name">
+													<img data-src="images/ic_delivery_method1.svg" alt="" class="icon lazyload">
+													<span>Самовивіз в магазині Всі.Свої</span>
+												</div>
+
+												<div class="info">
+													<div>
+														<div class="label">Ціна</div>
+														<div class="val"><b>безкоштовно</b></div>
+													</div>
+
+													<div>
+														<div class="label">Графік роботи</div>
+														<div class="val">щодня з 10:00 до 21:00</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="method">
+												<div class="name">
+													<img data-src="images/ic_delivery_method2.svg" alt="" class="icon lazyload">
+													<span>Кур'єром служби доставки</span>
+												</div>
+
+												<div class="notice"><div>
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_notice"></use></svg>
+													<span>тільки за умови оплати карткою на сайті</span>
+												</div></div>
+
+												<div class="info">
+													<div>
+														<div class="label">Ціна</div>
+														<div class="val">за тарифами перевізника</div>
+													</div>
+
+													<div>
+														<div class="label">Відправка</div>
+														<div class="val">протягом 48-72 годин</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="method">
+												<div class="name">
+													<img data-src="images/ic_delivery_method3.png" alt="" class="icon lazyload">
+													<span>До відділення Нової Пошти</span>
+												</div>
+
+												<div class="info">
+													<div>
+														<div class="label">Ціна</div>
+														<div class="val">за тарифами перевізника</div>
+													</div>
+
+													<div>
+														<div class="label">Відправка</div>
+														<div class="val">протягом 48-72 годин</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="method">
+												<div class="name">
+													<img data-src="images/ic_delivery_method4.png" alt="" class="icon lazyload">
+													<span>До відділення Укрпошти</span>
+												</div>
+
+												<div class="info">
+													<div>
+														<div class="label">Ціна</div>
+														<div class="val">за тарифами перевізника</div>
+													</div>
+
+													<div>
+														<div class="label">Відправка</div>
+														<div class="val">протягом 48-72 годин</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="return">
+											<div class="label">Повернення</div>
+
+											<div class="text_block">
+												<p><b>Товар, що з будь-яких причин вам не підійшов, може буде повернений впродовж 14 днів з моменту покупки.</b></p>
+
+												<p>Але за умови збереження його товарного вигляду, накладної, упаковки та етикеток. Звертаємо увагу, що відповідно до законодавства України поверненню не підлягають: корсетні товари, парфюмерно-косметичні вироби, пір'яно-пухові вироби, дитячі м'які та гумові іграшки, зубні щітки, гребінці, рукавички, ювелірні вироби з дорогоцінних металів та бурштину, білизна, панчішно-шкарпеткові вироби та товари в аерозольній упаковці.</p>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
