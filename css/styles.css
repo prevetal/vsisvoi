@@ -535,9 +535,14 @@ button
 
 .accordion_item .head .title
 {
+    font-family: var(--font_family);
     font-size: 14px;
     font-weight: 500;
+    line-height: normal;
 
+    padding: 0;
+
+    letter-spacing: 0;
     text-transform: uppercase;
 
     color: #333;
@@ -732,6 +737,12 @@ header .btns
     margin-left: auto;
 }
 
+
+
+header .account
+{
+    min-height: 0;
+}
 
 
 header .account .btn
@@ -1036,12 +1047,18 @@ header .categories .sub .col.border
 
 header .categories .sub .col .title
 {
+    font-family: var(--font_family);
     font-size: 14px;
     font-weight: 500;
+    line-height: normal;
 
     margin-bottom: 20px;
+    padding: 0;
 
+    letter-spacing: 0;
     text-transform: uppercase;
+
+    color: currentColor;
 }
 
 
@@ -1079,6 +1096,8 @@ header .categories .sub .links > * + *
 
 header .categories .sub .links a
 {
+    font-size: inherit;
+
     display: inline-block;
 
     transition: color .2s linear;
@@ -1123,8 +1142,11 @@ header .categories .sub .links a.active
 
 header .categories .banners
 {
+    display: block;
+
     width: 701px;
     max-width: 100%;
+    max-height: none;
     margin-left: auto;
     padding: 30px 0;
 }
@@ -1222,9 +1244,17 @@ header .categories .banners .percents
 
 header .categories .banners .title
 {
+    font-family: var(--font_family);
     font-size: 30px;
+    line-height: normal;
 
     width: 100%;
+    padding: 0;
+
+    letter-spacing: 0;
+    text-transform: uppercase;
+
+    color: currentColor;
 }
 
 
@@ -1315,6 +1345,7 @@ header .categories .banners .banner:hover .thumb img
 
 .mob_menu .menu .title
 {
+    font-family: var(--font_family);
     font-size: 26px;
     font-weight: 500;
     line-height: 20px;
@@ -1322,7 +1353,7 @@ header .categories .banners .banner:hover .thumb img
     margin-bottom: 20px;
     padding: 22px 72px 20px 20px;
 
-    text-transform: uppercase;
+    letter-spacing: 0;
     text-transform: uppercase;
 
     color: #2b3338;
@@ -1467,13 +1498,20 @@ header .categories .banners .banner:hover .thumb img
 
 .mob_menu .banner .title
 {
+    font-family: var(--font_family);
     font-size: 20px;
     font-weight: 800;
+    line-height: normal;
 
     position: relative;
     z-index: 3;
 
+    padding: 0;
+
+    letter-spacing: 0;
     text-transform: uppercase;
+
+    color: currentColor;
 }
 
 
@@ -2149,11 +2187,15 @@ aside
 
 .block_head .title
 {
+    font-family: var(--font_family);
     font-size: var(--font_size_title);
     font-weight: 800;
 
     display: block;
 
+    padding: 0;
+
+    letter-spacing: 0;
     text-transform: uppercase;
 
     color: #2b3338;
@@ -2515,11 +2557,28 @@ aside
 
 .form .nice-select
 {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: normal;
+
     position: relative;
 
     display: block;
+    float: none;
+
+    height: auto;
+    padding: 0;
 
     cursor: pointer;
+
+    border: none;
+    border-radius: 0;
+    background: none;
+}
+
+.form .nice-select:after
+{
+    display: none;
 }
 
 
@@ -2559,15 +2618,20 @@ aside
     margin-top: -1px;
 
     transition: .2s linear;
+    transform: none;
 
     opacity: 0;
     border: 1px solid var(--form_border_color);
+    border-radius: 0;
     background: var(--bg);
+    box-shadow: none;
 }
 
 .form .nice-select.open .nice-select-dropdown
 {
     visibility: visible;
+
+    transform: none;
 
     opacity: 1;
 }
@@ -2578,6 +2642,8 @@ aside
     overflow: auto;
 
     max-height: 180px;
+
+    border-radius: 0;
 }
 
 .form .nice-select .list::-webkit-scrollbar
@@ -2589,6 +2655,9 @@ aside
 
 .form .nice-select .list .option
 {
+    font-weight: inherit;
+    line-height: normal;
+
     display: block;
 
     padding: 6px 9px;
@@ -2596,7 +2665,16 @@ aside
     list-style-type: none;
 
     cursor: pointer;
+    transition: color .2s linear;
     white-space: nowrap;
+
+    background: none;
+}
+
+.form .nice-select .list .option:hover
+{
+    color: #c18c43;
+    background: none;
 }
 
 .form .nice-select .list .option:empty
@@ -2858,10 +2936,17 @@ aside
 
 .main_slider .title
 {
+    font-family: var(--font_family);
     font-size: 50px;
     font-weight: 800;
+    line-height: normal;
 
+    padding: 0;
+
+    letter-spacing: 0;
     text-transform: uppercase;
+
+    color: currentColor;
 }
 
 
@@ -2880,10 +2965,14 @@ aside
 
 .main_slider .bottom .title
 {
+    font-family: var(--font_family);
     font-size: 30px;
     font-weight: 700;
     line-height: 24px;
 
+    padding: 0;
+
+    letter-spacing: 0;
     text-transform: uppercase;
 
     color: #2b3338;
@@ -3121,10 +3210,17 @@ aside
 
 .content_banner .banner .title
 {
+    font-family: var(--font_family);
     font-size: 50px;
     font-weight: 800;
+    line-height: normal;
 
+    padding: 0;
+
+    letter-spacing: 0;
     text-transform: uppercase;
+
+    color: currentColor;
 }
 
 
@@ -3465,10 +3561,17 @@ aside
 
 .products_banners .banner .title
 {
+    font-family: var(--font_family);
     font-size: 30px;
     font-weight: 800;
+    line-height: normal;
 
+    padding: 0;
+
+    letter-spacing: 0;
     text-transform: uppercase;
+
+    color: currentColor;
 }
 
 
@@ -3621,6 +3724,10 @@ aside
 
 .products .product
 {
+    display: block;
+
+    padding: 0;
+
     text-align: center;
 }
 
@@ -3977,7 +4084,15 @@ aside
 
 .checkout .mob_head .title
 {
+    font-family: var(--font_family);
     font-size: 16px;
+    font-weight: inherit;
+    line-height: normal;
+
+    padding: 0;
+
+    letter-spacing: 0;
+    text-transform: none;
 
     color: #333;
 }
@@ -4144,11 +4259,15 @@ aside
 
 .checkout .auth .title
 {
+    font-family: var(--font_family);
     font-size: 14px;
     font-weight: 500;
+    line-height: normal;
+
+    padding: 0;
 
     text-align: center;
-    text-align: center;
+    letter-spacing: 0;
     text-transform: uppercase;
 
     color: #2b3338;
@@ -4342,12 +4461,18 @@ aside
 
 .checkout .orders_cart_info .order .title
 {
+    font-family: var(--font_family);
     font-size: 12px;
     font-weight: 800;
+    line-height: normal;
 
     margin-bottom: 15px;
+    padding: 0;
 
+    letter-spacing: 0;
     text-transform: uppercase;
+
+    color: currentColor;
 }
 
 
@@ -4409,11 +4534,15 @@ aside
 
 .checkout .order .head .title
 {
+    font-family: var(--font_family);
     font-size: 20px;
     font-weight: 800;
+    line-height: normal;
 
     margin: 0;
+    padding: 0;
 
+    letter-spacing: 0;
     text-transform: uppercase;
 
     color: #515151;
@@ -4530,6 +4659,13 @@ aside
 }
 
 
+.checkout .order_form .section
+{
+    padding: 0;
+
+    border: none;
+}
+
 .checkout .order_form .section + .section
 {
     margin-top: 40px;
@@ -4538,12 +4674,16 @@ aside
 
 .checkout .order_form .section .title
 {
+    font-family: var(--font_family);
     font-size: 14px;
     font-weight: 500;
+    line-height: normal;
 
     margin-bottom: 25px;
+    padding: 0;
 
     text-align: center;
+    letter-spacing: 0;
     text-transform: uppercase;
 
     color: #2b3338;
@@ -4806,7 +4946,9 @@ aside
     flex-wrap: wrap;
     justify-content: space-between;
 
-    padding-bottom: 30px;
+    padding: 0 0 30px;
+
+    text-align: left;
 
     border-bottom: 1px solid #eee;
 }
@@ -5344,6 +5486,7 @@ aside
 
 .category_banners .banner .title
 {
+    font-family: var(--font_family);
     font-size: 30px;
     font-weight: 800;
     line-height: 32px;
@@ -5363,7 +5506,10 @@ aside
     height: 100%;
     padding: 20px;
 
+    letter-spacing: 0;
     text-transform: uppercase;
+
+    color: currentColor;
 }
 
 
@@ -5417,11 +5563,28 @@ aside
 
 .products_head .nice-select
 {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: normal;
+
     position: relative;
 
     display: block;
+    float: none;
+
+    height: auto;
+    padding: 0;
 
     cursor: pointer;
+
+    border: none;
+    border-radius: 0;
+    background: none;
+}
+
+.products_head .nice-select:after
+{
+    display: none;
 }
 
 
@@ -5461,15 +5624,20 @@ aside
     padding: 4px 0;
 
     transition: .2s linear;
+    transform: none;
 
     opacity: 0;
     border: 1px solid #c8cbce;
+    border-radius: 0;
     background: var(--bg);
+    box-shadow: none;
 }
 
 .products_head .nice-select.open .nice-select-dropdown
 {
     visibility: visible;
+
+    transform: none;
 
     opacity: 1;
 }
@@ -5480,6 +5648,8 @@ aside
     overflow: auto;
 
     max-height: 180px;
+
+    border-radius: 0;
 }
 
 .products_head .nice-select .list::-webkit-scrollbar
@@ -5506,11 +5676,13 @@ aside
     white-space: nowrap;
 
     color: #444;
+    background: none;
 }
 
 .products_head .nice-select .list .option:hover
 {
     color: #c18c43;
+    background: none;
 }
 
 .products_head .nice-select .list .option.selected,
@@ -5837,11 +6009,28 @@ aside
 
 .mob_products_head .nice-select
 {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: normal;
+
     position: relative;
 
     display: block;
+    float: none;
+
+    height: auto;
+    padding: 0;
 
     cursor: pointer;
+
+    border: none;
+    border-radius: 0;
+    background: none;
+}
+
+.mob_products_head .nice-select:after
+{
+    display: none;
 }
 
 
@@ -5881,24 +6070,39 @@ aside
     padding: 0;
 
     transition: .2s linear;
+    transform: none;
 
     opacity: 0;
     border: 1px solid #c8cbce;
     border-top: none;
+    border-radius: 0;
     background: var(--bg);
+    box-shadow: none;
 }
 
 .mob_products_head .nice-select.open .nice-select-dropdown
 {
     visibility: visible;
 
+    transform: none;
+
     opacity: 1;
+}
+
+
+.mob_products_head .nice-select .list
+{
+    max-height: none;
+
+    border-radius: 0;
 }
 
 
 .mob_products_head .nice-select .list .option
 {
     font-size: 12px;
+    font-weight: inherit;
+    line-height: normal;
 
     display: block;
 
@@ -5907,11 +6111,19 @@ aside
     list-style-type: none;
 
     cursor: pointer;
+    transition: color .2s linear;
     white-space: nowrap;
     text-transform: uppercase;
 
     color: #444;
     border-top: 1px solid #c8cbce;
+    background: none;
+}
+
+.mob_products_head .nice-select .list .option:hover
+{
+    color: #c18c43;
+    background: none;
 }
 
 .mob_products_head .nice-select .list .option.selected,
@@ -6036,10 +6248,17 @@ aside
 
 .stock .banner .title
 {
+    font-family: var(--font_family);
     font-size: 50px;
     font-weight: 800;
+    line-height: normal;
 
+    padding: 0;
+
+    letter-spacing: 0;
     text-transform: uppercase;
+
+    color: currentColor;
 }
 
 
@@ -7397,9 +7616,11 @@ aside
 
 .product_info .shops .title
 {
+    font-family: var(--font_family);
     font-size: 15px;
     font-weight: 600;
     line-height: 22px;
+    line-height: normal;
 
     display: flex;
     align-content: center;
@@ -7408,6 +7629,11 @@ aside
     justify-content: space-between;
 
     margin-bottom: 6px;
+    padding: 0;
+
+    letter-spacing: 0;
+
+    color: currentColor;
 }
 
 
@@ -7797,6 +8023,7 @@ footer .logo img
 {
     display: block;
 
+    width: auto;
     max-width: 100%;
 }
 
@@ -7829,10 +8056,15 @@ footer .pyament_methods img
 
 footer .title
 {
+    font-family: var(--font_family);
+    font-size: var(--font_size);
     line-height: 17px;
 
     position: relative;
 
+    padding: 0;
+
+    letter-spacing: 0;
     text-transform: uppercase;
     pointer-events: none;
 
@@ -7976,12 +8208,15 @@ footer .subscribe .message.show
 
 footer .subscribe .message .title
 {
+    font-family: var(--font_family);
     font-size: var(--font_size_title);
     font-weight: 800;
     line-height: normal;
 
     width: 100%;
+    padding: 0;
 
+    letter-spacing: 0;
     text-transform: uppercase;
 
     color: #2b3338;
@@ -8038,9 +8273,14 @@ footer .creator span
 
 .modal > .title
 {
+    font-family: var(--font_family);
     font-size: 20px;
     font-weight: 800;
+    line-height: normal;
 
+    padding: 0;
+
+    letter-spacing: 0;
     text-transform: uppercase;
 
     color: #515151;

@@ -184,7 +184,7 @@
 
     .main_slider .bottom .links a
     {
-        width: 220px;
+        width: 208px;
     }
 
 
@@ -530,5 +530,15 @@
     footer .creator
     {
         margin-right: 0;
+    }
+
+
+
+    /*------------------
+        PopUp - Cart
+    ------------------*/
+    #cart_modal
+    {
+        width: 100%;
     }
 }

@@ -301,6 +301,12 @@
     /*--------------------
         Content banner
     --------------------*/
+    .content_banner.no_m
+    {
+        margin: 0;
+    }
+
+
     .content_banner .cont
     {
         padding: 0;
