@@ -272,11 +272,23 @@ document.addEventListener('DOMContentLoaded', function () {
 					if(swiper.slides.length <= swiper.params.slidesPerView) {
 						$(swiper.el).find('.controls').addClass('hide')
 					}
+
+					setTimeout(() => {
+						$(swiper.el).find('> .swiper-button-next, > .swiper-button-prev').css(
+							'top', $(swiper.el).find('.thumb').outerHeight() * 0.5
+						)
+					})
 				},
 				resize: swiper => {
 					swiper.slides.length <= swiper.params.slidesPerView
 						? $(swiper.el).find('.controls').addClass('hide')
 						: $(swiper.el).find('.controls').removeClass('hide')
+
+					setTimeout(() => {
+						$(swiper.el).find('> .swiper-button-next, > .swiper-button-prev').css(
+							'top', $(swiper.el).find('.thumb').outerHeight() * 0.5
+						)
+					})
 				}
 			}
 		}
@@ -745,6 +757,17 @@ document.addEventListener('DOMContentLoaded', function () {
 			lazy: true,
 			slidesPerView: 'auto',
 			direction: 'vertical',
+			on: {
+				activeIndexChange: swiper => {
+					swiper.activeIndex
+						? $(swiper.el).addClass('pad_top')
+						: $(swiper.el).removeClass('pad_top')
+
+					swiper.activeIndex === (swiper.slides.length - $(swiper.el).find('.swiper-slide-fully-visible').length)
+						? $(swiper.el).addClass('in_and')
+						: $(swiper.el).removeClass('in_and')
+				}
+			}
 		})
 
 		new Swiper('.product_info .big .swiper', {
@@ -770,6 +793,17 @@ document.addEventListener('DOMContentLoaded', function () {
 		$(this).toggleClass('active')
 
 		$('.product_info .sizes .vals .hide').slideToggle(300)
+	})
+
+
+	// Product page - stock
+	$('.stock .timer').each(function () {
+		$(this).countdown($(this).data('date'), function (event) {
+			$(this).find('.days span').text(event.strftime('%D'))
+			$(this).find('.hours').text(event.strftime('%H'))
+			$(this).find('.minutes').text(event.strftime('%M'))
+			$(this).find('.seconds').text(event.strftime('%S'))
+		})
 	})
 
 
