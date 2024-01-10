@@ -1,7 +1,6 @@
 WW = window.innerWidth || document.clientWidth || document.getElementsByTagName('body')[0].clientWidth
 WH = window.innerHeight || document.clientHeight || document.getElementsByTagName('body')[0].clientHeight
 BODY = document.getElementsByTagName('body')[0]
-OVERLAY = document.querySelector('.overlay')
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -29,13 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev'
 			},
-			preloadImages: false,
-			lazy: {
-				enabled: true,
-				checkInView: true,
-				loadOnTransitionStart: true,
-				loadPrevNext: true
-			},
+			lazy: true,
 			autoplay: {
 				delay: 4000,
 				disableOnInteraction: false
@@ -61,13 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev'
 			},
-			preloadImages: false,
-			lazy: {
-				enabled: true,
-				checkInView: true,
-				loadOnTransitionStart: true,
-				loadPrevNext: true
-			},
+			lazy: true,
 			pagination: {
 				el: '.swiper-pagination',
 				dynamicBullets: true,
@@ -113,13 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev'
 			},
-			preloadImages: false,
-			lazy: {
-				enabled: true,
-				checkInView: true,
-				loadOnTransitionStart: true,
-				loadPrevNext: true
-			},
+			lazy: true,
 			pagination: {
 				el: '.swiper-pagination',
 				dynamicBullets: true,
@@ -137,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			on: {
 				activeIndexChange: swiper => {
 					let direction = '',
-						parent = $(swiper.$el).closest('.popular_products'),
+						parent = $(swiper.el).closest('.popular_products'),
 						nextBanner
 
 					swiper.activeIndex > swiper.previousIndex
@@ -189,13 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev'
 			},
-			preloadImages: false,
-			lazy: {
-				enabled: true,
-				checkInView: true,
-				loadOnTransitionStart: true,
-				loadPrevNext: true
-			},
+			lazy: true,
 			pagination: {
 				el: '.swiper-pagination',
 				dynamicBullets: true,
@@ -213,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			on: {
 				activeIndexChange: swiper => {
 					let direction = '',
-						parent = $(swiper.$el).closest('.top_products'),
+						parent = $(swiper.el).closest('.top_products'),
 						nextBanner
 
 					swiper.activeIndex > swiper.previousIndex
@@ -265,13 +240,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev'
 			},
-			preloadImages: false,
-			lazy: {
-				enabled: true,
-				checkInView: true,
-				loadOnTransitionStart: true,
-				loadPrevNext: true
-			},
+			lazy: true,
 			pagination: {
 				el: '.swiper-pagination',
 				dynamicBullets: true,
@@ -301,13 +270,13 @@ document.addEventListener('DOMContentLoaded', function () {
 			on: {
 				init: swiper => {
 					if(swiper.slides.length <= swiper.params.slidesPerView) {
-						$(swiper.$el).find('.controls').addClass('hide')
+						$(swiper.el).find('.controls').addClass('hide')
 					}
 				},
 				resize: swiper => {
 					swiper.slides.length <= swiper.params.slidesPerView
-						? $(swiper.$el).find('.controls').addClass('hide')
-						: $(swiper.$el).find('.controls').removeClass('hide')
+						? $(swiper.el).find('.controls').addClass('hide')
+						: $(swiper.el).find('.controls').removeClass('hide')
 				}
 			}
 		}
@@ -460,13 +429,7 @@ document.addEventListener('DOMContentLoaded', function () {
 										nextEl: '.swiper-button-next',
 										prevEl: '.swiper-button-prev'
 									},
-									preloadImages: false,
-									lazy: {
-										enabled: true,
-										checkInView: true,
-										loadOnTransitionStart: true,
-										loadPrevNext: true
-									},
+									lazy: true,
 									pagination: {
 										el: '.swiper-pagination',
 										dynamicBullets: true,
@@ -496,13 +459,13 @@ document.addEventListener('DOMContentLoaded', function () {
 									on: {
 										init: swiper => {
 											if(swiper.slides.length <= swiper.params.slidesPerView) {
-												$(swiper.$el).find('.controls').addClass('hide')
+												$(swiper.el).find('.controls').addClass('hide')
 											}
 										},
 										resize: swiper => {
 											swiper.slides.length <= swiper.params.slidesPerView
-												? $(swiper.$el).find('.controls').addClass('hide')
-												: $(swiper.$el).find('.controls').removeClass('hide')
+												? $(swiper.el).find('.controls').addClass('hide')
+												: $(swiper.el).find('.controls').removeClass('hide')
 										}
 									}
 								}
@@ -764,6 +727,106 @@ document.addEventListener('DOMContentLoaded', function () {
 			item.addClass('active').find('.data').slideDown(300)
 		}
 	})
+
+
+	// Product page - images
+	if ($('.product_info .images').length) {
+		let productThumbs = new Swiper('.product_info .thumbs .swiper', {
+			loop: false,
+			speed: 500,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			spaceBetween: 10,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			},
+			lazy: true,
+			slidesPerView: 'auto',
+			direction: 'vertical',
+		})
+
+		new Swiper('.product_info .big .swiper', {
+			loop: false,
+			speed: 500,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			spaceBetween: 10,
+			slidesPerView: 2,
+			lazy: true,
+			thumbs: {
+				swiper: productThumbs
+			}
+		})
+	}
+
+
+	// Product page - sizes
+	$('.product_info .sizes .spoler_btn').click(function(e) {
+		e.preventDefault()
+
+		$(this).toggleClass('active')
+
+		$('.product_info .sizes .vals .hide').slideToggle(300)
+	})
+
+
+	// Smooth scrolling to anchor
+	const scrollBtns = document.querySelectorAll('.scroll_btn')
+
+	if (scrollBtns) {
+		scrollBtns.forEach(element => {
+			element.addEventListener('click', e => {
+				e.preventDefault()
+
+				let anchor = element.getAttribute('data-anchor')
+
+				document.getElementById(anchor).scrollIntoView({
+					behavior: 'smooth',
+					block: 'start'
+				}, 1000)
+			})
+		})
+	}
+
+
+	// Availability notification
+	$('#noti_availability_modal .form').submit(function(e) {
+		e.preventDefault()
+
+		// Close previous modal
+		Fancybox.close()
+
+		// Show success modal
+		Fancybox.show([{
+			src: '#noti_availability_success_modal',
+			type: 'inline'
+		}])
+	})
+
+
+	// Side modals
+	$('.side_modal_btn').click(function(e) {
+		e.preventDefault()
+
+		let modal = $(this).data('modal')
+
+		$('#' + modal).addClass('show')
+		$('.overlay').fadeIn(300)
+
+		$('body').toggleClass('menu_open')
+	})
+
+	$('.overlay, .side_modal .close_btn').click(function(e) {
+		e.preventDefault()
+
+		$(this).closest('.side_modal').removeClass('show')
+		$('.overlay').fadeOut(200)
+
+		$('body').toggleClass('menu_open')
+	})
 })
 
 
@@ -800,6 +863,17 @@ window.addEventListener('resize', function () {
 		}
 	}
 })
+
+
+
+// Table sticky column
+function tableScrollTracking(el) {
+	console.log(el)
+
+	el.scrollLeft > 0
+		? $(el).find('table').addClass('stuck')
+		: $(el).find('table').removeClass('stuck')
+}
 
 
 
