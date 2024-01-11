@@ -10,6 +10,17 @@
     }
 
 
+    .swiper > .swiper-button-prev
+    {
+        left: -24px;
+    }
+
+    .swiper > .swiper-button-next
+    {
+        right: -24px;
+    }
+
+
 
     /*----------------
         Pagination
@@ -108,7 +119,9 @@
         margin-left: 60px;
     }
 
-    .block_head .all_link:after
+
+    .block_head .all_link:after,
+    .block_head .title.line:after
     {
         margin-left: 60px;
     }
@@ -469,6 +482,7 @@
     }
 
 
+
     /*----------------------
         Category banners
     ----------------------*/
@@ -482,6 +496,96 @@
     {
         font-size: 26px;
         line-height: 30px;
+    }
+
+
+
+    /*------------------
+        Product info
+    ------------------*/
+    .product_info .images
+    {
+        padding-left: 94px;
+    }
+
+
+
+    /*-----------
+        Stock
+    -----------*/
+    .stock .banner
+    {
+        min-height: 300px;
+        padding: 48px 40px;
+    }
+
+
+    .stock .banner .data
+    {
+        width: 508px;
+    }
+
+
+    .stock .banner .title
+    {
+        font-size: 44px;
+    }
+
+
+    .stock .banner .title2
+    {
+        font-size: 30px;
+    }
+
+
+    .stock .banner .desc
+    {
+        font-size: 20px;
+    }
+
+
+    .stock .banner .btn
+    {
+        width: 260px;
+    }
+
+
+
+    /*-------------
+        Reviews
+    -------------*/
+    .reviews .total_rating
+    {
+        margin-left: 60px;
+    }
+
+    .reviews .total_rating:after
+    {
+        margin-left: 60px;
+    }
+
+
+    .reviews .head
+    {
+        margin-bottom: 30px;
+    }
+
+
+    .reviews .review .info
+    {
+        width: 300px;
+    }
+
+
+    .reviews .review .date
+    {
+        margin-top: 16px;
+    }
+
+
+    .reviews .review .data
+    {
+        width: calc(100% - 500px);
     }
 
 

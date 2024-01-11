@@ -17,6 +17,17 @@
     }
 
 
+    .swiper > .swiper-button-prev
+    {
+        right: -20px;
+    }
+
+    .swiper > .swiper-button-next
+    {
+        right: -20px;
+    }
+
+
 
     /*--------------
         Fancybox
@@ -506,6 +517,98 @@
     {
         font-size: 22px;
         line-height: 26px;
+    }
+
+
+
+    /*-----------
+        Stock
+    -----------*/
+    .stock .exp
+    {
+        margin-bottom: 12px;
+    }
+
+
+    .stock .banner
+    {
+        min-height: 260px;
+        padding: 40px 30px;
+    }
+
+
+    .stock .banner .data
+    {
+        width: 440px;
+    }
+
+
+    .stock .banner .title
+    {
+        font-size: 38px;
+    }
+
+
+    .stock .banner .title2
+    {
+        font-size: 24px;
+    }
+
+
+    .stock .banner .desc
+    {
+        font-size: 18px;
+    }
+
+
+    .stock .banner .btn
+    {
+        width: 240px;
+    }
+
+
+
+    /*-------------
+        Reviews
+    -------------*/
+    .reviews .total_rating
+    {
+        margin-left: 48px;
+    }
+
+    .reviews .total_rating:after
+    {
+        margin-left: 48px;
+    }
+
+
+    .reviews .head
+    {
+        margin-bottom: 24px;
+    }
+
+
+    .reviews .review .info
+    {
+        width: 260px;
+    }
+
+
+    .reviews .review .date
+    {
+        margin-top: 12px;
+    }
+
+
+    .reviews .review .data
+    {
+        width: calc(100% - 440px);
+    }
+
+
+    .reviews .review .answer
+    {
+        padding-left: 24px;
     }
 
 

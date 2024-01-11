@@ -388,6 +388,9 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Brands
 	initBrandsSliders()
 
+	// Reviews
+	initReviewsSliders()
+
 
 	// Fancybox
 	Fancybox.defaults.autoFocus = false
@@ -777,10 +780,21 @@ document.addEventListener('DOMContentLoaded', function () {
 			slideActiveClass: 'active',
 			slideVisibleClass: 'visible',
 			spaceBetween: 10,
-			slidesPerView: 2,
 			lazy: true,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			},
 			thumbs: {
 				swiper: productThumbs
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 1
+				},
+				1280: {
+					slidesPerView: 2
+				}
 			}
 		})
 	}
@@ -878,6 +892,9 @@ window.addEventListener('resize', function () {
 		// Brands
 		initBrandsSliders()
 
+		// Reviews
+		initReviewsSliders()
+
 
 		// Mob. version
 		if (!fakeResize) {
@@ -902,8 +919,6 @@ window.addEventListener('resize', function () {
 
 // Table sticky column
 function tableScrollTracking(el) {
-	console.log(el)
-
 	el.scrollLeft > 0
 		? $(el).find('table').addClass('stuck')
 		: $(el).find('table').removeClass('stuck')
@@ -943,5 +958,55 @@ function initBrandsSliders() {
 
 		$('.brands .swiper-wrapper').addClass('row').removeClass('swiper-wrapper')
 		$('.brands .row > *').removeClass('swiper-slide')
+	}
+}
+
+
+
+// Reviews
+reviewsSliders = []
+
+function initReviewsSliders() {
+	if ($(window).width() < 1024) {
+		if ($('.reviews .list').length) {
+			$('.reviews .list > *').addClass('swiper-slide')
+			$('.reviews .list').addClass('swiper-wrapper').removeClass('list')
+
+			$('.reviews .swiper').each(function (i) {
+				$(this).addClass('reviews_s' + i)
+
+				let options = {
+					loop: true,
+					speed: 500,
+					watchSlidesProgress: true,
+					slideActiveClass: 'active',
+					slideVisibleClass: 'visible',
+					slidesPerView: 1,
+					spaceBetween: 20,
+					autoHeight: true,
+					navigation: {
+						nextEl: '.swiper-button-next',
+						prevEl: '.swiper-button-prev'
+					},
+					pagination: {
+						el: '.swiper-pagination',
+						dynamicBullets: true,
+						clickable: true,
+						renderBullet: (index, className) => {
+							return '<div class="' + className + '"><span>' + (index + 1) + '</span></div>'
+						}
+					},
+				}
+
+				reviewsSliders.push(new Swiper('.reviews_s' + i, options))
+			})
+		}
+	} else {
+		reviewsSliders.forEach(element => element.destroy(true, true))
+
+		reviewsSliders = []
+
+		$('.reviews .swiper-wrapper').addClass('list').removeClass('swiper-wrapper')
+		$('.reviews .list > *').removeClass('swiper-slide')
 	}
 }

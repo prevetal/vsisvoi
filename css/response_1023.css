@@ -614,6 +614,179 @@
 
 
 
+    /*------------------
+        Product info
+    ------------------*/
+    .product_info
+    {
+        padding-top: 20px;
+    }
+
+
+    .product_info .images
+    {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+
+    .product_info .data
+    {
+        width: 100%;
+    }
+
+
+
+    /*-----------
+        Stock
+    -----------*/
+    .stock .banner
+    {
+        min-height: 240px;
+        padding: 32px 12px;
+    }
+
+
+    .stock .banner .data
+    {
+        width: 50%;
+    }
+
+
+    .stock .banner .title
+    {
+        font-size: 30px;
+    }
+
+
+    .stock .banner .title2
+    {
+        font-size: 20px;
+    }
+
+
+    .stock .banner .desc
+    {
+        font-size: 15px;
+    }
+
+
+    .stock .banner .btn
+    {
+        width: 200px;
+        margin-top: 20px;
+    }
+
+
+
+    /*-------------
+        Reviews
+    -------------*/
+    .reviews .hide
+    {
+        display: block;
+    }
+
+
+    .reviews .review
+    {
+        display: block;
+    }
+
+
+    .reviews .review .info
+    {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+
+    .reviews .review .author
+    {
+        order: 1;
+
+        margin: 0 auto 0 0;
+    }
+
+
+    .reviews .review .date
+    {
+        order: 2;
+
+        width: auto;
+        margin: 0;
+    }
+
+
+    .reviews .review .rating
+    {
+        position: relative;
+        top: -1px;
+
+        order: 3;
+
+        margin-left: 20px;
+    }
+
+
+    .reviews .review .data
+    {
+        width: 100%;
+    }
+
+
+    .reviews .review .text
+    {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+
+    .reviews .review .reply
+    {
+        margin-top: 12px;
+    }
+
+
+    .reviews .review .answer
+    {
+        padding: 0;
+    }
+
+    .reviews .review .answer .author
+    {
+        margin: 0 0 12px;
+    }
+
+
+    .reviews .review .likes
+    {
+        margin-top: 20px;
+    }
+
+
+    .reviews .controls
+    {
+        display: flex;
+    }
+
+
+    .reviews .spoler_btn
+    {
+        display: none;
+    }
+
+
+    .reviews .add_review_btn
+    {
+        font-size: 14px;
+
+        width: 200px;
+        margin-top: 30px;
+    }
+
+
+
     /*------------
         Footer
     ------------*/
@@ -806,5 +979,39 @@
         order: 1;
 
         margin-bottom: 20px;
+    }
+
+
+
+    /*----------------
+        Side modal
+    ----------------*/
+    .side_modal .close_btn
+    {
+        top: 18px;
+    }
+
+
+    .side_modal .title
+    {
+        font-size: 14px;
+        line-height: 20px;
+
+        padding: 20px 48px;
+    }
+
+
+    .side_modal .sub_title
+    {
+        font-size: 14px;
+        line-height: 20px;
+
+        padding: 12px 20px;
+    }
+
+
+    .side_modal table th
+    {
+        font-size: 14px;
     }
 }

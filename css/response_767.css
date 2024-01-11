@@ -16,6 +16,13 @@
     }
 
 
+    .swiper > .swiper-button-next,
+    .swiper > .swiper-button-prev
+    {
+        display: none;
+    }
+
+
 
     /*----------------
         Pagination
@@ -238,7 +245,6 @@
     {
         display: none;
     }
-
 
 
 
@@ -651,6 +657,234 @@
     .category_banners .row > * + *
     {
         margin-left: 16px;
+    }
+
+
+
+    /*------------------
+        Product info
+    ------------------*/
+    .product_info .images
+    {
+        padding: 0;
+    }
+
+
+    .product_info .images .thumbs
+    {
+        display: none;
+    }
+
+
+    .product_info .images .big .swiper-button-next,
+    .product_info .images .big .swiper-button-prev
+    {
+        display: flex;
+    }
+
+
+    .product_info .images .big .zoom
+    {
+        display: flex;
+    }
+
+
+    .product_info .rating
+    {
+        position: absolute;
+        z-index: 3;
+        right: 0;
+
+        margin: 26px 0 0;
+    }
+
+
+    .product_info .price
+    {
+        width: 100%;
+    }
+
+
+    .product_info .options
+    {
+        position: relative;
+
+        padding-bottom: 38px;
+    }
+
+
+    .product_info .partner_notice
+    {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        margin: 0;
+    }
+
+
+    .product_info .color
+    {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    .product_info .sizes_table_btn
+    {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        margin: 0;
+    }
+
+    .product_info .sizes_table_btn .icon
+    {
+        top: 0;
+    }
+
+
+    .product_info .sizes .vals
+    {
+        margin-bottom: -7px;
+        margin-left: -7px;
+    }
+
+    .product_info .sizes .vals > *
+    {
+        margin-bottom: 7px;
+        margin-left: 7px;
+    }
+
+
+    .product_info .sizes .vals .size
+    {
+        font-size: 14px;
+    }
+
+
+
+    /*-----------
+        Stock
+    -----------*/
+    .stock .banner
+    {
+        min-height: 230px;
+    }
+
+
+    .stock .exp
+    {
+        display: none;
+    }
+
+
+    .stock .banner .data
+    {
+        width: 46%;
+    }
+
+
+    .stock .banner .title
+    {
+        font-size: 26px;
+    }
+
+
+    .stock .banner .title2
+    {
+        font-size: 15px;
+    }
+
+    .stock .banner .title2 span
+    {
+        font-size: 26px;
+
+        position: relative;
+        top: -2px;
+
+        display: inline-block;
+
+        vertical-align: middle;
+    }
+
+    .stock .banner .title2 br
+    {
+        display: block;
+    }
+
+
+    .stock .banner .desc
+    {
+        margin-top: 8px;
+    }
+
+    .stock .banner .desc br
+    {
+        display: block;
+    }
+
+
+    .stock .banner .btn
+    {
+        display: none;
+    }
+
+
+
+    /*-------------
+        Reviews
+    -------------*/
+    .reviews .block_head
+    {
+        margin-bottom: 20px;
+    }
+
+
+    .reviews .total_rating
+    {
+        margin-left: 20px;
+    }
+
+    .reviews .total_rating:after
+    {
+        margin-left: 20px;
+    }
+
+
+    .reviews .head
+    {
+        margin-bottom: 28px;
+    }
+
+
+    .reviews .head .sort
+    {
+        flex-wrap: nowrap;
+
+        width: 100%;
+    }
+
+    .reviews .head .sort .field
+    {
+        width: 100%;
+    }
+
+
+    .reviews .review .text
+    {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+
+    .reviews .add_review_btn
+    {
+        font-size: 13px;
+
+        width: 100%;
+        margin-top: 40px;
     }
 
 
