@@ -257,6 +257,8 @@ button
 {
     position: relative;
 
+    order: 2;
+
     width: calc(100% - var(--sidebar_width) - 20px);
 }
 
