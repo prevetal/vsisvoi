@@ -483,16 +483,16 @@
 
 
 
-    /*----------------------
-        Category banners
-    ----------------------*/
-    .category_banners
+    /*-------------------
+        Banners block
+    -------------------*/
+    .banners_block
     {
         margin: 20px 0;
     }
 
 
-    .category_banners .banner .title
+    .banners_block .banner .title
     {
         font-size: 26px;
         line-height: 30px;

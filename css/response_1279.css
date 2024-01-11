@@ -510,10 +510,10 @@
     }
 
 
-    /*----------------------
-        Category banners
-    ----------------------*/
-    .category_banners .banner .title
+    /*-------------------
+        Banners block
+    -------------------*/
+    .banners_block .banner .title
     {
         font-size: 22px;
         line-height: 26px;

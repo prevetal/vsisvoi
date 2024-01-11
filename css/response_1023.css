@@ -597,16 +597,16 @@
     }
 
 
-    /*----------------------
-        Category banners
-    ----------------------*/
-    .category_banners
+    /*-------------------
+        Banners block
+    -------------------*/
+    .banners_block
     {
         margin-bottom: 0;
     }
 
 
-    .category_banners .banner .title
+    .banners_block .banner .title
     {
         font-size: 18px;
         line-height: 24px;

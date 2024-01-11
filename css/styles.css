@@ -7,7 +7,7 @@
     margin: 0;
     padding: 0;
 
-    scroll-margin-top: 24px;
+    scroll-margin-top: 92px;
 }
 
 *:before,
@@ -1627,7 +1627,7 @@ header .categories .banners .banner:hover .thumb img
 
 .page_head.no_border
 {
-    margin-bottom: 11px;
+    margin-bottom: 30px;
     padding: 0;
 
     border: none;
@@ -5466,16 +5466,16 @@ aside
 
 
 
-/*----------------------
-    Category banners
-----------------------*/
-.category_banners
+/*-------------------
+    Banners block
+-------------------*/
+.banners_block:not(.block)
 {
-    margin: 28px 0;
+    margin-bottom: 28px;
 }
 
 
-.category_banners .row
+.banners_block .row
 {
     align-content: stretch;
     align-items: stretch;
@@ -5484,25 +5484,25 @@ aside
     margin-left: -20px;
 }
 
-.category_banners .row > *
+.banners_block .row > *
 {
     width: calc(25% - 20px);
     margin-bottom: 20px;
     margin-left: 20px;
 }
 
-.category_banners .row > *.middle
+.banners_block .row > *.middle
 {
     width: calc(50% - 20px);
 }
 
-.category_banners .row > *.big
+.banners_block .row > *.big
 {
     width: calc(75% - 20px);
 }
 
 
-.category_banners .banner
+.banners_block .banner
 {
     position: relative;
 
@@ -5518,18 +5518,18 @@ aside
     background: #ddd;
 }
 
-.category_banners .middle .banner
+.banners_block .middle .banner
 {
     padding-bottom: calc(50% - 10px);
 }
 
-.category_banners .big .banner
+.banners_block .big .banner
 {
     padding-bottom: calc(33.333% - 13.333px);
 }
 
 
-.category_banners .banner img
+.banners_block .banner img
 {
     position: absolute;
     z-index: 1;
@@ -5547,7 +5547,7 @@ aside
 }
 
 
-.category_banners .banner .title
+.banners_block .banner .title
 {
     font-family: var(--font_family);
     font-size: 30px;
@@ -5576,7 +5576,7 @@ aside
 }
 
 
-.category_banners .banner:hover img
+.banners_block .banner:hover img
 {
     transform: scale(1.1);
 }
@@ -8448,6 +8448,223 @@ aside
 .product_info .return .text_block .hide > *
 {
     margin-bottom: 20px;
+}
+
+
+
+/*-----------------
+    Brands page
+-----------------*/
+.brands_page
+{
+    border-top: 1px solid #eee;
+}
+
+
+.brands_page aside
+{
+    padding: 12px 0;
+}
+
+
+.brands_page .content
+{
+    border-left: 1px solid #eee;
+}
+
+
+.brands_page .filter .form .checkbox
+{
+    font-size: 12px;
+}
+
+
+.brands_page .head
+{
+    display: flex;
+    align-content: stretch;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+
+.brands_page .head .type
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    padding: 0 30px;
+
+    border-right: 1px solid #eee;
+}
+
+.brands_page .head .type > * + *
+{
+    margin-left: 15px;
+}
+
+
+.brands_page .head .type .btn
+{
+    font-size: 12px;
+    line-height: 14px;
+
+    position: relative;
+
+    display: block;
+
+    height: 58px;
+
+    text-transform: uppercase;
+
+    color: #2b3338;
+}
+
+.brands_page .head .type .btn:after
+{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 0;
+    height: 1px;
+    margin: auto;
+
+    content: '';
+    transition: width .3s linear;
+
+    background: #ce0c36;
+}
+
+.brands_page .head .type .btn.active:after
+{
+    width: 100%;
+}
+
+
+.brands_page .head .alphabet
+{
+    font-size: 12px;
+    line-height: 14px;
+
+    overflow: hidden;
+
+    padding: 22px 24px;
+}
+
+
+.brands_page .head .alphabet .swiper
+{
+    display: none;
+    overflow: visible !important;
+}
+
+
+.brands_page .head .alphabet .swiper-slide
+{
+    width: auto;
+}
+
+
+.brands_page .head .alphabet .btn
+{
+    display: block;
+
+    transition: color .2s linear;
+    text-transform: uppercase;
+
+    color: #2b3338;
+}
+
+
+.brands_page .head .alphabet .btn.disabled
+{
+    pointer-events: none;
+
+    color: #c8cbce;
+}
+
+
+.brands_page .head .alphabet .btn:hover
+{
+    color: #c18c43;
+}
+
+
+.brands_page .list .item
+{
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding: 30px 0 30px 30px;
+
+    border-top: 1px solid #eee;
+}
+
+
+.brands_page .list .letter
+{
+    font-size: 64px;
+    line-height: 58px;
+
+    width: 120px;
+    max-width: 100%;
+
+    text-align: center;
+    white-space: nowrap;
+    text-transform: uppercase;
+
+    color: #2b3338;
+}
+
+
+.brands_page .list .items
+{
+    width: calc(100% - 210px);
+    margin-left: auto;
+}
+
+
+.brands_page .list .row
+{
+    margin-bottom: -14px;
+    margin-left: -26px;
+}
+
+.brands_page .list .row > *
+{
+    width: calc(25% - 26px);
+    margin-bottom: 14px;
+    margin-left: 26px;
+}
+
+
+.brands_page .list a
+{
+    font-size: 15px;
+    line-height: 22px;
+
+    display: inline-block;
+
+    transition: color .2s linear;
+    vertical-align: top;
+    text-decoration: none;
+
+    color: #515151;
+}
+
+
+.brands_page .list a:hover
+{
+    color: #c18c43;
 }
 
 

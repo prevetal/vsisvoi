@@ -605,10 +605,10 @@
     }
 
 
-    /*----------------------
-        Category banners
-    ----------------------*/
-    .category_banners .row
+    /*-------------------
+        Banners block
+    -------------------*/
+    .banners_block .row
     {
         display: block;
         overflow: auto;
@@ -625,7 +625,7 @@
         scrollbar-width: thin !important;
     }
 
-    .category_banners .row::-webkit-scrollbar
+    .banners_block .row::-webkit-scrollbar
     {
         display: none !important;
 
@@ -635,13 +635,13 @@
         background-color: transparent !important;
     }
 
-    .category_banners .row::-webkit-scrollbar-thumb
+    .banners_block .row::-webkit-scrollbar-thumb
     {
         background-color: transparent !important;
     }
 
 
-    .category_banners .row > *
+    .banners_block .row > *
     {
         display: inline-block;
 
@@ -654,7 +654,7 @@
         scroll-snap-align: start;
     }
 
-    .category_banners .row > * + *
+    .banners_block .row > * + *
     {
         margin-left: 16px;
     }

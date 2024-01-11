@@ -704,8 +704,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	// Sticky element
 	if (window.outerWidth > 1023) {
+		let productsHeadHeight = $('.products_head').length ? $('.products_head').outerHeight() : 0,
+			offset = $('header').outerHeight() + productsHeadHeight + 8
+
 		$('.filter').stick_in_parent({
-			offset_top: $('header').outerHeight() + $('.products_head').outerHeight() + 20
+			offset_top: offset
 		})
 	}
 
@@ -874,6 +877,45 @@ document.addEventListener('DOMContentLoaded', function () {
 		$('.overlay').fadeOut(200)
 
 		$('body').toggleClass('menu_open')
+	})
+
+
+	// Brands - alphabet types
+	$('.brands_page .head .type .btn').click(function(e) {
+		e.preventDefault()
+
+		if(!$(this).hasClass('active')) {
+			$('.brands_page .head .type .btn').removeClass('active')
+			$('.brands_page .head .alphabet .swiper').hide()
+
+			$(this).addClass('active')
+			$('.brands_page .head .alphabet .swiper' + $(this).data('type')).fadeIn(200)
+		}
+	})
+
+
+	// Brands - alphabets
+	const alphabetsSliders = [],
+		alphabets = document.querySelectorAll('.alphabet .swiper')
+
+	alphabets.forEach(function (el, i) {
+		el.classList.add('alphabet_s' + i)
+
+		let options = {
+			loop: false,
+			speed: 500,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			},
+			spaceBetween: 15,
+			slidesPerView: 'auto'
+		}
+
+		alphabetsSliders.push(new Swiper('.alphabet_s' + i, options))
 	})
 })
 
