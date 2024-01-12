@@ -17,6 +17,12 @@
     }
 
 
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover
+    {
+        background: none;
+    }
+
     .swiper > .swiper-button-prev
     {
         right: -20px;
@@ -609,6 +615,28 @@
     .reviews .review .answer
     {
         padding-left: 24px;
+    }
+
+
+
+    /*-----------------
+        Brands page
+    -----------------*/
+    .brands_page .head .alphabet
+    {
+        padding: 20px 24px 20px 40px;
+    }
+
+
+    .brands_page .list .items
+    {
+        width: calc(100% - 160px);
+    }
+
+
+    .brands_page .list .row > *
+    {
+        width: calc(33.333% - 24px);
     }
 
 

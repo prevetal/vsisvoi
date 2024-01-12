@@ -4,6 +4,12 @@
     /*-------------------
         Global styles
     -------------------*/
+    *
+    {
+        scroll-margin-top: 46px;
+    }
+
+
     :root
     {
         --sidebar_width: 100%;
@@ -88,9 +94,33 @@
     /*---------------
         Page head
     ---------------*/
+    .page_head,
+    .page_head.no_border
+    {
+        margin: 0;
+        padding: 20px 0;
+    }
+
     .page_head.mob_hide
     {
         display: none;
+    }
+
+
+    .breadcrumbs
+    {
+        display: none;
+    }
+
+
+    .page_title
+    {
+        font-size: 15px;
+        font-weight: 800;
+        line-height: 28px;
+
+        text-align: left;
+        text-transform: uppercase;
     }
 
 
@@ -98,6 +128,12 @@
     /*------------
         Filter
     ------------*/
+    .mob_filter_btn
+    {
+        display: block;
+    }
+
+
     .filter
     {
         position: fixed;
@@ -600,7 +636,12 @@
     /*-------------------
         Banners block
     -------------------*/
-    .banners_block
+    .banners_block.block
+    {
+        margin-bottom: 40px;
+    }
+
+    .banners_block:not(.block)
     {
         margin-bottom: 0;
     }
@@ -783,6 +824,46 @@
 
         width: 200px;
         margin-top: 30px;
+    }
+
+
+
+    /*-----------------
+        Brands page
+    -----------------*/
+    .brands_page .cont
+    {
+        padding: 0;
+    }
+
+
+    .brands_page aside
+    {
+        padding: 0;
+    }
+
+
+    .brands_page .content
+    {
+        border: none;
+    }
+
+
+    .brands_page .head .alphabet
+    {
+        padding: 20px 40px;
+    }
+
+
+    .brands_page .list .item
+    {
+        padding: 24px;
+    }
+
+
+    .brands_page .list .letter
+    {
+        font-size: 48px;
     }
 
 

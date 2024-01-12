@@ -486,9 +486,9 @@
     /*-------------------
         Banners block
     -------------------*/
-    .banners_block
+    .banners_block:not(.block)
     {
-        margin: 20px 0;
+        margin-bottom: 20px;
     }
 
 
@@ -586,6 +586,60 @@
     .reviews .review .data
     {
         width: calc(100% - 500px);
+    }
+
+
+
+    /*-----------------
+        Brands page
+    -----------------*/
+    .brands_page .head .type
+    {
+        padding: 0 24px;
+    }
+
+    .brands_page .head .type .btn
+    {
+        height: 54px;
+    }
+
+
+    .brands_page .head .alphabet
+    {
+        padding: 20px 24px;
+    }
+
+
+    .brands_page .list .item
+    {
+        padding: 24px 0 24px 24px;
+    }
+
+
+    .brands_page .list .letter
+    {
+        font-size: 52px;
+        line-height: 100%;
+    }
+
+
+    .brands_page .list .items
+    {
+        width: calc(100% - 180px);
+    }
+
+
+    .brands_page .list .row
+    {
+        margin-bottom: -12px;
+        margin-left: -24px;
+    }
+
+    .brands_page .list .row > *
+    {
+        width: calc(25% - 24px);
+        margin-bottom: 12px;
+        margin-left: 24px;
     }
 
 

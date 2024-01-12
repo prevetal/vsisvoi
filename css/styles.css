@@ -367,6 +367,20 @@ button
 }
 
 
+.controls.hide
+{
+    overflow: hidden;
+
+    height: 0 !important;
+    margin: 0 !important;
+}
+
+.controls.hide > *
+{
+    display: none;
+}
+
+
 
 /*----------------
     Pagination
@@ -1310,7 +1324,7 @@ header .categories .banners .banner:hover .thumb img
     min-height: -webkit-fill-available;
     min-height:         fill-available;
 
-    transition: transform .2s linear;
+    transition: transform .3s linear;
 
     background: var(--bg);
 }
@@ -1746,6 +1760,66 @@ aside
 /*------------
     Filter
 ------------*/
+.mob_filter_btn
+{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 17px;
+
+    position: relative;
+
+    display: none;
+
+    width: 100%;
+    height: 58px;
+    padding: 15px 20px;
+
+    text-align: left;
+    text-transform: uppercase;
+
+    color: #333;
+    border-bottom: 1px solid #eee;
+}
+
+
+.mob_filter_btn .icon
+{
+    position: absolute;
+    top: 0;
+    right: 20px;
+    bottom: 0;
+
+    width: 20px;
+    height: 20px;
+    margin: auto 0;
+}
+
+.mob_filter_btn .icon:before,
+.mob_filter_btn .icon:after
+{
+    position: absolute;
+
+    display: block;
+
+    width: 100%;
+    height: 2px;
+    margin: auto;
+
+    content: '';
+
+    background: #c8cbce;
+
+    inset: 0;
+}
+
+.mob_filter_btn .icon:after
+{
+    width: 2px;
+    height: 100%;
+}
+
+
+
 .filter
 {
     position: relative;
@@ -2103,7 +2177,7 @@ aside
     width: 15px;
     height: 15px;
 
-    transition: .2s linear;
+    transition: background .2s linear;
 
     border: none;
     border-radius: 50%;
@@ -2132,8 +2206,6 @@ aside
 
 .filter .checkbox input:checked + .check
 {
-    left: 3px;
-
     background: none;
 }
 
@@ -3703,17 +3775,6 @@ aside
     content: '';
 
     background: #c8cbce;
-}
-
-
-.products .controls.hide
-{
-    margin: 0;
-}
-
-.products .controls.hide > *
-{
-    display: none;
 }
 
 
@@ -5475,6 +5536,42 @@ aside
 }
 
 
+.banners_block .swiper
+{
+    overflow: visible !important;
+}
+
+
+.banners_block .swiper-slide
+{
+    position: relative;
+
+    visibility: hidden;
+
+    transition: opacity .2s linear, visibility .2s linear;
+    pointer-events: none;
+
+    opacity: 0;
+}
+
+.banners_block .swiper-slide.visible
+{
+    visibility: visible;
+
+    pointer-events: auto;
+
+    opacity: 1;
+}
+
+
+.banners_block .controls
+{
+    justify-content: center;
+
+    margin-top: 20px;
+}
+
+
 .banners_block .row
 {
     align-content: stretch;
@@ -5556,7 +5653,7 @@ aside
 
     position: absolute;
     z-index: 3;
-    top: 0;
+    bottom: 0;
     left: 0;
 
     display: flex;
@@ -8481,11 +8578,29 @@ aside
 
 .brands_page .head
 {
+    position: relative;
+
     display: flex;
     align-content: stretch;
     align-items: stretch;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: flex-start;
+}
+
+.brands_page .head:after
+{
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    display: block;
+
+    width: 100vw;
+    height: 1px;
+
+    content: '';
+
+    background: #eee;
 }
 
 
@@ -8494,7 +8609,7 @@ aside
     display: flex;
     align-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: flex-start;
 
     padding: 0 30px;
@@ -8567,7 +8682,42 @@ aside
 
 .brands_page .head .alphabet .swiper-slide
 {
+    position: relative;
+
+    visibility: hidden;
+
     width: auto;
+
+    transition: opacity .2s linear, visibility .2s linear;
+    pointer-events: none;
+
+    opacity: 0;
+}
+
+.brands_page .head .alphabet .swiper-slide.visible
+{
+    visibility: visible;
+
+    pointer-events: auto;
+
+    opacity: 1;
+}
+
+
+.brands_page .head .alphabet .swiper > .swiper-button-next,
+.brands_page .head .alphabet .swiper > .swiper-button-prev
+{
+    top: 50%;
+}
+
+.brands_page .head .alphabet .swiper > .swiper-button-prev
+{
+    left: -29px;
+}
+
+.brands_page .head .alphabet .swiper > .swiper-button-next
+{
+    right: -29px;
 }
 
 
