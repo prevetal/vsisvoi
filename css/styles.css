@@ -7277,7 +7277,8 @@ aside
 ------------------*/
 .product_info .images
 {
-    position: relative;
+    position: sticky;
+    top: 112px;
 
     width: calc(100% - 382px);
     padding-left: 120px;
@@ -8164,8 +8165,11 @@ aside
 {
     position: absolute;
     z-index: 3;
-    top: 2px;
-    right: 2px;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
 
     pointer-events: auto;
 }
@@ -8173,10 +8177,15 @@ aside
 
 .product_info .sizes .vals .notify .btn
 {
-    display: block;
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 
-    width: 12px;
-    height: 12px;
+    width: 100%;
+    height: 100%;
+    padding: 2px;
 
     color: #c18c43;
 }
@@ -8186,8 +8195,8 @@ aside
 {
     display: block;
 
-    width: 100%;
-    height: 100%;
+    width: 12px;
+    height: 12px;
 }
 
 
@@ -9514,14 +9523,16 @@ footer .creator span
 
     padding: 20px 0;
 
+    cursor: move;
+
     scrollbar-color: #797f83 #eee;
     scrollbar-width: thin;
 }
 
 .side_modal .table_wrap::-webkit-scrollbar
 {
-    width: 6px;
-    height: 6px;
+    width: 4px;
+    height: 4px;
 
     background-color: #eee;
 }

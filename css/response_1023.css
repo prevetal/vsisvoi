@@ -703,6 +703,9 @@
 
     .product_info .images
     {
+        position: relative;
+        top: 0;
+
         width: 100%;
         margin-bottom: 20px;
     }

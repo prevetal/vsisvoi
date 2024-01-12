@@ -960,7 +960,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	$('.overlay, .side_modal .close_btn').click(function(e) {
 		e.preventDefault()
 
-		$(this).closest('.side_modal').removeClass('show')
+		$('.side_modal').removeClass('show')
 		$('.overlay').fadeOut(200)
 
 		$('body').toggleClass('menu_open')
@@ -978,6 +978,37 @@ document.addEventListener('DOMContentLoaded', function () {
 			$(this).addClass('active')
 			$('.brands_page .head .alphabet .swiper' + $(this).data('type')).fadeIn(200)
 		}
+	})
+
+
+	// Size table
+	const scrollableDiv = document.querySelector('.side_modal .table_wrap')
+
+	let isMouseDown = false,
+		startX, scrollLeft
+
+	scrollableDiv.addEventListener('mousedown', (e) => {
+		isMouseDown = true
+		startX = e.pageX - scrollableDiv.offsetLeft
+		scrollLeft = scrollableDiv.scrollLeft
+	})
+
+	scrollableDiv.addEventListener('mouseup', () => isMouseDown = false)
+	scrollableDiv.addEventListener('mouseleave', () => isMouseDown = false )
+
+	scrollableDiv.addEventListener('mousemove', (e) => {
+		if (!isMouseDown) return
+
+		let x = e.pageX - scrollableDiv.offsetLeft,
+			walkX = (x - startX) * 1.5
+
+		scrollableDiv.scrollLeft = scrollLeft - walkX
+	})
+
+	scrollableDiv.addEventListener('wheel', (e) => {
+		e.preventDefault()
+
+		scrollableDiv.scrollLeft += e.deltaY
 	})
 })
 
