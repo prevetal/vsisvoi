@@ -190,33 +190,51 @@
     /*-----------------------
         Categories slider
     -----------------------*/
-    .categories_slider .block_head .title
+    .categories_slider .block_head
     {
         position: relative;
-
-        display: inline-block;
-
-        vertical-align: top;
+        z-index: 3;
     }
 
-    .categories_slider .block_head .title:after
+    .categories_slider .block_head:before
     {
         position: absolute;
+        z-index: 1;
         top: 0;
         bottom: 0;
-        left: 100%;
 
         display: block;
 
-        width: 100vw;
+        width: 100%;
         height: 1px;
-        margin: auto 0 auto 20px;
+        margin: auto 0;
 
         content: '';
 
         background: #c8cbce;
     }
 
+
+    .categories_slider .block_head .title
+    {
+        position: relative;
+        z-index: 3;
+
+        padding-right: 20px;
+
+        background: var(--bg);
+    }
+
+
+    .categories_slider .block_head .controls
+    {
+        position: relative;
+        z-index: 3;
+
+        padding-left: 20px;
+
+        background: var(--bg);
+    }
 
 
     .categories_slider .swiper-slide
@@ -232,6 +250,11 @@
 
 
     .categories_slider .controls
+    {
+        margin-left: auto;
+    }
+
+    .categories_slider .controls:after
     {
         display: none;
     }
