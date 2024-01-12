@@ -482,6 +482,13 @@
     /*--------------
         Checkout
     --------------*/
+    .checkout .cont
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+
     .checkout .mob_head
     {
         display: flex;
@@ -489,21 +496,21 @@
 
 
 
-    .checkout .mob_checkout_total
-    {
-        display: block;
-    }
-
-
-
     .checkout .notice
     {
-        display: none;
+        width: calc(100% + 40px);
+        margin: 0 -20px;
     }
 
     .checkout .notice .text
     {
         display: block;
+    }
+
+
+    .checkout .delivery_type
+    {
+        order: 2;
     }
 
 
@@ -566,16 +573,22 @@
     }
 
 
-    .checkout .order_form .form .callback,
-    .checkout .order_form .checkout_total
+    .checkout .order_form .form .callback
     {
         display: none;
     }
 
 
+    .checkout .checkout_total
+    {
+        margin-top: 20px;
+        padding: 20px 0;
+    }
+
+
     .checkout .order_form .form .submit
     {
-        padding-top: 10px;
+        padding-top: 0;
     }
 
 

@@ -450,7 +450,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 	// Adding product to favorites
-	$('.product .favorite_btn').click(function(e) {
+	$('.product .favorite_btn, .product_info .favorite_btn').click(function(e) {
 		e.preventDefault()
 
 		clearTimeout(timer)
