@@ -5643,6 +5643,11 @@ aside
     object-fit: cover;
 }
 
+.banners_block .banner img.mob
+{
+    display: none;
+}
+
 
 .banners_block .banner .title
 {
