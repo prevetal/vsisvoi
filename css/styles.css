@@ -5183,11 +5183,17 @@ aside
     color: #797f83;
 }
 
+
 .checkout .order_form .agree a
 {
     text-decoration: none;
 
     color: #c18c43;
+}
+
+.checkout .order_form .agree a:hover
+{
+    text-decoration: underline;
 }
 
 
