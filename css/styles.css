@@ -4983,22 +4983,22 @@ aside
     transition: background .2s linear;
     text-transform: uppercase;
 
-    color: #2b3338;
-    border: 1px solid #2b3338;
+    color: #fff;
+    background: #2b3338;
 }
 
 .checkout .order_form .copy_btn:hover
 {
-    background: #eee;
+    background: #000;
 }
 
-.checkout .order_form .copy_btn:disabled
+/* .checkout .order_form .copy_btn:disabled
 {
     pointer-events: none;
 
     color: #eee;
     border-color: #eee;
-}
+} */
 
 
 .checkout .order_form .methods .field + .field
