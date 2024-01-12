@@ -246,16 +246,28 @@
     }
 
 
-    .main_slider .link
+    .main_slider .image
     {
-        height: 260px;
+        /* height: 260px;
         padding: 20px;
-
-        text-align: center;
+        text-align: center; */
+        padding-bottom: 47.916%;
     }
 
 
-    .main_slider .info
+    .main_slider .img
+    {
+        display: none;
+    }
+
+    .main_slider .img.mob
+    {
+        display: block;
+    }
+
+
+
+    /* .main_slider .info
     {
         width: 100%;
     }
@@ -264,7 +276,7 @@
     .main_slider .title
     {
         font-size: 30px;
-    }
+    } */
 
 
     .main_slider .controls
@@ -349,7 +361,7 @@
     }
 
 
-    .content_banner .banner
+    /* .content_banner .banner
     {
         height: 230px;
         padding: 20px;
@@ -371,6 +383,12 @@
     .content_banner .banner .img
     {
         object-position: -40px 50%;
+    } */
+
+
+    .content_banner .banner .sticker
+    {
+        width: 200px;
     }
 
 
@@ -421,13 +439,13 @@
     }
 
 
-    .products_banners .banner .title
+    /* .products_banners .banner .title
     {
         font-size: 24px;
-    }
+    } */
 
 
-    .products_banners .banner .btn
+    .products_banners .banner .sticker
     {
         width: 200px;
     }
@@ -647,11 +665,17 @@
     }
 
 
-    .banners_block .banner .title
+    .banners_block.mob_hide
+    {
+        display: none;
+    }
+
+
+    /* .banners_block .banner .title
     {
         font-size: 18px;
         line-height: 24px;
-    }
+    } */
 
 
 
@@ -681,14 +705,14 @@
     /*-----------
         Stock
     -----------*/
-    .stock .banner
+    /* .stock .banner
     {
         min-height: 240px;
         padding: 32px 12px;
-    }
+    } */
 
 
-    .stock .banner .data
+    /* .stock .banner .data
     {
         width: 50%;
     }
@@ -716,6 +740,12 @@
     {
         width: 200px;
         margin-top: 20px;
+    } */
+
+
+    .stock .banner .sticker
+    {
+        width: 200px;
     }
 
 

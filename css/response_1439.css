@@ -184,7 +184,7 @@
     /*-----------------
         Main slider
     -----------------*/
-    .main_slider .link
+    /* .main_slider .image
     {
         height: 320px;
         padding: 48px 80px;
@@ -194,6 +194,14 @@
     .main_slider .title
     {
         font-size: 44px;
+    } */
+
+
+    .main_slider .sticker
+    {
+        font-size: 14px;
+
+        width: 260px;
     }
 
 
@@ -266,7 +274,7 @@
     /*--------------------
         Content banner
     --------------------*/
-    .content_banner .banner
+    /* .content_banner .banner
     {
         height: 300px;
         padding: 48px 100px;
@@ -282,6 +290,14 @@
     .content_banner .banner .title
     {
         font-size: 44px;
+    } */
+
+
+    .content_banner .banner .sticker
+    {
+        font-size: 14px;
+
+        width: 260px;
     }
 
 
@@ -394,13 +410,13 @@
     }
 
 
-    .products_banners .banner .title
+    /* .products_banners .banner .title
     {
         font-size: 28px;
-    }
+    } */
 
 
-    .products_banners .banner .btn
+    .products_banners .banner .sticker
     {
         font-size: 14px;
 
@@ -492,11 +508,11 @@
     }
 
 
-    .banners_block .banner .title
+    /* .banners_block .banner .title
     {
         font-size: 26px;
         line-height: 30px;
-    }
+    } */
 
 
 
@@ -513,14 +529,14 @@
     /*-----------
         Stock
     -----------*/
-    .stock .banner
+    /* .stock .banner
     {
         min-height: 300px;
         padding: 48px 40px;
-    }
+    } */
 
 
-    .stock .banner .data
+    /* .stock .banner .data
     {
         width: 508px;
     }
@@ -541,10 +557,10 @@
     .stock .banner .desc
     {
         font-size: 20px;
-    }
+    } */
 
 
-    .stock .banner .btn
+    .stock .banner .sticker
     {
         width: 260px;
     }

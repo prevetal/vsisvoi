@@ -162,7 +162,7 @@
     /*-----------------
         Main slider
     -----------------*/
-    .main_slider .link
+    /* .main_slider .image
     {
         height: 280px;
         padding: 40px 60px;
@@ -172,6 +172,12 @@
     .main_slider .title
     {
         font-size: 36px;
+    } */
+
+
+    .main_slider .sticker
+    {
+        display: none;
     }
 
 
@@ -238,7 +244,7 @@
     /*--------------------
         Content banner
     --------------------*/
-    .content_banner .banner
+    /* .content_banner .banner
     {
         height: 240px;
         padding: 40px 60px;
@@ -254,6 +260,12 @@
     .content_banner .banner .title
     {
         font-size: 36px;
+    } */
+
+
+    .content_banner .banner .sticker
+    {
+        width: 220px;
     }
 
 
@@ -402,13 +414,13 @@
     }
 
 
-    .products_banners .banner .title
+    /* .products_banners .banner .title
     {
         font-size: 26px;
-    }
+    } */
 
 
-    .products_banners .banner .btn
+    .products_banners .banner .sticker
     {
         bottom: 48px;
 
@@ -519,11 +531,11 @@
     /*-------------------
         Banners block
     -------------------*/
-    .banners_block .banner .title
+    /* .banners_block .banner .title
     {
         font-size: 22px;
         line-height: 26px;
-    }
+    } */
 
 
 
@@ -536,14 +548,14 @@
     }
 
 
-    .stock .banner
+    /* .stock .banner
     {
         min-height: 260px;
         padding: 40px 30px;
-    }
+    } */
 
 
-    .stock .banner .data
+    /* .stock .banner .data
     {
         width: 440px;
     }
@@ -564,12 +576,12 @@
     .stock .banner .desc
     {
         font-size: 18px;
-    }
+    } */
 
 
-    .stock .banner .btn
+    .stock .banner .sticker
     {
-        width: 240px;
+        width: 220px;
     }
 
 

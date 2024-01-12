@@ -117,15 +117,9 @@
     /*-----------------
         Main slider
     -----------------*/
-    .main_slider .link
+    /* .main_slider .image
     {
         height: 230px;
-    }
-
-
-    .main_slider .title
-    {
-        font-size: 26px;
     }
 
 
@@ -136,6 +130,12 @@
 
         object-position: 35% 50%;
     }
+
+
+    .main_slider .title
+    {
+        font-size: 26px;
+    } */
 
 
     .main_slider .bottom
@@ -181,16 +181,6 @@
         New
     ---------*/
     .new
-    {
-        display: none;
-    }
-
-
-
-    /*--------------------
-        Content banner
-    --------------------*/
-    .content_banner.mob_hide
     {
         display: none;
     }
@@ -429,7 +419,13 @@
     /*--------------------
         Content banner
     --------------------*/
-    .content_banner .banner .info
+    .content_banner.mob_hide
+    {
+        display: none;
+    }
+
+
+    /* .content_banner .banner .info
     {
         width: 231px;
     }
@@ -438,6 +434,12 @@
     .content_banner .banner .title
     {
         font-size: 26px;
+    } */
+
+
+    .content_banner .banner
+    {
+        padding-bottom: 47.916%;
     }
 
 
@@ -446,9 +448,15 @@
         display: none;
     }
 
-    .content_banner .banner .mob_img
+    .content_banner .banner .img.mob
     {
         display: block;
+    }
+
+
+    .content_banner .banner .sticker
+    {
+        width: 280px;
     }
 
 
@@ -456,13 +464,13 @@
     /*----------------------
         Products banners
     ----------------------*/
-    .products_banners .banner .title
+    /* .products_banners .banner .title
     {
         font-size: 26px;
-    }
+    } */
 
 
-    .products_banners .banner .btn
+    .products_banners .banner .sticker
     {
         bottom: 40px;
 
@@ -699,7 +707,7 @@
         padding-bottom: 47.916%;
     }
 
-    .banners_block .swiper .banner:after
+    /* .banners_block .swiper .banner:after
     {
         position: absolute;
         z-index: 1;
@@ -714,17 +722,17 @@
         content: '';
 
         background: linear-gradient(0deg, rgba(43, 51, 56, .70) 0%, rgba(0, 0, 0, .00) 36.45%);
-    }
+    } */
 
 
-    .banners_block .swiper .banner .title
+    /* .banners_block .swiper .banner .title
     {
         font-size: 26px;
         font-weight: 800;
         line-height: 30px;
 
         height: auto;
-    }
+    } */
 
 
 
@@ -837,7 +845,8 @@
     -----------*/
     .stock .banner
     {
-        min-height: 230px;
+        padding-bottom: 52.272%;
+        /* min-height: 230px; */
     }
 
 
@@ -847,7 +856,7 @@
     }
 
 
-    .stock .banner .data
+    /* .stock .banner .data
     {
         width: 46%;
     }
@@ -890,10 +899,21 @@
     .stock .banner .desc br
     {
         display: block;
+    } */
+
+
+    .stock .banner .img
+    {
+        display: none;
+    }
+
+    .stock .banner .img.mob
+    {
+        display: block;
     }
 
 
-    .stock .banner .btn
+    .stock .banner .sticker
     {
         display: none;
     }
