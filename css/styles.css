@@ -3848,11 +3848,74 @@ aside
 
 .products .product
 {
+    position: relative;
+
     display: block;
 
     padding: 0;
 
     text-align: center;
+}
+
+
+.products .product .stickers
+{
+    position: absolute;
+    z-index: 3;
+    top: 10px;
+    right: 10px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.products .product .stickers > *
+{
+    margin-left: auto;
+}
+
+.products .product .stickers > * + *
+{
+    margin-top: 4px;
+}
+
+
+.products .product .sticker
+{
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 100%;
+
+    padding: 8px 12px 7px;
+
+    white-space: nowrap;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+
+    color: #fff;
+    border-radius: 20px;
+}
+
+
+.products .product .sticker.unisex
+{
+    background: linear-gradient(135deg,#13c0ff 0,#0068ff 100%);
+}
+
+.products .product .sticker.discount
+{
+    font-size: 12px;
+    line-height: 36px;
+
+    width: 36px;
+    height: 36px;
+    padding: 0;
+
+    text-align: center;
+
+    border-radius: 50%;
+    background: linear-gradient(134.72deg,#ff7a61 0,#ff2c9d 100%);
 }
 
 
@@ -7093,6 +7156,67 @@ aside
 
     width: calc(100% - 382px);
     padding-left: 120px;
+}
+
+
+.product_info .images .stickers
+{
+    position: absolute;
+    z-index: 3;
+    top: 10px;
+    right: 10px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.product_info .images .stickers > *
+{
+    margin-left: auto;
+}
+
+.product_info .images .stickers > * + *
+{
+    margin-top: 4px;
+}
+
+
+.product_info .images .sticker
+{
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 100%;
+
+    padding: 8px 12px 7px;
+
+    white-space: nowrap;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+
+    color: #fff;
+    border-radius: 20px;
+}
+
+
+.product_info .images .sticker.unisex
+{
+    background: linear-gradient(135deg,#13c0ff 0,#0068ff 100%);
+}
+
+.product_info .images .sticker.discount
+{
+    font-size: 12px;
+    line-height: 36px;
+
+    width: 36px;
+    height: 36px;
+    padding: 0;
+
+    text-align: center;
+
+    border-radius: 50%;
+    background: linear-gradient(134.72deg,#ff7a61 0,#ff2c9d 100%);
 }
 
 
