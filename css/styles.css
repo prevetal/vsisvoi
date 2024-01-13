@@ -646,6 +646,41 @@ button
 
 
 
+/*----------------
+    Mini modal
+----------------*/
+.modal_cont
+{
+    position: relative;
+}
+
+
+.mini_modal
+{
+    position: absolute;
+    z-index: 100;
+    top: 100%;
+    left: 0;
+
+    visibility: hidden;
+
+    transition: .2s linear;
+    pointer-events: none;
+
+    opacity: 0;
+}
+
+.mini_modal.active
+{
+    visibility: visible;
+
+    pointer-events: auto;
+
+    opacity: 1;
+}
+
+
+
 /*------------
     Header
 ------------*/
@@ -2912,6 +2947,7 @@ aside
 .form .submit_btn:disabled
 {
     cursor: not-allowed;
+    pointer-events: none;
 }
 
 .form .submit_btn:hover
@@ -9151,8 +9187,72 @@ aside
 {
     position: sticky;
     top: 92px;
+}
 
-    padding: 4px 0;
+
+.lk_menu .btn
+{
+    font-size: 14px;
+
+    position: relative;
+
+    display: none;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 16px 20px;
+
+    text-align: left;
+    text-transform: uppercase;
+
+    color: currentColor;
+    background: #eef1f0;
+}
+
+.lk_menu .btn:after
+{
+    position: absolute;
+    top: -1px;
+    right: 20px;
+    bottom: 0;
+
+    display: block;
+
+    width: 8px;
+    height: 7px;
+    margin: auto 0;
+
+    content: '';
+    transition: .2s linear;
+    pointer-events: none;
+
+    color: #a5a5a5;
+    border-top: 7px solid currentColor;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+
+.lk_menu .btn.active:after
+{
+    top: 0;
+
+    transform: rotate(180deg);
+}
+
+
+.lk_menu .mini_modal
+{
+    position: relative;
+    top: 0;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    opacity: 1;
 }
 
 
@@ -9177,8 +9277,26 @@ aside
     color: rgba(51,51,51,.5);
 }
 
+.lk_menu a:before
+{
+    position: absolute;
+    top: 0;
+    left: -1px;
 
-.lk_menu a .icon
+    display: block;
+
+    width: 2px;
+    height: 0;
+
+    content: '';
+    transition: height .2s linear;
+    pointer-events: none;
+
+    background: #c18c43;
+}
+
+
+.lk_menu .icon
 {
     display: block;
 
@@ -9188,48 +9306,48 @@ aside
 }
 
 
-.lk_menu a .icon.profile
+.lk_menu .icon.profile
 {
     width: 12px;
     height: 12px;
     margin-right: 2px;
 }
 
-.lk_menu a .icon.address
+.lk_menu .icon.address
 {
     width: 11px;
     height: 14px;
     margin-right: 3px;
 }
 
-.lk_menu a .icon.favorite
+.lk_menu .icon.favorite
 {
     width: 14px;
     height: 11px;
 }
 
-.lk_menu a .icon.orders
+.lk_menu .icon.orders
 {
     width: 12px;
     height: 13px;
     margin-right: 2px;
 }
 
-.lk_menu a .icon.subscribe
+.lk_menu .icon.subscribe
 {
     width: 12px;
     height: 10px;
     margin-right: 2px;
 }
 
-.lk_menu a .icon.password
+.lk_menu .icon.password
 {
     width: 13px;
     height: 16px;
     margin-right: 1px;
 }
 
-.lk_menu a .icon.logout
+.lk_menu .icon.logout
 {
     width: 13px;
     height: 11px;
@@ -9237,7 +9355,7 @@ aside
 }
 
 
-.lk_menu a span
+.lk_menu span
 {
     align-self: center;
 
@@ -9252,6 +9370,13 @@ aside
 }
 
 
+.lk_menu a.active:before
+{
+    height: 100%;
+}
+
+
+.lk_menu .btn .icon,
 .lk_menu a.active .icon
 {
     opacity: 1;
@@ -9661,6 +9786,546 @@ aside
 .lk_profile .form .submit_btn
 {
     width: calc(50% - 20px);
+}
+
+
+
+/*------------------
+    LK - address
+------------------*/
+.lk_address .form
+{
+    display: none;
+
+    width: 345px;
+    max-width: 100%;
+}
+
+
+.lk_address .form .cancel_btn
+{
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 17px;
+
+    display: block;
+
+    width: 100%;
+    height: 44px;
+    margin-top: 16px;
+
+    transition: background .2s linear;
+    text-transform: uppercase;
+
+    color: #333;
+    border: 1px solid;
+}
+
+.lk_address .form .cancel_btn:hover
+{
+    background: #eee;
+}
+
+
+.lk_address .add_form
+{
+    position: relative;
+
+    margin-top: -40px;
+    margin-bottom: 40px;
+    padding: 40px 0;
+}
+
+.lk_address .add_form:after
+{
+    position: absolute;
+    bottom: 0;
+    left: -40px;
+
+    display: block;
+
+    width: 100vw;
+    height: 1px;
+
+    content: '';
+
+    background: #eee;
+}
+
+
+.lk_address .add_form .hide
+{
+    display: none;
+}
+
+
+.lk_address .add_form .method_info
+{
+    display: none;
+}
+
+
+.lk_address .add_form .shop a
+{
+    transition: color .2s linear;
+
+    color: currentColor;
+}
+
+.lk_address .add_form .shop a:hover
+{
+    color: #c18c43;
+}
+
+
+
+.lk_address .items
+{
+    width: 660px;
+    max-width: 100%;
+    margin-top: -40px;
+}
+
+
+.lk_address .address
+{
+    position: relative;
+
+    padding: 40px 0;
+}
+
+.lk_address .address:after
+{
+    position: absolute;
+    bottom: 0;
+    left: -40px;
+
+    display: block;
+
+    width: 100vw;
+    height: 1px;
+
+    content: '';
+
+    background: #eee;
+}
+
+
+.lk_address .address .data
+{
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+
+.lk_address .address .label
+{
+    font-size: 12px;
+    font-weight: 500;
+
+    width: 100%;
+    margin-bottom: 15px;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    opacity: .5;
+    color: #333;
+}
+
+
+.lk_address .address .icon
+{
+    display: block;
+    align-self: center;
+
+    width: 11px;
+    height: 14px;
+    margin-right: 19px;
+
+    opacity: .5;
+    color: rgba(51,51,51,.5);
+}
+
+
+.lk_address .address .val
+{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+
+    align-self: center;
+
+    width: calc(100% - 109px);
+
+    color: #262626;
+}
+
+
+.lk_address .address .btns
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    margin-left: auto;
+}
+
+
+.lk_address .address .btns .btn
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 20px;
+    height: 20px;
+
+    transition: .2s linear;
+
+    opacity: .5;
+    color: rgba(51,51,51,.5);
+}
+
+.lk_address .address .btns .btn + .btn
+{
+    margin-left: 15px;
+}
+
+
+.lk_address .address .btns svg
+{
+    display: block;
+
+    width: 16px;
+    height: 16px;
+}
+
+
+.lk_address .address .btns .delete_btn
+{
+    color: #fff;
+    border-radius: 50%;
+    background: rgba(51,51,51,.5);
+}
+
+
+.lk_address .address .btns .btn:hover
+{
+    opacity: 1;
+    color: #c18c43;
+}
+
+.lk_address .address .btns .delete_btn:hover
+{
+    opacity: 1;
+    color: #fff;
+    background: #c18c43;
+}
+
+
+.lk_address .add_btn
+{
+    font-size: 14px;
+    font-weight: 800;
+
+    display: block;
+
+    width: 230px;
+    max-width: 100%;
+    height: 44px;
+    margin-top: 40px;
+
+    transition: background .2s linear;
+    text-transform: uppercase;
+
+    color: #fff;
+    background: #2b3338;
+}
+
+.lk_address .add_btn:hover
+{
+    background: #000;
+}
+
+
+
+/*-------------------
+    LK - Favorite
+-------------------*/
+.lk_favorite
+{
+    margin-top: -40px !important;
+}
+
+
+.lk_favorite .product
+{
+    position: relative;
+
+    display: flex;
+    align-content: stretch;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 460px;
+    max-width: 100%;
+    max-width: 100%;
+    padding: 40px 0;
+
+    text-align: left;
+}
+
+.lk_favorite .product:after
+{
+    position: absolute;
+    bottom: 0;
+    left: -40px;
+
+    display: block;
+
+    width: 100vw;
+    height: 1px;
+
+    content: '';
+
+    background: #eee;
+}
+
+
+.lk_favorite .product .thumb
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    width: 115px;
+    height: 150px;
+
+    text-decoration: none;
+
+    color: currentColor;
+    background: #ddd;
+}
+
+
+.lk_favorite .product .thumb img
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.lk_favorite .product .thumb + *
+{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    width: calc(100% - 146px);
+    margin-left: auto;
+}
+
+
+.lk_favorite .product .delete_btn
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 20px;
+    height: 20px;
+
+    transition: .2s linear;
+
+    opacity: .5;
+    color: #fff;
+    border-radius: 50%;
+    background: rgba(51,51,51,.5);
+}
+
+.lk_favorite .product .delete_btn .icon
+{
+    display: block;
+
+    width: 16px;
+    height: 16px;
+}
+
+.lk_favorite .product .delete_btn:hover
+{
+    opacity: 1;
+    background: #c18c43;
+}
+
+
+.lk_favorite .product .name
+{
+    font-size: 12px;
+    font-weight: 800;
+
+    padding-right: 40px;
+
+    text-transform: uppercase;
+}
+
+
+.lk_favorite .product .name a
+{
+    display: inline-block;
+
+    vertical-align: top;
+    text-decoration: none;
+
+    color: currentColor;
+}
+
+
+.lk_favorite .product .desc
+{
+    font-size: 10px;
+    font-weight: 500;
+
+    margin-top: 6px;
+    padding-right: 40px;
+
+    color: #2b3338;
+}
+
+
+.lk_favorite .product .features
+{
+    font-size: 10px;
+    font-weight: 500;
+
+    margin-top: 12px;
+
+    color: #2b3338;
+}
+
+
+.lk_favorite .product .features > *
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.lk_favorite .product .features > * + *
+{
+    margin-top: 8px;
+}
+
+
+.lk_favorite .product .features .label
+{
+    font-weight: 600;
+
+    margin-right: 8px;
+
+    white-space: nowrap;
+}
+
+
+.lk_favorite .product .features .price
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    white-space: nowrap;
+}
+
+.lk_favorite .product .features .price .red
+{
+    color: #ce0c36;
+}
+
+.lk_favorite .product .features .price .old
+{
+    font-weight: 400;
+
+    margin-left: 8px;
+
+    text-decoration: line-through;
+}
+
+
+.lk_favorite .product .features .color img
+{
+    display: block;
+
+    width: 12px;
+    height: 12px;
+
+    border: 1px solid #c8cbce;
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+
+.lk_favorite .product .link
+{
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+
+.lk_favorite .product .link a
+{
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 44px;
+
+    display: block;
+
+    width: 100%;
+    height: 44px;
+
+    transition: background .2s linear;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: #fff;
+    background: #2b3338;
+}
+
+
+.lk_favorite .product .link a:hover
+{
+    background: #000;
 }
 
 

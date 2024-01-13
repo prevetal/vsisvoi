@@ -2573,1047 +2573,225 @@
 				<section class="lk_info content_flex">
 					<div class="cont row">
 						<section class="content">
-							<section class="lk_profile">
-								<form action="" class="form">
-									<div class="columns">
-										<div class="line">
-											<div class="label">Ім’я</div>
+							<section class="lk_address">
+								<form action="" class="form add_form">
+									<div class="line">
+										<div class="field">
+											<input type="text" name="city" value="" class="input" placeholder="Місто">
+										</div>
+									</div>
 
+									<div class="line hide">
+										<div class="field">
+											<select name="delivery_method" data-placeholder="Варіант доставки">
+												<option value="1">Самовивіз з вул. Хрещатик, 27</option>
+												<option value="2">Відділення Нової Пошти</option>
+												<option value="3">Кур'єром Нової Пошти</option>
+											</select>
+
+											<div class="arr"></div>
+										</div>
+									</div>
+
+
+									<div class="method_info method_info1">
+										<div class="line shop">
+											Адреса пункту: <a href="/" target="_blank" rel="noopener nofollow">вул. Хрещатик, 27</a>
+										</div>
+									</div>
+
+
+									<div class="method_info method_info2">
+										<div class="line">
 											<div class="field">
 												<input type="text" name="" value="" class="input">
-											</div>
-										</div>
-
-										<div class="line">
-											<div class="label">Прізвище</div>
-
-											<div class="field">
-												<input type="text" name="" value="" class="input">
-											</div>
-										</div>
-
-										<div class="line">
-											<div class="label">Телефон</div>
-
-											<div class="field">
-												<input type="tel" name="" value="" class="input">
-											</div>
-										</div>
-
-										<div class="line">
-											<div class="label">Email</div>
-
-											<div class="field">
-												<input type="email" name="" value="" class="input">
-											</div>
-										</div>
-
-										<div class="line">
-											<div class="label">Додатковий телефон</div>
-
-											<div class="field">
-												<input type="tel" name="" value="" class="input">
 											</div>
 										</div>
 									</div>
 
-									<div class="about_me">
-										<div class="head">
-											<button type="button" class="spoler_btn">ДЕЩО ПРО МЕНЕ</button>
 
-											<div class="exp">Розкажіть нам про себе, щоб ми могли підібрати для вас кращі товари та пропозиції</div>
+									<div class="method_info method_info3">
+										<div class="line">
+											<div class="field">
+												<input type="text" name="" value="" class="input" placeholder="Вулиця">
+											</div>
 										</div>
 
-										<div class="hide">
-											<div class="section">
-												<div class="row">
-													<div class="line gender">
-														<div class="label">Стать</div>
-
-														<div class="fields">
-															<div class="field">
-																<label>
-																	<input type="radio" name="gender">
-																	<div>Чоловіча</div>
-																</label>
-															</div>
-
-															<div class="field">
-																<label>
-																	<input type="radio" name="gender" checked>
-																	<div>Жіноча</div>
-																</label>
-															</div>
-														</div>
-													</div>
-
-													<div class="line birthday">
-														<div class="label">День народження</div>
-
-														<div class="fields">
-															<div class="field">
-																<select name="birthday_day">
-																	<option value="1">1</option>
-																	<option value="2">2</option>
-																	<option value="3">3</option>
-																	<option value="4">4</option>
-																	<option value="5">5</option>
-																	<option value="6">6</option>
-																	<option value="7">7</option>
-																	<option value="8">8</option>
-																	<option value="9">9</option>
-																	<option value="10" selected>10</option>
-																	<option value="11">11</option>
-																	<option value="12">12</option>
-																	<option value="13">13</option>
-																	<option value="14">14</option>
-																	<option value="15">15</option>
-																	<option value="16">16</option>
-																	<option value="17">17</option>
-																	<option value="18">18</option>
-																	<option value="19">19</option>
-																	<option value="20">20</option>
-																	<option value="21">21</option>
-																	<option value="22">22</option>
-																	<option value="23">23</option>
-																	<option value="24">24</option>
-																	<option value="25">25</option>
-																	<option value="26">26</option>
-																	<option value="27">27</option>
-																	<option value="28">28</option>
-																	<option value="29">29</option>
-																	<option value="30">30</option>
-																	<option value="31">31</option>
-																</select>
-
-																<div class="arr"></div>
-															</div>
-
-															<div class="field">
-																<select name="birthday_month">
-																	<option value="1">Січень</option>
-																	<option value="2">Лютий</option>
-																	<option value="3" selected>Березень</option>
-																	<option value="4">Квітень</option>
-																	<option value="5">Травень</option>
-																	<option value="6">Червень</option>
-																	<option value="7">Липень</option>
-																	<option value="8">Серпень</option>
-																	<option value="9">Вересень</option>
-																	<option value="10">Жовтень</option>
-																	<option value="11">Листопад</option>
-																	<option value="12">Грудень</option>
-																</select>
-
-																<div class="arr"></div>
-															</div>
-
-															<div class="field">
-																<select name="birthday_year">
-																	<option value="2024">2024</option>
-																	<option value="2023">2023</option>
-																	<option value="2022">2022</option>
-																	<option value="2021">2021</option>
-																	<option value="2020">2020</option>
-																	<option value="2019">2019</option>
-																	<option value="2018">2018</option>
-																	<option value="2017">2017</option>
-																	<option value="2016">2016</option>
-																	<option value="2015">2015</option>
-																	<option value="2014">2014</option>
-																	<option value="2013">2013</option>
-																	<option value="2012">2012</option>
-																	<option value="2011">2011</option>
-																	<option value="2010">2010</option>
-																	<option value="2009">2009</option>
-																	<option value="2008">2008</option>
-																	<option value="2007">2007</option>
-																	<option value="2006">2006</option>
-																	<option value="2005">2005</option>
-																	<option value="2004">2004</option>
-																	<option value="2003">2003</option>
-																	<option value="2002">2002</option>
-																	<option value="2001">2001</option>
-																	<option value="2000">2000</option>
-																	<option value="1999">1999</option>
-																	<option value="1998">1998</option>
-																	<option value="1997">1997</option>
-																	<option value="1996">1996</option>
-																	<option value="1995">1995</option>
-																	<option value="1994">1994</option>
-																	<option value="1993">1993</option>
-																	<option value="1992">1992</option>
-																	<option value="1991">1991</option>
-																	<option value="1990">1990</option>
-																	<option value="1989">1989</option>
-																	<option value="1988">1988</option>
-																	<option value="1987">1987</option>
-																	<option value="1986">1986</option>
-																	<option value="1985">1985</option>
-																	<option value="1984">1984</option>
-																	<option value="1983" selected>1983</option>
-																	<option value="1982">1982</option>
-																	<option value="1981">1981</option>
-																	<option value="1980">1980</option>
-																	<option value="1979">1979</option>
-																	<option value="1978">1978</option>
-																	<option value="1977">1977</option>
-																	<option value="1976">1976</option>
-																	<option value="1975">1975</option>
-																	<option value="1974">1974</option>
-																	<option value="1973">1973</option>
-																	<option value="1972">1972</option>
-																	<option value="1971">1971</option>
-																	<option value="1970">1970</option>
-																	<option value="1969">1969</option>
-																	<option value="1968">1968</option>
-																	<option value="1967">1967</option>
-																	<option value="1966">1966</option>
-																	<option value="1965">1965</option>
-																	<option value="1964">1964</option>
-																	<option value="1963">1963</option>
-																	<option value="1962">1962</option>
-																	<option value="1961">1961</option>
-																	<option value="1960">1960</option>
-																	<option value="1959">1959</option>
-																	<option value="1958">1958</option>
-																	<option value="1957">1957</option>
-																</select>
-
-																<div class="arr"></div>
-															</div>
-														</div>
-
-														<div class="exp">Вкажіть дату свого народження щоб отримувати приємні вітання від нас</div>
-													</div>
-												</div>
+										<div class="line">
+											<div class="field">
+												<input type="number" name="" value="" class="input" placeholder="Будинок">
 											</div>
-
-											<div class="section">
-												<div class="line clothe_sizes">
-													<div class="label">Мій розмір одягу</div>
-
-													<div class="fields">
-														<div class="field">
-															<label class="checkbox">
-																<input type="checkbox" name="clothe_sizes[]">
-
-																<div class="check"></div>
-																<div>XS</div>
-															</label>
-														</div>
-
-														<div class="field">
-															<label class="checkbox">
-																<input type="checkbox" name="clothe_sizes[]">
-
-																<div class="check"></div>
-																<div>S</div>
-															</label>
-														</div>
-
-														<div class="field">
-															<label class="checkbox">
-																<input type="checkbox" name="clothe_sizes[]">
-
-																<div class="check"></div>
-																<div>M</div>
-															</label>
-														</div>
-
-														<div class="field">
-															<label class="checkbox">
-																<input type="checkbox" name="clothe_sizes[]">
-
-																<div class="check"></div>
-																<div>L</div>
-															</label>
-														</div>
-
-														<div class="field">
-															<label class="checkbox">
-																<input type="checkbox" name="clothe_sizes[]">
-
-																<div class="check"></div>
-																<div>XL</div>
-															</label>
-														</div>
-
-														<div class="field">
-															<label class="checkbox">
-																<input type="checkbox" name="clothe_sizes[]">
-
-																<div class="check"></div>
-																<div>XXL</div>
-															</label>
-														</div>
-
-														<div class="field">
-															<label class="checkbox">
-																<input type="checkbox" name="clothe_sizes[]">
-
-																<div class="check"></div>
-																<div>3XL</div>
-															</label>
-														</div>
-													</div>
-												</div>
-
-												<div class="line shoe_sizes">
-													<div class="label">Мій розмір взуття</div>
-
-													<div class="fields">
-														<div class="field">
-															<label class="checkbox">
-																<input type="checkbox" name="shoe_sizes[]">
-
-																<div class="check"></div>
-																<div>35</div>
-															</label>
-														</div>
-
-														<div class="field">
-															<label class="checkbox">
-																<input type="checkbox" name="shoe_sizes[]">
-
-																<div class="check"></div>
-																<div>36</div>
-															</label>
-														</div>
-
-														<div class="field">
-															<label class="checkbox">
-																<input type="checkbox" name="shoe_sizes[]">
-
-																<div class="check"></div>
-																<div>37</div>
-															</label>
-														</div>
-
-														<div class="field">
-															<label class="checkbox">
-																<input type="checkbox" name="shoe_sizes[]">
-
-																<div class="check"></div>
-																<div>38</div>
-															</label>
-														</div>
-
-														<div class="field">
-															<label class="checkbox">
-																<input type="checkbox" name="shoe_sizes[]">
-
-																<div class="check"></div>
-																<div>39</div>
-															</label>
-														</div>
-
-														<div class="field">
-															<label class="checkbox">
-																<input type="checkbox" name="shoe_sizes[]">
-
-																<div class="check"></div>
-																<div>40</div>
-															</label>
-														</div>
-
-														<div class="field">
-															<label class="checkbox">
-																<input type="checkbox" name="shoe_sizes[]">
-
-																<div class="check"></div>
-																<div>41</div>
-															</label>
-														</div>
-
-														<div class="field">
-															<label class="checkbox">
-																<input type="checkbox" name="shoe_sizes[]">
-
-																<div class="check"></div>
-																<div>42</div>
-															</label>
-														</div>
-
-														<div class="field">
-															<label class="checkbox">
-																<input type="checkbox" name="shoe_sizes[]">
-
-																<div class="check"></div>
-																<div>43</div>
-															</label>
-														</div>
-
-														<div class="field">
-															<label class="checkbox">
-																<input type="checkbox" name="shoe_sizes[]">
-
-																<div class="check"></div>
-																<div>44</div>
-															</label>
-														</div>
-
-														<div class="field">
-															<label class="checkbox">
-																<input type="checkbox" name="shoe_sizes[]">
-
-																<div class="check"></div>
-																<div>45</div>
-															</label>
-														</div>
-
-														<div class="field">
-															<label class="checkbox">
-																<input type="checkbox" name="shoe_sizes[]">
-
-																<div class="check"></div>
-																<div>46</div>
-															</label>
-														</div>
-													</div>
-												</div>
-											</div>
-
-											<div class="section">
-												<div class="line children">
-													<div class="label">Мої діти</div>
-
-													<div class="boys">
-														<div class="field">
-															<label class="checkbox have_boys">
-																<input type="checkbox" name="boy">
-
-																<div class="check"></div>
-																<div>Хлопчик</div>
-															</label>
-														</div>
-
-														<div class="birthday">
-															<div class="label">День народження</div>
-
-															<div class="fields">
-																<div class="field">
-																	<select name="birthday_day" data-placeholder="-">
-																		<option value="1">1</option>
-																		<option value="2">2</option>
-																		<option value="3">3</option>
-																		<option value="4">4</option>
-																		<option value="5">5</option>
-																		<option value="6">6</option>
-																		<option value="7">7</option>
-																		<option value="8">8</option>
-																		<option value="9">9</option>
-																		<option value="10">10</option>
-																		<option value="11">11</option>
-																		<option value="12">12</option>
-																		<option value="13">13</option>
-																		<option value="14">14</option>
-																		<option value="15">15</option>
-																		<option value="16">16</option>
-																		<option value="17">17</option>
-																		<option value="18">18</option>
-																		<option value="19">19</option>
-																		<option value="20">20</option>
-																		<option value="21">21</option>
-																		<option value="22">22</option>
-																		<option value="23">23</option>
-																		<option value="24">24</option>
-																		<option value="25">25</option>
-																		<option value="26">26</option>
-																		<option value="27">27</option>
-																		<option value="28">28</option>
-																		<option value="29">29</option>
-																		<option value="30">30</option>
-																		<option value="31">31</option>
-																	</select>
-
-																	<div class="arr"></div>
-																</div>
-
-																<div class="field">
-																	<select name="birthday_month" data-placeholder="-">
-																		<option value="1">Січень</option>
-																		<option value="2">Лютий</option>
-																		<option value="3">Березень</option>
-																		<option value="4">Квітень</option>
-																		<option value="5">Травень</option>
-																		<option value="6">Червень</option>
-																		<option value="7">Липень</option>
-																		<option value="8">Серпень</option>
-																		<option value="9">Вересень</option>
-																		<option value="10">Жовтень</option>
-																		<option value="11">Листопад</option>
-																		<option value="12">Грудень</option>
-																	</select>
-
-																	<div class="arr"></div>
-																</div>
-
-																<div class="field">
-																	<select name="birthday_year" data-placeholder="-">
-																		<option value="2024">2024</option>
-																		<option value="2023">2023</option>
-																		<option value="2022">2022</option>
-																		<option value="2021">2021</option>
-																		<option value="2020">2020</option>
-																		<option value="2019">2019</option>
-																		<option value="2018">2018</option>
-																		<option value="2017">2017</option>
-																		<option value="2016">2016</option>
-																		<option value="2015">2015</option>
-																		<option value="2014">2014</option>
-																		<option value="2013">2013</option>
-																		<option value="2012">2012</option>
-																		<option value="2011">2011</option>
-																		<option value="2010">2010</option>
-																		<option value="2009">2009</option>
-																		<option value="2008">2008</option>
-																		<option value="2007">2007</option>
-																		<option value="2006">2006</option>
-																		<option value="2005">2005</option>
-																		<option value="2004">2004</option>
-																		<option value="2003">2003</option>
-																		<option value="2002">2002</option>
-																		<option value="2001">2001</option>
-																		<option value="2000">2000</option>
-																		<option value="1999">1999</option>
-																		<option value="1998">1998</option>
-																		<option value="1997">1997</option>
-																		<option value="1996">1996</option>
-																		<option value="1995">1995</option>
-																		<option value="1994">1994</option>
-																		<option value="1993">1993</option>
-																		<option value="1992">1992</option>
-																		<option value="1991">1991</option>
-																		<option value="1990">1990</option>
-																		<option value="1989">1989</option>
-																		<option value="1988">1988</option>
-																		<option value="1987">1987</option>
-																		<option value="1986">1986</option>
-																		<option value="1985">1985</option>
-																		<option value="1984">1984</option>
-																		<option value="1983">1983</option>
-																		<option value="1982">1982</option>
-																		<option value="1981">1981</option>
-																		<option value="1980">1980</option>
-																		<option value="1979">1979</option>
-																		<option value="1978">1978</option>
-																		<option value="1977">1977</option>
-																		<option value="1976">1976</option>
-																		<option value="1975">1975</option>
-																		<option value="1974">1974</option>
-																		<option value="1973">1973</option>
-																		<option value="1972">1972</option>
-																		<option value="1971">1971</option>
-																		<option value="1970">1970</option>
-																		<option value="1969">1969</option>
-																		<option value="1968">1968</option>
-																		<option value="1967">1967</option>
-																		<option value="1966">1966</option>
-																		<option value="1965">1965</option>
-																		<option value="1964">1964</option>
-																		<option value="1963">1963</option>
-																		<option value="1962">1962</option>
-																		<option value="1961">1961</option>
-																		<option value="1960">1960</option>
-																		<option value="1959">1959</option>
-																		<option value="1958">1958</option>
-																		<option value="1957">1957</option>
-																	</select>
-
-																	<div class="arr"></div>
-																</div>
-															</div>
-
-															<button type="button" class="add_btn">
-																<svg class="icon"><use xlink:href="images/sprite.svg#ic_plus"></use></svg>
-																<span>ДОДАТИ ЩЕ</span>
-															</button>
-														</div>
-
-														<div class="template">
-															<div class="fields need_init">
-																<div class="field">
-																	<select name="birthday_day" data-placeholder="-" class="skip">
-																		<option value="1">1</option>
-																		<option value="2">2</option>
-																		<option value="3">3</option>
-																		<option value="4">4</option>
-																		<option value="5">5</option>
-																		<option value="6">6</option>
-																		<option value="7">7</option>
-																		<option value="8">8</option>
-																		<option value="9">9</option>
-																		<option value="10">10</option>
-																		<option value="11">11</option>
-																		<option value="12">12</option>
-																		<option value="13">13</option>
-																		<option value="14">14</option>
-																		<option value="15">15</option>
-																		<option value="16">16</option>
-																		<option value="17">17</option>
-																		<option value="18">18</option>
-																		<option value="19">19</option>
-																		<option value="20">20</option>
-																		<option value="21">21</option>
-																		<option value="22">22</option>
-																		<option value="23">23</option>
-																		<option value="24">24</option>
-																		<option value="25">25</option>
-																		<option value="26">26</option>
-																		<option value="27">27</option>
-																		<option value="28">28</option>
-																		<option value="29">29</option>
-																		<option value="30">30</option>
-																		<option value="31">31</option>
-																	</select>
-
-																	<div class="arr"></div>
-																</div>
-
-																<div class="field">
-																	<select name="birthday_month" data-placeholder="-" class="skip">
-																		<option value="1">Січень</option>
-																		<option value="2">Лютий</option>
-																		<option value="3">Березень</option>
-																		<option value="4">Квітень</option>
-																		<option value="5">Травень</option>
-																		<option value="6">Червень</option>
-																		<option value="7">Липень</option>
-																		<option value="8">Серпень</option>
-																		<option value="9">Вересень</option>
-																		<option value="10">Жовтень</option>
-																		<option value="11">Листопад</option>
-																		<option value="12">Грудень</option>
-																	</select>
-
-																	<div class="arr"></div>
-																</div>
-
-																<div class="field">
-																	<select name="birthday_year" data-placeholder="-" class="skip">
-																		<option value="2024">2024</option>
-																		<option value="2023">2023</option>
-																		<option value="2022">2022</option>
-																		<option value="2021">2021</option>
-																		<option value="2020">2020</option>
-																		<option value="2019">2019</option>
-																		<option value="2018">2018</option>
-																		<option value="2017">2017</option>
-																		<option value="2016">2016</option>
-																		<option value="2015">2015</option>
-																		<option value="2014">2014</option>
-																		<option value="2013">2013</option>
-																		<option value="2012">2012</option>
-																		<option value="2011">2011</option>
-																		<option value="2010">2010</option>
-																		<option value="2009">2009</option>
-																		<option value="2008">2008</option>
-																		<option value="2007">2007</option>
-																		<option value="2006">2006</option>
-																		<option value="2005">2005</option>
-																		<option value="2004">2004</option>
-																		<option value="2003">2003</option>
-																		<option value="2002">2002</option>
-																		<option value="2001">2001</option>
-																		<option value="2000">2000</option>
-																		<option value="1999">1999</option>
-																		<option value="1998">1998</option>
-																		<option value="1997">1997</option>
-																		<option value="1996">1996</option>
-																		<option value="1995">1995</option>
-																		<option value="1994">1994</option>
-																		<option value="1993">1993</option>
-																		<option value="1992">1992</option>
-																		<option value="1991">1991</option>
-																		<option value="1990">1990</option>
-																		<option value="1989">1989</option>
-																		<option value="1988">1988</option>
-																		<option value="1987">1987</option>
-																		<option value="1986">1986</option>
-																		<option value="1985">1985</option>
-																		<option value="1984">1984</option>
-																		<option value="1983">1983</option>
-																		<option value="1982">1982</option>
-																		<option value="1981">1981</option>
-																		<option value="1980">1980</option>
-																		<option value="1979">1979</option>
-																		<option value="1978">1978</option>
-																		<option value="1977">1977</option>
-																		<option value="1976">1976</option>
-																		<option value="1975">1975</option>
-																		<option value="1974">1974</option>
-																		<option value="1973">1973</option>
-																		<option value="1972">1972</option>
-																		<option value="1971">1971</option>
-																		<option value="1970">1970</option>
-																		<option value="1969">1969</option>
-																		<option value="1968">1968</option>
-																		<option value="1967">1967</option>
-																		<option value="1966">1966</option>
-																		<option value="1965">1965</option>
-																		<option value="1964">1964</option>
-																		<option value="1963">1963</option>
-																		<option value="1962">1962</option>
-																		<option value="1961">1961</option>
-																		<option value="1960">1960</option>
-																		<option value="1959">1959</option>
-																		<option value="1958">1958</option>
-																		<option value="1957">1957</option>
-																	</select>
-
-																	<div class="arr"></div>
-																</div>
-
-																<button type="button" class="delete_btn">
-																	<svg class="icon"><use xlink:href="images/sprite.svg#ic_close"></use></svg>
-																</button>
-															</div>
-														</div>
-													</div>
-
-													<div class="girls">
-														<div class="field">
-															<label class="checkbox have_girls">
-																<input type="checkbox" name="girl">
-
-																<div class="check"></div>
-																<div>Дівчинка</div>
-															</label>
-														</div>
-
-														<div class="birthday">
-															<div class="label">День народження</div>
-
-															<div class="fields">
-																<div class="field">
-																	<select name="birthday_day" data-placeholder="-">
-																		<option value="1">1</option>
-																		<option value="2">2</option>
-																		<option value="3">3</option>
-																		<option value="4">4</option>
-																		<option value="5">5</option>
-																		<option value="6">6</option>
-																		<option value="7">7</option>
-																		<option value="8">8</option>
-																		<option value="9">9</option>
-																		<option value="10">10</option>
-																		<option value="11">11</option>
-																		<option value="12">12</option>
-																		<option value="13">13</option>
-																		<option value="14">14</option>
-																		<option value="15">15</option>
-																		<option value="16">16</option>
-																		<option value="17">17</option>
-																		<option value="18">18</option>
-																		<option value="19">19</option>
-																		<option value="20">20</option>
-																		<option value="21">21</option>
-																		<option value="22">22</option>
-																		<option value="23">23</option>
-																		<option value="24">24</option>
-																		<option value="25">25</option>
-																		<option value="26">26</option>
-																		<option value="27">27</option>
-																		<option value="28">28</option>
-																		<option value="29">29</option>
-																		<option value="30">30</option>
-																		<option value="31">31</option>
-																	</select>
-
-																	<div class="arr"></div>
-																</div>
-
-																<div class="field">
-																	<select name="birthday_month" data-placeholder="-">
-																		<option value="1">Січень</option>
-																		<option value="2">Лютий</option>
-																		<option value="3">Березень</option>
-																		<option value="4">Квітень</option>
-																		<option value="5">Травень</option>
-																		<option value="6">Червень</option>
-																		<option value="7">Липень</option>
-																		<option value="8">Серпень</option>
-																		<option value="9">Вересень</option>
-																		<option value="10">Жовтень</option>
-																		<option value="11">Листопад</option>
-																		<option value="12">Грудень</option>
-																	</select>
-
-																	<div class="arr"></div>
-																</div>
-
-																<div class="field">
-																	<select name="birthday_year" data-placeholder="-">
-																		<option value="2024">2024</option>
-																		<option value="2023">2023</option>
-																		<option value="2022">2022</option>
-																		<option value="2021">2021</option>
-																		<option value="2020">2020</option>
-																		<option value="2019">2019</option>
-																		<option value="2018">2018</option>
-																		<option value="2017">2017</option>
-																		<option value="2016">2016</option>
-																		<option value="2015">2015</option>
-																		<option value="2014">2014</option>
-																		<option value="2013">2013</option>
-																		<option value="2012">2012</option>
-																		<option value="2011">2011</option>
-																		<option value="2010">2010</option>
-																		<option value="2009">2009</option>
-																		<option value="2008">2008</option>
-																		<option value="2007">2007</option>
-																		<option value="2006">2006</option>
-																		<option value="2005">2005</option>
-																		<option value="2004">2004</option>
-																		<option value="2003">2003</option>
-																		<option value="2002">2002</option>
-																		<option value="2001">2001</option>
-																		<option value="2000">2000</option>
-																		<option value="1999">1999</option>
-																		<option value="1998">1998</option>
-																		<option value="1997">1997</option>
-																		<option value="1996">1996</option>
-																		<option value="1995">1995</option>
-																		<option value="1994">1994</option>
-																		<option value="1993">1993</option>
-																		<option value="1992">1992</option>
-																		<option value="1991">1991</option>
-																		<option value="1990">1990</option>
-																		<option value="1989">1989</option>
-																		<option value="1988">1988</option>
-																		<option value="1987">1987</option>
-																		<option value="1986">1986</option>
-																		<option value="1985">1985</option>
-																		<option value="1984">1984</option>
-																		<option value="1983">1983</option>
-																		<option value="1982">1982</option>
-																		<option value="1981">1981</option>
-																		<option value="1980">1980</option>
-																		<option value="1979">1979</option>
-																		<option value="1978">1978</option>
-																		<option value="1977">1977</option>
-																		<option value="1976">1976</option>
-																		<option value="1975">1975</option>
-																		<option value="1974">1974</option>
-																		<option value="1973">1973</option>
-																		<option value="1972">1972</option>
-																		<option value="1971">1971</option>
-																		<option value="1970">1970</option>
-																		<option value="1969">1969</option>
-																		<option value="1968">1968</option>
-																		<option value="1967">1967</option>
-																		<option value="1966">1966</option>
-																		<option value="1965">1965</option>
-																		<option value="1964">1964</option>
-																		<option value="1963">1963</option>
-																		<option value="1962">1962</option>
-																		<option value="1961">1961</option>
-																		<option value="1960">1960</option>
-																		<option value="1959">1959</option>
-																		<option value="1958">1958</option>
-																		<option value="1957">1957</option>
-																	</select>
-
-																	<div class="arr"></div>
-																</div>
-															</div>
-
-															<button type="button" class="add_btn">
-																<svg class="icon"><use xlink:href="images/sprite.svg#ic_plus"></use></svg>
-																<span>ДОДАТИ ЩЕ</span>
-															</button>
-														</div>
-
-														<div class="template">
-															<div class="fields need_init">
-																<div class="field">
-																	<select name="birthday_day" data-placeholder="-" class="skip">
-																		<option value="1">1</option>
-																		<option value="2">2</option>
-																		<option value="3">3</option>
-																		<option value="4">4</option>
-																		<option value="5">5</option>
-																		<option value="6">6</option>
-																		<option value="7">7</option>
-																		<option value="8">8</option>
-																		<option value="9">9</option>
-																		<option value="10">10</option>
-																		<option value="11">11</option>
-																		<option value="12">12</option>
-																		<option value="13">13</option>
-																		<option value="14">14</option>
-																		<option value="15">15</option>
-																		<option value="16">16</option>
-																		<option value="17">17</option>
-																		<option value="18">18</option>
-																		<option value="19">19</option>
-																		<option value="20">20</option>
-																		<option value="21">21</option>
-																		<option value="22">22</option>
-																		<option value="23">23</option>
-																		<option value="24">24</option>
-																		<option value="25">25</option>
-																		<option value="26">26</option>
-																		<option value="27">27</option>
-																		<option value="28">28</option>
-																		<option value="29">29</option>
-																		<option value="30">30</option>
-																		<option value="31">31</option>
-																	</select>
-
-																	<div class="arr"></div>
-																</div>
-
-																<div class="field">
-																	<select name="birthday_month" data-placeholder="-" class="skip">
-																		<option value="1">Січень</option>
-																		<option value="2">Лютий</option>
-																		<option value="3">Березень</option>
-																		<option value="4">Квітень</option>
-																		<option value="5">Травень</option>
-																		<option value="6">Червень</option>
-																		<option value="7">Липень</option>
-																		<option value="8">Серпень</option>
-																		<option value="9">Вересень</option>
-																		<option value="10">Жовтень</option>
-																		<option value="11">Листопад</option>
-																		<option value="12">Грудень</option>
-																	</select>
-
-																	<div class="arr"></div>
-																</div>
-
-																<div class="field">
-																	<select name="birthday_year" data-placeholder="-" class="skip">
-																		<option value="2024">2024</option>
-																		<option value="2023">2023</option>
-																		<option value="2022">2022</option>
-																		<option value="2021">2021</option>
-																		<option value="2020">2020</option>
-																		<option value="2019">2019</option>
-																		<option value="2018">2018</option>
-																		<option value="2017">2017</option>
-																		<option value="2016">2016</option>
-																		<option value="2015">2015</option>
-																		<option value="2014">2014</option>
-																		<option value="2013">2013</option>
-																		<option value="2012">2012</option>
-																		<option value="2011">2011</option>
-																		<option value="2010">2010</option>
-																		<option value="2009">2009</option>
-																		<option value="2008">2008</option>
-																		<option value="2007">2007</option>
-																		<option value="2006">2006</option>
-																		<option value="2005">2005</option>
-																		<option value="2004">2004</option>
-																		<option value="2003">2003</option>
-																		<option value="2002">2002</option>
-																		<option value="2001">2001</option>
-																		<option value="2000">2000</option>
-																		<option value="1999">1999</option>
-																		<option value="1998">1998</option>
-																		<option value="1997">1997</option>
-																		<option value="1996">1996</option>
-																		<option value="1995">1995</option>
-																		<option value="1994">1994</option>
-																		<option value="1993">1993</option>
-																		<option value="1992">1992</option>
-																		<option value="1991">1991</option>
-																		<option value="1990">1990</option>
-																		<option value="1989">1989</option>
-																		<option value="1988">1988</option>
-																		<option value="1987">1987</option>
-																		<option value="1986">1986</option>
-																		<option value="1985">1985</option>
-																		<option value="1984">1984</option>
-																		<option value="1983">1983</option>
-																		<option value="1982">1982</option>
-																		<option value="1981">1981</option>
-																		<option value="1980">1980</option>
-																		<option value="1979">1979</option>
-																		<option value="1978">1978</option>
-																		<option value="1977">1977</option>
-																		<option value="1976">1976</option>
-																		<option value="1975">1975</option>
-																		<option value="1974">1974</option>
-																		<option value="1973">1973</option>
-																		<option value="1972">1972</option>
-																		<option value="1971">1971</option>
-																		<option value="1970">1970</option>
-																		<option value="1969">1969</option>
-																		<option value="1968">1968</option>
-																		<option value="1967">1967</option>
-																		<option value="1966">1966</option>
-																		<option value="1965">1965</option>
-																		<option value="1964">1964</option>
-																		<option value="1963">1963</option>
-																		<option value="1962">1962</option>
-																		<option value="1961">1961</option>
-																		<option value="1960">1960</option>
-																		<option value="1959">1959</option>
-																		<option value="1958">1958</option>
-																		<option value="1957">1957</option>
-																	</select>
-
-																	<div class="arr"></div>
-																</div>
-
-																<button type="button" class="delete_btn">
-																	<svg class="icon"><use xlink:href="images/sprite.svg#ic_close"></use></svg>
-																</button>
-															</div>
-														</div>
-													</div>
-												</div>
+										</div>
+
+										<div class="line">
+											<div class="field">
+												<input type="number" name="" value="" class="input" placeholder="Квартира">
 											</div>
 										</div>
 									</div>
 
 									<div class="submit">
-										<button type="submit" class="submit_btn">Оновити профіль</button>
+										<button type="submit" class="submit_btn">Зберегти</button>
+
+										<button type="button" class="cancel_btn">Відміна</button>
 									</div>
 								</form>
+
+
+								<div class="items">
+									<div class="address">
+										<div class="data">
+											<div class="label">АДРЕСА 1</div>
+
+											<svg class="icon"><use xlink:href="images/sprite.svg#ic_lk_address"></use></svg>
+
+											<div class="val">Київ (Київська область) Відділення №120 (до 15 кг): вул. Ніжинська, 16</div>
+
+											<div class="btns">
+												<button class="btn edit_btn">
+													<svg><use xlink:href="images/sprite.svg#ic_edit"></use></svg>
+												</button>
+
+												<button class="btn delete_btn">
+													<svg><use xlink:href="images/sprite.svg#ic_close"></use></svg>
+												</button>
+											</div>
+										</div>
+
+										<form action="" class="form edit_form">
+											<div class="line">
+												<div class="field">
+													<input type="text" name="" value="Київ" class="input">
+												</div>
+											</div>
+
+											<div class="line">
+												<div class="field">
+													<input type="text" name="" value="Відділення Нової Пошти" class="input">
+												</div>
+											</div>
+
+											<div class="line">
+												<div class="field">
+													<input type="text" name="" value="Відділення №120 (до 15 кг): вул. Ніжинська, 16" class="input">
+												</div>
+											</div>
+
+											<div class="submit">
+												<button type="submit" class="submit_btn">Зберегти</button>
+
+												<button type="button" class="cancel_btn">Відміна</button>
+											</div>
+										</form>
+									</div>
+
+									<div class="address">
+										<div class="data">
+											<div class="label">АДРЕСА 1</div>
+
+											<svg class="icon"><use xlink:href="images/sprite.svg#ic_lk_address"></use></svg>
+
+											<div class="val">Київ (Київська область) Відділення №120 (до 15 кг): вул. Ніжинська, 16</div>
+
+											<div class="btns">
+												<button class="btn edit_btn">
+													<svg><use xlink:href="images/sprite.svg#ic_edit"></use></svg>
+												</button>
+
+												<button class="btn delete_btn">
+													<svg><use xlink:href="images/sprite.svg#ic_close"></use></svg>
+												</button>
+											</div>
+										</div>
+
+										<form action="" class="form edit_form">
+											<div class="line">
+												<div class="field">
+													<input type="text" name="" value="Київ" class="input">
+												</div>
+											</div>
+
+											<div class="line">
+												<div class="field">
+													<input type="text" name="" value="Кур'єром Нової Пошти" class="input">
+												</div>
+											</div>
+
+											<div class="line">
+												<div class="field">
+													<input type="text" name="" value="вул. Ніжинська" class="input">
+												</div>
+											</div>
+
+											<div class="line">
+												<div class="field">
+													<input type="number" name="" value="16" class="input">
+												</div>
+											</div>
+
+											<div class="line">
+												<div class="field">
+													<input type="number" name="" value="43" class="input">
+												</div>
+											</div>
+
+											<div class="submit">
+												<button type="submit" class="submit_btn">Зберегти</button>
+
+												<button type="button" class="cancel_btn">Відміна</button>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<button class="add_btn">Додати адресу</button>
 							</section>
 						</section>
 
 
 						<aside>
-							<div class="lk_menu">
-								<div><a class="active">
+							<div class="lk_menu modal_cont">
+								<button class="btn mini_modal_btn" data-modal-id="#lk_menu_modal">
 									<svg class="icon profile"><use xlink:href="images/sprite.svg#ic_lk_profile"></use></svg>
-									<span>Мої дані</span>
-								</a></div>
-
-								<div><a href="/">
-									<svg class="icon address"><use xlink:href="images/sprite.svg#ic_lk_address"></use></svg>
 									<span>Адреса</span>
-								</a></div>
+								</button>
 
-								<div><a href="/">
-									<svg class="icon favorite"><use xlink:href="images/sprite.svg#ic_lk_favorite"></use></svg>
-									<span>Обрані товари</span>
-								</a></div>
+								<div class="mini_modal" id="lk_menu_modal">
+									<div><a href="/">
+										<svg class="icon profile"><use xlink:href="images/sprite.svg#ic_lk_profile"></use></svg>
+										<span>Мої дані</span>
+									</a></div>
 
-								<div><a href="/">
-									<svg class="icon orders"><use xlink:href="images/sprite.svg#ic_lk_orders"></use></svg>
-									<span>Історія покупок</span>
-								</a></div>
+									<div><a class="active">
+										<svg class="icon address"><use xlink:href="images/sprite.svg#ic_lk_address"></use></svg>
+										<span>Адреса</span>
+									</a></div>
 
-								<div><a href="/">
-									<svg class="icon subscribe"><use xlink:href="images/sprite.svg#ic_lk_subscribe"></use></svg>
-									<span>Розсилки</span>
-								</a></div>
+									<div><a href="/">
+										<svg class="icon favorite"><use xlink:href="images/sprite.svg#ic_lk_favorite"></use></svg>
+										<span>Обрані товари</span>
+									</a></div>
 
-								<div><a href="/">
-									<svg class="icon password"><use xlink:href="images/sprite.svg#ic_lk_password"></use></svg>
-									<span>Змінити пароль</span>
-								</a></div>
+									<div><a href="/">
+										<svg class="icon orders"><use xlink:href="images/sprite.svg#ic_lk_orders"></use></svg>
+										<span>Історія покупок</span>
+									</a></div>
 
-								<div><a href="/">
-									<svg class="icon logout"><use xlink:href="images/sprite.svg#ic_lk_logout"></use></svg>
-									<span>Вихід</span>
-								</a></div>
+									<div><a href="/">
+										<svg class="icon subscribe"><use xlink:href="images/sprite.svg#ic_lk_subscribe"></use></svg>
+										<span>Розсилки</span>
+									</a></div>
+
+									<div><a href="/">
+										<svg class="icon password"><use xlink:href="images/sprite.svg#ic_lk_password"></use></svg>
+										<span>Змінити пароль</span>
+									</a></div>
+
+									<div><a href="/">
+										<svg class="icon logout"><use xlink:href="images/sprite.svg#ic_lk_logout"></use></svg>
+										<span>Вихід</span>
+									</a></div>
+								</div>
 							</div>
 						</aside>
 					</div>

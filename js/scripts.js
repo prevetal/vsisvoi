@@ -1014,7 +1014,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 
-	// LK - profile
+	// LK - Profile
 	$('.lk_profile .about_me .head .spoler_btn').click(function(e) {
 		$(this).toggleClass('active')
 
@@ -1022,7 +1022,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
-	// LK - profile - kids
+	// LK - Profile - Kids
 	$('.lk_profile .form .children .have_boys').click(function(e) {
 		if(e.target.nodeName === 'LABEL') {
 			$(this).closest('.boys').find('.birthday').slideToggle(300)
@@ -1036,7 +1036,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
-	// LK - profile - kids - Add line
+	// LK - Profile - Kids - Add
 	$('.lk_profile .form .children .add_btn').click(function(e) {
 		e.preventDefault()
 
@@ -1060,11 +1060,104 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
-	// LK - profile - kids - Delete line
+	// LK - Profile - Kids - Delete
 	$('body').on('click', '.lk_profile .form .children .birthday .delete_btn', function (e) {
 		e.preventDefault()
 
 		$(this).closest('.fields').remove()
+	})
+
+
+	// Mini modal
+	$('.mini_modal_btn').click(function(e) {
+		e.preventDefault()
+
+		let modalId = $(this).data('modal-id')
+
+		if ($(this).hasClass('active')) {
+			$(this).removeClass('active')
+			$('.mini_modal').removeClass('active')
+
+			if (is_touch_device()) $('body').css('cursor', 'default')
+		} else {
+			$('.mini_modal_btn').removeClass('active')
+			$(this).addClass('active')
+
+			$('.mini_modal').removeClass('active')
+			$(modalId).addClass('active')
+
+			if (is_touch_device()) $('body').css('cursor', 'pointer')
+		}
+	})
+
+	// Close the popup when clicked due to its behavior
+	$(document).click(e => {
+		if ($(e.target).closest('.modal_cont').length === 0) {
+			$('.mini_modal, .mini_modal_btn').removeClass('active')
+
+			if (is_touch_device()) $('body').css('cursor', 'default')
+		}
+	})
+
+
+	// LK - Address - Add
+	$('.lk_address .add_btn').click(function(e) {
+		e.preventDefault()
+
+		$(this).hide()
+		$('.lk_address .add_form').fadeIn(300)
+	})
+
+	$('.lk_address .add_form .cancel_btn').click(function(e) {
+		e.preventDefault()
+
+		$('.lk_address .add_form').hide()
+		$('.lk_address .add_btn').fadeIn(300)
+	})
+
+
+	$('.lk_address .add_form .input[name=city]').keyup(function() {
+		let _self = $(this),
+			parent = $(this).closest('.line')
+
+		setTimeout(() => {
+			_self.val().length
+				? parent.next('.hide').fadeIn(300)
+				: parent.next('.hide').fadeOut(200)
+		})
+	})
+
+	$('.lk_address .add_form select[name=delivery_method]').change(function() {
+		$('.lk_address .add_form .method_info').hide()
+		$('.lk_address .add_form .method_info' + $(this).val()).fadeIn(300)
+	})
+
+
+	// LK - Address - Edit
+	$('.lk_address .address .edit_btn').click(function(e) {
+		e.preventDefault()
+
+		let parent = $(this).closest('.address')
+
+		parent.find('.data').hide()
+		parent.find('.form').fadeIn(300)
+	})
+
+	$('.lk_address .address .form .cancel_btn').click(function(e) {
+		e.preventDefault()
+
+		let parent = $(this).closest('.address')
+
+		parent.find('.form').hide()
+		parent.find('.data').fadeIn(300)
+	})
+
+
+	// LK - Address - Delete
+	$('.lk_address .address .delete_btn').click(function(e) {
+		e.preventDefault()
+
+		$(this).closest('.address').remove()
 	})
 })
 

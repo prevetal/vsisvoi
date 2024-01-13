@@ -123,6 +123,11 @@
         text-transform: uppercase;
     }
 
+    .page_title.top_p
+    {
+        padding: 0;
+    }
+
 
 
     /*------------
@@ -910,6 +915,92 @@
     .brands_page .list .letter
     {
         font-size: 48px;
+    }
+
+
+
+    /*-------------
+        LK info
+    -------------*/
+    .lk_info
+    {
+        --sidebar_width: 100%;
+    }
+
+
+    .lk_info aside
+    {
+        border-left: 0;
+    }
+
+
+    .lk_info .content
+    {
+        padding-left: 0;
+
+        border: none;
+    }
+
+
+
+    /*-------------
+        LK menu
+    -------------*/
+    .lk_menu
+    {
+        position: relative;
+        top: 0;
+
+        width: calc(100% + 40px);
+        margin-right: -20px;
+        margin-left: -20px;
+    }
+
+
+    .lk_menu .btn
+    {
+        display: flex;
+    }
+
+
+    .lk_menu .mini_modal
+    {
+        position: absolute;
+        top: 100%;
+
+        visibility: hidden;
+
+        width: 100%;
+        padding: 8px 0;
+
+        pointer-events: none;
+
+        opacity: 0;
+        border-bottom: 1px solid #eee;
+        background: #fff;
+    }
+
+
+    .lk_menu .mini_modal.active
+    {
+        visibility: visible;
+
+        pointer-events: auto;
+
+        opacity: 1;
+    }
+
+
+    .lk_menu a
+    {
+        font-size: 13px;
+
+        padding: 12px 19px;
+    }
+
+    .lk_menu a:before
+    {
+        left: 0;
     }
 
 
