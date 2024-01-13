@@ -682,7 +682,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 	// Custom select
-	const selects = document.querySelectorAll('select')
+	const selects = document.querySelectorAll('select:not(.skip)')
 
 	if (selects) {
 		selects.forEach(el => NiceSelect.bind(el, {
@@ -984,31 +984,87 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Size table
 	const scrollableDiv = document.querySelector('.side_modal .table_wrap')
 
-	let isMouseDown = false,
-		startX, scrollLeft
+	if(scrollableDiv) {
+		let isMouseDown = false,
+			startX, scrollLeft
 
-	scrollableDiv.addEventListener('mousedown', (e) => {
-		isMouseDown = true
-		startX = e.pageX - scrollableDiv.offsetLeft
-		scrollLeft = scrollableDiv.scrollLeft
+		scrollableDiv.addEventListener('mousedown', (e) => {
+			isMouseDown = true
+			startX = e.pageX - scrollableDiv.offsetLeft
+			scrollLeft = scrollableDiv.scrollLeft
+		})
+
+		scrollableDiv.addEventListener('mouseup', () => isMouseDown = false)
+		scrollableDiv.addEventListener('mouseleave', () => isMouseDown = false )
+
+		scrollableDiv.addEventListener('mousemove', (e) => {
+			if (!isMouseDown) return
+
+			let x = e.pageX - scrollableDiv.offsetLeft,
+				walkX = (x - startX) * 1.5
+
+			scrollableDiv.scrollLeft = scrollLeft - walkX
+		})
+
+		scrollableDiv.addEventListener('wheel', (e) => {
+			e.preventDefault()
+
+			scrollableDiv.scrollLeft += e.deltaY
+		})
+	}
+
+
+	// LK - profile
+	$('.lk_profile .about_me .head .spoler_btn').click(function(e) {
+		$(this).toggleClass('active')
+
+		$('.lk_profile .about_me .hide').slideToggle(300)
 	})
 
-	scrollableDiv.addEventListener('mouseup', () => isMouseDown = false)
-	scrollableDiv.addEventListener('mouseleave', () => isMouseDown = false )
 
-	scrollableDiv.addEventListener('mousemove', (e) => {
-		if (!isMouseDown) return
-
-		let x = e.pageX - scrollableDiv.offsetLeft,
-			walkX = (x - startX) * 1.5
-
-		scrollableDiv.scrollLeft = scrollLeft - walkX
+	// LK - profile - kids
+	$('.lk_profile .form .children .have_boys').click(function(e) {
+		if(e.target.nodeName === 'LABEL') {
+			$(this).closest('.boys').find('.birthday').slideToggle(300)
+		}
 	})
 
-	scrollableDiv.addEventListener('wheel', (e) => {
+	$('.lk_profile .form .children .have_girls').click(function(e) {
+		if(e.target.nodeName === 'LABEL') {
+			$(this).closest('.girls').find('.birthday').slideToggle(300)
+		}
+	})
+
+
+	// LK - profile - kids - Add line
+	$('.lk_profile .form .children .add_btn').click(function(e) {
 		e.preventDefault()
 
-		scrollableDiv.scrollLeft += e.deltaY
+		// Get template
+		let template = $(this).closest('.birthday').next('.template').html()
+
+		$(this).before(template).promise().done(() => {
+			// Init selects
+			let selects = $(this).closest('.birthday').find('> .need_init select')
+
+			selects.each(i => {
+				selects[i].classList.remove('skip')
+
+				NiceSelect.bind(selects[i], {
+					placeholder: selects[i].getAttribute('data-placeholder')
+				})
+			})
+
+			$(this).closest('.birthday').find('> .need_init').removeClass('need_init')
+		})
+	})
+
+
+	// LK - profile - kids - Delete line
+	$('body').on('click', '.lk_profile .form .children .birthday .delete_btn', function (e) {
+		e.preventDefault()
+
+		$(this).closest('.fields').remove()
 	})
 })
 

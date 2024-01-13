@@ -1742,6 +1742,11 @@ header .categories .banners .banner:hover .thumb img
     color: #515151;
 }
 
+.page_title.top_p
+{
+    padding-top: 40px;
+}
+
 
 
 /*-------------
@@ -2553,6 +2558,18 @@ aside
 }
 
 
+.form .label
+{
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 12px;
+
+    padding-bottom: 10px;
+
+    color: #a3a2a2;
+}
+
+
 .form .input
 {
     font-family: var(--font_family);
@@ -2662,6 +2679,12 @@ aside
 .form .checkbox input
 {
     display: none;
+}
+
+
+.form .checkbox > *
+{
+    pointer-events: none;
 }
 
 
@@ -9091,6 +9114,553 @@ aside
 .brands_page .list a:hover
 {
     color: #c18c43;
+}
+
+
+
+/*-------------
+    LK info
+-------------*/
+.lk_info
+{
+    border-top: 1px solid #eee;
+
+    --sidebar_width: 248px;
+}
+
+
+.lk_info aside
+{
+    border-left: 1px solid #eee;
+}
+
+
+.lk_info .content
+{
+    padding: 40px 0 40px 40px;
+
+    border-left: 1px solid #eee;
+}
+
+
+
+/*-------------
+    LK menu
+-------------*/
+.lk_menu
+{
+    position: sticky;
+    top: 92px;
+
+    padding: 4px 0;
+}
+
+
+.lk_menu a
+{
+    font-size: 14px;
+
+    position: relative;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding: 16px;
+
+    transition: color .2s linear;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: rgba(51,51,51,.5);
+}
+
+
+.lk_menu a .icon
+{
+    display: block;
+
+    transition: .2s linear;
+
+    opacity: .5;
+}
+
+
+.lk_menu a .icon.profile
+{
+    width: 12px;
+    height: 12px;
+    margin-right: 2px;
+}
+
+.lk_menu a .icon.address
+{
+    width: 11px;
+    height: 14px;
+    margin-right: 3px;
+}
+
+.lk_menu a .icon.favorite
+{
+    width: 14px;
+    height: 11px;
+}
+
+.lk_menu a .icon.orders
+{
+    width: 12px;
+    height: 13px;
+    margin-right: 2px;
+}
+
+.lk_menu a .icon.subscribe
+{
+    width: 12px;
+    height: 10px;
+    margin-right: 2px;
+}
+
+.lk_menu a .icon.password
+{
+    width: 13px;
+    height: 16px;
+    margin-right: 1px;
+}
+
+.lk_menu a .icon.logout
+{
+    width: 13px;
+    height: 11px;
+    margin-right: 1px;
+}
+
+
+.lk_menu a span
+{
+    align-self: center;
+
+    width: calc(100% - 24px);
+}
+
+
+.lk_menu a:hover,
+.lk_menu a.active
+{
+    color: currentColor;
+}
+
+
+.lk_menu a.active .icon
+{
+    opacity: 1;
+    color: #c18c43;
+}
+
+
+
+/*------------------
+    LK - profile
+------------------*/
+.lk_profile
+{
+    width: 660px;
+    max-width: 100%;
+}
+
+
+.lk_profile .form .columns
+{
+    --form_columns_offset: 40px;
+}
+
+
+.lk_profile .about_me
+{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+
+.lk_profile .about_me .head
+{
+    position: relative;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding-bottom: 20px;
+}
+
+.lk_profile .about_me .head:before
+{
+    position: absolute;
+    bottom: 0;
+    left: -40px;
+
+    display: block;
+
+    width: 100vw;
+    height: 1px;
+
+    content: '';
+    pointer-events: none;
+
+    background: #eee;
+}
+
+
+.lk_profile .about_me .head .spoler_btn
+{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+
+    position: relative;
+
+    padding-right: 16px;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #333;
+}
+
+.lk_profile .about_me .head .spoler_btn:after
+{
+    position: absolute;
+    top: -1px;
+    right: 0;
+    bottom: 0;
+
+    display: block;
+
+    width: 8px;
+    height: 7px;
+    margin: auto 0;
+
+    content: '';
+    transition: .2s linear;
+    pointer-events: none;
+
+    color: #a5a5a5;
+    border-top: 7px solid currentColor;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+
+
+.lk_profile .about_me .head .spoler_btn.active:after
+{
+    top: 0;
+
+    transform: rotate(180deg);
+}
+
+
+.lk_profile .about_me .head .exp
+{
+    font-size: 10px;
+    line-height: 13px;
+
+    width: calc(50% - 20px);
+
+    color: #9b9b9b;
+}
+
+
+.lk_profile .about_me .hide
+{
+    display: none;
+
+    margin-bottom: -40px;
+}
+
+
+.lk_profile .form .section
+{
+    position: relative;
+
+    padding: 40px 0 20px;
+}
+
+.lk_profile .form .section + .section:before
+{
+    position: absolute;
+    top: 0;
+    left: -40px;
+
+    display: block;
+
+    width: 100vw;
+    height: 1px;
+
+    content: '';
+    pointer-events: none;
+
+    background: #eee;
+}
+
+
+.lk_profile .form .gender
+{
+    display: block;
+
+    margin-left: 0;
+}
+
+.lk_profile .form .gender > *
+{
+    margin-left: 0;
+}
+
+
+.lk_profile .form .gender .fields
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+
+.lk_profile .form .gender input
+{
+    display: none;
+}
+
+
+.lk_profile .form .gender label
+{
+    display: block;
+
+    width: 80px;
+    max-width: 100%;
+
+    cursor: pointer;
+}
+
+
+.lk_profile .form .gender label div
+{
+    font-size: 15px;
+
+    position: relative;
+
+    padding: 15px 0 14px;
+
+    transition: color .2s linear;
+    text-align: center;
+
+    color: rgba(74,74,74,.3);
+    border-bottom: 1px solid #eee;
+}
+
+.lk_profile .form .gender label div:after
+{
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    left: 0;
+
+    width: 0;
+    height: 2px;
+    margin: auto;
+
+    content: '';
+    transition: width .3s linear;
+
+    background: linear-gradient(134.72deg,#ff7a61 0,#ff2c9d 100%);
+}
+
+
+.lk_profile .form .gender label:hover div,
+.lk_profile .form .gender input:checked + div
+{
+    color: currentColor;
+}
+
+.lk_profile .form .gender input:checked + div:after
+{
+    width: 100%;
+}
+
+
+.lk_profile .form .birthday
+{
+    width: 400px;
+    max-width: 100%;
+    margin-left: auto;
+}
+
+
+.lk_profile .form .birthday .fields
+{
+    position: relative;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    margin-left: -16px;
+}
+
+.lk_profile .form .birthday .fields + .fields
+{
+    margin-top: 12px;
+}
+
+
+.lk_profile .form .birthday .fields > *
+{
+    width: calc(33.333% - 16px);
+    margin-left: 16px;
+}
+
+
+.lk_profile .form .birthday .exp
+{
+    font-size: 10px;
+    line-height: 13px;
+
+    margin-top: 10px;
+
+    color: #9b9b9b;
+}
+
+
+.lk_profile .form .clothe_sizes .fields,
+.lk_profile .form .shoe_sizes .fields
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    margin-bottom: -16px;
+    margin-left: -20px;
+    padding-top: 8px;
+}
+
+.lk_profile .form .shoe_sizes
+{
+    padding-top: 20px;
+}
+
+
+.lk_profile .form .clothe_sizes .fields > *,
+.lk_profile .form .shoe_sizes .fields > *
+{
+    width: calc(25% - 20px);
+    margin-bottom: 16px;
+    margin-left: 20px;
+}
+
+
+.lk_profile .form .children .boys
+{
+    margin-top: 8px;
+}
+
+
+.lk_profile .form .children .girls
+{
+    margin-top: 20px;
+}
+
+
+.lk_profile .form .children .birthday
+{
+    display: none;
+
+    margin-top: 16px;
+    margin-left: 0;
+    padding-bottom: 20px;
+}
+
+
+.lk_profile .form .children .birthday .delete_btn
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 18px;
+    height: 18px;
+    margin: auto 0 auto 16px;
+
+    transition: color .2s linear;
+
+    border: 1px solid;
+    border-radius: 50%;
+}
+
+.lk_profile .form .children .birthday .delete_btn .icon
+{
+    display: block;
+
+    width: 16px;
+    height: 16px;
+}
+
+.lk_profile .form .children .birthday .delete_btn:hover
+{
+    color: #c18c43;
+}
+
+
+.lk_profile .form .children .add_btn
+{
+    font-size: 10px;
+    font-weight: 500;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    margin-top: 12px;
+
+    text-transform: uppercase;
+
+    color: #4a4a4a;
+}
+
+.lk_profile .form .children .add_btn .icon
+{
+    display: block;
+
+    width: 12px;
+    height: 12px;
+    margin-right: 10px;
+}
+
+
+.lk_profile .form .children .template
+{
+    display: none;
+}
+
+
+.lk_profile .form .submit_btn
+{
+    width: calc(50% - 20px);
 }
 
 
