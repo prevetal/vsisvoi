@@ -681,6 +681,20 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 
+	// Change type password
+	$('.form .type_toggle_btn').click(function(e) {
+		e.preventDefault()
+
+		let parent = $(this).closest('.field')
+
+		$(this).toggleClass('active')
+
+		$(this).hasClass('active')
+			? parent.find('.input').attr('type', 'text')
+			: parent.find('.input').attr('type', 'password')
+	})
+
+
 	// Custom select
 	const selects = document.querySelectorAll('select:not(.skip)')
 
@@ -1158,6 +1172,14 @@ document.addEventListener('DOMContentLoaded', function () {
 		e.preventDefault()
 
 		$(this).closest('.address').remove()
+	})
+
+
+	// LK - Orders
+	$('.lk_orders .order .head').click(function(e) {
+		e.preventDefault()
+
+		$(this).toggleClass('active').next('.data').slideToggle(300)
 	})
 })
 

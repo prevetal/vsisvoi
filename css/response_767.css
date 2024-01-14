@@ -1193,8 +1193,106 @@
     /*-------------------
         LK - Favorite
     -------------------*/
-    .lk_favorite .product{
+    .lk_favorite .product
+    {
         padding: 30px 0;
+    }
+
+
+
+    /*-----------------
+        LK - orders
+    -----------------*/
+    .lk_orders .titles
+    {
+        display: none;
+    }
+
+
+    .lk_orders .items
+    {
+        margin-top: -20px;
+    }
+
+
+    .lk_orders .order + .order
+    {
+        margin-top: -1px;
+    }
+
+
+    .lk_orders .order .head
+    {
+        flex-wrap: wrap;
+
+        min-height: 0;
+        padding: 20px 0;
+    }
+
+    .lk_orders .order:before
+    {
+        position: absolute;
+        top: 0;
+        left: -20px;
+
+        display: block;
+
+        width: 100vw;
+        height: 1px;
+
+        content: '';
+
+        background: #eee;
+    }
+
+    .lk_orders .order:after
+    {
+        left: -20px;
+    }
+
+
+    .lk_orders .order .head > *
+    {
+        align-content: flex-start;
+        align-items: flex-start;
+        justify-content: flex-end;
+
+        padding: 0;
+    }
+
+    .lk_orders .order .head > *:before
+    {
+        font-size: 12px;
+        font-weight: 400;
+
+        display: block;
+
+        width: 50%;
+        margin-right: auto;
+
+        content: attr(data-column);
+        text-align: left;
+    }
+
+
+    .lk_orders .order .head > * + *
+    {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+
+    .lk_orders .order .head .arr
+    {
+        align-self: center;
+
+        margin-left: 10px;
+    }
+
+
+    .lk_orders .pagination .links
+    {
+        display: flex;
     }
 
 

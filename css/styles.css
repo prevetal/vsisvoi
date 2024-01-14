@@ -316,20 +316,20 @@ button
 }
 
 
-.fancybox__content > .carousel__button.is-close
+.fancybox__content > .f-button.is-close-btn
 {
-    top: 10px;
-    right: 10px;
+    top: 0;
+    right: 0;
 
-    width: 24px;
-    height: 24px;
+    width: 44px;
+    height: 44px;
 
-    transition: color .2s linear;
+    transition: .2s linear;
 
     color: #c8cbce;
 }
 
-.fancybox__content > .carousel__button.is-close svg
+.fancybox__content > .f-button.is-close-btn svg
 {
     display: block;
 
@@ -337,13 +337,14 @@ button
     height: 24px;
 
     filter: none;
-    stroke: none;
-    stroke-width: 0;
+    stroke: currentColor;
+    stroke-width: 1.5px;
 }
 
-.fancybox__content > .carousel__button.is-close:hover
+.fancybox__content > .f-button.is-close-btn:hover
 {
-    color: var(--text_color);
+    color: #c18c43;
+    background: #eee;
 }
 
 
@@ -2925,6 +2926,87 @@ aside
 .form .nice-select.open + .arr
 {
     transform: rotate(180deg);
+}
+
+
+.form .type_toggle_btn
+{
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 35px;
+    height: 35px;
+
+    transition: .2s linear;
+
+    opacity: .5;
+    color: rgba(51,51,51,.5);
+}
+
+.form .type_toggle_btn:after
+{
+    position: absolute;
+
+    display: block;
+
+    width: 2px;
+    height: 22px;
+    margin: auto;
+
+    content: '';
+    transition: opacity .2s linear;
+    transform: rotate(30deg);
+
+    opacity: 0;
+    background: currentColor;
+
+    inset: 0;
+}
+
+
+.form .type_toggle_btn .icon
+{
+    display: block;
+
+    width: 20px;
+    height: 20px;
+}
+
+
+.form .type_toggle_btn:hover
+{
+    opacity: 1;
+    color: #c18c43;
+}
+
+
+.form .type_toggle_btn.active:after
+{
+    opacity: 1;
+}
+
+
+.form .recovery_btn
+{
+    font-size: 14px;
+    font-weight: 500;
+
+    margin-top: 10px;
+
+    transition: color .2s linear;
+}
+
+.form .recovery_btn:hover
+{
+    color: #c18c43;
 }
 
 
@@ -10326,6 +10408,308 @@ aside
 .lk_favorite .product .link a:hover
 {
     background: #000;
+}
+
+
+
+/*-----------------
+    LK - orders
+-----------------*/
+.lk_orders .titles
+{
+    font-size: 9px;
+    font-weight: 700;
+
+    position: relative;
+
+    display: flex;
+    align-content: stretch;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+
+    width: 660px;
+    max-width: 100%;
+    margin-top: -40px;
+    padding: 10px 0;
+
+    text-transform: uppercase;
+}
+
+.lk_orders .titles:after
+{
+    position: absolute;
+    bottom: 0;
+    left: -40px;
+
+    display: block;
+
+    width: 100vw;
+    height: 1px;
+
+    content: '';
+
+    background: #eee;
+}
+
+
+.lk_orders .titles > *
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    width: 100%;
+}
+
+.lk_orders .titles > * + *
+{
+    margin-left: 10px;
+}
+
+
+.lk_orders .titles .alignright
+{
+    justify-content: flex-end;
+
+    text-align: right;
+}
+
+
+.lk_orders .order
+{
+    position: relative;
+
+    width: 660px;
+    max-width: 100%;
+}
+
+.lk_orders .order:after
+{
+    position: absolute;
+    bottom: 0;
+    left: -40px;
+
+    display: block;
+
+    width: 100vw;
+    height: 1px;
+
+    content: '';
+
+    background: #eee;
+}
+
+
+.lk_orders .order .head
+{
+    font-size: 12px;
+
+    display: flex;
+    align-content: stretch;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+
+    min-height: 48px;
+    padding: 10px 0;
+
+    cursor: pointer;
+
+    color: #333;
+}
+
+
+.lk_orders .order .head > *
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    width: 100%;
+}
+
+.lk_orders .order .head > * + *
+{
+    margin-left: 10px;
+}
+
+
+.lk_orders .order .head .alignright
+{
+    justify-content: flex-end;
+
+    text-align: right;
+}
+
+
+.lk_orders .order .head .col_number
+{
+    flex-wrap: nowrap;
+}
+
+
+.lk_orders .order .head .col_price
+{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.lk_orders .order .head .arr
+{
+    display: block;
+
+    width: 8px;
+    min-width: 8px;
+    height: 6px;
+    margin-left: 6px;
+
+    transition: transform .2s linear;
+    pointer-events: none;
+
+    border-top: 6px solid #c8cbce;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+
+.lk_orders .order .head.active .arr
+{
+    transform: rotate(180deg);
+}
+
+
+.lk_orders .order .data
+{
+    display: none;
+
+    padding: 10px 0 20px;
+}
+
+
+.lk_orders .order .loadtion
+{
+    font-size: 12px;
+    font-weight: 500;
+
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+
+    color: #333;
+}
+
+
+.lk_orders .order .loadtion .icon
+{
+    display: block;
+
+    width: 11px;
+    height: 14px;
+
+    opacity: .5;
+    color: rgba(51,51,51,.5);
+}
+
+
+.lk_orders .order .loadtion span
+{
+    align-self: center;
+
+    width: calc(100% - 24px);
+}
+
+
+.lk_orders .order .payment_method
+{
+    font-size: 12px;
+    font-weight: 500;
+
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+
+    color: #333;
+}
+
+
+.lk_orders .order .payment_method .icon
+{
+    display: block;
+
+    width: 11px;
+    height: 14px;
+
+    opacity: .5;
+    color: rgba(51,51,51,.5);
+}
+
+
+.lk_orders .order .payment_method span
+{
+    align-self: center;
+
+    width: calc(100% - 24px);
+}
+
+
+.lk_orders .order .cart_info
+{
+    margin-top: 20px;
+}
+
+
+.lk_orders .order .cart_info .product
+{
+    padding-bottom: 0;
+
+    border: none;
+}
+
+.lk_orders .order .cart_info .product + .product
+{
+    margin-top: 20px;
+    padding-top: 20px;
+
+    border-top: 1px solid #eee;
+}
+
+
+.lk_orders .pagination
+{
+    margin-top: 20px;
+}
+
+
+.lk_orders .pagination .links
+{
+    justify-content: flex-start;
+
+    width: auto;
+    margin: 0;
+}
+
+
+
+/*------------------------
+    LK - Edit password
+------------------------*/
+.lk_edit_password .form
+{
+    width: 305px;
+    max-width: 100%;
 }
 
 
