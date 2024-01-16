@@ -1111,18 +1111,35 @@
 
 
 
-    /*-------------------
-        LK - Favorite
-    -------------------*/
-    .lk_favorite .product
+    /*--------------
+        Favorite
+    --------------*/
+    .favorite .product
     {
         width: 460px;
         padding: 40px 0;
     }
 
-    .lk_favorite .product:after
+    .favorite .product:after
     {
         left: -20px;
+    }
+
+
+    .favorite .row .product
+    {
+        padding: 20px 20px 20px 0;
+    }
+
+    .favorite .row .product:nth-child(2n)
+    {
+        padding-right: 0;
+        padding-left: 20px;
+    }
+
+    .favorite .row .product:after
+    {
+        left: 0;
     }
 
 

@@ -653,6 +653,27 @@
 
 
 
+    /*--------------
+        Favorite
+    --------------*/
+    .favorite .row .product
+    {
+        width: 50%;
+    }
+
+
+    .favorite .row .product:nth-child(3n+1):after
+    {
+        display: block;
+    }
+
+    .favorite .row .product:nth-child(2n+1):after
+    {
+        display: none;
+    }
+
+
+
     /*------------
         Footer
     ------------*/
