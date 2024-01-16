@@ -242,6 +242,38 @@
 
 
 
+    /*----------------
+        Typography
+    ----------------*/
+    .text_block
+    {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+
+    .text_block > *,
+    .text_block .hide > *
+    {
+        margin-bottom: 20px;
+    }
+
+
+    .text_block h3
+    {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+
+    .text_block * + h2,
+    .text_block * + h3
+    {
+        margin-top: 30px;
+    }
+
+
+
     /*-----------------
         Main slider
     -----------------*/

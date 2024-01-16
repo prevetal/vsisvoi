@@ -3080,6 +3080,33 @@ aside
     text-transform: uppercase;
 }
 
+.text_block h3
+{
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 25px;
+
+    margin-bottom: 10px !important;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #333;
+}
+
+
+.text_block * + h2,
+.text_block * + h3
+{
+    margin-top: 40px;
+}
+
+.text_block h2 + *,
+.text_block h3 + *
+{
+    margin-top: 0 !important;
+}
+
 
 .text_block .hide
 {
@@ -3151,6 +3178,20 @@ aside
 .text_block strong
 {
     font-weight: 600;
+}
+
+
+.text_block a
+{
+    transition: .2s linear;
+    text-decoration: none;
+
+    color: #c18c43;
+}
+
+.text_block a:hover
+{
+    text-decoration: underline;
 }
 
 
