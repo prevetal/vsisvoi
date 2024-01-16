@@ -754,6 +754,17 @@
     }
 
 
+    .product_info .products .row > *
+    {
+        width: calc(33.333% - 20px);
+    }
+
+    .product_info .products .row > *.hide
+    {
+        display: block;
+    }
+
+
 
     /*-----------
         Stock

@@ -7882,6 +7882,27 @@ aside
 
 
 
+.product_info .not_available
+{
+    font-size: 14px;
+    line-height: 24px;
+
+    display: inline-block;
+
+    width: 190px;
+    max-width: 100%;
+    margin-top: 40px;
+    padding: 10px;
+
+    text-align: center;
+    vertical-align: top;
+
+    color: #eb4848;
+    background-color: #fcf2f2;
+}
+
+
+
 .product_info .options
 {
     margin-top: 20px;
@@ -7903,7 +7924,7 @@ aside
 
 
 
-.product_info .price
+.product_info .options .price
 {
     font-size: 20px;
     font-weight: 800;
@@ -7917,13 +7938,13 @@ aside
     text-transform: uppercase;
 }
 
-.product_info .price .red
+.product_info .options .price .red
 {
     color: #ce0c36;
 }
 
 
-.product_info .price .old
+.product_info .options .price .old
 {
     font-size: 14px;
     font-weight: 800;
@@ -8504,6 +8525,70 @@ aside
 {
     color: #c18c43;
     background: none;
+}
+
+
+
+.product_info .products
+{
+    margin-top: 40px;
+    padding-bottom: 20px;
+}
+
+
+.product_info .products .title
+{
+    font-family: var(--font_family);
+    font-size: 23px;
+    font-weight: 800;
+    line-height: 100%;
+
+    margin-bottom: 20px;
+    padding: 0;
+
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+
+.product_info .products .row > *
+{
+    width: calc(50% - 20px);
+}
+
+.product_info .products .row > *.hide
+{
+    display: none;
+}
+
+
+.product_info .products .all_link
+{
+    margin-top: 20px;
+}
+
+.product_info .products .all_link a
+{
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 44px;
+
+    display: block;
+
+    height: 44px;
+
+    transition: .2s linear;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: #fff;
+    background: #2b3338;
+}
+
+.product_info .products .all_link a:hover
+{
+    background: #000;
 }
 
 

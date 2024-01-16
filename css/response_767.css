@@ -793,13 +793,19 @@
         z-index: 3;
         right: 0;
 
-        margin: 26px 0 0;
+        margin: 25px 0 0;
     }
 
 
-    .product_info .price
+    .product_info .options .price
     {
         width: 100%;
+    }
+
+
+    .product_info .not_available
+    {
+        margin-top: 20px;
     }
 
 
@@ -859,6 +865,32 @@
     .product_info .sizes .vals .size
     {
         font-size: 14px;
+    }
+
+
+
+    .product_info .products
+    {
+        order: 3;
+
+        padding-bottom: 0;
+    }
+
+
+    .product_info .products .title
+    {
+        font-size: 20px;
+    }
+
+
+    .product_info .products .row > *
+    {
+        width: calc(50% - 20px);
+    }
+
+    .product_info .products .row > *.hide
+    {
+        display: none;
     }
 
 
