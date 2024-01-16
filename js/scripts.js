@@ -707,8 +707,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	// Checkout form
 	$('.checkout .order_form .form .other_recipient_checkbox').click(function(e) {
-		console.log(e)
-		if(e.currentTarget.nodeName == 'LABEL') {
+		if(e.target.nodeName == 'LABEL') {
 			let parent = $(this).closest('.section')
 
 			parent.find('.current_recipient').addClass('hide')
@@ -1180,6 +1179,52 @@ document.addEventListener('DOMContentLoaded', function () {
 		e.preventDefault()
 
 		$(this).toggleClass('active').next('.data').slideToggle(300)
+	})
+
+
+	// LK - Subscribe
+	$('.lk_subscribe .form .gender label').click(function(e) {
+		if (e.target.nodeName == 'LABEL') {
+			let parent = $(this).closest('.lk_subscribe'),
+				filter = $(this).data('filter')
+
+			if (filter == '*') {
+				parent.find('.brands_page .list .row > *').fadeIn(200)
+			} else {
+				parent.find('.brands_page .list .row > *').hide()
+				parent.find('.brands_page .list .row > *' + filter).fadeIn(200)
+			}
+		}
+	})
+
+
+	$('.lk_subscribe .toggle label').click(function(e) {
+		if (e.target.nodeName == 'LABEL') {
+			let parent = $(this).closest('.lk_subscribe')
+
+			parent.find('.hide').slideToggle(300)
+		}
+	})
+
+
+	$('.lk_subscribe .form .toggle_all').click(function(e) {
+		if (e.target.nodeName == 'LABEL') {
+			$(this).toggleClass('active')
+
+			$(this).hasClass('active')
+				? $('.lk_subscribe .brands_page input').prop('checked', true)
+				: $('.lk_subscribe .brands_page input').prop('checked', false)
+		}
+	})
+
+
+	$('.lk_subscribe .form .clear_btn').click(function(e) {
+		e.preventDefault()
+
+		$('.lk_subscribe .form .btns .toggle_all').removeClass('active')
+		$('.lk_subscribe .form .btns .toggle_all input').prop('checked', false).removeAttr('checked')
+
+		$('.lk_subscribe .brands_page input').prop('checked', false)
 	})
 })
 

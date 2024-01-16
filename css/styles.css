@@ -9255,8 +9255,6 @@ aside
 
 .lk_info .content
 {
-    padding: 40px 0 40px 40px;
-
     border-left: 1px solid #eee;
 }
 
@@ -9472,8 +9470,9 @@ aside
 ------------------*/
 .lk_profile
 {
-    width: 660px;
+    width: 700px;
     max-width: 100%;
+    padding: 40px 0 40px 40px;
 }
 
 
@@ -9682,7 +9681,7 @@ aside
     content: '';
     transition: width .3s linear;
 
-    background: linear-gradient(134.72deg,#ff7a61 0,#ff2c9d 100%);
+    background: var(--text_color);
 }
 
 
@@ -9913,16 +9912,14 @@ aside
 {
     position: relative;
 
-    margin-top: -40px;
-    margin-bottom: 40px;
-    padding: 40px 0;
+    padding: 40px 0 40px 40px;
 }
 
 .lk_address .add_form:after
 {
     position: absolute;
     bottom: 0;
-    left: -40px;
+    left: 0;
 
     display: block;
 
@@ -9965,7 +9962,6 @@ aside
 {
     width: 660px;
     max-width: 100%;
-    margin-top: -40px;
 }
 
 
@@ -9973,14 +9969,14 @@ aside
 {
     position: relative;
 
-    padding: 40px 0;
+    padding: 40px 0 40px 40px;
 }
 
 .lk_address .address:after
 {
     position: absolute;
     bottom: 0;
-    left: -40px;
+    left: 0;
 
     display: block;
 
@@ -10125,6 +10121,8 @@ aside
     max-width: 100%;
     height: 44px;
     margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 40px;
 
     transition: background .2s linear;
     text-transform: uppercase;
@@ -10143,12 +10141,6 @@ aside
 /*-------------------
     LK - Favorite
 -------------------*/
-.lk_favorite
-{
-    margin-top: -40px !important;
-}
-
-
 .lk_favorite .product
 {
     position: relative;
@@ -10159,10 +10151,10 @@ aside
     flex-wrap: wrap;
     justify-content: space-between;
 
-    width: 460px;
+    width: 500px;
     max-width: 100%;
     max-width: 100%;
-    padding: 40px 0;
+    padding: 40px 0 40px 40px;
 
     text-align: left;
 }
@@ -10171,7 +10163,7 @@ aside
 {
     position: absolute;
     bottom: 0;
-    left: -40px;
+    left: 0;
 
     display: block;
 
@@ -10428,10 +10420,9 @@ aside
     flex-wrap: nowrap;
     justify-content: flex-start;
 
-    width: 660px;
+    width: 700px;
     max-width: 100%;
-    margin-top: -40px;
-    padding: 10px 0;
+    padding: 10px 0 10px 40px;
 
     text-transform: uppercase;
 }
@@ -10440,7 +10431,7 @@ aside
 {
     position: absolute;
     bottom: 0;
-    left: -40px;
+    left: 0;
 
     display: block;
 
@@ -10482,15 +10473,16 @@ aside
 {
     position: relative;
 
-    width: 660px;
+    width: 700px;
     max-width: 100%;
+    padding-left: 40px;
 }
 
 .lk_orders .order:after
 {
     position: absolute;
     bottom: 0;
-    left: -40px;
+    left: 0;
 
     display: block;
 
@@ -10689,7 +10681,8 @@ aside
 
 .lk_orders .pagination
 {
-    margin-top: 20px;
+    margin-top: 0;
+    padding: 20px 0 40px 40px;
 }
 
 
@@ -10710,6 +10703,269 @@ aside
 {
     width: 305px;
     max-width: 100%;
+    padding: 40px 0 40px 40px;
+}
+
+
+
+/*--------------------
+    LK - Subscribe
+--------------------*/
+.lk_subscribe .toggle
+{
+    position: relative;
+
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    padding: 20px 0 20px 40px;
+}
+
+.lk_subscribe .toggle:after
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100vw;
+    height: 1px;
+
+    content: '';
+    pointer-events: none;
+
+    background: #eee;
+}
+
+
+.lk_subscribe .toggle input
+{
+    display: none;
+}
+
+
+.lk_subscribe .toggle label
+{
+    line-height: 1.15;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    cursor: pointer;
+
+    color: #515151;
+}
+
+.lk_subscribe .toggle label > *
+{
+    pointer-events: none;
+}
+
+
+.lk_subscribe .toggle label .check
+{
+    position: relative;
+
+    width: 28px;
+    height: 1px;
+    margin-right: 12px;
+
+    background: #e9e9e9;
+}
+
+.lk_subscribe .toggle label .check:before
+{
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    display: block;
+
+    width: 13px;
+    height: 13px;
+
+    content: '';
+    transition: .2s linear;
+    transform: translateY(-50%);
+
+    border: 1px solid #a4a4a4;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+
+.lk_subscribe .toggle label .check + *
+{
+    max-width: calc(100% - 40px);
+}
+
+
+.lk_subscribe .toggle input:checked + .check:before
+{
+    left: calc(100% - 12px);
+
+    border-color: #0e9d57;
+    background-color: #0e9d57;
+}
+
+
+.lk_subscribe .hide
+{
+    display: none;
+}
+
+
+.lk_subscribe .form .info
+{
+    display: flex;
+    align-content: flex-end;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 660px;
+    max-width: 100%;
+    padding: 40px 0 20px 40px;
+}
+
+
+.lk_subscribe .form .gender
+{
+    display: block;
+
+    margin-left: 0;
+}
+
+.lk_subscribe .form .gender > *
+{
+    margin-left: 0;
+}
+
+
+.lk_subscribe .form .gender .fields
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    border-bottom: 1px solid #eee;
+}
+
+.lk_subscribe .form .gender .fields > * + *
+{
+    margin-left: 30px;
+}
+
+
+.lk_subscribe .form .gender input
+{
+    display: none;
+}
+
+
+.lk_subscribe .form .gender label
+{
+    display: block;
+
+    width: auto;
+    max-width: 100%;
+    padding: 0;
+
+    cursor: pointer;
+}
+
+.lk_subscribe .form .gender label > *
+{
+    pointer-events: none;
+}
+
+
+.lk_subscribe .form .gender label div
+{
+    font-size: 14px;
+
+    position: relative;
+
+    padding: 10px 0 12px;
+
+    transition: color .2s linear;
+    text-align: center;
+
+    color: rgba(74,74,74,.3);
+}
+
+.lk_subscribe .form .gender label div:after
+{
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    left: 0;
+
+    width: 0;
+    height: 2px;
+    margin: auto;
+
+    content: '';
+    transition: width .3s linear;
+
+    background: var(--text_color);
+}
+
+
+.lk_subscribe .form .gender label:hover div,
+.lk_subscribe .form .gender input:checked + div
+{
+    color: currentColor;
+}
+
+.lk_subscribe .form .gender input:checked + div:after
+{
+    width: 100%;
+}
+
+
+.lk_subscribe .form .btns
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    min-height: 39px;
+    margin-left: auto;
+}
+
+
+.lk_subscribe .form .clear_btn
+{
+    font-size: 14px;
+
+    margin-left: 30px;
+
+    transition: color .2s linear;
+
+    color: #515151;
+}
+
+.lk_subscribe .form .clear_btn:hover
+{
+    color: #c18c43;
+}
+
+
+.lk_subscribe .brands_page
+{
+    margin-top: -1px;
 }
 
 

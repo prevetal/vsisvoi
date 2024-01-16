@@ -1175,27 +1175,9 @@
     /*------------------
         LK - address
     ------------------*/
-    .lk_address .add_form,
-    .lk_address .address
-    {
-        padding: 30px 0;
-    }
-
-
     .lk_address .add_btn
     {
         width: 100%;
-        margin-top: 30px;
-    }
-
-
-
-    /*-------------------
-        LK - Favorite
-    -------------------*/
-    .lk_favorite .product
-    {
-        padding: 30px 0;
     }
 
 
@@ -1206,12 +1188,6 @@
     .lk_orders .titles
     {
         display: none;
-    }
-
-
-    .lk_orders .items
-    {
-        margin-top: -20px;
     }
 
 
@@ -1243,11 +1219,6 @@
         content: '';
 
         background: #eee;
-    }
-
-    .lk_orders .order:after
-    {
-        left: -20px;
     }
 
 
@@ -1290,9 +1261,44 @@
     }
 
 
-    .lk_orders .pagination .links
+
+    /*------------------------
+        LK - Edit password
+    ------------------------*/
+    .lk_edit_password .form
     {
-        display: flex;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+
+
+    /*--------------------
+        LK - Subscribe
+    --------------------*/
+    .lk_subscribe .toggle label
+    {
+        font-size: 13px;
+    }
+
+
+    .lk_subscribe .form .gender
+    {
+        width: 100%;
+    }
+
+
+    .lk_subscribe .form .btns
+    {
+        width: 100%;
+        min-height: 0;
+        padding-top: 10px;
+    }
+
+
+    .lk_subscribe .form .clear_btn
+    {
+        margin-left: auto;
     }
 
 

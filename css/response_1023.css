@@ -1005,6 +1005,143 @@
 
 
 
+    /*------------------
+        LK - profile
+    ------------------*/
+    .lk_profile
+    {
+        width: 660px;
+        padding: 40px 0;
+    }
+
+
+    .lk_profile .about_me .head:before
+    {
+        left: -20px;
+    }
+
+
+    .lk_profile .form .section + .section:before
+    {
+        left: -20px;
+    }
+
+
+
+    /*-----------------
+        LK - orders
+    -----------------*/
+    .lk_orders .titles
+    {
+        width: 660px;
+        padding-left: 0;
+    }
+
+    .lk_orders .titles:after
+    {
+        left: -20px;
+    }
+
+
+    .lk_orders .order
+    {
+        width: 660px;
+        padding-left: 0;
+    }
+
+    .lk_orders .order:after
+    {
+        left: -20px;
+    }
+
+
+    .lk_orders .pagination
+    {
+        padding-bottom: 40px;
+        padding-left: 0;
+    }
+
+    .lk_orders .pagination .links
+    {
+        display: flex;
+    }
+
+
+
+    /*-------------------
+        LK - Favorite
+    -------------------*/
+    .lk_favorite .product
+    {
+        width: 460px;
+        padding: 40px 0;
+    }
+
+    .lk_favorite .product:after
+    {
+        left: -20px;
+    }
+
+
+
+    /*------------------------
+        LK - Edit password
+    ------------------------*/
+    .lk_edit_password .form
+    {
+        padding: 40px 0;
+    }
+
+
+
+    /*------------------
+        LK - address
+    ------------------*/
+    .lk_address .add_form,
+    .lk_address .address
+    {
+        padding: 40px 0;
+    }
+
+
+    .lk_address .add_btn
+    {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-left: 0;
+    }
+
+
+
+    /*--------------------
+        LK - Subscribe
+    --------------------*/
+    .lk_subscribe .toggle
+    {
+        padding-left: 0;
+    }
+
+    .lk_subscribe .toggle:after
+    {
+        left: -20px;
+    }
+
+
+    .lk_subscribe .form .info
+    {
+        padding: 40px 0 20px;
+    }
+
+
+    .lk_subscribe .brands_page
+    {
+        width: calc(100% + 40px);
+        margin-right: -20px;
+        margin-left: -20px;
+    }
+
+
+
     /*------------
         Footer
     ------------*/
