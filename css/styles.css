@@ -9070,7 +9070,7 @@ aside
     content: '';
     transition: width .3s linear;
 
-    background: #ce0c36;
+    background: #000;
 }
 
 .brands_page .head .type .btn.active:after
