@@ -3196,6 +3196,36 @@ aside
 }
 
 
+.text_block ul li
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    padding-left: 20px;
+
+    list-style-type: none;
+}
+
+.text_block ul li:before
+{
+    position: absolute;
+    top: 10px;
+    left: 4px;
+
+    display: block;
+
+    width: 4px;
+    height: 4px;
+
+    content: '';
+
+    border-radius: 50%;
+    background: currentColor;
+}
+
+
 
 /*-----------------
     Main slider
@@ -11591,6 +11621,74 @@ aside
 .articles .article .link a:hover
 {
     text-decoration: underline;
+}
+
+
+
+/*------------------
+    Payment info
+------------------*/
+.payment_info{
+    padding-top: 20px;
+}
+
+
+.payment_info .method
+{
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.payment_info .method + .method
+{
+    margin-top: 40px;
+    padding-top: 40px;
+
+    border-top: 1px solid #eee;
+}
+
+
+.payment_info .method .icon
+{
+    width: 40px;
+}
+
+.payment_info .method .icon img
+{
+    display: block;
+
+    max-width: 100%;
+}
+
+.payment_info .method .icon + *
+{
+    align-self: center;
+
+    width: calc(100% - 80px);
+}
+
+
+.payment_info .method .name
+{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 23px;
+}
+
+
+.payment_info .method .desc
+{
+    margin-top: 20px;
+}
+
+
+.payment_info .method .text_block > *,
+.payment_info .method .text_block .hide > *
+{
+    margin-bottom: 16px;
 }
 
 

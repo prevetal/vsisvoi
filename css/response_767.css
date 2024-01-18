@@ -1447,6 +1447,17 @@
 
 
 
+    /*------------------
+        Payment info
+    ------------------*/
+    .payment_info .method .icon + *
+    {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+
+
     /*------------
         Footer
     ------------*/
