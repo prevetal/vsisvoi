@@ -1372,6 +1372,81 @@
 
 
 
+    /*----------------
+        Error info
+    ----------------*/
+    .error_info
+    {
+        padding-bottom: 60px;
+    }
+
+
+    .error_info .code
+    {
+        font-size: 124px;
+    }
+
+
+    .error_info .col img
+    {
+        width: 148px;
+    }
+
+
+    .error_info .title
+    {
+        font-family: var(--font_family);
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 26px;
+    }
+
+
+
+    /*--------------------
+        Press about us
+    --------------------*/
+    .press_about_us img
+    {
+        margin-bottom: 20px;
+    }
+
+
+    .press_about_us .title
+    {
+        font-size: 16px;
+        line-height: 1.4;
+
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    .press_about_us .desc
+    {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+
+
+    /*--------------
+        Articles
+    --------------*/
+    .articles .row
+    {
+        margin-left: 0;
+    }
+
+
+    .articles .row > *
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+
     /*------------
         Footer
     ------------*/

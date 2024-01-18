@@ -1202,6 +1202,62 @@
 
 
 
+    /*----------------
+        Error info
+    ----------------*/
+    .error_info
+    {
+        min-height: 0;
+        padding-top: 8px;
+        padding-bottom: 80px;
+    }
+
+
+    .error_info .col
+    {
+        width: 100%;
+    }
+
+
+    .error_info .data
+    {
+        margin-top: 220px;
+        margin-left: 0;
+
+        text-align: center;
+    }
+
+
+    .error_info .link a
+    {
+        margin: 0 auto;
+    }
+
+
+
+    /*--------------------
+        Press about us
+    --------------------*/
+    .press_about_us .desc
+    {
+        font-size: 13px;
+        line-height: 1.4;
+
+        width: calc(100% - 232px);
+    }
+
+
+
+    /*--------------
+        Articles
+    --------------*/
+    .articles .row > *
+    {
+        width: calc(50% - 20px);
+    }
+
+
+
     /*------------
         Footer
     ------------*/
