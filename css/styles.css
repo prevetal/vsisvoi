@@ -2535,7 +2535,7 @@ aside
 {
     --form_border_color: #c8cbce;
     --form_focus_color: #c18c43;
-    --form_error_color: red;
+    --form_error_color: #f81c41;
     --form_bg_color: none;
     --form_placeholder_color: #515151;
 }
@@ -2669,9 +2669,13 @@ aside
 }
 
 
-.form .error
+.form .error_text
 {
-    border-color: var(--form_error_color);
+    font-size: 12px;
+
+    margin-top: 5px;
+
+    color: var(--form_error_color);
 }
 
 
@@ -11628,7 +11632,8 @@ aside
 /*------------------
     Payment info
 ------------------*/
-.payment_info{
+.payment_info
+{
     padding-top: 20px;
 }
 
@@ -11687,6 +11692,79 @@ aside
 .payment_info .method .text_block .hide > *
 {
     margin-bottom: 16px;
+}
+
+
+
+/*---------
+    FAQ
+---------*/
+.FAQ
+{
+    --sidebar_width: 348px;
+}
+
+
+.FAQ.content_flex .content
+{
+    order: 0;
+
+    width: calc(100% - var(--sidebar_width) - 40px);
+}
+
+
+.FAQ .section + .section
+{
+    margin-top: 40px;
+}
+
+
+.FAQ .section > .title
+{
+    font-family: var(--font_family);
+    font-size: 18px;
+    line-height: normal;
+    font-weight: 700;
+
+    margin-bottom: 20px;
+    padding: 0;
+
+    letter-spacing: .05em;
+    text-transform: uppercase;
+
+    color: #333;
+}
+
+
+.FAQ .add_form
+{
+    position: sticky;
+    top: 92px;
+
+    padding: 40px;
+
+    background: #f2f2f2;
+}
+
+
+.FAQ .add_form .title
+{
+    font-family: var(--font_family);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: normal;
+
+    margin-bottom: 30px;
+    padding: 0;
+
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+
+.FAQ .add_form .submit_btn
+{
+    font-size: 14px;
 }
 
 
