@@ -1297,8 +1297,51 @@
     }
 
 
-    .FAQ aside{
+    .FAQ aside
+    {
         margin-top: 40px;
+    }
+
+
+
+    /*-------------
+        Join us
+    -------------*/
+    .join_us .image
+    {
+        height: 200px;
+    }
+
+
+    .join_us .item
+    {
+        margin-top: 48px;
+    }
+
+
+    .join_us .item .title
+    {
+        font-size: 16px;
+    }
+
+
+    .join_us .item .desc
+    {
+        font-size: 12px;
+
+        margin-top: 10px;
+    }
+
+
+    .join_us .item .link
+    {
+        padding: 20px;
+    }
+
+
+    .join_us .item .link a
+    {
+        width: 240px;
     }
 
 

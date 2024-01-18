@@ -1458,6 +1458,30 @@
 
 
 
+    /*-------------
+        Join us
+    -------------*/
+    .join_us .image
+    {
+        height: 220px;
+    }
+
+
+    .join_us .image,
+    .join_us .data,
+    .join_us .item
+    {
+        width: 100%;
+    }
+
+
+    .join_us .data
+    {
+        margin-top: 20px;
+    }
+
+
+
     /*------------
         Footer
     ------------*/

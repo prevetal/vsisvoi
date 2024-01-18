@@ -694,13 +694,28 @@
     /*--------------
         Articles
     --------------*/
-    .articles .article .name {
-        font-size: 15px;}
+    .articles .article .name
+    {
+        font-size: 15px;
+    }
 
 
-        .articles .article .desc{
-            line-height: 1.4;
-        }
+    .articles .article .desc
+    {
+        line-height: 1.4;
+    }
+
+
+
+    /*-------------
+        Join us
+    -------------*/
+    .join_us .image,
+    .join_us .data,
+    .join_us .item
+    {
+        width: calc(50% - 10px);
+    }
 
 
 

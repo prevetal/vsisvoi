@@ -11723,8 +11723,8 @@ aside
 {
     font-family: var(--font_family);
     font-size: 18px;
-    line-height: normal;
     font-weight: 700;
+    line-height: normal;
 
     margin-bottom: 20px;
     padding: 0;
@@ -11765,6 +11765,123 @@ aside
 .FAQ .add_form .submit_btn
 {
     font-size: 14px;
+}
+
+
+
+/*-------------
+    Join us
+-------------*/
+.join_us .cont
+{
+    justify-content: space-between;
+}
+
+
+.join_us .image
+{
+    position: relative;
+
+    overflow: hidden;
+
+    width: calc(50% - 20px);
+    height: 265px;
+
+    background: #ddd;
+}
+
+
+.join_us .image img
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.join_us .data
+{
+    width: calc(50% - 20px);
+}
+
+
+.join_us .item
+{
+    width: calc(50% - 20px);
+    margin-top: 60px;
+
+    text-align: center;
+}
+
+
+.join_us .item .title
+{
+    font-family: var(--font_family);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: normal;
+
+    padding: 0;
+
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.join_us .item .desc
+{
+    font-size: 13px;
+    font-weight: 600;
+
+    margin-top: 12px;
+
+    text-transform: uppercase;
+
+    color: #909090;
+}
+
+
+.join_us .item .link
+{
+    margin-top: 20px;
+    padding: 30px;
+
+    background: #f8f9f9;
+}
+
+
+.join_us .item .link a
+{
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 44px;
+
+    display: block;
+
+    width: 280px;
+    max-width: 100%;
+    height: 44px;
+    margin: 0 auto;
+
+    transition: .2s linear;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: #fff;
+    background: #2b3338;
+}
+
+.join_us .item .link a:hover
+{
+    background: #000;
 }
 
 
