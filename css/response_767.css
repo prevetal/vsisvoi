@@ -810,6 +810,12 @@
     }
 
 
+    .product_info .images .stickers
+    {
+        left: 0;
+    }
+
+
     .product_info .images .thumbs
     {
         display: none;
