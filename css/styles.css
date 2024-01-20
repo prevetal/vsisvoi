@@ -1420,11 +1420,10 @@ header .categories .banners .banner:hover .thumb img
     display: none;
     overflow: auto;
 
+    width: 100%;
     max-height: -moz-available;
     max-height: -webkit-fill-available;
     max-height:         fill-available;
-
-    width: 100%;
     padding-top: 46px;
 
     background: #fff;
@@ -3740,7 +3739,8 @@ aside
     justify-content: flex-start;
 
     padding-bottom: 26.760%;
-    /* height: 380px;
+
+/* height: 380px;
     padding: 70px 120px; */
 
     text-decoration: none;
@@ -4075,7 +4075,8 @@ aside
     justify-content: flex-end;
 
     padding-bottom: 23.239%;
-    /* height: 330px;
+
+/* height: 330px;
     padding: 59px 118px; */
 
     text-decoration: none;
@@ -6123,7 +6124,8 @@ aside
     font-weight: 800;
 
     position: relative;
-    /* margin-top: 14px; */
+
+/* margin-top: 14px; */
 
     padding-top: 16px;
 
@@ -7240,7 +7242,8 @@ aside
     justify-content: flex-end;
 
     padding-bottom: 23.239%;
-    /* min-height: 330px;
+
+/* min-height: 330px;
     padding: 65px 52px 55px; */
 
     text-decoration: none;
@@ -12224,6 +12227,8 @@ aside
     padding: 40px;
 
     background: #f2f2f2;
+
+    --form_bg_color: #fff;
 }
 
 
