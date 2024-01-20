@@ -1146,6 +1146,19 @@
     /*--------------
         Favorite
     --------------*/
+    .favorite .empty
+    {
+        margin: 0;
+
+        text-align: left;
+    }
+
+    .favorite .empty .link a
+    {
+        margin: 0;
+    }
+
+
     .favorite .product
     {
         width: 460px;
