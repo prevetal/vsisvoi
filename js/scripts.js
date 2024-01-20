@@ -1226,6 +1226,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		$('.lk_subscribe .brands_page input').prop('checked', false)
 	})
+
+
+	// Search
+	$('header .search .input').keyup(function() {
+		let _self = $(this)
+
+		setTimeout(() => {
+			_self.val().length
+				? $('.search_tips').fadeIn(300)
+				: $('.search_tips').fadeOut(200)
+		})
+	})
 })
 
 

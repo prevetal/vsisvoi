@@ -112,6 +112,34 @@
 
 
 
+    /*-----------------
+        Search tips
+    -----------------*/
+    .search_tips .rec_products
+    {
+        padding: 28px 28px 28px 0;
+    }
+
+
+    .search_tips .rec_products > .row > *
+    {
+        width: calc(50% - 24px);
+    }
+
+
+    .search_tips .col
+    {
+        padding: 28px 0 28px 27px;
+    }
+
+
+    .search_tips .rec_brands
+    {
+        margin-top: 40px;
+    }
+
+
+
     /*---------------
         Page head
     ---------------*/

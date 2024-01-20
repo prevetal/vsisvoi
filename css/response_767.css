@@ -37,6 +37,20 @@
     /*------------
         Header
     ------------*/
+    header .search
+    {
+        position: static;
+    }
+
+
+    header .search .mini_modal
+    {
+        left: 6px;
+
+        width: calc(100% - 12px);
+    }
+
+
     header .account .link .icon
     {
         margin: 0;
@@ -46,6 +60,34 @@
     header .account .link span
     {
         display: none;
+    }
+
+
+
+    /*-----------------
+        Search tips
+    -----------------*/
+    .search_tips .rec_products
+    {
+        padding: 24px 20px;
+    }
+
+
+    .search_tips .rec_products > .row
+    {
+        margin-left: -20px;
+    }
+
+    .search_tips .rec_products > .row > *
+    {
+        width: calc(50% - 20px);
+        margin-left: 20px;
+    }
+
+
+    .search_tips .col
+    {
+        padding: 24px 20px;
     }
 
 
