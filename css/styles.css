@@ -1282,6 +1282,28 @@ header .categories .sub .links a.active
 }
 
 
+header .categories .sub .all_link
+{
+    font-size: 13px;
+
+    margin-top: 20px;
+}
+
+
+header .categories .sub .all_link a
+{
+    text-decoration: none;
+
+    color: #c18c43;
+}
+
+
+header .categories .sub .all_link a:hover
+{
+    text-decoration: underline;
+}
+
+
 header .categories .banners
 {
     display: block;
@@ -2034,6 +2056,33 @@ header .categories .banners .banner:hover .thumb img
     padding-left: 60px;
 
     text-transform: none;
+}
+
+
+.mob_menu .menu .all_link
+{
+    margin-top: 20px;
+}
+
+
+.mob_menu .menu .all_link a
+{
+    font-size: 15px;
+
+    display: inline-block;
+
+    padding-left: 40px;
+
+    vertical-align: top;
+    text-decoration: none;
+
+    color: #c18c43;
+}
+
+
+.mob_menu .menu .all_link a:hover
+{
+    text-decoration: underline;
 }
 
 
