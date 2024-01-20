@@ -621,6 +621,12 @@
     }
 
 
+    .checkout .order .head
+    {
+        position: relative;
+    }
+
+
     .checkout .order .head .title
     {
         font-size: 18px;
@@ -628,6 +634,18 @@
 
 
     .checkout .order .head .col
+    {
+        position: absolute;
+        top: 50%;
+        right: 24px;
+
+        margin-top: -2px;
+
+        transform: translateY(-50%);
+    }
+
+
+    .checkout .order .head .seller
     {
         display: none;
     }

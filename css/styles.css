@@ -5216,7 +5216,7 @@ aside
     height: 44px;
     padding: 9px;
 
-    transition: border-color .2s linear;
+    transition: .2s linear;
     text-align: center;
     text-transform: uppercase;
 
@@ -5224,12 +5224,20 @@ aside
     border: 1px solid #c8cbce;
 }
 
-.checkout .delivery_type label:hover div,
+
+.checkout .delivery_type label:hover div
+{
+    border-color: #2b3338;
+}
+
+
 .checkout .delivery_type input:checked + div
 {
     z-index: 3;
 
+    color: #fff;
     border-color: #2b3338;
+    background: #2b3338;
 }
 
 
