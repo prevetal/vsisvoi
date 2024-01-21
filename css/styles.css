@@ -316,7 +316,8 @@ button
 }
 
 
-.fancybox__content > .f-button.is-close-btn
+.fancybox__content > .f-button.is-close-btn,
+.is-compact .fancybox__content > .f-button.is-close-btn
 {
     top: 0;
     right: 0;
@@ -3177,6 +3178,11 @@ aside
     position: relative;
 }
 
+.form .field + .field
+{
+    margin-top: 10px;
+}
+
 
 .form .label
 {
@@ -3347,6 +3353,20 @@ aside
     background: #515151;
 
     inset: 0;
+}
+
+
+.form .checkbox a
+{
+    text-decoration: none;
+    pointer-events: auto;
+
+    color: #c18c43;
+}
+
+.form .checkbox a:hover
+{
+    text-decoration: underline;
 }
 
 
@@ -12642,6 +12662,188 @@ aside
     margin-bottom: 20px;
 
     color: #2b3338;
+}
+
+
+
+/*--------------
+    Register
+--------------*/
+.register .form
+{
+    width: 728px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+
+.register .form .columns
+{
+    --form_columns_offset: 40px;
+}
+
+
+.register .form .hide
+{
+    display: none;
+}
+
+
+.register .form .add_btn
+{
+    line-height: 22px;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    transition: .2s linear;
+    text-align: left;
+
+    color: #515151;
+}
+
+
+.register .form .add_btn .icon
+{
+    display: block;
+
+    width: 16px;
+    height: 16px;
+    margin-right: 20px;
+
+    color: #c18c43;
+}
+
+
+.register .form .add_btn span
+{
+    width: calc(100% - 36px);
+}
+
+
+.register .form .add_btn:hover
+{
+    color: #c18c43;
+}
+
+
+.register .form .checkboxes,
+.register .form .submit
+{
+    padding-top: 10px;
+}
+
+
+.register .form .socials .title
+{
+    font-size: 12px;
+    line-height: 15px;
+
+    margin-top: 30px;
+
+    text-align: center;
+
+    color: #797f83;
+}
+
+
+.register .form .socials .btns
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 50%;
+    margin: 20px auto -10px;
+}
+
+.register .form .socials .btns > *
+{
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+}
+
+
+.register .form .socials .btn
+{
+    font-size: 12px;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    padding: 9px 19px;
+
+    transition: border-color .2s linear;
+    text-align: center;
+    text-transform: uppercase;
+
+    border: 1px solid #d6d6d6;
+}
+
+
+.register .form .socials .btn img
+{
+    display: block;
+
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+}
+
+
+.register .form .socials .btn:hover
+{
+    border-color: #c18c43;
+}
+
+
+.register .form .login .title
+{
+    font-size: 12px;
+    line-height: 15px;
+
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+    text-align: center;
+
+    color: #797f83;
+}
+
+
+.register .form .login .btn
+{
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 17px;
+
+    display: block;
+
+    width: 50%;
+    height: 44px;
+    margin: 0 auto;
+
+    transition: background .2s linear;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #333;
+    border: 1px solid #000;
+}
+
+
+.register .form .login .btn:hover
+{
+    background: #eee;
 }
 
 

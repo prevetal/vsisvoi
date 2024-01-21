@@ -1434,6 +1434,18 @@
 
 
 
+    /*--------------
+        Register
+    --------------*/
+    .register
+    {
+        padding-top: 19px;
+
+        border-top: 1px solid #eee;
+    }
+
+
+
     /*------------
         Footer
     ------------*/

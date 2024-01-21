@@ -1238,6 +1238,15 @@ document.addEventListener('DOMContentLoaded', function () {
 				: $('.search_tips').fadeOut(200)
 		})
 	})
+
+
+	// Register
+	$('.register .form .add_btn').click(function(e) {
+		e.preventDefault()
+
+		$(this).hide()
+		$('.register .form .hide').fadeIn(300)
+	})
 })
 
 
