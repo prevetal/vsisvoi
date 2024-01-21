@@ -162,7 +162,7 @@
     ------------*/
     .mob_filter_btn
     {
-        display: block;
+        display: flex;
     }
 
 
@@ -1400,6 +1400,36 @@
     .join_us .item .link a
     {
         width: 240px;
+    }
+
+
+
+    /*----------------
+        Brand page
+    ----------------*/
+    .brand_page
+    {
+        padding-top: 39px;
+
+        border-top: 1px solid #eee;
+    }
+
+
+
+    /*----------------
+        Brand info
+    ----------------*/
+    .brand_info .logo
+    {
+        width: 224px;
+        height: 124px;
+        padding: 24px 20px;
+    }
+
+
+    .brand_info .logo + *
+    {
+        width: calc(100% - 244px);
     }
 
 

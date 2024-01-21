@@ -747,6 +747,24 @@
 
 
 
+    /*----------------
+        Brand info
+    ----------------*/
+    .brand_info .logo
+    {
+        width: 224px;
+        height: 124px;
+        padding: 24px 20px;
+    }
+
+
+    .brand_info .logo + *
+    {
+        width: calc(100% - 244px);
+    }
+
+
+
     /*------------
         Footer
     ------------*/

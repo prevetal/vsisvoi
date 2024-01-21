@@ -1530,6 +1530,31 @@
 
 
 
+    /*----------------
+        Brand info
+    ----------------*/
+    .brand_info .logo
+    {
+        width: 100%;
+        height: auto;
+        margin-bottom: 40px;
+        padding: 0;
+    }
+
+
+    .brand_info .logo + *
+    {
+        width: 100%;
+    }
+
+
+    .brand_info .title
+    {
+        text-align: center;
+    }
+
+
+
     /*------------
         Footer
     ------------*/
