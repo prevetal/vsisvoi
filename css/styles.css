@@ -12853,6 +12853,58 @@ aside
 
 
 
+/*-------------------
+    Delivery info
+-------------------*/
+.delivery_info .row
+{
+    margin-bottom: -40px;
+    margin-left: -24px;
+}
+
+.delivery_info .row > *
+{
+    width: calc(25% - 24px);
+    margin-bottom: 40px;
+    margin-left: 24px;
+}
+
+
+.delivery_info .method .icon
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    height: 34px;
+    margin-bottom: 10px;
+}
+
+
+.delivery_info .method .icon img
+{
+    display: block;
+
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.delivery_info .method .name
+{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.6;
+
+    margin-bottom: 12px;
+
+    color: #515151;
+}
+
+
+
 /*------------
     Footer
 ------------*/
