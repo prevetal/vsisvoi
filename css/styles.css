@@ -12856,30 +12856,44 @@ aside
 /*-------------------
     Delivery info
 -------------------*/
+.delivery_info .section + .section
+{
+    margin-top: 60px;
+}
+
+
+.delivery_info .section .title
+{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.6;
+
+    margin-bottom: 24px;
+
+    letter-spacing: .07em;
+    text-transform: uppercase;
+
+    color: #333;
+}
+
+
 .delivery_info .row
 {
     margin-bottom: -40px;
-    margin-left: -24px;
+    margin-left: -40px;
 }
 
 .delivery_info .row > *
 {
-    width: calc(25% - 24px);
+    width: calc(33.333% - 40px);
     margin-bottom: 40px;
-    margin-left: 24px;
+    margin-left: 40px;
 }
 
 
 .delivery_info .method .icon
 {
-    display: flex;
-    align-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-
-    height: 34px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 
@@ -12887,20 +12901,188 @@ aside
 {
     display: block;
 
-    max-width: 100%;
-    max-height: 100%;
+    width: 36px;
+    height: 34px;
 }
 
 
 .delivery_info .method .name
 {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
     line-height: 1.6;
 
     margin-bottom: 12px;
 
     color: #515151;
+}
+
+
+.delivery_info .method .price
+{
+    font-size: 13px;
+
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    color: #515151;
+}
+
+
+.delivery_info .method .price svg
+{
+    display: block;
+
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+
+    opacity: .3;
+}
+
+
+.delivery_info .method .price span
+{
+    align-self: center;
+
+    width: calc(100% - 22px);
+}
+
+
+.delivery_info .method .time
+{
+    font-size: 13px;
+
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-top: 12px;
+
+    color: #515151;
+}
+
+
+.delivery_info .method .time svg
+{
+    display: block;
+
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+
+    opacity: .3;
+}
+
+
+.delivery_info .method .time span
+{
+    align-self: center;
+
+    width: calc(100% - 22px);
+}
+
+
+
+/*-------------
+    Pickups
+-------------*/
+.pickups .image
+{
+    width: 50%;
+}
+
+
+.pickups .image img
+{
+    display: block;
+
+    width: 100%;
+}
+
+
+.pickups .data
+{
+    font-size: 13px;
+    line-height: 23px;
+
+    width: calc(50% - 40px);
+    margin-left: auto;
+
+    color: #515151;
+}
+
+
+.pickups .title
+{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.6;
+
+    margin-bottom: 16px;
+
+    letter-spacing: .07em;
+    text-transform: uppercase;
+
+    color: #333;
+}
+
+
+.pickups .data a
+{
+    text-decoration: none;
+
+    color: #c18c43;
+}
+
+.pickups .data a:hover
+{
+    text-decoration: underline;
+}
+
+
+.pickups .item + .item
+{
+    margin-top: 24px;
+}
+
+
+.pickups .contacts
+{
+    margin-top: 40px;
+}
+
+
+.pickups .holidays
+{
+    margin-top: 10px;
+}
+
+
+.pickups .indicator
+{
+    position: relative;
+    top: -1px;
+
+    display: inline-block;
+
+    width: 8px;
+    height: 8px;
+    margin-left: 4px;
+
+    vertical-align: middle;
+
+    border-radius: 50%;
+}
+
+.pickups .indicator.green
+{
+    background: #82d300;
 }
 
 

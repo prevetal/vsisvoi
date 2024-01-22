@@ -1446,6 +1446,63 @@
 
 
 
+    /*-------------------
+        Delivery info
+    -------------------*/
+    .delivery_info
+    {
+        padding-top: 39px;
+
+        border-top: 1px solid #eee;
+    }
+
+
+    .delivery_info .section + .section
+    {
+        margin-top: 48px;
+    }
+
+
+    .delivery_info .section .title
+    {
+        font-size: 16px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .delivery_info .row > *
+    {
+        width: calc(50% - 40px);
+    }
+
+
+
+    /*-------------
+        Pickups
+    -------------*/
+    .pickups .image
+    {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+
+    .pickups .data
+    {
+        width: 100%;
+    }
+
+
+    .pickups .title
+    {
+        font-size: 16px;
+
+        margin-bottom: 12px;
+    }
+
+
+
     /*------------
         Footer
     ------------*/

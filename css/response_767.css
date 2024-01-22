@@ -1578,6 +1578,46 @@
 
 
 
+    /*-------------------
+        Delivery info
+    -------------------*/
+    .delivery_info .section + .section
+    {
+        margin-top: 40px;
+    }
+
+
+    .delivery_info .section .title
+    {
+        font-size: 15px;
+    }
+
+
+    .delivery_info .row
+    {
+        margin-bottom: -24px;
+        margin-left: 0;
+    }
+
+    .delivery_info .row > *
+    {
+        width: 100%;
+        margin-bottom: 24px;
+        margin-left: 0;
+    }
+
+
+
+    /*-------------
+        Pickups
+    -------------*/
+    .pickups .image
+    {
+        margin-bottom: 20px;
+    }
+
+
+
     /*------------
         Footer
     ------------*/
