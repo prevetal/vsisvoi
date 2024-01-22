@@ -156,6 +156,16 @@
 
 
 
+    /*------------------
+        Form elements
+    ------------------*/
+    .form .cols .col
+    {
+        width: 100%;
+    }
+
+
+
     /*-----------------
         Main slider
     -----------------*/
@@ -1614,6 +1624,16 @@
     .pickups .image
     {
         margin-bottom: 20px;
+    }
+
+
+
+    /*--------------
+        Feedback
+    --------------*/
+    .feedback
+    {
+        padding: 31px;
     }
 
 

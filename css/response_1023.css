@@ -1503,6 +1503,73 @@
 
 
 
+    /*-------------------
+        Contacts info
+    -------------------*/
+    .contacts_info
+    {
+        padding-top: 39px;
+
+        border-top: 1px solid #eee;
+    }
+
+
+    .contacts_info .data
+    {
+        width: 100%;
+        min-height: 0;
+    }
+
+
+    .contacts_info .title
+    {
+        font-size: 16px;
+
+        margin-bottom: 12px;
+    }
+
+
+    .contacts_info .map
+    {
+        position: relative;
+        top: 0;
+
+        height: 360px;
+        margin-top: 40px;
+    }
+
+    .contacts_info .map:after
+    {
+        display: none;
+    }
+
+
+    .contacts_info .feedback
+    {
+        margin-top: 40px;
+    }
+
+
+
+    /*--------------
+        Feedback
+    --------------*/
+    .feedback
+    {
+        padding: 39px;
+    }
+
+
+    .feedback .title
+    {
+        font-size: 18px;
+        line-height: 24px;
+
+        margin-bottom: 20px;
+    }
+
+
+
     /*------------
         Footer
     ------------*/
