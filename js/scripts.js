@@ -699,9 +699,13 @@ document.addEventListener('DOMContentLoaded', function () {
 	const selects = document.querySelectorAll('select:not(.skip)')
 
 	if (selects) {
-		selects.forEach(el => NiceSelect.bind(el, {
-			placeholder: el.getAttribute('data-placeholder')
-		}))
+		selects.forEach(el => {
+			NiceSelect.bind(el, {
+				placeholder: el.getAttribute('data-placeholder')
+			})
+
+			el.addEventListener('change', () => el.classList.add('selected'))
+		})
 	}
 
 

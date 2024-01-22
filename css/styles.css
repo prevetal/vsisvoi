@@ -3425,9 +3425,14 @@ aside
     white-space: nowrap;
     text-overflow: ellipsis;
 
-    color: var(--text_color);
+    color: var(--form_placeholder_color);
     border: 1px solid var(--form_border_color);
     background: var(--form_bg_color);
+}
+
+.form select.selected + .nice-select .current
+{
+    color: var(--text_color);
 }
 
 
