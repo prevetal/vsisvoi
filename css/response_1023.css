@@ -1570,6 +1570,37 @@
 
 
 
+    /*---------------
+        Thank you
+    ---------------*/
+    .thank_you
+    {
+        padding-top: 40px;
+    }
+
+
+    .thank_you .data
+    {
+        width: 100%;
+    }
+
+
+    .thank_you .data .title
+    {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+
+    .thank_you .order
+    {
+        margin-top: 88px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+
+
     /*------------
         Footer
     ------------*/
