@@ -1251,6 +1251,14 @@ document.addEventListener('DOMContentLoaded', function () {
 		$(this).hide()
 		$('.register .form .hide').fadeIn(300)
 	})
+
+
+	// Feedback form
+	$('.feedback .form').submit(function(e) {
+		e.preventDefault()
+
+		$('.feedback .success').css('display', 'flex')
+	})
 })
 
 
