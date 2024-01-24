@@ -12384,6 +12384,62 @@ aside
 }
 
 
+.FAQ .add_form .success
+{
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+
+    display: none;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    padding: 19px;
+
+    text-align: center;
+
+    background: #f2f2f2;
+}
+
+
+.FAQ .add_form .success .title
+{
+    font-weight: 800;
+
+    width: 100%;
+    margin: 0;
+
+    letter-spacing: 2px;
+}
+
+
+.FAQ .add_form .success .desc
+{
+    font-size: 13px;
+    line-height: 17px;
+
+    width: 100%;
+    margin-top: 8px;
+
+    color: #333;
+}
+
+
+.FAQ .add_form .success img
+{
+    display: block;
+
+    max-width: 264px;
+    max-height: 181px;
+    margin: 24px auto 0;
+}
+
+
 
 /*-------------
     Join us
@@ -13365,6 +13421,8 @@ aside
 
 .feedback .success .title
 {
+    font-weight: 800;
+
     width: 100%;
     margin: 0;
 

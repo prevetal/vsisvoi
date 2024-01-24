@@ -1259,6 +1259,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		$('.feedback .success').css('display', 'flex')
 	})
+
+
+	// FAQ - Add question
+	$('.FAQ .add_form').submit(function(e) {
+		e.preventDefault()
+
+		$('.FAQ .add_form .success').css('display', 'flex')
+	})
 })
 
 
