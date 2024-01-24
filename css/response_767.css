@@ -1641,6 +1641,7 @@
     /*---------------
         Thank you
     ---------------*/
+    .thank_you .data .link a,
     .thank_you .data .form .submit_btn
     {
         width: 100%;

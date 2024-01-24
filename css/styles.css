@@ -13489,6 +13489,80 @@ aside
 }
 
 
+.thank_you .data .desc .icon
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+    margin: 0;
+}
+
+.thank_you .data .desc .icon img
+{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+
+.thank_you .data .desc.row
+{
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.thank_you .data .desc.row p
+{
+    align-self: center;
+
+    width: calc(100% - 52px);
+    margin: 0;
+}
+
+
+.thank_you .data .link
+{
+    margin-top: 40px;
+}
+
+
+.thank_you .data .link a
+{
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 44px;
+
+    display: block;
+
+    width: 260px;
+    max-width: 100%;
+    height: 44px;
+
+    transition: .2s linear;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: #fff;
+    background: #2b3338;
+}
+
+.thank_you .data .link a:hover
+{
+    background: #000;
+}
+
+
 .thank_you .data .form
 {
     margin-top: 40px;
@@ -13581,6 +13655,12 @@ aside
 .thank_you .data .form .submit_btn
 {
     width: 50%;
+}
+
+
+.thank_you .message
+{
+    display: none;
 }
 
 
@@ -13857,7 +13937,16 @@ aside
 }
 
 
-.thank_you .total_price
+.thank_you .prices
+{
+    margin-top: 24px;
+
+    border-top: 1px dashed #c8cbce;
+    border-bottom: 1px dashed #c8cbce;
+}
+
+
+.thank_you .prices > *
 {
     display: flex;
     align-content: flex-start;
@@ -13865,16 +13954,17 @@ aside
     flex-wrap: nowrap;
     justify-content: space-between;
 
-    margin-top: 24px;
     padding-top: 19px;
     padding-bottom: 19px;
+}
 
+.thank_you .prices > * + *
+{
     border-top: 1px dashed #c8cbce;
-    border-bottom: 1px dashed #c8cbce;
 }
 
 
-.thank_you .total_price .price
+.thank_you .prices .price
 {
     font-weight: 700;
 

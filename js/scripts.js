@@ -1267,6 +1267,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		$('.FAQ .add_form .success').css('display', 'flex')
 	})
+
+
+	// Thank you
+	$('.thank_you .data .form').submit(function(e) {
+		e.preventDefault()
+
+		let rating = new FormData(this).get('rating'),
+			message = ''
+
+		if (rating < 4) {
+			message = '.message_low'
+		}
+
+		if (rating < 9 && rating > 3) {
+			message = '.message_medium'
+		}
+
+		if (rating > 8) {
+			message = '.message_high'
+		}
+
+		$('.thank_you .data').hide()
+		$(message).fadeIn(300)
+	})
 })
 
 
