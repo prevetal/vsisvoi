@@ -1291,6 +1291,12 @@ document.addEventListener('DOMContentLoaded', function () {
 		$('.thank_you .data').hide()
 		$(message).fadeIn(300)
 	})
+
+
+	// Top banner
+	$('.top_banner .close_btn').click(e => {
+		$('.top_banner').slideUp(200)
+	})
 })
 
 

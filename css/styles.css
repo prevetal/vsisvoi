@@ -684,6 +684,69 @@ button
 
 
 
+/*----------------
+    Top banner
+----------------*/
+.top_banner
+{
+    position: relative;
+
+    text-align: center;
+
+    background: #eee;
+}
+
+
+.top_banner .close_btn
+{
+    position: absolute;
+    top: 0;
+    right: 16px;
+    bottom: 0;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    margin: auto 0;
+
+    transition: color .2s linear;
+}
+
+
+.top_banner .close_btn .icon
+{
+    display: block;
+
+    width: 24px;
+    height: 24px;
+}
+
+
+.top_banner .close_btn:hover
+{
+    color: #c18c43;
+}
+
+
+.top_banner a
+{
+    font-size: 13px;
+    line-height: 17px;
+
+    display: block;
+
+    padding: 8px 60px;
+
+    text-decoration: none;
+
+    color: currentColor;
+}
+
+
+
 /*------------
     Header
 ------------*/
@@ -3885,7 +3948,7 @@ aside
     flex-wrap: wrap;
     justify-content: flex-start;
 
-    padding-bottom: 26.760%;
+    padding-bottom: 36.197%;
 
 /* height: 380px;
     padding: 70px 120px; */
@@ -4221,7 +4284,7 @@ aside
     flex-wrap: wrap;
     justify-content: flex-end;
 
-    padding-bottom: 23.239%;
+    padding-bottom: 36.197%;
 
 /* height: 330px;
     padding: 59px 118px; */
