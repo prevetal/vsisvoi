@@ -1086,14 +1086,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 	// LK - Success message
-	$('.lk_edit_password .form').submit(function (e) {
+	$('.lk_info .form').submit(function (e) {
 		e.preventDefault()
 
 		// Show
-		$('.lk_edit_password .success_message').fadeIn(300)
+		$('.lk_info .success_message').fadeIn(300)
 
 		// Hide after 3s
-		setTimeout(() => $('.lk_edit_password .success_message').fadeOut(200), 3000)
+		setTimeout(() => $('.lk_info .success_message').fadeOut(200), 3000)
 	})
 
 
