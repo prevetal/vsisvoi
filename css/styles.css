@@ -10093,6 +10093,26 @@ aside
 }
 
 
+.lk_info .success_message
+{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+
+    display: none;
+
+    width: 100%;
+    padding: 14px 24px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #fff;
+    background: #000;
+}
+
+
 
 /*-------------
     LK menu
