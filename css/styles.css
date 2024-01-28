@@ -14314,6 +14314,12 @@ footer .subscribe .form
 }
 
 
+footer .subscribe .form .field + .field
+{
+    margin-top: 0;
+}
+
+
 footer .subscribe .message
 {
     position: absolute;
