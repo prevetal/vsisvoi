@@ -907,6 +907,21 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 
+	$('.product_info .images .image, .product_info .full_view .close_btn').click(function(e) {
+		e.preventDefault()
+
+		$('.product_info .full_view').toggleClass('show')
+
+		$('body').toggleClass('menu_open')
+
+		$('.product_info .full_view .wheelSlider-container:not(.loaded)').wheelSlider({
+			dots: false,
+			arrowPrevHtml: '<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>',
+			arrowNextHtml: '<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>'
+		})
+	})
+
+
 	// Product page - sizes
 	$('.product_info .sizes .spoler_btn').click(function(e) {
 		e.preventDefault()

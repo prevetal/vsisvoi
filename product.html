@@ -33,6 +33,7 @@
 		<link rel="stylesheet" href="css/swiper.css" async>
 		<link rel="stylesheet" href="css/fancybox.css" async>
 		<link rel="stylesheet" href="css/ion.rangeSlider.css" async>
+		<link rel="stylesheet" href="css/wheelSlider.css" async>
 		<link rel="stylesheet" href="css/styles.css" async>
 
 		<link rel="stylesheet" href="css/response_1599.css" media="print, (max-width: 1599px)" async>
@@ -62,14 +63,14 @@
 
 							<div class="btns">
 								<div class="account">
-									<button class="btn modal_btn" data-modal="login_modal">
+									<!-- <button class="btn modal_btn" data-modal="login_modal">
 										<svg class="icon"><use xlink:href="images/sprite.svg#ic_user"></use></svg>
-									</button>
+									</button> -->
 
-									<!-- <a href="/" class="link">
+									<a href="/" class="link">
 										<svg class="icon"><use xlink:href="images/sprite.svg#ic_user"></use></svg>
 										<span>Вітаємо, Олено</span>
-									</a> -->
+									</a>
 								</div>
 
 								<div class="search modal_cont">
@@ -2999,11 +3000,11 @@
 												</div>
 											</div>
 
-											<div>
+											<!-- <div>
 												<div class="label">ФОП Марченко Тетяна Юріївна</div>
-											</div>
+											</div> -->
 
-											<div>
+											<!-- <div>
 												<div class="label">Контакти</div>
 
 												<div class="val">
@@ -3025,7 +3026,7 @@
 														<div>+38 073 880 26 28</div>
 													</div>
 												</div>
-											</div>
+											</div> -->
 										</div>
 									</div>
 								</div>
@@ -3134,6 +3135,55 @@
 										</div>
 									</div>
 								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="full_view">
+						<button class="close_btn">
+							<svg class="icon"><use xlink:href="images/sprite.svg#ic_close"></use></svg>
+						</button>
+
+						<div class="wheelSlider-container">
+							<div class="wheelSlider-item slide">
+								<img src="images/tmp/product_img_big.jpg" alt="">
+							</div>
+
+							<div class="wheelSlider-item slide">
+								<img src="images/tmp/product_img_big.jpg" alt="">
+							</div>
+
+							<div class="wheelSlider-item slide">
+								<img src="images/tmp/product_img_big.jpg" alt="">
+							</div>
+
+							<div class="wheelSlider-item slide">
+								<img src="images/tmp/product_img_big.jpg" alt="">
+							</div>
+
+							<div class="wheelSlider-item slide">
+								<img src="images/tmp/product_img_big.jpg" alt="">
+							</div>
+
+							<div class="wheelSlider-item slide">
+								<img src="images/tmp/product_img_big.jpg" alt="">
+							</div>
+
+							<div class="wheelSlider-item slide">
+								<img src="images/tmp/product_img_big.jpg" alt="">
+							</div>
+
+							<div class="wheelSlider-item slide">
+								<img src="images/tmp/product_img_big.jpg" alt="">
+							</div>
+
+							<div class="wheelSlider-item slide">
+								<img src="images/tmp/product_img_big.jpg" alt="">
+							</div>
+
+							<div class="wheelSlider-item slide">
+								<img src="images/tmp/product_img_big.jpg" alt="">
 							</div>
 						</div>
 					</div>
@@ -4010,7 +4060,7 @@
 							<span>Сховати відгуки</span>
 						</button>
 
-						<button class="add_review_btn">залишити відгук</button>
+						<button class="add_review_btn modal_btn" data-modal="add_review_modal">залишити відгук</button>
 					</div>
 				</section>
 
@@ -5139,6 +5189,78 @@
 		</section>
 
 
+		<section class="modal" id="add_review_modal">
+			<div class="modal_title">Оцінити товар</div>
+
+			<form action="" class="form">
+				<div class="line rate">
+					<input type="radio" name="rating" id="rate-5">
+					<label for="rate-5">
+						<svg class="icon"><use xlink:href="images/sprite.svg#ic_star"></use></svg>
+					</label>
+
+					<input type="radio" name="rating" id="rate-4">
+					<label for="rate-4">
+						<svg class="icon"><use xlink:href="images/sprite.svg#ic_star"></use></svg>
+					</label>
+
+					<input type="radio" name="rating" id="rate-3">
+					<label for="rate-3">
+						<svg class="icon"><use xlink:href="images/sprite.svg#ic_star"></use></svg>
+					</label>
+
+					<input type="radio" name="rating" id="rate-2">
+					<label for="rate-2">
+						<svg class="icon"><use xlink:href="images/sprite.svg#ic_star"></use></svg>
+					</label>
+
+					<input type="radio" name="rating" id="rate-1">
+					<label for="rate-1">
+						<svg class="icon"><use xlink:href="images/sprite.svg#ic_star"></use></svg>
+					</label>
+				</div>
+
+				<div class="line">
+					<div class="label">Коментар:</div>
+
+					<div class="field">
+						<textarea name=""></textarea>
+					</div>
+				</div>
+
+				<div class="line">
+					<div class="label">Повне ім'я:</div>
+
+					<div class="field">
+						<input type="text" name="" value="" class="input">
+					</div>
+				</div>
+
+				<div class="line">
+					<div class="label">E-mail:</div>
+
+					<div class="field">
+						<input type="email" name="" value="" class="input">
+					</div>
+				</div>
+
+				<div class="line">
+					<div class="field">
+						<label class="checkbox">
+							<input type="radio" name="">
+							<div class="check"></div>
+							<div>Повідомини про відповідь</div>
+						</label>
+					</div>
+				</div>
+
+				<div class="submit">
+					<button type="submit" class="submit_btn">Додати</button>
+				</div>
+			</form>
+		</section>
+
+
 		<!-- Connecting javascript files -->
 		<script src="js/jquery-3.6.3.min.js"></script>
 		<script src="js/functions.js"></script>
@@ -5149,6 +5271,7 @@
 		<script src="js/sticky-kit.min.js"></script>
 		<script src="js/ion.rangeSlider.min.js"></script>
 		<script src="js/countdown.js"></script>
+		<script src="js/wheelSlider.js"></script>
 		<script src="js/scripts.js"></script>
 	</body>
 </html>

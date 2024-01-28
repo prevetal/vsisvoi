@@ -22,6 +22,39 @@
     }
 
 
+    .wheelSlider-container .wheelSlider-arrow[data-action='prev']
+    {
+        left: 10px;
+    }
+
+    .wheelSlider-container .wheelSlider-arrow[data-action='next']
+    {
+        right: 10px;
+    }
+
+
+    .wheelSlider-container .slide.next,
+    .wheelSlider-container .slide.prev,
+    .wheelSlider-container .slide.next_next,
+    .wheelSlider-container .slide.prev_prev
+    {
+        transform: scale(1);
+
+        opacity: 0;
+    }
+
+
+    .wheelSlider-container .slide.prev
+    {
+        left: -100%;
+    }
+
+    .wheelSlider-container .slide.next
+    {
+        left: 100%;
+    }
+
+
 
     /*----------------
         Pagination
@@ -812,6 +845,12 @@
     .product_info .products .row > *.hide
     {
         display: block;
+    }
+
+
+    .product_info .full_view .slide img
+    {
+        max-width: calc(100% - 80px);
     }
 
 

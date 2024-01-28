@@ -34,6 +34,17 @@
     }
 
 
+    .wheelSlider-container .wheelSlider-arrow[data-action='prev']
+    {
+        left: 22%;
+    }
+
+    .wheelSlider-container .wheelSlider-arrow[data-action='next']
+    {
+        right: 22%;
+    }
+
+
 
     /*--------------
         Fancybox
