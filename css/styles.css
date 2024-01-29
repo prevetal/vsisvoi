@@ -399,15 +399,11 @@ button
     font-size: 10px;
     font-weight: 500;
 
-    display: flex;
-    align-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
     width: 320px;
     max-width: 100%;
     margin: 0 auto 20px;
+
+    text-align: center;
 
     color: #2b3338;
 }
