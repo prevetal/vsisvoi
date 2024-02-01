@@ -848,9 +848,25 @@
     }
 
 
-    .product_info .full_view .slide img
+
+    /*------------------
+        Product info
+    ------------------*/
+    .product_info .full_view .swiper-button-next,
+    .product_info .full_view .swiper-button-prev
     {
-        max-width: calc(100% - 80px);
+        display: flex;
+    }
+
+
+    .product_info .full_view .swiper-button-prev
+    {
+        left: 20px;
+    }
+
+    .product_info .full_view .swiper-button-next
+    {
+        right: 20px;
     }
 
 

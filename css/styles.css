@@ -9891,28 +9891,76 @@ aside
 }
 
 
-.product_info .full_view .slide
+.product_info .full_view .swiper
 {
+    width: 100%;
+}
+
+
+.product_info .full_view .swiper-slide
+{
+    position: relative;
+
     display: flex;
     align-content: center;
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
 
+    height: 100vh;
+
+    transition: opacity .8s ease, transform .8s ease;
+    transform: scale3d(.5,.5,.5);
+    transform-origin: center;
+
+    opacity: .4;
+}
+
+
+.product_info .full_view .swiper-slide img
+{
+    display: block;
+
+    max-width: calc(100% - 40px);
     height: 100%;
     min-height: -moz-available;
     min-height: -webkit-fill-available;
     min-height:         fill-available;
+
+    transition: transform .2s linear;
+
+    object-fit: cover;
 }
 
 
-.product_info .full_view .slide img
+.product_info .full_view .swiper-slide.active
 {
-    display: block;
+    z-index: 3;
 
-    max-width: 100%;
-    max-height: 100%;
-    margin: 0 auto;
+    transform: scaleX(1);
+
+    opacity: 1;
+}
+
+
+.product_info .full_view .swiper-button-next,
+.product_info .full_view .swiper-button-prev
+{
+    top: 0;
+    bottom: 0;
+
+    margin: auto 0;
+}
+
+
+.product_info .full_view .swiper-button-prev
+{
+    left: 25%;
+}
+
+.product_info .full_view .swiper-button-next
+{
+    right: 25%;
 }
 
 

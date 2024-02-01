@@ -914,10 +914,61 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		$('body').toggleClass('menu_open')
 
-		$('.product_info .full_view .wheelSlider-container:not(.loaded)').wheelSlider({
-			dots: false,
-			arrowPrevHtml: '<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>',
-			arrowNextHtml: '<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>'
+		new Swiper('.product_info .full_view .swiper', {
+			loop: false,
+			speed: 500,
+			roundLengths: true,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			spaceBetween: 0,
+			lazy: true,
+			centeredSlides: true,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 1
+				},
+				1024: {
+					slidesPerView: 2
+				},
+				1280: {
+					slidesPerView: 2.333
+				}
+			},
+			on: {
+				slideChangeTransitionStart: swiper => {
+					$(swiper.el).find('.swiper-slide').removeClass('zoomed')
+					$(swiper.el).find('.swiper-slide img').css('transform', `none`)
+				}
+			}
+		})
+
+
+		// Zoom
+		$('body').on('click', '.product_info .full_view .swiper-slide.active', function (e) {
+			e.preventDefault()
+
+			$(this).toggleClass('zoomed')
+
+			if ($(this).hasClass('zoomed')) {
+				let translateY = e.pageY / $(this).outerHeight() * -100 / 2 + 25
+
+				$(this).find('img').css('transform', `scale3d(2, 2, 2) translateY(${translateY}%)`)
+			} else {
+				$(this).find('img').css('transform', `none`)
+			}
+		})
+
+
+		// Mouse move
+		$('body').on('mousemove', '.product_info .full_view .swiper-slide.zoomed', function (e) {
+			let translateY = e.pageY / $(this).outerHeight() * -100 / 2 + 25
+
+			$(this).find('img').css('transform', `scale3d(2, 2, 2) translateY(${translateY}%)`)
 		})
 	})
 

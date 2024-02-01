@@ -776,6 +776,21 @@
 
 
 
+    /*------------------
+        Product info
+    ------------------*/
+    .product_info .full_view .swiper-button-prev
+    {
+        left: 20%;
+    }
+
+    .product_info .full_view .swiper-button-next
+    {
+        right: 20%;
+    }
+
+
+
     /*------------
         Footer
     ------------*/
