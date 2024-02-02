@@ -9909,6 +9909,7 @@ aside
 
     height: 100vh;
 
+    cursor: zoom-in;
     transition: opacity .8s ease, transform .8s ease;
     transform: scale3d(.5,.5,.5);
     transform-origin: center;
@@ -9921,7 +9922,7 @@ aside
 {
     display: block;
 
-    max-width: calc(100% - 124px);
+    max-width: 100%;
     height: 100%;
     min-height: -moz-available;
     min-height: -webkit-fill-available;
@@ -9940,6 +9941,11 @@ aside
     transform: scaleX(1);
 
     opacity: 1;
+}
+
+.product_info .full_view .swiper-slide.zoomed
+{
+    cursor: zoom-out;
 }
 
 
