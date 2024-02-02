@@ -907,7 +907,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 
-	$('.product_info .images .image, .product_info .full_view .close_btn').click(function(e) {
+	$('.product_info .images .big .image').click(function(e) {
 		e.preventDefault()
 
 		$('.product_info .full_view').toggleClass('show')
@@ -924,6 +924,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			spaceBetween: 0,
 			lazy: true,
 			centeredSlides: true,
+			initialSlide: $(this).data('slide-index'),
 			navigation: {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev'
@@ -965,11 +966,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 		// Mouse move
-		$('body').on('mousemove', '.product_info .full_view .swiper-slide.zoomed', function (e) {
-			let translateY = e.pageY / $(this).outerHeight() * -100 / 2 + 25
+		$('body').on('mousemove touchmove', '.product_info .full_view .swiper-slide.zoomed', function (e) {
+			let translateY = 0,
+				translateX = 0
 
-			$(this).find('img').css('transform', `scale3d(2, 2, 2) translateY(${translateY}%)`)
+			if (!e.touches) {
+				// Mouse move
+				translateY = e.pageY / $(this).outerHeight() * -100 / 2 + 25
+			} else {
+				// Touch move
+				translateY = e.touches[0].pageY / $(this).outerHeight() * -100 / 2 + 25
+				translateX = e.touches[0].pageX / $(this).outerWidth() * 100 / 2 - 25
+			}
+
+			$(this).find('img').css('transform', `scale3d(2, 2, 2) translate(${translateX}%, ${translateY}%)`)
 		})
+	})
+
+
+	$('.product_info .full_view .close_btn').click(function(e) {
+		e.preventDefault()
+
+		$('.product_info .full_view').toggleClass('show')
+
+		$('body').toggleClass('menu_open')
 	})
 
 
