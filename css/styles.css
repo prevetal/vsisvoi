@@ -10659,6 +10659,11 @@ aside
     justify-content: flex-start;
 }
 
+.lk_profile .form .gender .fields > * + *
+{
+    margin-top: 0;
+}
+
 
 .lk_profile .form .gender input
 {
@@ -10753,6 +10758,11 @@ aside
 {
     width: calc(33.333% - 16px);
     margin-left: 16px;
+}
+
+.lk_profile .form .birthday .fields > * + *
+{
+    margin-top: 0;
 }
 
 
@@ -11621,6 +11631,7 @@ aside
 
 .lk_subscribe .form .gender .fields > * + *
 {
+    margin-top: 0;
     margin-left: 30px;
 }
 
