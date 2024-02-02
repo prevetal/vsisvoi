@@ -852,10 +852,18 @@
     /*------------------
         Product info
     ------------------*/
+    .product_info .full_view .swiper-slide
+    {
+        padding: 72px 0 40px;
+    }
+
+
     .product_info .full_view .swiper-button-next,
     .product_info .full_view .swiper-button-prev
     {
         display: flex;
+
+        background: #fff;
     }
 
 
