@@ -75,6 +75,11 @@
         width: calc((100% - 480px) / 2);
     }
 
+    header .categories .sub .col.full
+    {
+        width: calc(100% - 480px);
+    }
+
 
     header .categories .sub .col.main_links
     {
@@ -92,6 +97,20 @@
     {
         column-gap: 20px;
         column-width: 140px;
+    }
+
+
+    header .categories .sub .links:not(.two_cols) > * + *,
+    header .categories .sub .links.two_cols .column > * + *,
+    header .categories .sub .links.two_cols .column + .column
+    {
+        margin-top: 12px;
+    }
+
+
+    header .categories .sub .links.two_cols .column
+    {
+        width: 100%;
     }
 
 

@@ -51,6 +51,11 @@
         width: calc((100% - 600px) / 2);
     }
 
+    header .categories .sub .col.full
+    {
+        width: calc(100% - 600px);
+    }
+
 
     header .categories .sub .col.main_links
     {
