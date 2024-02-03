@@ -9011,7 +9011,7 @@ aside
 }
 
 
-.product_info .sizes .vals a
+.product_info .sizes .vals label
 {
     position: relative;
 
@@ -9019,15 +9019,19 @@ aside
 
     width: 42px;
 
-    text-decoration: none;
+    cursor: pointer;
     pointer-events: none;
-
-    color: currentColor;
 }
 
-.product_info .sizes .vals a.disabled
+.product_info .sizes .vals label.disabled
 {
     cursor: default;
+}
+
+
+.product_info .sizes .vals label input
+{
+    display: none;
 }
 
 
@@ -9055,7 +9059,7 @@ aside
 }
 
 
-.product_info .sizes .vals a.disabled .size
+.product_info .sizes .vals label.disabled .size
 {
     pointer-events: none;
 
@@ -9104,7 +9108,7 @@ aside
     box-shadow: 0 10px 19px 0 rgba(100, 86, 68, .20);
 }
 
-.product_info .sizes .vals a:hover .last_exp
+.product_info .sizes .vals label:hover .last_exp
 {
     display: block;
 }
@@ -9177,12 +9181,13 @@ aside
 }
 
 
-.product_info .sizes .vals a:hover .size
+.product_info .sizes .vals label:hover .size
 {
     background: #eee;
 }
 
-.product_info .sizes .vals a.active .size
+
+.product_info .sizes .vals label input:checked ~ .size
 {
     border-color: #c18c43;
     background: var(--bg);
