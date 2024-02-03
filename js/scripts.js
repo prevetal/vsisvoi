@@ -910,42 +910,44 @@ document.addEventListener('DOMContentLoaded', function () {
 	$('.product_info .images .big .image').click(function(e) {
 		e.preventDefault()
 
-		$('.product_info .full_view').toggleClass('show')
-
 		$('body').toggleClass('menu_open')
 
-		new Swiper('.product_info .full_view .swiper', {
-			loop: false,
-			speed: 500,
-			roundLengths: true,
-			watchSlidesProgress: true,
-			slideActiveClass: 'active',
-			slideVisibleClass: 'visible',
-			spaceBetween: 0,
-			lazy: true,
-			centeredSlides: true,
-			initialSlide: $(this).data('slide-index'),
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev'
-			},
-			breakpoints: {
-				0: {
-					slidesPerView: 1
+		$('.product_info .full_view').toggleClass('show')
+
+		setTimeout(() => {
+			new Swiper('.product_info .full_view .swiper', {
+				loop: false,
+				speed: 500,
+				roundLengths: true,
+				watchSlidesProgress: true,
+				slideActiveClass: 'active',
+				slideVisibleClass: 'visible',
+				spaceBetween: 0,
+				lazy: true,
+				centeredSlides: true,
+				initialSlide: $(this).data('slide-index'),
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev'
 				},
-				1024: {
-					slidesPerView: 2
+				breakpoints: {
+					0: {
+						slidesPerView: 1
+					},
+					1024: {
+						slidesPerView: 2
+					},
+					1280: {
+						slidesPerView: 2.333
+					}
 				},
-				1280: {
-					slidesPerView: 2.333
+				on: {
+					activeIndexChange: swiper => {
+						$(swiper.el).find('.swiper-slide').removeClass('zoomed')
+						$(swiper.el).find('.swiper-slide img').css('transform', `none`)
+					}
 				}
-			},
-			on: {
-				slideChangeTransitionStart: swiper => {
-					$(swiper.el).find('.swiper-slide').removeClass('zoomed')
-					$(swiper.el).find('.swiper-slide img').css('transform', `none`)
-				}
-			}
+			})
 		})
 
 

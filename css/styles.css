@@ -8401,6 +8401,17 @@ aside
 }
 
 
+.product_info .images .big .swiper
+{
+    display: none;
+}
+
+.product_info .images .big .swiper-initialized
+{
+    display: block;
+}
+
+
 .product_info .images .big .swiper-button-next,
 .product_info .images .big .swiper-button-prev
 {
