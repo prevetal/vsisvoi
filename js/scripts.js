@@ -117,31 +117,8 @@ document.addEventListener('DOMContentLoaded', function () {
 			spaceBetween: 20,
 			on: {
 				activeIndexChange: swiper => {
-					let direction = '',
-						parent = $(swiper.el).closest('.popular_products'),
-						nextBanner
-
-					swiper.activeIndex > swiper.previousIndex
-						? direction = 'right'
-						: direction = 'left'
-
-
-					// Change banner
-					if(direction == 'right') {
-						nextBanner = parent.find('.products_banners > *.active').next()
-
-						if(!nextBanner.length) {
-							nextBanner = parent.find('.products_banners  > *:first-child')
-						}
-					}
-
-					if(direction == 'left') {
-						nextBanner = parent.find('.products_banners > *.active').prev()
-
-						if(!nextBanner.length) {
-							nextBanner = parent.find('.products_banners  > *:last-child')
-						}
-					}
+					let parent = $(swiper.el).closest('.popular_products'),
+						nextBanner = parent.find('.products_banners > *').eq(swiper.realIndex)
 
 					parent.find('.products_banners > *').removeClass('active').hide()
 					nextBanner.addClass('active').fadeIn(300)
@@ -187,31 +164,8 @@ document.addEventListener('DOMContentLoaded', function () {
 			spaceBetween: 20,
 			on: {
 				activeIndexChange: swiper => {
-					let direction = '',
-						parent = $(swiper.el).closest('.top_products'),
-						nextBanner
-
-					swiper.activeIndex > swiper.previousIndex
-						? direction = 'right'
-						: direction = 'left'
-
-
-					// Change banner
-					if(direction == 'right') {
-						nextBanner = parent.find('.products_banners > *.active').next()
-
-						if(!nextBanner.length) {
-							nextBanner = parent.find('.products_banners  > *:first-child')
-						}
-					}
-
-					if(direction == 'left') {
-						nextBanner = parent.find('.products_banners > *.active').prev()
-
-						if(!nextBanner.length) {
-							nextBanner = parent.find('.products_banners  > *:last-child')
-						}
-					}
+					let parent = $(swiper.el).closest('.popular_products'),
+						nextBanner = parent.find('.products_banners > *').eq(swiper.realIndex)
 
 					parent.find('.products_banners > *').removeClass('active').hide()
 					nextBanner.addClass('active').fadeIn(300)
