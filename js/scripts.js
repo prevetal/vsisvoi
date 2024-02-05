@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			spaceBetween: 20,
 			on: {
 				activeIndexChange: swiper => {
-					let parent = $(swiper.el).closest('.popular_products'),
+					let parent = $(swiper.el).closest('.top_products'),
 						nextBanner = parent.find('.products_banners > *').eq(swiper.realIndex)
 
 					parent.find('.products_banners > *').removeClass('active').hide()
