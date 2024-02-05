@@ -404,24 +404,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 	// Adding product to favorites
-	$('.product .favorite_btn, .product_info .favorite_btn').click(function(e) {
-		e.preventDefault()
+	// $('.product .favorite_btn, .product_info .favorite_btn').click(function(e) {
+	// 	e.preventDefault()
 
-		clearTimeout(timer)
+	// 	clearTimeout(timer)
 
-		let product = $(this).closest('.product')
+	// 	let product = $(this).closest('.product')
 
-		$(this).toggleClass('active')
+	// 	$(this).toggleClass('active')
 
-		// Show message
-		product.find('.favorite_mes').hide()
+	// 	// Show message
+	// 	product.find('.favorite_mes').hide()
 
-		$(this).hasClass('active')
-			? product.find('.favorite_mes.added').fadeIn(300)
-			: product.find('.favorite_mes.removed').fadeIn(300)
+	// 	$(this).hasClass('active')
+	// 		? product.find('.favorite_mes.added').fadeIn(300)
+	// 		: product.find('.favorite_mes.removed').fadeIn(300)
 
-		var timer = setTimeout(() => product.find('.favorite_mes').fadeOut(200), 2000)
-	})
+	// 	var timer = setTimeout(() => product.find('.favorite_mes').fadeOut(200), 2000)
+	// })
 
 
 	// Brands
