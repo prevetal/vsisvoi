@@ -9028,7 +9028,7 @@ aside
 
     display: block;
 
-    width: 42px;
+    min-width: 42px;
 
     cursor: pointer;
     pointer-events: none;
@@ -9056,6 +9056,7 @@ aside
 
     width: 100%;
     height: 42px;
+    padding: 0 11px;
 
     transition: .2s linear;
     pointer-events: auto;
