@@ -4972,7 +4972,7 @@ aside
 }
 
 
-.products .product .thumb img
+.products .product .thumb picture
 {
     position: absolute;
     z-index: 1;
@@ -4989,7 +4989,7 @@ aside
     object-fit: cover;
 }
 
-.products .product .thumb img + img
+.products .product .thumb picture + picture
 {
     z-index: 2;
 
@@ -5125,12 +5125,12 @@ aside
 }
 
 
-.products .product:hover .thumb img
+.products .product:hover .thumb picture
 {
     opacity: 0;
 }
 
-.products .product:hover .thumb img + img
+.products .product:hover .thumb picture + picture
 {
     opacity: 1;
 }
