@@ -457,6 +457,12 @@
     }
 
 
+    .products_banners .banner
+    {
+        height: 683px;
+    }
+
+
     /* .products_banners .banner .title
     {
         font-size: 28px;

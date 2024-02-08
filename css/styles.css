@@ -4670,29 +4670,13 @@ aside
 
 .products_banners > *
 {
-    position: absolute;
-    top: 0;
-    left: 0;
-
     display: none;
-
-    width: 100%;
-    height: 100%;
-}
-
-.mob_products .products_banners > *
-{
-    position: relative;
-
-    height: auto;
 }
 
 
 .products_banners .banner
 {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
 
     display: flex;
     align-content: center;
@@ -4700,21 +4684,13 @@ aside
     flex-wrap: wrap;
     justify-content: center;
 
-    width: 100%;
-    height: 100%;
+    height: 782px;
 
     text-align: center;
     text-decoration: none;
 
     color: #fff;
     background: #ececec;
-}
-
-.mob_products .products_banners .banner
-{
-    position: relative;
-
-    height: auto;
 }
 
 
