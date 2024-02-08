@@ -852,7 +852,7 @@
     /*------------------
         Product info
     ------------------*/
-    .product_info .full_view .swiper-slide
+    .product_info .full_view
     {
         padding: 72px 0 40px;
     }
