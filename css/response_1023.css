@@ -215,7 +215,7 @@
         min-height: -webkit-fill-available;
         min-height:         fill-available;
         padding-top: 46px;
-        padding-bottom: 84px;
+        padding-bottom: 138px;
 
         background: var(--bg);
 
@@ -230,7 +230,7 @@
 
 
     .filter .filter_selected,
-    .filter .mob_back
+    .filter .mob_btns
     {
         display: block;
     }
@@ -537,7 +537,7 @@
 
     .products_banners .banner
     {
-        height: calc(100vw - 40px);
+        height: calc(100vw - 40px) !important;
     }
 
 
