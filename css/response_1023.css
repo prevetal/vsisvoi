@@ -654,6 +654,14 @@
     }
 
 
+    .checkout .order.single
+    {
+        margin-top: 0;
+
+        border: none;
+    }
+
+
     .checkout .order .head
     {
         position: relative;

@@ -5736,6 +5736,14 @@ aside
 }
 
 
+.checkout .order.single
+{
+    margin-top: 20px;
+
+    border-top: 1px solid #eee;
+}
+
+
 .checkout .order + .order
 {
     border-top: 1px solid #eee;
