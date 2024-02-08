@@ -4680,6 +4680,13 @@ aside
     height: 100%;
 }
 
+.mob_products .products_banners > *
+{
+    position: relative;
+
+    height: auto;
+}
+
 
 .products_banners .banner
 {
@@ -4701,6 +4708,13 @@ aside
 
     color: #fff;
     background: #ececec;
+}
+
+.mob_products .products_banners .banner
+{
+    position: relative;
+
+    height: auto;
 }
 
 
