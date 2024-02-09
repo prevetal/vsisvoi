@@ -649,7 +649,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
-	// Custom select
+	// Custom select - Nice select
 	const selects = document.querySelectorAll('select:not(.skip)')
 
 	if (selects) {
@@ -661,6 +661,23 @@ document.addEventListener('DOMContentLoaded', function () {
 			el.addEventListener('change', () => el.classList.add('selected'))
 		})
 	}
+
+
+	// Custom select - Select2
+	$.fn.select2.defaults.set('width', '100%')
+
+	$('select.select2').select2({
+		allowClear: true,
+		language: {
+			'noResults': () =>'Нічого не знайдено'
+		}
+	})
+
+
+	// World phones
+	$('.phone_input').intlTelInput({
+		showSelectedDialCode: true
+	})
 
 
 	// Checkout form
@@ -678,6 +695,23 @@ document.addEventListener('DOMContentLoaded', function () {
 		e.preventDefault()
 
 		$(this).addClass('hide').next().removeClass('hide')
+	})
+
+
+	$('.checkout .delivery_type label').click(function(e) {
+		if (e.target.nodeName === 'LABEL') {
+			let type = $(this).data('type')
+
+			if (type == 'ukraine') {
+				$('.checkout .order_form').hide()
+				$('.checkout .order_form.for_ukraine').fadeIn(300)
+			}
+
+			if (type == 'world') {
+				$('.checkout .order_form').hide()
+				$('.checkout .order_form.for_world').fadeIn(300)
+			}
+		}
 	})
 
 

@@ -33,6 +33,8 @@
 		<link rel="stylesheet" href="css/swiper.css" async>
 		<link rel="stylesheet" href="css/fancybox.css" async>
 		<link rel="stylesheet" href="css/ion.rangeSlider.css" async>
+		<link rel="stylesheet" href="css/select2.min.css" async>
+		<link rel="stylesheet" href="css/intlTelInput.min.css" async>
 		<link rel="stylesheet" href="css/styles.css" async>
 
 		<link rel="stylesheet" href="css/response_1599.css" media="print, (max-width: 1599px)" async>
@@ -2792,14 +2794,14 @@
 
 						<section class="delivery_type">
 							<div class="field">
-								<label>
+								<label data-type="ukraine">
 									<input type="radio" name="delivery_type" checked>
 									<div>Доставка по україні</div>
 								</label>
 							</div>
 
 							<div class="field">
-								<label>
+								<label data-type="world">
 									<input type="radio" name="delivery_type">
 									<div>доставка по світу</div>
 								</label>
@@ -2811,7 +2813,7 @@
 					<section class="orders">
 						<div class="order single">
 							<div class="cont small row">
-								<section class="order_form">
+								<section class="order_form for_ukraine" style="display: block;">
 									<form action="" class="form">
 										<div class="section personal">
 											<div class="title">контактна інформація</div>
@@ -2849,8 +2851,9 @@
 
 											<div class="line">
 												<div class="field">
-													<select name="city">
-														<option value="1" selected>м. Київ</option>
+													<select name="city" class="skip select2" data-placeholder="Місто">
+														<option></option>
+														<option value="1">м. Київ</option>
 														<option value="2">м. Київ</option>
 														<option value="3">м. Київ</option>
 														<option value="4">м. Київ</option>
@@ -2860,8 +2863,6 @@
 														<option value="8">м. Київ</option>
 														<option value="9">м. Київ</option>
 													</select>
-
-													<div class="arr"></div>
 												</div>
 											</div>
 
@@ -2919,13 +2920,12 @@
 
 											<div class="line">
 												<div class="field">
-													<select name="city" data-placeholder="Оберіть номер відділення">
+													<select name="" data-placeholder="Оберіть номер відділення" class="skip select2">
+														<option></option>
 														<option value="1">Варіант 1</option>
 														<option value="2">Варіант 2</option>
 														<option value="3">Варіант 3</option>
 													</select>
-
-													<div class="arr"></div>
 												</div>
 											</div>
 										</div>
@@ -2973,12 +2973,12 @@
 												<div class="promocode">
 													<button type="button" class="add_btn">
 														<svg class="icon"><use xlink:href="images/sprite.svg#ic_plus"></use></svg>
-														<span>Додати промо код</span>
+														<span>Додати промокод</span>
 													</button>
 
 													<div class="line hide">
 														<div class="field">
-															<input type="text" name="" value="" class="input" placeholder="Промо код">
+															<input type="text" name="" value="" class="input" placeholder="Промокод">
 														</div>
 
 														<button type="button" class="apply_btn">додати</button>
@@ -2989,7 +2989,7 @@
 
 
 										<div class="section recipient">
-											<div class="title">Одержувач</div>
+											<div class="title">Отримувач</div>
 
 											<div class="line">
 												<div class="field">
@@ -2998,7 +2998,7 @@
 
 														<div class="check"></div>
 
-														<div>Інший одержувач</div>
+														<div>Інший отримувач</div>
 													</label>
 												</div>
 											</div>
@@ -3043,7 +3043,227 @@
 											</div>
 										</div>
 
-										<div class="section">
+										<div class="section bottom">
+											<div class="line callback">
+												<div class="field">
+													<label class="checkbox">
+														<input type="checkbox" name="callback">
+
+														<div class="check"></div>
+
+														<div>Передзвонити мені для уточнення деталей</div>
+													</label>
+												</div>
+											</div>
+
+											<div class="checkout_total hide">
+												<div>
+													<div class="label">Доставка:</div>
+													<div class="val">200 ₴</div>
+												</div>
+
+												<div>
+													<div class="label">Знижка:</div>
+													<div class="val">200 ₴</div>
+												</div>
+
+												<div>
+													<div class="label"><b>Всього:</b></div>
+													<div class="val total_price">21 300 ₴</div>
+												</div>
+											</div>
+
+											<div class="submit">
+												<button type="submit" class="submit_btn">замовити</button>
+											</div>
+
+											<div class="agree">Натискаючи цю кнопку, ви погоджуєтесь з умовами <a href="/" target="_blank">Угоди користувача</a></div>
+										</div>
+									</form>
+								</section>
+
+
+								<section class="order_form for_world">
+									<form action="" class="form">
+										<div class="section personal">
+											<div class="title">контактна інформація</div>
+
+											<div class="line">
+												<div class="field">
+													<input type="email" name="" value="" class="input" placeholder="Email">
+												</div>
+											</div>
+
+											<div class="columns">
+												<div class="line">
+													<div class="field">
+														<input type="text" name="" value="" class="input" placeholder="Ім'я (латиницею)">
+													</div>
+												</div>
+
+												<div class="line">
+													<div class="field">
+														<input type="text" name="" value="" class="input" placeholder="Прізвище (латиницею)">
+													</div>
+												</div>
+											</div>
+
+											<div class="line">
+												<div class="field">
+													<input type="text" name="" value="" class="input phone_input">
+												</div>
+											</div>
+										</div>
+
+
+										<div class="section delivery">
+											<div class="title">доставка</div>
+
+											<div class="line">
+												<div class="field">
+													<select name="country" class="skip select2" data-placeholder="Країна (латиницею)">
+														<option></option>
+														<option value="1">м. Київ</option>
+														<option value="2">м. Київ</option>
+														<option value="3">м. Київ</option>
+														<option value="4">м. Київ</option>
+														<option value="5">м. Київ</option>
+														<option value="6">м. Київ</option>
+														<option value="7">м. Київ</option>
+														<option value="8">м. Київ</option>
+														<option value="9">м. Київ</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="line">
+												<div class="field">
+													<select name="city" data-placeholder="Тип доставки" class="skip select2">
+														<option></option>
+														<option value="1">Варіант 1</option>
+														<option value="2">Варіант 2</option>
+														<option value="3">Варіант 3</option>
+													</select>
+												</div>
+											</div>
+										</div>
+
+
+										<div class="section payment">
+											<div class="title">спосіб оплати</div>
+
+											<div class="line methods">
+												<div class="field">
+													<label class="checkbox">
+														<input type="radio" name="payment_method" checked>
+
+														<div class="check"></div>
+
+														<div>Карткою на сайті</div>
+													</label>
+												</div>
+
+												<div class="cert">
+													<button type="button" class="add_btn">
+														<svg class="icon"><use xlink:href="images/sprite.svg#ic_plus"></use></svg>
+														<span>Додати сертифікат</span>
+													</button>
+
+													<div class="line hide">
+														<div class="field">
+															<input type="text" name="" value="" class="input" placeholder="Сертифікат">
+														</div>
+
+														<button type="button" class="apply_btn">додати</button>
+													</div>
+												</div>
+
+												<div class="promocode">
+													<button type="button" class="add_btn">
+														<svg class="icon"><use xlink:href="images/sprite.svg#ic_plus"></use></svg>
+														<span>Додати промокод</span>
+													</button>
+
+													<div class="line hide">
+														<div class="field">
+															<input type="text" name="" value="" class="input" placeholder="Промокод">
+														</div>
+
+														<button type="button" class="apply_btn">додати</button>
+													</div>
+												</div>
+											</div>
+										</div>
+
+
+										<div class="section recipient">
+											<div class="title">Отримувач</div>
+
+											<div class="line">
+												<div class="field">
+													<label class="checkbox other_recipient_checkbox">
+														<input type="checkbox" name="other_recipient">
+
+														<div class="check"></div>
+
+														<div>Інший отримувач</div>
+													</label>
+												</div>
+											</div>
+
+											<div class="line current_recipient">
+												<div class="field">
+													<input type="text" name="" value="Єлизавета Василевська" class="input">
+												</div>
+											</div>
+
+											<div class="other_recipient hide">
+												<div class="columns">
+													<div class="line">
+														<div class="field">
+															<input type="text" name="" value="" class="input" placeholder="Ім’я*">
+														</div>
+													</div>
+
+													<div class="line">
+														<div class="field">
+															<input type="text" name="" value="" class="input" placeholder="Прізвище*">
+														</div>
+													</div>
+												</div>
+
+												<div class="line">
+													<div class="field">
+														<input type="tel" name="" value="" class="input" placeholder="+38 (0__) ___  __  __*">
+													</div>
+												</div>
+											</div>
+
+											<button type="button" class="add_btn">
+												<svg class="icon"><use xlink:href="images/sprite.svg#ic_plus"></use></svg>
+												<span>Додати коментар до замовлення</span>
+											</button>
+
+											<div class="line hide">
+												<div class="field">
+													<textarea name="" placeholder="Коментар до замовлення"></textarea>
+												</div>
+											</div>
+										</div>
+
+										<div class="section bottom">
+											<div class="line callback">
+												<div class="field">
+													<label class="checkbox">
+														<input type="checkbox" name="callback">
+
+														<div class="check"></div>
+
+														<div>Передзвонити мені для уточнення деталей</div>
+													</label>
+												</div>
+											</div>
+
 											<div class="checkout_total hide">
 												<div>
 													<div class="label">Доставка:</div>
@@ -4018,6 +4238,9 @@
 		<script src="js/sticky-kit.min.js"></script>
 		<script src="js/ion.rangeSlider.min.js"></script>
 		<script src="js/countdown.js"></script>
+		<script src="js/select2.js"></script>
+		<script src="js/utils.js"></script>
+		<script src="js/intlTelInput-jquery.min.js"></script>
 		<script src="js/scripts.js"></script>
 	</body>
 </html>
