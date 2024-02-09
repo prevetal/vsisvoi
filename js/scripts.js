@@ -720,6 +720,17 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
+	$('.checkout .delivery .checkbox').click(function(e) {
+		if (e.target.nodeName === 'LABEL') {
+			let info = $(this).data('info'),
+				parent = $(this).closest('.delivery')
+
+			$(parent).find('.method_info').hide()
+			$(parent).find('.method_info' + info).fadeIn(300)
+		}
+	})
+
+
 	// Menu
 	$('header .categories .sub .main_links .links a').mouseover(function() {
 		let sub = $(this).data('sub'),
