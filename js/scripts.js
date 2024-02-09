@@ -5,10 +5,13 @@ BODY = document.getElementsByTagName('body')[0]
 
 document.addEventListener('DOMContentLoaded', function () {
 	// Main slider on the main page
-	let mainSlider = document.querySelector('.main_slider .swiper')
+	const mainSliders = [],
+		mainSlider = document.querySelectorAll('.main_slider .swiper')
 
-	if (mainSlider) {
-		new Swiper('.main_slider .swiper', {
+	mainSlider.forEach(function (el, i) {
+		el.classList.add('main_slider_s' + i)
+
+		let options = {
 			loop: true,
 			speed: 500,
 			watchSlidesProgress: true,
@@ -33,8 +36,10 @@ document.addEventListener('DOMContentLoaded', function () {
 				delay: 4000,
 				disableOnInteraction: false
 			}
-		})
-	}
+		}
+
+		mainSliders.push(new Swiper('.main_slider_s' + i, options))
+	})
 
 
 	// Categories sliders

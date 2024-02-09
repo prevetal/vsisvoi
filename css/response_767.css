@@ -24,6 +24,18 @@
 
 
 
+    .mob_hide
+    {
+        display: none !important;
+    }
+
+    .desktop_hide
+    {
+        display: block !important;
+    }
+
+
+
     /*----------------
         Pagination
     ----------------*/
@@ -229,16 +241,6 @@
 
 
 
-    /*---------
-        New
-    ---------*/
-    .new
-    {
-        display: none;
-    }
-
-
-
     /*-----------------------
         Categories slider
     -----------------------*/
@@ -316,12 +318,6 @@
     /*--------------
         Products
     --------------*/
-    .mob_products
-    {
-        display: block;
-    }
-
-
     .products .block_head
     {
         position: relative;
@@ -426,12 +422,6 @@
     /*----------------------
         Popular products
     ----------------------*/
-    .popular_products.mob
-    {
-        display: block;
-    }
-
-
     .popular_products .products
     {
         order: 3;
@@ -494,12 +484,6 @@
     /*--------------------
         Content banner
     --------------------*/
-    .content_banner.mob_hide
-    {
-        display: none;
-    }
-
-
     /* .content_banner .banner .info
     {
         width: 231px;

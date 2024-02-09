@@ -55,6 +55,17 @@
     }
 
 
+    .tablet_hide
+    {
+        display: none !important;
+    }
+
+    .desktop_hide.tablet_show
+    {
+        display: block !important;
+    }
+
+
 
     /*----------------
         Pagination
@@ -357,17 +368,6 @@
     }
 
 
-    .main_slider .img
-    {
-        display: none;
-    }
-
-    .main_slider .img.mob
-    {
-        display: block;
-    }
-
-
 
     /* .main_slider .info
     {
@@ -496,41 +496,11 @@
 
 
     /*----------------------
-        Popular products
-    ----------------------*/
-    .popular_products
-    {
-        display: none;
-    }
-
-
-
-    /*------------------
-        Top products
-    ------------------*/
-    .top_products
-    {
-        display: none;
-    }
-
-
-
-    /*----------------------
         Products banners
     ----------------------*/
     .products_banners
     {
-        order: 2;
-
         width: 100%;
-        margin-top: 40px;
-    }
-
-    .mob_products .products_banners
-    {
-        order: 0;
-
-        margin-top: 0;
         margin-bottom: 40px;
     }
 
@@ -550,16 +520,6 @@
     .products_banners .banner .sticker
     {
         width: 200px;
-    }
-
-
-
-    /*--------------
-        Products
-    --------------*/
-    .mob_popular_products
-    {
-        display: block;
     }
 
 

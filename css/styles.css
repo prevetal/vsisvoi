@@ -329,6 +329,13 @@ button
 
 
 
+.desktop_hide
+{
+    display: none !important;
+}
+
+
+
 /*--------------
     Fancybox
 --------------*/
@@ -4167,11 +4174,6 @@ aside
     object-fit: cover;
 }
 
-.main_slider .img.mob
-{
-    display: none;
-}
-
 
 /* .main_slider .info
 {
@@ -4899,12 +4901,6 @@ aside
 /*--------------
     Products
 --------------*/
-.mob_products
-{
-    display: none;
-}
-
-
 .products .block_head
 {
     display: flex;
