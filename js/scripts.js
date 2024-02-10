@@ -911,86 +911,89 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 
-	$('.product_info .images .big .image').click(function(e) {
-		e.preventDefault()
-
-		$('body').toggleClass('menu_open')
-
-		$('.product_info .full_view').toggleClass('show')
-
-		setTimeout(() => {
-			new Swiper('.product_info .full_view .swiper', {
-				loop: false,
-				speed: 500,
-				roundLengths: true,
-				watchSlidesProgress: true,
-				slideActiveClass: 'active',
-				slideVisibleClass: 'visible',
-				spaceBetween: 0,
-				lazy: true,
-				centeredSlides: true,
-				initialSlide: $(this).data('slide-index'),
-				navigation: {
-					nextEl: '.swiper-button-next',
-					prevEl: '.swiper-button-prev'
-				},
-				breakpoints: {
-					0: {
-						slidesPerView: 1
-					},
-					1024: {
-						slidesPerView: 2
-					},
-					1280: {
-						slidesPerView: 2.333
-					}
-				},
-				on: {
-					activeIndexChange: swiper => {
-						$(swiper.el).find('.swiper-slide').removeClass('zoomed')
-						$(swiper.el).find('.swiper-slide img').css('transform', `none`)
-					}
-				}
-			})
-		})
-
-
-		// Zoom
-		$('body').on('click', '.product_info .full_view .swiper-slide.active', function (e) {
-			e.preventDefault()
-
-			$(this).toggleClass('zoomed')
-
-			if ($(this).hasClass('zoomed')) {
-				let translateY = e.pageY / $(this).outerHeight() * -100 / 2 + 25
-
-				$(this).find('img').css('transform', `scale3d(2, 2, 2) translateY(${translateY}%)`)
-			} else {
-				$(this).find('img').css('transform', `none`)
+	fullViewSlider = new Swiper('.full_view .swiper', {
+		loop: false,
+		speed: 500,
+		roundLengths: true,
+		watchSlidesProgress: true,
+		slideActiveClass: 'active',
+		slideVisibleClass: 'visible',
+		spaceBetween: 0,
+		lazy: true,
+		centeredSlides: true,
+		initialSlide: $(this).data('slide-index'),
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev'
+		},
+		breakpoints: {
+			0: {
+				slidesPerView: 1
+			},
+			1024: {
+				slidesPerView: 2
+			},
+			1280: {
+				slidesPerView: 2.333
 			}
-		})
-
-
-		// Mouse move
-		$('body').on('mousemove touchmove', '.product_info .full_view .swiper-slide.zoomed', function (e) {
-			let translateY = 0,
-				translateX = 0
-
-			if (!e.touches) {
-				// Mouse move
-				translateY = e.pageY / $(this).outerHeight() * -100 / 2 + 25
-			} else {
-				// Touch move
-				translateY = e.touches[0].pageY / $(this).outerHeight() * -100 / 2 + 25
-				translateX = e.touches[0].pageX / $(this).outerWidth() * 100 / 2 - 25
+		},
+		on: {
+			activeIndexChange: swiper => {
+				$(swiper.el).find('.swiper-slide').removeClass('zoomed')
+				$(swiper.el).find('.swiper-slide img').css('transform', `none`)
 			}
-
-			$(this).find('img').css('transform', `scale3d(2, 2, 2) translate(${translateX}%, ${translateY}%)`)
-		})
+		}
 	})
 
 
-	$('.product_info .full_view .close_btn').click(function(e) {
+	$('.product_info .images .big .image').click(function(e) {
+		e.preventDefault()
+
+		if (typeof fullViewSlider != 'undefined') {
+			fullViewSlider.slideTo($(this).data('slide-index'))
+		}
+
+		$('body').toggleClass('menu_open')
+
+		$('.full_view').toggleClass('show')
+	})
+
+
+	// Zoom
+	$('body').on('click', '.full_view .swiper-slide.active', function (e) {
+		e.preventDefault()
+
+		$(this).toggleClass('zoomed')
+
+		if ($(this).hasClass('zoomed')) {
+			let translateY = e.pageY / $(this).outerHeight() * -100 / 2 + 25
+
+			$(this).find('img').css('transform', `scale3d(2, 2, 2) translateY(${translateY}%)`)
+		} else {
+			$(this).find('img').css('transform', `none`)
+		}
+	})
+
+
+	// Mouse move
+	$('body').on('mousemove touchmove', '.full_view .swiper-slide.zoomed', function (e) {
+		let translateY = 0,
+			translateX = 0
+
+		if (!e.touches) {
+			// Mouse move
+			translateY = e.pageY / $(this).outerHeight() * -100 / 2 + 25
+		} else {
+			// Touch move
+			translateY = e.touches[0].pageY / $(this).outerHeight() * -100 / 2 + 25
+			translateX = e.touches[0].pageX / $(this).outerWidth() * 100 / 2 - 25
+		}
+
+		$(this).find('img').css('transform', `scale3d(2, 2, 2) translate(${translateX}%, ${translateY}%)`)
+	})
+
+
+	$('.full_view .close_btn').click(function(e) {
 		e.preventDefault()
 
 		$('.product_info .full_view').toggleClass('show')

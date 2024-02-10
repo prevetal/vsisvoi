@@ -10198,6 +10198,7 @@ aside
     max-height:         fill-available;
 
     transition: transform .2s linear;
+    pointer-events: none;
 
     object-fit: cover;
 }
