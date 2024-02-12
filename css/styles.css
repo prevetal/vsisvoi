@@ -5218,7 +5218,11 @@ aside
     font-size: 14px;
     font-weight: 800;
 
+    overflow: hidden;
+
+    white-space: nowrap;
     text-transform: uppercase;
+    text-overflow: ellipsis;
 }
 
 
@@ -10198,7 +10202,6 @@ aside
     max-height:         fill-available;
 
     transition: transform .2s linear;
-    pointer-events: none;
 
     object-fit: cover;
 }
