@@ -9436,7 +9436,7 @@ aside
 .product_info .sizes .vals label input:checked ~ .size
 {
     border-color: #c18c43;
-    background: var(--bg);
+    background: #eee;
 }
 
 
