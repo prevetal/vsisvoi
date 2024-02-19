@@ -723,6 +723,7 @@ button
 .top_banner
 {
     position: relative;
+    z-index: 91;
 
     text-align: center;
 
@@ -1040,7 +1041,7 @@ header .search .input
 
     width: 100%;
     height: 36px;
-    padding: 0 36px;
+    padding: 0 36px 0 15px;
 
     color: #333;
     border: 1px solid #c8cbce;
@@ -1576,7 +1577,7 @@ header .categories .banners .banner:hover .thumb img
 -----------------*/
 .search_tips
 {
-    position: fixed;
+    position: absolute;
     z-index: 2;
     top: 0;
     left: 0;
@@ -1585,9 +1586,6 @@ header .categories .banners .banner:hover .thumb img
     overflow: auto;
 
     width: 100%;
-    max-height: -moz-available;
-    max-height: -webkit-fill-available;
-    max-height:         fill-available;
     padding-top: 46px;
 
     background: #fff;
@@ -1811,6 +1809,39 @@ header .categories .banners .banner:hover .thumb img
     border-radius: 50%;
 
     object-fit: cover;
+}
+
+
+.search_tips .rec_products .more
+{
+    display: none;
+
+    margin-top: 40px;
+}
+
+
+.search_tips .rec_products .more .btn
+{
+    font-size: 16px;
+    line-height: 100%;
+
+    display: block;
+
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 13px 40px;
+
+    transition: background .2s linear;
+    text-align: center;
+    text-decoration: none;
+
+    color: #fff;
+    background: #2b3338;
+}
+
+.search_tips .rec_products .more .btn:hover
+{
+    background: #000;
 }
 
 

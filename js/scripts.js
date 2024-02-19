@@ -1202,6 +1202,11 @@ document.addEventListener('DOMContentLoaded', function () {
 			$(this).removeClass('active')
 			$('.mini_modal').removeClass('active')
 
+			// Search modal
+			if (modalId == '#search_modal') {
+				$('.search_tips').fadeOut(200)
+			}
+
 			if (is_touch_device()) $('body').css('cursor', 'default')
 		} else {
 			$('.mini_modal_btn').removeClass('active')
@@ -1209,6 +1214,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 			$('.mini_modal').removeClass('active')
 			$(modalId).addClass('active')
+
+			// Search modal
+			if (modalId == '#search_modal') {
+				$('.search_tips').fadeIn(300)
+
+				setTimeout(() => $('header .search .input').focus(), 100)
+			}
 
 			if (is_touch_device()) $('body').css('cursor', 'pointer')
 		}
@@ -1345,8 +1357,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		setTimeout(() => {
 			_self.val().length
-				? $('.search_tips').fadeIn(300)
-				: $('.search_tips').fadeOut(200)
+				? $('.search_tips .rec_products .more').fadeIn(300)
+				: $('.search_tips .rec_products .more').fadeOut(200)
 		})
 	})
 
