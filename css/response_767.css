@@ -822,14 +822,9 @@
     }
 
 
+    .product_info .images .big .zoom,
     .product_info .images .big .swiper-button-next,
     .product_info .images .big .swiper-button-prev
-    {
-        display: flex;
-    }
-
-
-    .product_info .images .big .zoom
     {
         display: flex;
     }
@@ -872,6 +867,13 @@
         left: 0;
 
         margin: 0;
+    }
+
+
+    .product_info .partner_notice .exp
+    {
+        right: auto;
+        left: 0;
     }
 
 

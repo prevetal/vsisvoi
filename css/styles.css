@@ -8671,8 +8671,6 @@ aside
     top: 0;
     bottom: 0;
 
-    display: none;
-
     height: 58px;
     margin: auto 0;
 }
@@ -8967,6 +8965,8 @@ aside
     font-size: 10px;
     font-weight: 500;
 
+    position: relative;
+
     display: flex;
     align-content: center;
     align-items: center;
@@ -8981,6 +8981,7 @@ aside
     color: #2b3338;
     background: rgba(200, 203, 206, .20);
 }
+
 
 .product_info .partner_notice .icon
 {
@@ -8997,6 +8998,36 @@ aside
 .product_info .partner_notice span
 {
     max-width: calc(100% - 22px);
+}
+
+
+.product_info .partner_notice .exp
+{
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 12px;
+
+    position: absolute;
+    z-index: 3;
+    right: 0;
+    bottom: 100%;
+
+    display: none;
+
+    width: 180px;
+    margin-bottom: 8px;
+    padding: 8px 12px;
+
+    text-align: center;
+    pointer-events: none;
+
+    color: #fff;
+    background: #c18c43;
+}
+
+.product_info .partner_notice:hover .exp
+{
+    display: block;
 }
 
 
