@@ -703,6 +703,29 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
+	$('.checkout .order_form .form .apply_btn').click(function(e) {
+		e.preventDefault()
+
+		let parent = $(this).closest('.line')
+
+		$(this).hide()
+
+		parent.find('.remove_btn').fadeIn(300)
+		parent.find('.status.green').fadeIn(300)
+	})
+
+	$('.checkout .order_form .form .remove_btn').click(function(e) {
+		e.preventDefault()
+
+		let parent = $(this).closest('.line')
+
+		$(this).hide()
+
+		parent.find('.apply_btn').fadeIn(300)
+		parent.find('.status').fadeOut(200)
+	})
+
+
 	$('.checkout .delivery_type label').click(function(e) {
 		if (e.target.nodeName === 'LABEL') {
 			let type = $(this).data('type')

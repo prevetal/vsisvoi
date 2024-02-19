@@ -6241,7 +6241,8 @@ aside
 }
 
 
-.checkout .order_form .form .apply_btn
+.checkout .order_form .form .apply_btn,
+.checkout .order_form .form .remove_btn
 {
     font-size: 13px;
     font-weight: 800;
@@ -6261,9 +6262,38 @@ aside
     border: 1px solid #2b3338;
 }
 
-.checkout .order_form .form .apply_btn:hover
+.checkout .order_form .form .remove_btn
+{
+    display: none;
+}
+
+.checkout .order_form .form .apply_btn:hover,
+.checkout .order_form .form .remove_btn:hover
 {
     background: #eee;
+}
+
+
+.checkout .order_form .cert .status,
+.checkout .order_form .promocode .status
+{
+    display: none;
+
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+.checkout .order_form .cert .status.green,
+.checkout .order_form .promocode .status.green
+{
+    color: green;
+}
+
+.checkout .order_form .cert .status.red,
+.checkout .order_form .promocode .status.red
+{
+    color: #ce0c36;
 }
 
 
