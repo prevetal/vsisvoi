@@ -146,12 +146,6 @@ html.custom_scroll ::-webkit-scrollbar-thumb
     background-color: #000;
 }
 
-html.custom_scroll
-{
-    scrollbar-color: #000 var(--bg);
-    scrollbar-width: thin;
-}
-
 
 body
 {
@@ -2943,8 +2937,6 @@ aside
 
     min-height: 15px;
     padding-left: 25px;
-
-    text-transform: uppercase;
 }
 
 
@@ -7291,7 +7283,7 @@ aside
 {
     align-self: center;
 
-    max-width: calc(100% - 557px);
+    max-width: calc(100% - 481px);
     margin-right: auto;
     margin-left: 29px;
 }

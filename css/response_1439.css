@@ -523,7 +523,7 @@
 
     .products_head .filter_selected
     {
-        max-width: calc(100% - 534px);
+        max-width: calc(100% - 467px);
         margin-left: 24px;
     }
 
