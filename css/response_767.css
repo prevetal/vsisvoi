@@ -1641,6 +1641,23 @@
 
 
 
+    /*------------------
+        Search empty
+    ------------------*/
+    .search_empty .title
+    {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+
+    .search_empty .desc
+    {
+        margin-top: 24px;
+    }
+
+
+
     /*------------
         Footer
     ------------*/

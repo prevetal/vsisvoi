@@ -3124,6 +3124,11 @@ aside
     margin-bottom: 40px;
 }
 
+.block_head.center
+{
+    text-align: center;
+}
+
 
 .block_head .title
 {
@@ -4132,7 +4137,7 @@ aside
 .text_block ul li:before
 {
     position: absolute;
-    top: 10px;
+    top: 9px;
     left: 4px;
 
     display: block;
@@ -12508,6 +12513,46 @@ aside
     width: 307px;
     max-width: 75%;
     margin: 40px auto 0;
+}
+
+
+
+/*------------------
+    Search empty
+------------------*/
+.search_empty
+{
+    padding: 95px 0 60px;
+}
+
+
+.search_empty .title
+{
+    font-size: 23px;
+    font-weight: 800;
+    line-height: 27px;
+
+    width: 746px;
+    max-width: 100%;
+    margin: 0 auto;
+
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: #333;
+}
+
+
+.search_empty .desc
+{
+    margin-top: 40px;
+}
+
+
+.search_empty .desc ul li + li
+{
+    margin-top: 16px;
 }
 
 
