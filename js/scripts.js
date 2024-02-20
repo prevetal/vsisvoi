@@ -1228,6 +1228,8 @@ document.addEventListener('DOMContentLoaded', function () {
 			// Search modal
 			if (modalId == '#search_modal') {
 				$('.search_tips').fadeOut(200)
+
+				$('body').removeClass('menu_open')
 			}
 
 			if (is_touch_device()) $('body').css('cursor', 'default')
@@ -1242,6 +1244,8 @@ document.addEventListener('DOMContentLoaded', function () {
 			if (modalId == '#search_modal') {
 				$('.search_tips').fadeIn(300)
 
+				$('body').addClass('menu_open')
+
 				setTimeout(() => $('header .search .input').focus(), 100)
 			}
 
@@ -1253,6 +1257,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	$(document).click(e => {
 		if ($(e.target).closest('.modal_cont').length === 0) {
 			$('.mini_modal, .mini_modal_btn').removeClass('active')
+
+			$('.search_tips').fadeOut(200)
+
+			$('body').removeClass('menu_open')
 
 			if (is_touch_device()) $('body').css('cursor', 'default')
 		}

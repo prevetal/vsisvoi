@@ -661,12 +661,6 @@
     }
 
 
-    .checkout .order_form .form .callback
-    {
-        display: none;
-    }
-
-
     .checkout .checkout_total
     {
         display: block !important;

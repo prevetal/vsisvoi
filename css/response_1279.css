@@ -145,6 +145,17 @@
     /*-----------------
         Search tips
     -----------------*/
+    .search_tips
+    {
+        position: fixed;
+
+        height: 100%;
+        min-height: -moz-available;
+        min-height: -webkit-fill-available;
+        min-height:         fill-available;
+    }
+
+
     .search_tips .rec_products
     {
         padding: 28px 28px 28px 0;
@@ -176,6 +187,12 @@
     .page_head .back
     {
         left: 20px;
+    }
+
+
+    .page_head .back + .page_title
+    {
+        text-align: center;
     }
 
 

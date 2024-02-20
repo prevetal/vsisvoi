@@ -1571,7 +1571,7 @@ header .categories .banners .banner:hover .thumb img
 -----------------*/
 .search_tips
 {
-    position: absolute;
+    position: fixed;
     z-index: 2;
     top: 0;
     left: 0;
@@ -5742,8 +5742,10 @@ aside
 
     transition: border-color .2s linear;
     text-align: center;
+    text-decoration: none;
     text-transform: uppercase;
 
+    color: currentColor;
     border: 1px solid #d6d6d6;
 }
 
