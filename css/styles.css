@@ -1811,6 +1811,8 @@ header .categories .banners .banner:hover .thumb img
     display: none;
 
     margin-top: 40px;
+
+    text-align: center;
 }
 
 
@@ -1819,14 +1821,14 @@ header .categories .banners .banner:hover .thumb img
     font-size: 16px;
     line-height: 100%;
 
-    display: block;
+    display: inline-block;
 
     max-width: 100%;
-    margin: 0 auto;
     padding: 13px 40px;
 
     transition: background .2s linear;
     text-align: center;
+    vertical-align: top;
     text-decoration: none;
 
     color: #fff;
