@@ -81,6 +81,8 @@
     -----------------*/
     .search_tips .rec_products
     {
+        order: 2;
+
         padding: 24px 20px;
     }
 
@@ -94,6 +96,11 @@
     {
         width: calc(50% - 20px);
         margin-left: 20px;
+    }
+
+    .search_tips .rec_products > .row > *:nth-child(4) ~ *
+    {
+        display: none;
     }
 
 

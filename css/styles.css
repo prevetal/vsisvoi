@@ -1690,6 +1690,8 @@ header .categories .banners .banner:hover .thumb img
     font-size: 12px;
     font-weight: 800;
 
+    width: 100%;
+
     text-transform: uppercase;
 }
 
@@ -1717,6 +1719,7 @@ header .categories .banners .banner:hover .thumb img
     font-size: 10px;
     font-weight: 500;
 
+    width: 100%;
     margin-top: 6px;
 
     color: #2b3338;
@@ -1792,17 +1795,24 @@ header .categories .banners .banner:hover .thumb img
 }
 
 
-.search_tips .rec_products .product .features .color img
+.search_tips .rec_products .product .features .val
 {
-    display: block;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
 
+
+.search_tips .rec_products .product .features .color
+{
     width: 12px;
     height: 12px;
+    margin-right: 4px;
 
     border: 1px solid #c8cbce;
     border-radius: 50%;
-
-    object-fit: cover;
 }
 
 
