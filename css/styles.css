@@ -2273,7 +2273,8 @@ header .categories .banners .banner:hover .thumb img
 
     width: 100%;
     margin-top: auto;
-    padding: 27px 20px 41px;
+
+/* padding: 27px 20px 41px; */
 
     text-align: center;
     text-decoration: none;
@@ -2283,7 +2284,7 @@ header .categories .banners .banner:hover .thumb img
 }
 
 
-.mob_menu .banner .title
+/* .mob_menu .banner .title
 {
     font-family: var(--font_family);
     font-size: 20px;
@@ -2308,22 +2309,21 @@ header .categories .banners .banner:hover .thumb img
     z-index: 3;
 
     margin-top: 10px;
-}
+} */
 
 
 .mob_menu .banner img
 {
-    position: absolute;
+    /* position: absolute;
     z-index: 1;
     top: 0;
-    left: 0;
-
+    left: 0; */
     display: block;
 
     width: 100%;
-    height: 100%;
+    /* height: 100%;
 
-    object-fit: cover;
+    object-fit: cover; */
 }
 
 
