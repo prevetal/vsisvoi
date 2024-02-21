@@ -1454,6 +1454,14 @@ document.addEventListener('DOMContentLoaded', function () {
 	$('.top_banner .close_btn').click(e => {
 		$('.top_banner').slideUp(200)
 	})
+
+
+	// Brand info
+	$('.brand_info .spoler_btn').click(function(e) {
+
+		$(this).toggleClass('active')
+		$('.brand_info .text_block').toggleClass('show')
+	})
 })
 
 
