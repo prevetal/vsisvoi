@@ -213,7 +213,7 @@
     .filter
     {
         position: fixed;
-        z-index: 20;
+        z-index: 80;
         top: 0;
         left: 0;
 
