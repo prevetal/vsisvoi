@@ -1589,6 +1589,43 @@ header .categories .banners .banner:hover .thumb img
 }
 
 
+.search_tips .close_btn
+{
+    position: absolute;
+    top: 46px;
+    right: 0;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    transition: .2s linear;
+
+    color: #c8cbce;
+}
+
+
+.search_tips .close_btn .icon
+{
+    display: block;
+
+    width: 28px;
+    height: 28px;
+}
+
+
+.search_tips .close_btn:hover
+{
+    color: #c18c43;
+    background: #eee;
+}
+
+
 .search_tips .cont
 {
     align-content: stretch;

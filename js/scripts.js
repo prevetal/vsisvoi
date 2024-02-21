@@ -1394,6 +1394,13 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
+	$('.search_tips .close_btn').click(function(e) {
+		e.preventDefault()
+
+		$('.search_tips').fadeOut(200)
+	})
+
+
 	// Register
 	$('.register .form .add_btn').click(function(e) {
 		e.preventDefault()
