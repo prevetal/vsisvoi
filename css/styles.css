@@ -1852,6 +1852,11 @@ header .categories .banners .banner:hover .thumb img
     border-radius: 50%;
 }
 
+.search_tips .rec_products .product .features .color + div
+{
+    width: calc(100% - 16px);
+}
+
 
 .search_tips .rec_products .more
 {
@@ -6638,6 +6643,16 @@ aside
 }
 
 
+.cart_info .product .features .val
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+
 .cart_info .product .features .price
 {
     display: flex;
@@ -6668,9 +6683,15 @@ aside
 {
     width: 12px;
     height: 12px;
+    margin-right: 4px;
 
     border: 1px solid #c8cbce;
     border-radius: 50%;
+}
+
+.cart_info .product .features .color + div
+{
+    width: calc(100% - 16px);
 }
 
 
@@ -15461,8 +15482,6 @@ footer .creator span
 
     counter-reset: number;
 
-    scrollbar-color: #797f83 #eee;
-    scrollbar-width: thin;
     overscroll-behavior-y: contain;
 }
 
