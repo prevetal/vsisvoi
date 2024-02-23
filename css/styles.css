@@ -15404,16 +15404,27 @@ footer .creator span
     cursor: move;
 }
 
+.side_modal .table_wrap::-webkit-scrollbar-track
+{
+    width: 4px;
+    height: 4px;
+
+    opacity: 1;
+    background-color: #eee;
+}
+
 .side_modal .table_wrap::-webkit-scrollbar
 {
     width: 4px;
     height: 4px;
 
+    opacity: 1;
     background-color: #eee;
 }
 
 .side_modal .table_wrap::-webkit-scrollbar-thumb
 {
+    opacity: 1;
     background-color: #797f83;
 }
 
