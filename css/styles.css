@@ -5390,9 +5390,31 @@ aside
     font-size: 14px;
     font-weight: 800;
 
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
     margin-top: 14px;
 
     text-transform: uppercase;
+}
+
+.products .product .price .red
+{
+    color: #ce0c36;
+}
+
+.products .product .price .old
+{
+    font-size: 12px;
+
+    margin-left: 8px;
+
+    text-decoration: line-through;
+
+    color: #797f83;
 }
 
 
