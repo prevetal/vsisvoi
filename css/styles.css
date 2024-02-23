@@ -12419,6 +12419,16 @@ aside
 }
 
 
+.favorite .product .features .val
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+
 .favorite .product .features .price
 {
     display: flex;
@@ -12449,9 +12459,15 @@ aside
 {
     width: 12px;
     height: 12px;
+    margin-right: 4px;
 
     border: 1px solid #c8cbce;
     border-radius: 50%;
+}
+
+.favorite .product .features .color + div
+{
+    width: calc(100% - 16px);
 }
 
 
