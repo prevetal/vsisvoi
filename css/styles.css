@@ -4210,6 +4210,37 @@ aside
 }
 
 
+.text_block ol
+{
+    counter-reset: li;
+}
+
+
+.text_block ol li
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    padding-left: 20px;
+
+    list-style-type: none;
+}
+
+.text_block ol li:before
+{
+    font-weight: 700;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    content: counter(li) '.';
+    counter-increment: li;
+}
+
+
 
 /*-----------------
     Main slider
@@ -15325,9 +15356,6 @@ footer .creator span
     padding: 20px 0;
 
     cursor: move;
-
-    scrollbar-color: #797f83 #eee;
-    scrollbar-width: thin;
 }
 
 .side_modal .table_wrap::-webkit-scrollbar
