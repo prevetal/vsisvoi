@@ -842,6 +842,22 @@
 
 
 
+    /*----------------
+        Stock info
+    ----------------*/
+    .stock_info .thumb
+    {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+    .stock_info .thumb + *
+    {
+        width: 100%;
+    }
+
+
+
     /*------------
         Footer
     ------------*/

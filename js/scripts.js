@@ -1036,7 +1036,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 	// Product page - stock
-	$('.stock .timer').each(function () {
+	$('.timer').each(function () {
 		$(this).countdown($(this).data('date'), function (event) {
 			$(this).find('.days span').text(event.strftime('%D'))
 			$(this).find('.hours').text(event.strftime('%H'))
