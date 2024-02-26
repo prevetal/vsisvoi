@@ -1465,20 +1465,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 	// Load products
-	$('.pagination .load_more_btn').click(function(e) {
-		e.preventDefault()
+	// $('.pagination .load_more_btn').click(function(e) {
+	// 	e.preventDefault()
 
-		// Remember position when clicked
-		let offsetTop = $(window).scrollTop()
+	// 	// Remember position when clicked
+	// 	let offsetTop = $(window).scrollTop()
 
-		// Request and insert new products in html
-		// ...
+	// 	// Request and insert new products in html
+	// 	// ...
 
-		// Return the user to the right place
-		$('html, body').animate({
-			scrollTop: offsetTop
-		}, 500)
-	})
+	// 	// Return the user to the right place
+	// 	setTimeout(() => {
+	// 		$('html, body').animate({
+	// 			scrollTop: offsetTop
+	// 		}, 500)
+	// 	})
+	// })
 })
 
 
