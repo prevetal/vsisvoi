@@ -3527,6 +3527,11 @@ aside
     color: var(--form_error_color);
 }
 
+.form .error_text:empty
+{
+    display: none;
+}
+
 
 .form .gender
 {
@@ -15901,8 +15906,10 @@ footer .creator span
 
     transition: border-color .2s linear;
     text-align: center;
+    text-decoration: none;
     text-transform: uppercase;
 
+    color: currentColor;
     border: 1px solid #d6d6d6;
 }
 
