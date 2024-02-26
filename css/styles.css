@@ -15266,6 +15266,17 @@ footer .subscribe .message .desc
 }
 
 
+footer .subscribe .btn-send
+{
+    background: #2b3338;
+}
+
+footer .subscribe .btn-send:hover
+{
+    background: #000 !important;
+}
+
+
 
 footer .creator
 {
