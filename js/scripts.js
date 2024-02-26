@@ -1256,13 +1256,15 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Close the popup when clicked due to its behavior
 	$(document).click(e => {
 		if ($(e.target).closest('.modal_cont').length === 0) {
-			$('.mini_modal, .mini_modal_btn').removeClass('active')
+			if($(e.target).closest('.search_tips').length === 0) {
+				$('.mini_modal, .mini_modal_btn').removeClass('active')
 
-			$('.search_tips').fadeOut(200)
+				$('.search_tips').fadeOut(200)
 
-			$('body').removeClass('menu_open')
+				$('body').removeClass('menu_open')
 
-			if (is_touch_device()) $('body').css('cursor', 'default')
+				if (is_touch_device()) $('body').css('cursor', 'default')
+			}
 		}
 	})
 
