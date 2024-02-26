@@ -7146,7 +7146,8 @@ aside
 }
 
 
-.banners_block .banner img
+.banners_block .banner img,
+.banners_block .banner picture
 {
     position: absolute;
     z-index: 1;
@@ -7161,11 +7162,6 @@ aside
     transition: transform .2s linear;
 
     object-fit: cover;
-}
-
-.banners_block .banner img.mob
-{
-    display: none;
 }
 
 
@@ -7198,7 +7194,7 @@ aside
 } */
 
 
-.banners_block .banner:hover img
+.banners_block .banner:hover picture
 {
     transform: scale(1.1);
 }

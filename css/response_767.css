@@ -763,17 +763,6 @@
     }
 
 
-    .banners_block .banner img
-    {
-        display: none;
-    }
-
-    .banners_block .banner img.mob
-    {
-        display: block;
-    }
-
-
     .banners_block .swiper .banner
     {
         padding-bottom: 47.916%;
