@@ -1398,6 +1398,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		e.preventDefault()
 
 		$('.search_tips').fadeOut(200)
+
+		$('body').removeClass('menu_open')
 	})
 
 
