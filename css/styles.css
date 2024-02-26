@@ -4931,9 +4931,6 @@ aside
 .top_products .products_banners .banner
 {
     height: 100%;
-    min-height: -moz-available;
-    min-height: -webkit-fill-available;
-    min-height:         fill-available;
 }
 
 
