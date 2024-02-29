@@ -2581,15 +2581,6 @@ aside
 }
 
 
-.content .mob_filter_btn
-{
-    margin-top: -20px;
-    margin-bottom: 20px;
-
-    border: 1px solid #eee;
-}
-
-
 .mob_filter_btn .count
 {
     font-weight: 700;
@@ -7618,6 +7609,11 @@ aside
     background: var(--bg);
 }
 
+.mob_products_head.no_top_p
+{
+    padding-top: 0;
+}
+
 
 
 .mob_products_head .filter_btn
@@ -7634,7 +7630,7 @@ aside
 
     width: calc(50% - 10px);
     height: 56px;
-    padding: 20px 71px 20px 24px;
+    padding: 20px 59px 20px 24px;
 
     text-transform: uppercase;
 
@@ -7725,7 +7721,7 @@ aside
     overflow: hidden;
 
     height: 56px;
-    padding: 0 71px 0 24px;
+    padding: 0 59px 0 24px;
 
     cursor: pointer;
     white-space: nowrap;
