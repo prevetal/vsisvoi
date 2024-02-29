@@ -8974,6 +8974,21 @@ aside
 }
 
 
+.product_info .product_name a
+{
+    transition: color .2s linear;
+    text-decoration: none;
+
+    color: currentColor;
+}
+
+
+.product_info .product_name a:hover
+{
+    color: #c18c43;
+}
+
+
 
 .product_info .desc
 {
