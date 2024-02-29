@@ -534,7 +534,7 @@ button
 
 
 .pagination .links a:hover,
-.pagination .links a.active
+.pagination .links .active a
 {
     color: #c18c43;
 }
@@ -555,7 +555,6 @@ button
 .pagination .next .icon
 {
     position: relative;
-    top: 1px;
 
     display: block;
 
@@ -565,7 +564,7 @@ button
 
 .pagination .next .icon
 {
-    top: -1px;
+    top: -2px;
 
     transform: rotate(180deg);
 }
