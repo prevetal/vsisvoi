@@ -15054,7 +15054,22 @@ footer .bottom .cont
 {
     align-content: center;
     align-items: center;
+}
+
+
+footer .cont
+{
+    align-content: stretch;
+    align-items: stretch;
     justify-content: space-between;
+}
+
+
+
+footer .col
+{
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -15069,6 +15084,45 @@ footer .logo img
 
 
 
+footer .socials
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    margin-top: 28px;
+}
+
+
+footer .socials a
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    text-decoration: none;
+
+    color: currentColor;
+    border-radius: 50%;
+}
+
+footer .socials a + a
+{
+    margin-left: 12px;
+}
+
+
+footer .socials img
+{
+    display: block;
+}
+
+
+
 footer .pyament_methods
 {
     display: flex;
@@ -15077,7 +15131,7 @@ footer .pyament_methods
     flex-wrap: wrap;
     justify-content: flex-start;
 
-    margin-top: 116px;
+    margin-top: auto;
     margin-left: -20px;
 }
 

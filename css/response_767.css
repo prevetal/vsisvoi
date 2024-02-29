@@ -1690,11 +1690,20 @@
 
 
 
-    footer .pyament_methods
+    footer .socials
     {
         justify-content: center;
 
         width: 100%;
+    }
+
+
+
+    footer .pyament_methods
+    {
+        justify-content: center;
+
+        width: calc(100% + 20px);
         margin-top: 40px;
     }
 
