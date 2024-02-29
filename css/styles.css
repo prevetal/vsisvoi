@@ -7609,11 +7609,6 @@ aside
     background: var(--bg);
 }
 
-.mob_products_head.no_top_p
-{
-    padding-top: 0;
-}
-
 
 
 .mob_products_head .filter_btn
