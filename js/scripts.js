@@ -982,6 +982,13 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
+	// Product page - data
+	if (WW < 1023) {
+		$('.product_info .accordion_item').removeClass('active')
+		$('.product_info .accordion_item .data').hide()
+	}
+
+
 	// Zoom
 	$('body').on('click', '.full_view .swiper-slide.active', function (e) {
 		e.preventDefault()
