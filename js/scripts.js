@@ -473,7 +473,7 @@ document.addEventListener('DOMContentLoaded', function () {
 						reveal: () => {
 							// Cart modal - Products
 							const cartProductsSliders = [],
-								cartProducts = document.querySelectorAll('.fancybox__container #cart_modal .products .swiper')
+								cartProducts = document.querySelectorAll('.fancybox__container #cart_modal .products .swiper:not(.swiper-initialized)')
 
 							cartProducts.forEach(function (el, i) {
 								el.classList.add('cart_products_s' + i)
