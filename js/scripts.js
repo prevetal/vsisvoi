@@ -1421,6 +1421,17 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
+	$('.register .form').submit(function(e) {
+		e.preventDefault()
+
+		// Show success modal
+		Fancybox.show([{
+			src: '#register_success_modal',
+			type: 'inline'
+		}])
+	})
+
+
 	// Feedback form
 	$('.feedback .form').submit(function(e) {
 		e.preventDefault()
