@@ -5148,6 +5148,12 @@ aside
 }
 
 
+.products .product.empty.hide
+{
+    display: none;
+}
+
+
 .products .product .stickers
 {
     position: absolute;
@@ -5424,7 +5430,7 @@ aside
 
 
 
-.products .row .banner.big_h + * + * + *
+.products .row .banner.big_h.left + * + * + *
 {
     margin-left: calc(50% + 20px);
 }

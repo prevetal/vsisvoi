@@ -400,12 +400,12 @@
     }
 
 
-    .products .row .banner.big_h + * + *
+    .products .row .banner.big_h.left + * + *
     {
         margin-left: calc(66.666% + 20px);
     }
 
-    .products .row .banner.big_h + * + * + *
+    .products .row .banner.big_h.left + * + * + *
     {
         margin-left: 20px;
     }
@@ -419,6 +419,17 @@
     .products .row .banner.big_h a div
     {
         padding-bottom: 155.33%;
+    }
+
+
+    .products .product.empty
+    {
+        display: none;
+    }
+
+    .products .product.empty.hide
+    {
+        display: block;
     }
 
 

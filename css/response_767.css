@@ -418,9 +418,15 @@
         padding-bottom: 155.9%;
     }
 
-    .products .row .banner.big_h + * + *
+    .products .row .banner.big_h.left + * + *
     {
         margin-left: 20px;
+    }
+
+
+    .products .product.empty.hide
+    {
+        display: none;
     }
 
 
