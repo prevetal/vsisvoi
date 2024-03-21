@@ -1492,6 +1492,18 @@ document.addEventListener('DOMContentLoaded', function () {
 	// 		}, 500)
 	// 	})
 	// })
+
+
+	// Create new password
+	$('.create_new_password .form').submit(function(e) {
+		e.preventDefault()
+
+		// Show success modal
+		Fancybox.show([{
+			src: '#create_new_password_success_modal',
+			type: 'inline'
+		}])
+	})
 })
 
 

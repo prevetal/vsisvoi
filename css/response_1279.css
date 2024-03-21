@@ -869,6 +869,22 @@
 
 
 
+    /*-------------------------
+        Create new password
+    -------------------------*/
+    .create_new_password
+    {
+        padding: 40px 0 0;
+    }
+
+
+    .create_new_password .title
+    {
+        margin-bottom: 32px;
+    }
+
+
+
     /*------------
         Footer
     ------------*/

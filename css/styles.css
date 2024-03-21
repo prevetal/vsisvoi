@@ -15027,6 +15027,38 @@ aside
 
 
 
+/*-------------------------
+    Create new password
+-------------------------*/
+.create_new_password
+{
+    padding: 60px 0 0;
+}
+
+
+.create_new_password .title
+{
+    font-size: 22px;
+    font-weight: 800;
+
+    margin-bottom: 40px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #2b3338;
+}
+
+
+.create_new_password .form
+{
+    width: 280px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+
 /*------------
     Footer
 ------------*/
