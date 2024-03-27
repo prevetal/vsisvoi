@@ -79,14 +79,6 @@
     .pagination .load_more_btn
     {
         width: 100%;
-        margin: 0;
-    }
-
-
-    .pagination .count,
-    .pagination .links
-    {
-        display: none;
     }
 
 
