@@ -69,15 +69,6 @@
     /*------------
         Header
     ------------*/
-    header .time
-    {
-        font-size: 13px;
-
-        margin-left: 40px;
-    }
-
-
-
     header .categories .sub .col
     {
         padding: 24px 30px 24px 0;

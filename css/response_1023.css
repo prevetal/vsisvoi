@@ -100,8 +100,7 @@
 
 
 
-    header .email,
-    header .time
+    header .email
     {
         display: none;
     }
