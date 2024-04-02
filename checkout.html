@@ -4787,6 +4787,38 @@
 														</div>
 													</div>
 												</div>
+
+												<div class="field">
+													<label class="checkbox" data-info=".method_info2">
+														<input type="radio" name="payment_method">
+
+														<div class="check"></div>
+
+														<div>При отриманні</div>
+													</label>
+												</div>
+
+												<div class="field">
+													<label class="checkbox" data-info=".method_info3">
+														<input type="radio" name="payment_method">
+
+														<div class="check"></div>
+
+														<div>Кредит та оплата частинами</div>
+													</label>
+
+													<div class="method_info method_info3">
+														<div class="row">
+															<div>
+																<div class="name">ПриватБанк, Оплата частинами на 6 платежів / 5 місяців</div>
+
+																<div class="price">4 260 грн. / місяць</div>
+															</div>
+
+															<button type="button" class="btn modal_btn" data-modal="credit_modal">Змінити</button>
+														</div>
+													</div>
+												</div>
 											</div>
 
 											<div class="cert">
@@ -5217,38 +5249,6 @@
 																	</div>
 																</div>
 															</label>
-														</div>
-													</div>
-												</div>
-
-												<div class="field">
-													<label class="checkbox" data-info=".method_info2">
-														<input type="radio" name="payment_method">
-
-														<div class="check"></div>
-
-														<div>При отриманні</div>
-													</label>
-												</div>
-
-												<div class="field">
-													<label class="checkbox" data-info=".method_info3">
-														<input type="radio" name="payment_method">
-
-														<div class="check"></div>
-
-														<div>Кредит та оплата частинами</div>
-													</label>
-
-													<div class="method_info method_info3">
-														<div class="row">
-															<div>
-																<div class="name">ПриватБанк, Оплата частинами на 6 платежів / 5 місяців</div>
-
-																<div class="price">4 260 грн. / місяць</div>
-															</div>
-
-															<button type="button" class="btn modal_btn" data-modal="credit_modal">Змінити</button>
 														</div>
 													</div>
 												</div>
@@ -6410,6 +6410,61 @@
 			</div>
 
 			<button class="close_btn">Закрити</button>
+		</section>
+
+
+		<section class="modal" id="credit_modal">
+			<div class="title">кредит та оплата частинами</div>
+
+			<div class="list">
+				<div><div class="item">
+					<div class="logo">
+						<img src="images/tmp/privatbank_logo.png" alt="" loading="lazy">
+					</div>
+
+					<div class="info">
+						<div class="name">Оплата частинами від Приватбанк</div>
+
+						<div class="price">від 86 грн./місяць</div>
+
+						<div class="amount">2 - 10 платежів</div>
+					</div>
+
+					<div class="period">
+						<select name="">
+							<option value="8" selected>8 платежів</option>
+							<option value="8">8 платежів</option>
+							<option value="8">8 платежів</option>
+						</select>
+					</div>
+
+					<button class="choose_btn">обрати</button>
+				</div></div>
+
+				<div><div class="item">
+					<div class="logo">
+						<img src="images/tmp/monobank_logo.png" alt="" loading="lazy">
+					</div>
+
+					<div class="info">
+						<div class="name">Оплата частинами від monobank</div>
+
+						<div class="price">від 120 грн./місяць</div>
+
+						<div class="amount">3 - 6 платежів</div>
+					</div>
+
+					<div class="period">
+						<select name="">
+							<option value="6" selected>6 платежів</option>
+							<option value="6">6 платежів</option>
+							<option value="6">6 платежів</option>
+						</select>
+					</div>
+
+					<button class="choose_btn">обрати</button>
+				</div></div>
+			</div>
 		</section>
 
 
