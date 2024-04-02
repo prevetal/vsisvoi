@@ -1705,12 +1705,20 @@
 
 
 
+    footer .time
+    {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+
     footer .pyament_methods
     {
         justify-content: center;
 
         width: calc(100% + 20px);
-        margin-top: 40px;
     }
 
 

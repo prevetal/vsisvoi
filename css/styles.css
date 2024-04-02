@@ -898,6 +898,13 @@ header .email a
 
 
 
+header .time
+{
+    margin-left: 60px;
+}
+
+
+
 header .site_logo
 {
     position: absolute;
@@ -2142,7 +2149,7 @@ header .categories .banners .banner:hover .thumb img
 .mob_menu .menu
 {
     margin-bottom: auto;
-    padding-bottom: 86px;
+    padding-bottom: 60px;
 }
 
 
@@ -2305,6 +2312,12 @@ header .categories .banners .banner:hover .thumb img
 .mob_menu .menu .all_link a:hover
 {
     text-decoration: underline;
+}
+
+
+.mob_menu .time
+{
+    padding: 0 20px 40px;
 }
 
 
@@ -15389,6 +15402,18 @@ footer .socials a + a
 footer .socials img
 {
     display: block;
+}
+
+
+footer .time
+{
+    font-size: 11px;
+
+    margin-top: 60px;
+
+    text-transform: uppercase;
+
+    color: #333;
 }
 
 

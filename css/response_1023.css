@@ -100,7 +100,8 @@
 
 
 
-    header .email
+    header .email,
+    header .time
     {
         display: none;
     }
@@ -1659,6 +1660,17 @@
         padding: 48px 0;
     }
 
+
+    footer .time
+    {
+        margin-top: 28px;
+    }
+
+
+    footer .pyament_methods
+    {
+        margin-top: 20px;
+    }
 
 
     footer .links
