@@ -754,6 +754,26 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
+	$('.checkout .payment .checkbox[data-info]').click(function(e) {
+		if (e.target.nodeName === 'LABEL') {
+			let info = $(this).data('info'),
+				parent = $(this).closest('.payment')
+
+			$(parent).find('.method_info').hide()
+			$(parent).find('.method_info' + info).fadeIn(300)
+		}
+	})
+
+
+	$('.checkout .order_form .form .pay_for_delivery_checkbox').click(function(e) {
+		if(e.target.nodeName == 'LABEL') {
+			let parent = $(this).closest('.field')
+
+			parent.find('.delivery_price').toggleClass('hide')
+		}
+	})
+
+
 	// Menu
 	$('header .categories .sub .main_links .links a').mouseover(function() {
 		let sub = $(this).data('sub'),

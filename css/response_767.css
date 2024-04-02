@@ -1813,4 +1813,61 @@
     {
         padding: 20px;
     }
+
+
+
+    /*------------------
+        Credit modal
+    ------------------*/
+    #credit_modal .item .info
+    {
+        width: calc(100% - 68px);
+    }
+
+
+    #credit_modal .item .period
+    {
+        margin-top: 12px;
+        margin-left: 68px;
+    }
+
+
+    #credit_modal .item .nice-select .current
+    {
+        line-height: 38px;
+
+        height: 40px;
+    }
+
+
+    #credit_modal .item .choose_btn
+    {
+        height: 40px;
+        margin-top: 12px;
+        margin-left: auto;
+    }
+
+
+
+    /*---------------------
+        Packaging modal
+    ---------------------*/
+    #packaging_modal .item .info
+    {
+        width: calc(100% - 94px);
+    }
+
+
+    #packaging_modal .item .amount
+    {
+        margin-top: 12px;
+        margin-left: 94px;
+    }
+
+
+    #packaging_modal .item .choose_btn
+    {
+        margin-top: 12px;
+        margin-left: auto;
+    }
 }

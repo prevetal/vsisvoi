@@ -3123,7 +3123,7 @@
 						<section class="mob_head">
 							<div class="title">У вашому кошику 2 товари</div>
 
-							<button class="spoler_btn">
+							<button class="spoler_btn active">
 								<span>Переглянути</span>
 								<span>Згорнути</span>
 							</button>
@@ -3439,6 +3439,10 @@
 														<div>Адреса пункту: <a href="https://www.google.com.ua/maps/place/%D0%92%D1%81%D1%96.+%D0%A1%D0%B2%D0%BE%D1%97/@50.4441258,30.5195844,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4ce55dc2afcb1:0xfe79db6338206e2c!8m2!3d50.4441258!4d30.5217784" target="_blank" rel="noopener nofollow">вул. Хрещатик, 27</a></div>
 
 														<div class="exp">Щоб забрати своє замовлення в магазині Хрещатик, 27, очікуйте на підтвердження його готовності в Telegram або на пошті. Дякуємо за розуміння та чекаємо на Вас!</div>
+
+														<div class="require"><span>*</span>Вибір пакування є обов'язковим полем для опції “Самовивіз"</div>
+
+														<button class="package_btn modal_btn" data-modal="packaging_modal">Оберіть пакування</button>
 													</div>
 												</div>
 											</div>
@@ -3524,17 +3528,58 @@
 
 											<div class="line methods">
 												<div class="field">
-													<label class="checkbox">
-														<input type="radio" name="payment_method" checked>
+													<label class="checkbox" data-info=".method_info1">
+														<input type="radio" name="payment_method">
 
 														<div class="check"></div>
 
-														<div>Карткою на сайті</div>
+														<div>
+															<div>Карткою на сайті</div>
+
+															<div class="logos">
+																<div><img src="images/visa_logo.svg" alt=""></div>
+																<div><img src="images/mastercard_logo.svg" alt=""></div>
+															</div>
+														</div>
 													</label>
+
+													<div class="method_info method_info1">
+														<div class="field">
+															<label class="checkbox">
+																<input type="radio" name="payment_method_card">
+
+																<div class="check"></div>
+
+																<div>
+																	<div>LiqPay</div>
+
+																	<div class="logos">
+																		<div><img src="images/LiqPay_logo.png" alt=""></div>
+																	</div>
+																</div>
+															</label>
+														</div>
+
+														<div class="field">
+															<label class="checkbox">
+																<input type="radio" name="payment_method_card">
+
+																<div class="check"></div>
+
+																<div>
+																	<div>MonoPay</div>
+
+																	<div class="logos">
+																		<div><img src="images/MonoPay_logo.png" alt=""></div>
+																	</div>
+																</div>
+															</label>
+														</div>
+													</div>
 												</div>
 
 												<div class="field">
-													<label class="checkbox">
+													<label class="checkbox" data-info=".method_info2">
 														<input type="radio" name="payment_method">
 
 														<div class="check"></div>
@@ -3543,46 +3588,68 @@
 													</label>
 												</div>
 
-												<div class="cert">
-													<button type="button" class="add_btn">
-														<svg class="icon"><use xlink:href="images/sprite.svg#ic_plus"></use></svg>
-														<span>Додати сертифікат</span>
-													</button>
+												<div class="field">
+													<label class="checkbox" data-info=".method_info3">
+														<input type="radio" name="payment_method">
 
-													<div class="line hide">
-														<div class="field">
-															<input type="text" name="" value="" class="input" placeholder="Сертифікат">
+														<div class="check"></div>
+
+														<div>Кредит та оплата частинами</div>
+													</label>
+
+													<div class="method_info method_info3">
+														<div class="row">
+															<div>
+																<div class="name">ПриватБанк, Оплата частинами на 6 платежів / 5 місяців</div>
+
+																<div class="price">4 260 грн. / місяць</div>
+															</div>
+
+															<button type="button" class="btn modal_btn" data-modal="credit_modal">Змінити</button>
 														</div>
-
-														<button type="button" class="apply_btn">додати</button>
-
-														<button type="button" class="remove_btn">Видалити</button>
-
-														<div class="status green">Сертифікат дійсний, номінал 100 ₴</div>
-
-														<div class="status red">Сертифікат не дійсний</div>
 													</div>
 												</div>
+											</div>
 
-												<div class="promocode">
-													<button type="button" class="add_btn">
-														<svg class="icon"><use xlink:href="images/sprite.svg#ic_plus"></use></svg>
-														<span>Додати промокод</span>
-													</button>
+											<div class="cert">
+												<button type="button" class="add_btn">
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_plus"></use></svg>
+													<span>Додати сертифікат</span>
+												</button>
 
-													<div class="line hide">
-														<div class="field">
-															<input type="text" name="" value="" class="input" placeholder="Промокод">
-														</div>
-
-														<button type="button" class="apply_btn">додати</button>
-
-														<button type="button" class="remove_btn">Видалити</button>
-
-														<div class="status green">Промокод дійсний</div>
-
-														<div class="status red">Промокод не дійсний</div>
+												<div class="line hide">
+													<div class="field">
+														<input type="text" name="" value="" class="input" placeholder="Сертифікат">
 													</div>
+
+													<button type="button" class="apply_btn">додати</button>
+
+													<button type="button" class="remove_btn">Видалити</button>
+
+													<div class="status green">Сертифікат дійсний, номінал 100 ₴</div>
+
+													<div class="status red">Сертифікат не дійсний</div>
+												</div>
+											</div>
+
+											<div class="promocode">
+												<button type="button" class="add_btn">
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_plus"></use></svg>
+													<span>Додати промокод</span>
+												</button>
+
+												<div class="line hide">
+													<div class="field">
+														<input type="text" name="" value="" class="input" placeholder="Промокод">
+													</div>
+
+													<button type="button" class="apply_btn">додати</button>
+
+													<button type="button" class="remove_btn">Видалити</button>
+
+													<div class="status green">Промокод дійсний</div>
+
+													<div class="status red">Промокод не дійсний</div>
 												</div>
 											</div>
 										</div>
@@ -3631,12 +3698,27 @@
 												</div>
 											</div>
 
-											<button type="button" class="add_btn">
+											<div class="line">
+												<div class="field">
+													<label class="checkbox pay_for_delivery_checkbox">
+														<input type="checkbox" name="pay_for_delivery">
+
+														<div class="check"></div>
+
+														<div>Хочу сплатити за доставку</div>
+													</label>
+
+													<div class="delivery_price hide">Вартість доставки  80 грн.</div>
+												</div>
+											</div>
+
+											<!-- <button type="button" class="add_btn">
 												<svg class="icon"><use xlink:href="images/sprite.svg#ic_plus"></use></svg>
 												<span>Додати коментар до замовлення</span>
-											</button>
+											</button> -->
 
-											<div class="line hide">
+											<!-- <div class="line hide"> -->
+											<div class="line">
 												<div class="field">
 													<textarea name="" placeholder="Коментар до замовлення"></textarea>
 												</div>
@@ -3656,10 +3738,30 @@
 												</div>
 											</div>
 
-											<div class="checkout_total hide">
+											<div class="checkout_total">
+												<div class="hide">
+													<div class="label">Сертифікат:</div>
+													<div class="val">50 ₴</div>
+												</div>
+
+												<div class="hide">
+													<div class="label">Промокод:</div>
+													<div class="val">SVOI30</div>
+												</div>
+
+												<div class="hide">
+													<div class="label">Спосіб оплати:</div>
+													<div class="val">ПриватБанк, Оплата частинами</div>
+												</div>
+
+												<div class="hide">
+													<div class="label">Умови:</div>
+													<div class="val">4 260 грн. / 5 платежів</div>
+												</div>
+
 												<div>
 													<div class="label">Доставка:</div>
-													<div class="val">200 ₴</div>
+													<div class="val">280 ₴</div>
 												</div>
 
 												<div>
@@ -3667,10 +3769,19 @@
 													<div class="val">200 ₴</div>
 												</div>
 
+												<div class="red">
+													<div class="label">Пакування:</div>
+													<div class="val">0 ₴</div>
+												</div>
+
 												<div>
 													<div class="label"><b>Всього:</b></div>
 													<div class="val total_price">21 300 ₴</div>
 												</div>
+											</div>
+
+											<div class="require">
+												Вибір пакування є обов'язковим полем для опції “Самовивіз". <button type="button" class="btn modal_btn" data-modal="packaging_modal">Обрати пакування</button>
 											</div>
 
 											<div class="submit">
@@ -3754,43 +3865,84 @@
 
 											<div class="line methods">
 												<div class="field">
-													<label class="checkbox">
-														<input type="radio" name="payment_method" checked>
+													<label class="checkbox" data-info=".method_info1">
+														<input type="radio" name="payment_method">
 
 														<div class="check"></div>
 
-														<div>Карткою на сайті</div>
+														<div>
+															<div>Карткою на сайті</div>
+
+															<div class="logos">
+																<div><img src="images/visa_logo.svg" alt=""></div>
+																<div><img src="images/mastercard_logo.svg" alt=""></div>
+															</div>
+														</div>
 													</label>
-												</div>
 
-												<div class="cert">
-													<button type="button" class="add_btn">
-														<svg class="icon"><use xlink:href="images/sprite.svg#ic_plus"></use></svg>
-														<span>Додати сертифікат</span>
-													</button>
-
-													<div class="line hide">
+													<div class="method_info method_info1">
 														<div class="field">
-															<input type="text" name="" value="" class="input" placeholder="Сертифікат">
+															<label class="checkbox">
+																<input type="radio" name="payment_method_card">
+
+																<div class="check"></div>
+
+																<div>
+																	<div>LiqPay</div>
+
+																	<div class="logos">
+																		<div><img src="images/LiqPay_logo.png" alt=""></div>
+																	</div>
+																</div>
+															</label>
 														</div>
 
-														<button type="button" class="apply_btn">додати</button>
+														<div class="field">
+															<label class="checkbox">
+																<input type="radio" name="payment_method_card">
+
+																<div class="check"></div>
+
+																<div>
+																	<div>MonoPay</div>
+
+																	<div class="logos">
+																		<div><img src="images/MonoPay_logo.png" alt=""></div>
+																	</div>
+																</div>
+															</label>
+														</div>
 													</div>
 												</div>
+											</div>
 
-												<div class="promocode">
-													<button type="button" class="add_btn">
-														<svg class="icon"><use xlink:href="images/sprite.svg#ic_plus"></use></svg>
-														<span>Додати промокод</span>
-													</button>
+											<div class="cert">
+												<button type="button" class="add_btn">
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_plus"></use></svg>
+													<span>Додати сертифікат</span>
+												</button>
 
-													<div class="line hide">
-														<div class="field">
-															<input type="text" name="" value="" class="input" placeholder="Промокод">
-														</div>
-
-														<button type="button" class="apply_btn">додати</button>
+												<div class="line hide">
+													<div class="field">
+														<input type="text" name="" value="" class="input" placeholder="Сертифікат">
 													</div>
+
+													<button type="button" class="apply_btn">додати</button>
+												</div>
+											</div>
+
+											<div class="promocode">
+												<button type="button" class="add_btn">
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_plus"></use></svg>
+													<span>Додати промокод</span>
+												</button>
+
+												<div class="line hide">
+													<div class="field">
+														<input type="text" name="" value="" class="input" placeholder="Промокод">
+													</div>
+
+													<button type="button" class="apply_btn">додати</button>
 												</div>
 											</div>
 										</div>
@@ -3839,12 +3991,27 @@
 												</div>
 											</div>
 
-											<button type="button" class="add_btn">
+											<div class="line">
+												<div class="field">
+													<label class="checkbox pay_for_delivery_checkbox">
+														<input type="checkbox" name="pay_for_delivery">
+
+														<div class="check"></div>
+
+														<div>Хочу сплатити за доставку</div>
+													</label>
+
+													<div class="delivery_price hide">Вартість доставки  80 грн.</div>
+												</div>
+											</div>
+
+											<!-- <button type="button" class="add_btn">
 												<svg class="icon"><use xlink:href="images/sprite.svg#ic_plus"></use></svg>
 												<span>Додати коментар до замовлення</span>
-											</button>
+											</button> -->
 
-											<div class="line hide">
+											<!-- <div class="line hide"> -->
+											<div class="line">
 												<div class="field">
 													<textarea name="" placeholder="Коментар до замовлення"></textarea>
 												</div>
@@ -3864,15 +4031,40 @@
 												</div>
 											</div>
 
-											<div class="checkout_total hide">
+											<div class="checkout_total">
+												<div class="hide">
+													<div class="label">Сертифікат:</div>
+													<div class="val">50 ₴</div>
+												</div>
+
+												<div class="hide">
+													<div class="label">Промокод:</div>
+													<div class="val">SVOI30</div>
+												</div>
+
+												<div class="hide">
+													<div class="label">Спосіб оплати:</div>
+													<div class="val">ПриватБанк, Оплата частинами</div>
+												</div>
+
+												<div class="hide">
+													<div class="label">Умови:</div>
+													<div class="val">4 260 грн. / 5 платежів</div>
+												</div>
+
 												<div>
 													<div class="label">Доставка:</div>
-													<div class="val">200 ₴</div>
+													<div class="val">280 ₴</div>
 												</div>
 
 												<div>
 													<div class="label">Знижка:</div>
 													<div class="val">200 ₴</div>
+												</div>
+
+												<div>
+													<div class="label">Пакування:</div>
+													<div class="val">25 ₴</div>
 												</div>
 
 												<div>
@@ -4076,6 +4268,16 @@
 											</div>
 
 											<div class="col">
+												<div>
+													<div class="label">Спосіб оплати:</div>
+													<div class="val">ПриватБанк, Оплата частинами</div>
+												</div>
+
+												<div>
+													<div class="label">Умови:</div>
+													<div class="val">4 260 грн. / 5 платежів</div>
+												</div>
+
 												<div>
 													<div class="label">Доставка:</div>
 													<div class="val">200 ₴</div>
@@ -4858,6 +5060,226 @@
 			</div>
 
 			<button class="close_btn">Закрити</button>
+		</section>
+
+
+		<section class="modal" id="credit_modal">
+			<div class="title">кредит та оплата частинами</div>
+
+			<div class="list">
+				<div><div class="item">
+					<div class="logo">
+						<img src="images/tmp/privatbank_logo.png" alt="" loading="lazy">
+					</div>
+
+					<div class="info">
+						<div class="name">Оплата частинами від Приватбанк</div>
+
+						<div class="price">від 86 грн./місяць</div>
+
+						<div class="amount">2 - 10 платежів</div>
+					</div>
+
+					<div class="period">
+						<select name="">
+							<option value="8" selected>8 платежів</option>
+							<option value="8">8 платежів</option>
+							<option value="8">8 платежів</option>
+						</select>
+					</div>
+
+					<button class="btn">обрати</button>
+				</div></div>
+
+				<div><div class="item">
+					<div class="logo">
+						<img src="images/tmp/monobank_logo.png" alt="" loading="lazy">
+					</div>
+
+					<div class="info">
+						<div class="name">Оплата частинами від monobank</div>
+
+						<div class="price">від 120 грн./місяць</div>
+
+						<div class="amount">3 - 6 платежів</div>
+					</div>
+
+					<div class="period">
+						<select name="">
+							<option value="6" selected>6 платежів</option>
+							<option value="6">6 платежів</option>
+							<option value="6">6 платежів</option>
+						</select>
+					</div>
+
+					<button class="choose_btn">обрати</button>
+				</div></div>
+			</div>
+		</section>
+
+
+		<section class="modal" id="packaging_modal">
+			<div class="title">Вибір пакування</div>
+
+			<div class="list">
+				<div class="item">
+					<div class="thumb">
+						<img src="images/tmp/packaging_modal_thumb.png" alt="" loading="lazy">
+					</div>
+
+					<div class="info">
+						<div class="name">пакет всі. свої розмір s</div>
+
+						<div class="desc">Обери цей розмір, якщо у твоєму кошику лише кілька обраних предметів.</div>
+
+						<div class="size">
+							<div class="label">Розмір:</div>
+							<div class="val">260 х 150 х 350 мм</div>
+						</div>
+
+						<div class="price">15 ₴</div>
+					</div>
+
+					<div class="amount">
+						<button type="button" class="btn minus">
+							<svg class="icon"><use xlink:href="images/sprite.svg#ic_minus"></use></svg>
+						</button>
+
+						<input type="text" value="0" class="input" data-minimum="0" data-maximum="99" data-step="1" data-unit="" maxlength="2">
+
+						<button type="button" class="btn plus">
+							<svg class="icon"><use xlink:href="images/sprite.svg#ic_plus"></use></svg>
+						</button>
+					</div>
+
+					<button class="choose_btn">обрати</button>
+				</div>
+
+				<div class="item">
+					<div class="thumb">
+						<img src="images/tmp/packaging_modal_thumb.png" alt="" loading="lazy">
+					</div>
+
+					<div class="info">
+						<div class="name">пакет всі. свої розмір M</div>
+
+						<div class="desc">Якщо в твоєму кошику помірна кількість речей</div>
+
+						<div class="size">
+							<div class="label">Розмір:</div>
+							<div class="val">260 х 150 х 350 мм</div>
+						</div>
+
+						<div class="price">20 ₴</div>
+					</div>
+
+					<div class="amount">
+						<button type="button" class="btn minus">
+							<svg class="icon"><use xlink:href="images/sprite.svg#ic_minus"></use></svg>
+						</button>
+
+						<input type="text" value="0" class="input" data-minimum="0" data-maximum="99" data-step="1" data-unit="" maxlength="2">
+
+						<button type="button" class="btn plus">
+							<svg class="icon"><use xlink:href="images/sprite.svg#ic_plus"></use></svg>
+						</button>
+					</div>
+
+					<button class="choose_btn">обрати</button>
+				</div>
+
+				<div class="item">
+					<div class="thumb">
+						<img src="images/tmp/packaging_modal_thumb.png" alt="" loading="lazy">
+					</div>
+
+					<div class="info">
+						<div class="name">пакет всі. свої розмір L</div>
+
+						<div class="desc">Обирай розмір L, якщо у тебе значна кількість обраних речей.</div>
+
+						<div class="size">
+							<div class="label">Розмір:</div>
+							<div class="val">260 х 150 х 350 мм</div>
+						</div>
+
+						<div class="price">25 ₴</div>
+					</div>
+
+					<div class="amount">
+						<button type="button" class="btn minus">
+							<svg class="icon"><use xlink:href="images/sprite.svg#ic_minus"></use></svg>
+						</button>
+
+						<input type="text" value="0" class="input" data-minimum="0" data-maximum="99" data-step="1" data-unit="" maxlength="2">
+
+						<button type="button" class="btn plus">
+							<svg class="icon"><use xlink:href="images/sprite.svg#ic_plus"></use></svg>
+						</button>
+					</div>
+
+					<button class="choose_btn">обрати</button>
+				</div>
+
+				<div class="item">
+					<div class="thumb">
+						<img src="images/tmp/packaging_modal_thumb.png" alt="" loading="lazy">
+					</div>
+
+					<div class="info">
+						<div class="name">шопер всі. свої</div>
+
+						<div class="desc">Обери цей розмір, якщо у твоєму кошику лише кілька обраних предметів.</div>
+
+						<div class="size">
+							<div class="label">Розмір:</div>
+							<div class="val">260 х 150 х 350 мм</div>
+						</div>
+
+						<div class="price">100 ₴</div>
+					</div>
+
+					<div class="amount">
+						<button type="button" class="btn minus">
+							<svg class="icon"><use xlink:href="images/sprite.svg#ic_minus"></use></svg>
+						</button>
+
+						<input type="text" value="0" class="input" data-minimum="0" data-maximum="99" data-step="1" data-unit="" maxlength="2">
+
+						<button type="button" class="btn plus">
+							<svg class="icon"><use xlink:href="images/sprite.svg#ic_plus"></use></svg>
+						</button>
+					</div>
+
+					<button class="choose_btn">обрати</button>
+				</div>
+
+				<div class="item">
+					<div class="thumb">
+						<img src="images/tmp/packaging_modal_thumb.png" alt="" loading="lazy">
+					</div>
+
+					<div class="info">
+						<div class="name">я буду зі своєю торбинкою</div>
+
+						<div class="price">0 ₴</div>
+					</div>
+
+					<div class="amount">
+						<button type="button" class="btn minus">
+							<svg class="icon"><use xlink:href="images/sprite.svg#ic_minus"></use></svg>
+						</button>
+
+						<input type="text" value="0" class="input" data-minimum="0" data-maximum="99" data-step="1" data-unit="" maxlength="2">
+
+						<button type="button" class="btn plus">
+							<svg class="icon"><use xlink:href="images/sprite.svg#ic_plus"></use></svg>
+						</button>
+					</div>
+
+					<button class="choose_btn">обрати</button>
+				</div>
+			</div>
 		</section>
 
 

@@ -568,6 +568,11 @@
     }
 
 
+    .checkout .orders_cart_info
+    {
+        display: block;
+    }
+
 
     .checkout .orders_cart_info .notice
     {
@@ -614,6 +619,12 @@
     }
 
 
+    .checkout .order + .order
+    {
+        margin-top: -40px;
+    }
+
+
     .checkout .order .head
     {
         position: relative;
@@ -655,10 +666,14 @@
 
     .checkout .checkout_total
     {
-        display: block !important;
-
         margin-top: 20px;
         padding: 20px 0;
+    }
+
+
+    .checkout .checkout_total .hide
+    {
+        display: flex !important;
     }
 
 
@@ -1862,5 +1877,58 @@
     .side_modal table th
     {
         font-size: 14px;
+    }
+
+
+
+    /*------------------
+        Credit modal
+    ------------------*/
+    #credit_modal > .list > *,
+    #credit_modal > .list > * + *
+    {
+        padding: 0;
+    }
+
+
+    #credit_modal .item
+    {
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+
+
+    #credit_modal .item .logo
+    {
+        margin-right: 20px;
+    }
+
+
+    #credit_modal .item .info
+    {
+        width: calc(100% - 368px);
+    }
+
+
+
+    /*---------------------
+        Packaging modal
+    ---------------------*/
+    #packaging_modal .item .thumb
+    {
+        margin-right: 20px;
+    }
+
+
+    #packaging_modal .item .info
+    {
+        width: calc(100% - 360px);
+    }
+
+
+    #packaging_modal .item .amount,
+    #packaging_modal .item .choose_btn
+    {
+        margin-left: 48px;
     }
 }
