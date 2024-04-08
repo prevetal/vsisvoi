@@ -16976,7 +16976,8 @@ footer .creator span
 }
 
 
-#packaging_modal .item .choose_btn:hover
+#packaging_modal .item .choose_btn:hover,
+#packaging_modal .item .choose_btn.active
 {
     background: #eee;
 }
@@ -17236,7 +17237,8 @@ footer .creator span
 }
 
 
-#packaging_modal .mob_view .choose_btn:hover
+#packaging_modal .mob_view .choose_btn:hover,
+#packaging_modal .mob_view .choose_btn.active
 {
     background: #eee;
 }
