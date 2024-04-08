@@ -1535,6 +1535,13 @@ document.addEventListener('DOMContentLoaded', function () {
 			type: 'inline'
 		}])
 	})
+
+
+	// Packaging modal
+	$('#packaging_modal .mob_view .size select').change(function() {
+		$('#packaging_modal .mob_view .item').removeClass('show')
+		$('#packaging_modal .mob_view .item.size' + $(this).val()).addClass('show')
+	})
 })
 
 

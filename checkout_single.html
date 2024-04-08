@@ -5122,7 +5122,143 @@
 			<div class="title">Вибір пакування</div>
 
 			<div class="list">
-				<div class="item">
+				<div class="mob_view">
+					<div class="item show">
+						<div class="thumb">
+							<img src="images/tmp/packaging_modal_thumb.png" alt="" loading="lazy">
+						</div>
+
+						<div class="info">
+							<div class="name">пакет всі. свої</div>
+						</div>
+
+						<div class="amount">
+							<button type="button" class="btn minus" disabled>
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_minus"></use></svg>
+							</button>
+
+							<input type="text" value="0" class="input" data-minimum="0" data-maximum="99" data-step="1" data-unit="" maxlength="2" readonly>
+
+							<button type="button" class="btn plus" disabled>
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_plus"></use></svg>
+							</button>
+						</div>
+					</div>
+
+					<div class="item size1">
+						<div class="thumb">
+							<img src="images/tmp/packaging_modal_thumb.png" alt="" loading="lazy">
+						</div>
+
+						<div class="info">
+							<div class="name">пакет всі. свої розмір s</div>
+
+							<div class="desc">Обери цей розмір, якщо у твоєму кошику лише кілька обраних предметів.</div>
+
+							<div class="size">
+								<div class="label">Розмір:</div>
+								<div class="val">260 х 150 х 350 мм</div>
+							</div>
+
+							<div class="price">15 ₴</div>
+						</div>
+
+						<div class="amount">
+							<button type="button" class="btn minus">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_minus"></use></svg>
+							</button>
+
+							<input type="text" value="0" class="input" data-minimum="0" data-maximum="99" data-step="1" data-unit="" maxlength="2">
+
+							<button type="button" class="btn plus">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_plus"></use></svg>
+							</button>
+						</div>
+
+						<button class="choose_btn">обрати</button>
+					</div>
+
+					<div class="item size2">
+						<div class="thumb">
+							<img src="images/tmp/packaging_modal_thumb.png" alt="" loading="lazy">
+						</div>
+
+						<div class="info">
+							<div class="name">пакет всі. свої розмір M</div>
+
+							<div class="desc">Якщо в твоєму кошику помірна кількість речей</div>
+
+							<div class="size">
+								<div class="label">Розмір:</div>
+								<div class="val">260 х 150 х 350 мм</div>
+							</div>
+
+							<div class="price">20 ₴</div>
+						</div>
+
+						<div class="amount">
+							<button type="button" class="btn minus">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_minus"></use></svg>
+							</button>
+
+							<input type="text" value="0" class="input" data-minimum="0" data-maximum="99" data-step="1" data-unit="" maxlength="2">
+
+							<button type="button" class="btn plus">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_plus"></use></svg>
+							</button>
+						</div>
+
+						<button class="choose_btn">обрати</button>
+					</div>
+
+					<div class="item size3">
+						<div class="thumb">
+							<img src="images/tmp/packaging_modal_thumb.png" alt="" loading="lazy">
+						</div>
+
+						<div class="info">
+							<div class="name">пакет всі. свої розмір L</div>
+
+							<div class="desc">Обирай розмір L, якщо у тебе значна кількість обраних речей.</div>
+
+							<div class="size">
+								<div class="label">Розмір:</div>
+								<div class="val">260 х 150 х 350 мм</div>
+							</div>
+
+							<div class="price">25 ₴</div>
+						</div>
+
+						<div class="amount">
+							<button type="button" class="btn minus">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_minus"></use></svg>
+							</button>
+
+							<input type="text" value="0" class="input" data-minimum="0" data-maximum="99" data-step="1" data-unit="" maxlength="2">
+
+							<button type="button" class="btn plus">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_plus"></use></svg>
+							</button>
+						</div>
+
+						<button class="choose_btn">обрати</button>
+					</div>
+
+					<div class="size">
+						<select name="" data-placeholder="Оберіть розмір">
+							<option value="1">Розмір S</option>
+							<option value="2">Розмір M</option>
+							<option value="3">Розмір L</option>
+						</select>
+
+						<div class="arr"></div>
+					</div>
+
+					<button class="choose_btn">обрати</button>
+				</div>
+
+
+				<div class="item mob_hide">
 					<div class="thumb">
 						<img src="images/tmp/packaging_modal_thumb.png" alt="" loading="lazy">
 					</div>
@@ -5155,7 +5291,7 @@
 					<button class="choose_btn">обрати</button>
 				</div>
 
-				<div class="item">
+				<div class="item mob_hide">
 					<div class="thumb">
 						<img src="images/tmp/packaging_modal_thumb.png" alt="" loading="lazy">
 					</div>
@@ -5188,7 +5324,7 @@
 					<button class="choose_btn">обрати</button>
 				</div>
 
-				<div class="item">
+				<div class="item mob_hide">
 					<div class="thumb">
 						<img src="images/tmp/packaging_modal_thumb.png" alt="" loading="lazy">
 					</div>
@@ -5239,7 +5375,7 @@
 						<div class="price">100 ₴</div>
 					</div>
 
-					<div class="amount">
+					<div class="amount mob_hide">
 						<button type="button" class="btn minus">
 							<svg class="icon"><use xlink:href="images/sprite.svg#ic_minus"></use></svg>
 						</button>
@@ -5263,18 +5399,6 @@
 						<div class="name">я буду зі своєю торбинкою</div>
 
 						<div class="price">0 ₴</div>
-					</div>
-
-					<div class="amount">
-						<button type="button" class="btn minus">
-							<svg class="icon"><use xlink:href="images/sprite.svg#ic_minus"></use></svg>
-						</button>
-
-						<input type="text" value="0" class="input" data-minimum="0" data-maximum="99" data-step="1" data-unit="" maxlength="2">
-
-						<button type="button" class="btn plus">
-							<svg class="icon"><use xlink:href="images/sprite.svg#ic_plus"></use></svg>
-						</button>
 					</div>
 
 					<button class="choose_btn">обрати</button>

@@ -16980,3 +16980,263 @@ footer .creator span
 {
     background: #eee;
 }
+
+
+
+#packaging_modal .mob_view
+{
+    position: relative;
+
+    display: none;
+
+    padding-bottom: 24px;
+
+    border-bottom: 1px solid #eee;
+}
+
+
+#packaging_modal .mob_view .item
+{
+    display: none;
+}
+
+#packaging_modal .mob_view .item.show
+{
+    display: flex;
+}
+
+
+#packaging_modal .mob_view .item .amount
+{
+    margin-top: 24px;
+    margin-left: 0;
+    padding: 0;
+}
+
+
+#packaging_modal .mob_view .item .amount .btn
+{
+    width: 44px;
+    height: 44px;
+}
+
+
+#packaging_modal .mob_view .item .amount .btn .icon
+{
+    width: 20px;
+    height: 20px;
+}
+
+
+#packaging_modal .mob_view .item .amount .input
+{
+    font-size: 15px;
+
+    width: 75px;
+    height: 44px;
+}
+
+
+#packaging_modal .mob_view .item .choose_btn
+{
+    display: none;
+}
+
+
+#packaging_modal .mob_view > .size
+{
+    position: absolute;
+    right: 0;
+    bottom: 92px;
+
+    width: calc(100% - 187px);
+}
+
+
+#packaging_modal .mob_view > .size select
+{
+    display: none;
+}
+
+
+#packaging_modal .mob_view > .size .nice-select
+{
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: normal;
+
+    position: relative;
+
+    display: block;
+    float: none;
+
+    height: auto;
+    padding: 0;
+
+    cursor: pointer;
+
+    border: none;
+    border-radius: 0;
+    background: none;
+}
+
+#packaging_modal .mob_view > .size .nice-select:after
+{
+    display: none;
+}
+
+
+#packaging_modal .mob_view > .size .nice-select .current
+{
+    font-size: var(--font_size);
+    line-height: 42px;
+
+    display: block;
+    overflow: hidden;
+
+    height: 44px;
+    padding: 0 31px 0 9px;
+
+    cursor: pointer;
+    transition: border-color .2s linear;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    color: var(--text_color);
+    border: 1px solid #c8cbce;
+}
+
+#packaging_modal .mob_view > .size select.selected + .nice-select .current
+{
+    color: var(--text_color);
+}
+
+
+#packaging_modal .mob_view > .size .nice-select-dropdown
+{
+    position: absolute;
+    z-index: 9;
+    top: 100%;
+    left: 0;
+
+    visibility: hidden;
+    overflow: hidden;
+
+    width: 100%;
+    margin-top: -1px;
+
+    transition: .2s linear;
+    transform: none;
+
+    opacity: 0;
+    border: 1px solid #c8cbce;
+    border-radius: 0;
+    background: var(--bg);
+    box-shadow: none;
+}
+
+#packaging_modal .mob_view > .size .nice-select.open .nice-select-dropdown
+{
+    visibility: visible;
+
+    transform: none;
+
+    opacity: 1;
+}
+
+
+#packaging_modal .mob_view > .size .nice-select .list
+{
+    overflow: auto;
+
+    max-height: 180px;
+
+    border-radius: 0;
+}
+
+#packaging_modal .mob_view > .size .nice-select .list::-webkit-scrollbar
+{
+    width: 4px;
+    height: 4px;
+}
+
+
+#packaging_modal .mob_view > .size .nice-select .list .option
+{
+    font-weight: inherit;
+    line-height: normal;
+
+    display: block;
+
+    padding: 6px 9px;
+
+    list-style-type: none;
+
+    cursor: pointer;
+    transition: color .2s linear;
+    white-space: nowrap;
+
+    background: none;
+}
+
+#packaging_modal .mob_view > .size .nice-select .list .option:hover
+{
+    color: #c18c43;
+    background: none;
+}
+
+#packaging_modal .mob_view > .size .nice-select .list .option:empty
+{
+    display: none;
+}
+
+
+#packaging_modal .mob_view > .size .nice-select + .arr
+{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    bottom: 0;
+
+    display: block;
+
+    width: 10px;
+    height: 8px;
+    margin: auto 0;
+
+    transition: transform .2s linear;
+    pointer-events: none;
+
+    border-top: 8px solid #c8cbce;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+}
+
+#packaging_modal .mob_view > .size .nice-select.open + .arr
+{
+    transform: rotate(180deg);
+}
+
+
+#packaging_modal .mob_view .choose_btn
+{
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 17px;
+
+    width: 100%;
+    height: 44px;
+    padding: 9px;
+
+    transition: background .2s linear;
+    text-transform: uppercase;
+
+    color: #2b3338;
+    border: 1px solid #2b3338;
+}
+
+
+#packaging_modal .mob_view .choose_btn:hover
+{
+    background: #eee;
+}
