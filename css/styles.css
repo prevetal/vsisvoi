@@ -11009,6 +11009,22 @@ aside
 }
 
 
+.lk_info .pagination
+{
+    margin-top: 0;
+    padding: 20px 0 40px 40px;
+}
+
+
+.lk_info .pagination .links
+{
+    justify-content: flex-start;
+
+    width: auto;
+    margin: 0;
+}
+
+
 
 /*-------------
     LK menu
@@ -12170,22 +12186,6 @@ aside
     padding-top: 20px;
 
     border-top: 1px solid #eee;
-}
-
-
-.lk_orders .pagination
-{
-    margin-top: 0;
-    padding: 20px 0 40px 40px;
-}
-
-
-.lk_orders .pagination .links
-{
-    justify-content: flex-start;
-
-    width: auto;
-    margin: 0;
 }
 
 

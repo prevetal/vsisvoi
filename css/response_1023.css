@@ -1069,6 +1069,18 @@
     }
 
 
+    .lk_info .pagination
+    {
+        padding-bottom: 40px;
+        padding-left: 0;
+    }
+
+    .lk_info .pagination .links
+    {
+        display: flex;
+    }
+
+
 
     /*-------------
         LK menu
@@ -1179,18 +1191,6 @@
     .lk_orders .order:after
     {
         left: -20px;
-    }
-
-
-    .lk_orders .pagination
-    {
-        padding-bottom: 40px;
-        padding-left: 0;
-    }
-
-    .lk_orders .pagination .links
-    {
-        display: flex;
     }
 
 
