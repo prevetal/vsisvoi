@@ -791,25 +791,37 @@ document.addEventListener('DOMContentLoaded', function () {
 	$('.mob_products_head .filter_btn, .mob_filter_btn').click(function(e) {
 		e.preventDefault()
 
-		$('.filter').fadeIn(300)
+		$('body').addClass('filter_open')
 
-		$('body').addClass('menu_open')
+		$('.filter .name').removeClass('active')
+		$('.filter .data').hide()
+
+		$('.filter').fadeIn(300)
 	})
 
 	$('.filter .close_btn').click(function(e) {
 		e.preventDefault()
 
-		$('.filter').fadeOut(200)
+		$('body').removeClass('filter_open')
 
-		$('body').removeClass('menu_open')
+		$('.filter').fadeOut(200)
 	})
 
 
-	$('.filter .name').click(function(e) {
+	$('.filter .name.spoler, .filter .name .icon.spoler').click(function(e) {
 		e.preventDefault()
 
 		$(this).toggleClass('active').next('.data').slideToggle(300, () => $('.filter').trigger('sticky_kit:recalc'))
 	})
+
+	$('.filter .name .icon.spoler').click(function(e) {
+		e.preventDefault()
+
+		let name = $(this).closest('.name')
+
+		name.toggleClass('active').next('.data').slideToggle(300, () => $('.filter').trigger('sticky_kit:recalc'))
+	})
+
 
 	$('.filter .spoler_btn').click(function(e) {
 		e.preventDefault()
@@ -817,14 +829,20 @@ document.addEventListener('DOMContentLoaded', function () {
 		$(this).toggleClass('active').closest('.data').find('.hide').slideToggle(300, () => $('.filter').trigger('sticky_kit:recalc'))
 	})
 
-	$('.reset_filter_btn').click(function() {
+
+	$('.filter .mob_categories_btn, .filter .categories .back_btn').click(function(e) {
+		e.preventDefault()
+
+		$('.filter .categories').toggleClass('show')
+	})
+
+
+	$('.filter .reset_filter_btn').click(function() {
 		if($priceRange) {
 			$priceRange.reset()
 		}
 
 		$('.filter form').get(0).reset()
-
-		$('.filter_selected').html('')
 	})
 
 
