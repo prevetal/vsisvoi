@@ -3058,6 +3058,11 @@ aside
     font-weight: 600;
 }
 
+.filter .category .name.default
+{
+    font-weight: 400;
+}
+
 
 .filter .category .sub
 {

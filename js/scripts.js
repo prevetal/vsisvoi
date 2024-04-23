@@ -837,6 +837,20 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
+	$('.filter .sub .checkbox').click(function(e) {
+		if (e.target.nodeName === 'LABEL') {
+			let category = $(this).closest('.category'),
+				sub = $(this).closest('.sub')
+
+			setTimeout(() => {
+				sub.find('.checkbox input:checked').length
+					? category.find('.name').addClass('default')
+					: category.find('.name').removeClass('default')
+			})
+		}
+	})
+
+
 	$('.filter .reset_filter_btn').click(function() {
 		if($priceRange) {
 			$priceRange.reset()
