@@ -799,6 +799,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		$('.filter').fadeIn(300)
 	})
 
+
 	$('.filter .close_btn').click(function(e) {
 		e.preventDefault()
 
@@ -808,18 +809,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
-	$('.filter .name.spoler, .filter .name .icon.spoler').click(function(e) {
-		e.preventDefault()
-
-		$(this).toggleClass('active').next('.data').slideToggle(300, () => $('.filter').trigger('sticky_kit:recalc'))
-	})
-
-	$('.filter .name .icon.spoler').click(function(e) {
-		e.preventDefault()
-
-		let name = $(this).closest('.name')
-
-		name.toggleClass('active').next('.data').slideToggle(300, () => $('.filter').trigger('sticky_kit:recalc'))
+	$('.filter .name.spoler').click(function(e) {
+		if (e.target.nodeName === 'LABEL') {
+			$(this).toggleClass('active').next().slideToggle(300, () => $('.filter').trigger('sticky_kit:recalc'))
+		}
 	})
 
 
@@ -834,6 +827,20 @@ document.addEventListener('DOMContentLoaded', function () {
 		e.preventDefault()
 
 		$('.filter .categories').toggleClass('show')
+	})
+
+
+	$('.filter .category > .name').click(function(e) {
+		if (e.target.nodeName === 'LABEL') {
+			let section = $(this).closest('.section'),
+				category = $(this).closest('.category')
+
+			setTimeout(() => {
+				category.find('> .name input:checked').length
+					? section.find('> .name').addClass('default')
+					: section.find('> .name').removeClass('default')
+			})
+		}
 	})
 
 
