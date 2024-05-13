@@ -212,7 +212,8 @@
         left: 0;
 
         display: none;
-        overflow: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
 
         width: 100% !important;
         height: 100%;
