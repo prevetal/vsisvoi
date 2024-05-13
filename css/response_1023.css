@@ -212,8 +212,7 @@
         left: 0;
 
         display: none;
-        overflow-x: hidden;
-        overflow-y: auto;
+        overflow: auto;
 
         width: 100% !important;
         height: 100%;
@@ -324,12 +323,6 @@
     }
 
 
-    .filter .name.checkbox
-    {
-        padding-left: 20px;
-    }
-
-
     .filter .name .selected
     {
         font-weight: 400;
@@ -370,27 +363,15 @@
     }
 
 
-
-    .filter .category .name.checkbox
+    .filter .category .name
     {
-        padding-left: 26px;
-    }
-
-    .filter .category .name.checkbox .check
-    {
-        display: block;
+        min-height: 0;
     }
 
 
     .filter .data
     {
         padding: 0 20px 20px;
-    }
-
-
-    .filter .category .sub
-    {
-        padding-left: 26px;
     }
 
 
