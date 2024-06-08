@@ -370,6 +370,13 @@
     }
 
 
+    .filter .name.active,
+    .filter .category .name.active
+    {
+        font-weight: 600;
+    }
+
+
     .filter .data
     {
         padding: 0 20px 20px;
