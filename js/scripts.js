@@ -1316,11 +1316,13 @@ document.addEventListener('DOMContentLoaded', function () {
 	$(document).click(e => {
 		if ($(e.target).closest('.modal_cont').length === 0) {
 			if($(e.target).closest('.search_tips').length === 0) {
-				$('.mini_modal, .mini_modal_btn').removeClass('active')
-
 				$('.search_tips').fadeOut(200)
 
-				$('body').removeClass('menu_open')
+				if ($('header .search .btn').hasClass('active')) {
+					$('body').removeClass('menu_open')
+				}
+
+				$('.mini_modal, .mini_modal_btn').removeClass('active')
 
 				if (is_touch_device()) $('body').css('cursor', 'default')
 			}
@@ -1606,7 +1608,7 @@ window.addEventListener('resize', function () {
 		if (!fakeResize2) {
 			fakeResize2 = true
 
-			if (windowW < 480) document.getElementsByTagName('meta')['viewport'].content = 'width=480, user-scalable=no'
+			if (windowW < 375) document.getElementsByTagName('meta')['viewport'].content = 'width=375, user-scalable=no'
 		} else {
 			fakeResize = false
 			fakeResize2 = true

@@ -188,30 +188,9 @@
     /*-----------------
         Main slider
     -----------------*/
-    /* .main_slider .image
-    {
-        height: 230px;
-    }
-
-
-    .main_slider .img
-    {
-        width: 150%;
-        height: 150%;
-
-        object-position: 35% 50%;
-    }
-
-
-    .main_slider .title
-    {
-        font-size: 26px;
-    } */
-
-
     .main_slider .image
     {
-        padding-bottom: 47.916%;
+        height: 230px;
     }
 
 
