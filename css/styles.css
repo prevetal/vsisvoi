@@ -916,6 +916,9 @@ header .site_logo
 header .site_logo img
 {
     display: block;
+
+    width: 128px;
+    height: 30px;
 }
 
 
@@ -15556,8 +15559,8 @@ footer .logo img
 {
     display: block;
 
-    width: auto;
-    max-width: 100%;
+    width: 128px;
+    height: 30px;
 }
 
 
