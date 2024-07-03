@@ -500,17 +500,6 @@
     }
 
 
-    .content_banner .banner .img
-    {
-        display: none;
-    }
-
-    .content_banner .banner .img.mob
-    {
-        display: block;
-    }
-
-
     .content_banner .banner .sticker
     {
         width: 280px;
@@ -986,17 +975,6 @@
     {
         display: block;
     } */
-
-
-    .stock .banner .img
-    {
-        display: none;
-    }
-
-    .stock .banner .img.mob
-    {
-        display: block;
-    }
 
 
     .stock .banner .sticker
