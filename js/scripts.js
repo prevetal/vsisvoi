@@ -1576,6 +1576,25 @@ document.addEventListener('DOMContentLoaded', function () {
 		$('#packaging_modal .mob_view .item').removeClass('show')
 		$('#packaging_modal .mob_view .item.size' + $(this).val()).addClass('show')
 	})
+
+
+	// Tabs
+	$('body').on('click', '.tabs .btn', function(e) {
+		e.preventDefault()
+
+		if (!$(this).hasClass('active')) {
+			let parent = $(this).closest('.tabs_container'),
+				activeTab = $(this).data('content'),
+				activeTabContent = $(activeTab),
+				level = $(this).data('level')
+
+			parent.find('.tabs:first .btn').removeClass('active')
+			parent.find('.tab_content.' + level).removeClass('active')
+
+			$(this).addClass('active')
+			activeTabContent.addClass('active')
+		}
+	})
 })
 
 

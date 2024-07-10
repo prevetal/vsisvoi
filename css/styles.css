@@ -797,6 +797,38 @@ button
 
 
 
+/*----------
+    Tabs
+----------*/
+.tab_content
+{
+    position: relative;
+
+    visibility: hidden;
+    overflow: hidden;
+
+    height: 0;
+
+    pointer-events: none;
+
+    opacity: 0;
+}
+
+.tab_content.active
+{
+    visibility: visible;
+    overflow: visible;
+
+    height: auto;
+
+    transition: opacity .5s linear;
+    pointer-events: auto;
+
+    opacity: 1;
+}
+
+
+
 /*------------
     Header
 ------------*/
@@ -2143,6 +2175,7 @@ header .categories .banners .banner:hover .thumb img
     min-height: -moz-available;
     min-height: -webkit-fill-available;
     min-height:         fill-available;
+    padding-bottom: 55px;
 
     overscroll-behavior-y: contain;
 }
@@ -2162,13 +2195,93 @@ header .categories .banners .banner:hover .thumb img
     font-weight: 500;
     line-height: 20px;
 
-    margin-bottom: 20px;
     padding: 22px 72px 20px 20px;
 
     letter-spacing: 0;
     text-transform: uppercase;
 
     color: #2b3338;
+}
+
+
+.mob_menu .menu .tabs
+{
+    display: block;
+    overflow: auto;
+
+    width: 100%;
+    margin: 0 0 -1px;
+    padding: 0;
+
+    white-space: nowrap;
+
+    scroll-padding: 0 0;
+    scroll-snap-type: x mandatory;
+    scrollbar-color: transparent transparent !important;
+    scrollbar-width: thin !important;
+}
+
+
+.mob_menu .menu .tabs::-webkit-scrollbar
+{
+    display: none !important;
+
+    width: 0 !important;
+    height: 0 !important;
+
+    background-color: transparent !important;
+}
+
+
+.mob_menu .menu .tabs::-webkit-scrollbar-thumb
+{
+    background-color: transparent !important;
+}
+
+
+.mob_menu .menu .tab_content.active
+{
+    border-top: 1px solid #c8cbce;
+}
+
+
+.mob_menu .menu .tabs .btn
+{
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 28px;
+
+    position: relative;
+    z-index: 2;
+
+    padding: 15px 20px;
+
+    text-transform: uppercase;
+}
+
+.mob_menu .menu .tabs .btn:after
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 1px;
+
+    content: '';
+    transition: opacity .2s linear;
+    pointer-events: none;
+
+    opacity: 0;
+    background: #ce0c36;
+}
+
+
+.mob_menu .menu .tabs .btn.active:after
+{
+    opacity: 1;
 }
 
 
@@ -2383,6 +2496,19 @@ header .categories .banners .banner:hover .thumb img
     left: 0;
 }
 
+
+
+.mob_menu .links
+{
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    background: #fff;
+}
 
 
 .mob_menu .links > *
