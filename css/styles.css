@@ -2259,6 +2259,13 @@ header .categories .banners .banner:hover .thumb img
     text-transform: uppercase;
 }
 
+
+.mob_menu .menu .tabs .btn + .btn
+{
+    margin-left: -4px;
+}
+
+
 .mob_menu .menu .tabs .btn:after
 {
     position: absolute;
@@ -2268,14 +2275,14 @@ header .categories .banners .banner:hover .thumb img
     display: block;
 
     width: 100%;
-    height: 1px;
+    height: 2px;
 
     content: '';
     transition: opacity .2s linear;
     pointer-events: none;
 
     opacity: 0;
-    background: #ce0c36;
+    background: currentColor;
 }
 
 
