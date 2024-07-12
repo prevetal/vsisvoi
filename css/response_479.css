@@ -639,4 +639,23 @@
     {
         margin-top: 40px;
     }
+
+
+
+    /*-------------------------
+        Confirm phone modal
+    -------------------------*/
+    #confirm_phone_modal
+    {
+        padding-top: 30px;
+        padding-right: 20px;
+        padding-bottom: 30px;
+        padding-left: 20px;
+    }
+
+
+    #confirm_phone_modal > .title
+    {
+        padding-right: 44px;
+    }
 }

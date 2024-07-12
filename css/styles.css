@@ -16829,9 +16829,9 @@ footer .creator span
 
 
 
-/*------------------
+/*------------------------
     PopUp - Add review
-------------------*/
+------------------------*/
 #add_review_modal .modal_title
 {
     font-size: 20px;
@@ -17661,4 +17661,137 @@ footer .creator span
 #packaging_modal .mob_view .choose_btn.active
 {
     background: #eee;
+}
+
+
+
+/*-------------------------
+    Confirm phone modal
+-------------------------*/
+#confirm_phone_modal
+{
+    width: 391px;
+    padding-top: 38px;
+    padding-bottom: 38px;
+}
+
+
+#confirm_phone_modal .code
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-left: -20px;
+}
+
+
+#confirm_phone_modal .form .code > *
+{
+    width: calc(25% - 20px);
+    margin-left: 20px;
+}
+
+
+#confirm_phone_modal .form .code > * + *
+{
+    margin-left: 20px;
+}
+
+
+#confirm_phone_modal .form .code .error_text
+{
+    width: calc(100% - 20px);
+}
+
+
+#confirm_phone_modal .form .field + .field
+{
+    margin-top: 0;
+}
+
+
+#confirm_phone_modal .form .input
+{
+    text-align: center;
+}
+
+
+#confirm_phone_modal .resend
+{
+    font-size: 14px;
+
+    position: relative;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+#confirm_phone_modal .resend .btn
+{
+    transition: color .2s linear;
+
+    color: #c18c43;
+}
+
+
+#confirm_phone_modal .resend .btn:disabled
+{
+    pointer-events: none;
+
+    color: #797f83;
+}
+
+
+#confirm_phone_modal .resend .message
+{
+    font-size: 14px;
+
+    position: absolute;
+    bottom: 100%;
+    left: -13px;
+
+    display: none;
+
+    width: calc(100% + 26px);
+    margin-bottom: 18px;
+    padding: 20px;
+
+    text-align: center;
+
+    background: #fff;
+    box-shadow: 0 10px 19px 0 rgba(100, 86, 68, .2);
+}
+
+
+#confirm_phone_modal .resend .message:before
+{
+    position: absolute;
+    bottom: -6px;
+    bottom: -6px;
+    left: 26px;
+
+    display: block;
+
+    width: 12px;
+    height: 12px;
+
+    content: '';
+    transform: rotate(45deg);
+
+    background: #fff;
+}
+
+
+#confirm_phone_modal .resend .message .phone
+{
+    font-weight: 600;
+
+    margin-top: 16px;
 }

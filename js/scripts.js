@@ -1595,6 +1595,38 @@ document.addEventListener('DOMContentLoaded', function () {
 			activeTabContent.addClass('active')
 		}
 	})
+
+
+	// Confirm phone
+	Fancybox.show([{
+		src: '#confirm_phone_modal',
+		type: 'inline'
+	}], {
+		on: {
+			reveal: () => $('#confirm_phone_modal .input:first').focus()
+		}
+	})
+
+
+	// Confirm phone - timer
+	startResendTimer()
+
+
+	// Confirm phone - resend
+	$('.resend .btn').click(function(e) {
+		e.preventDefault()
+
+		// Send SMS
+
+		// Show message
+		$('.resend .message').fadeIn(200)
+
+		// Start timer
+		startResendTimer()
+
+		// Hide messahe after 3 sec
+		setTimeout(() => $('.resend .message').fadeOut(100), 3000)
+	})
 })
 
 
@@ -1729,4 +1761,41 @@ function initReviewsSliders() {
 		$('.reviews .swiper-wrapper').addClass('list').removeClass('swiper-wrapper')
 		$('.reviews .list > *').removeClass('swiper-slide')
 	}
+}
+
+
+
+// Start resend timer
+function startResendTimer() {
+	$('.resend .btn').attr('disabled', true)
+	$('.resend_timer').show()
+
+	let now = new Date()
+
+	$('.resend_timer').countdown(now.setSeconds(now.getSeconds() + 59), event => {
+		$('.resend_timer span').text(event.strftime('%S'))
+	}).on('finish.countdown', () => {
+		// End of countdown
+		$('.resend .btn').removeAttr('disabled')
+		$('.resend_timer').hide()
+	})
+}
+
+
+
+// Move focus
+function moveFocus(el) {
+	if ($(el).val().length >= 1) {
+		$(el).closest('.field').next().find('input').focus()
+	}
+}
+
+
+// Move back
+function moveBack(el) {
+	setTimeout(() => {
+		if ($(el).val().length === 0) {
+			$(el).closest('.field').prev().find('input').select()
+		}
+	})
 }
