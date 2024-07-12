@@ -1598,35 +1598,37 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 	// Confirm phone
-	Fancybox.show([{
-		src: '#confirm_phone_modal',
-		type: 'inline'
-	}], {
-		on: {
-			reveal: () => $('#confirm_phone_modal .input:first').focus()
-		}
-	})
+	if ($('#confirm_phone_modal').length) {
+		Fancybox.show([{
+			src: '#confirm_phone_modal',
+			type: 'inline'
+		}], {
+			on: {
+				reveal: () => $('#confirm_phone_modal .input:first').focus()
+			}
+		})
 
 
-	// Confirm phone - timer
-	startResendTimer()
-
-
-	// Confirm phone - resend
-	$('.resend .btn').click(function(e) {
-		e.preventDefault()
-
-		// Send SMS
-
-		// Show message
-		$('.resend .message').fadeIn(200)
-
-		// Start timer
+		// Confirm phone - timer
 		startResendTimer()
 
-		// Hide messahe after 3 sec
-		setTimeout(() => $('.resend .message').fadeOut(100), 3000)
-	})
+
+		// Confirm phone - resend
+		$('.resend .btn').click(function(e) {
+			e.preventDefault()
+
+			// Send SMS
+
+			// Show message
+			$('.resend .message').fadeIn(200)
+
+			// Start timer
+			startResendTimer()
+
+			// Hide messahe after 3 sec
+			setTimeout(() => $('.resend .message').fadeOut(100), 3000)
+		})
+	}
 })
 
 
@@ -1792,10 +1794,12 @@ function moveFocus(el) {
 
 
 // Move back
-function moveBack(el) {
-	setTimeout(() => {
-		if ($(el).val().length === 0) {
-			$(el).closest('.field').prev().find('input').select()
-		}
-	})
+function moveBack(el, event) {
+	if (event.key === 'Backspace' || event.keyCode === 8) {
+		setTimeout(() => {
+			if ($(el).val().length === 0) {
+				$(el).closest('.field').prev().find('input').select()
+			}
+		})
+	}
 }
