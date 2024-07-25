@@ -1803,3 +1803,20 @@ function moveBack(el, event) {
 		})
 	}
 }
+
+
+
+// Event handler for pasting text from clipboard
+function handlePaste(e) {
+	e.preventDefault()
+
+	// Get data from the clipboard
+	let pastedText = (e.clipboardData || window.clipboardData).getData('text'),
+		pastedTextArr = pastedText.split('')
+
+	if (pastedTextArr.length == 4) {
+		$('#confirm_phone_modal .form .input').each((i, element) => element.value = pastedTextArr[i])
+
+		$('#confirm_phone_modal .form .input').blur()
+	}
+}
