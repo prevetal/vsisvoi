@@ -17670,52 +17670,19 @@ footer .creator span
 -------------------------*/
 #confirm_phone_modal
 {
-    width: 391px;
-    padding-top: 38px;
-    padding-bottom: 38px;
-}
-
-
-#confirm_phone_modal .code
-{
-    display: flex;
-    align-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    margin-left: -20px;
-}
-
-
-#confirm_phone_modal .form .code > *
-{
-    width: calc(25% - 20px);
-    margin-left: 20px;
-}
-
-
-#confirm_phone_modal .form .code > * + *
-{
-    margin-left: 20px;
-}
-
-
-#confirm_phone_modal .form .code .error_text
-{
-    width: calc(100% - 20px);
-}
-
-
-#confirm_phone_modal .form .field + .field
-{
-    margin-top: 0;
+    width: 392px;
+    padding-top: 48px;
+    padding-bottom: 40px;
 }
 
 
 #confirm_phone_modal .form .input
 {
+    font-size: 18px;
+    font-weight: 700;
+
     text-align: center;
+    letter-spacing: 6px;
 }
 
 
