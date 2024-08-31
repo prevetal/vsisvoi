@@ -774,6 +774,15 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
+	// Checkout auth
+	$('.checkout .auth .by_phone .toggle_btn').click(function(e) {
+		e.preventDefault()
+
+		$('.checkout .auth .by_phone').hide()
+		$('.checkout .auth .by_email').fadeIn(200)
+	})
+
+
 	// Menu
 	$('header .categories .sub .main_links .links a').mouseover(function() {
 		let sub = $(this).data('sub'),

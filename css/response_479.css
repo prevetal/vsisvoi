@@ -89,6 +89,16 @@
 
 
 
+    /*---------------
+        Page head
+    ---------------*/
+    .page_head
+    {
+        padding: 12px 0;
+    }
+
+
+
     /*-----------------
         Main slider
     -----------------*/
@@ -296,13 +306,6 @@
     /*--------------
         Checkout
     --------------*/
-    .checkout .auth .form .btns
-    {
-        font-size: 14px;
-        line-height: 20px;
-    }
-
-
     .checkout .cart_info
     {
         padding-bottom: 40px;

@@ -120,6 +120,12 @@
     }
 
 
+    .page_head .back
+    {
+        margin-top: 1px;
+    }
+
+
     .page_head .back a .icon
     {
         margin: 0;
@@ -129,6 +135,14 @@
     .page_head .back a span
     {
         display: none;
+    }
+
+
+    .page_head .back + .page_title
+    {
+        padding-left: 34px;
+
+        text-align: left;
     }
 
 
@@ -543,6 +557,12 @@
     .checkout .auth
     {
         padding: 20px 0 70px;
+    }
+
+
+    .checkout .auth .or
+    {
+        display: none;
     }
 
 

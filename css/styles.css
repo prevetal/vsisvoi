@@ -6010,7 +6010,7 @@ aside
     margin-left: -20px;
     padding: 15px 20px;
 
-    border-bottom: 1px solid #c8cbce;
+    border-bottom: 1px solid #eee;
 }
 
 
@@ -6205,10 +6205,11 @@ aside
 .checkout .auth .title
 {
     font-family: var(--font_family);
-    font-size: 14px;
-    font-weight: 500;
-    line-height: normal;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 28px;
 
+    margin-bottom: 24px;
     padding: 0;
 
     text-align: center;
@@ -6221,14 +6222,11 @@ aside
 
 .checkout .auth .desc
 {
-    font-size: 12px;
-    line-height: 15px;
-
-    margin-top: 10px;
+    font-size: 14px;
 
     text-align: center;
 
-    color: #797f83;
+    color: #2b3338;
 }
 
 
@@ -6240,8 +6238,8 @@ aside
     flex-wrap: wrap;
     justify-content: flex-start;
 
-    margin-top: 20px;
-    margin-bottom: -10px;
+    margin-top: 16px;
+    margin-bottom: -20px;
     margin-left: -20px;
 }
 
@@ -6291,9 +6289,23 @@ aside
 }
 
 
+.checkout .auth .by_phone
+{
+    margin-top: 16px;
+}
+
+
+.checkout .auth .by_email
+{
+    display: none;
+
+    margin-top: 16px;
+}
+
+
 .checkout .auth .form
 {
-    margin-top: 20px;
+    margin-top: 16px;
 }
 
 
@@ -6305,14 +6317,15 @@ aside
 
 .checkout .auth .form .btns
 {
-    font-size: 15px;
-    line-height: 22px;
+    font-size: 14px;
 
     display: flex;
     align-content: center;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    padding-top: 4px;
 
     color: #c18c43;
 }
@@ -6331,12 +6344,19 @@ aside
 .checkout .auth .form .btns .btn:hover
 {
     text-decoration: underline;
+
+    text-decoration-thickness: 1px;
+}
+
+
+.checkout .auth .form .submit
+{
+    padding-top: 4px;
 }
 
 
 .checkout .auth .form .submit_btn
 {
-    font-size: 13px;
     font-weight: 800;
     line-height: 17px;
 }
@@ -6344,28 +6364,30 @@ aside
 
 .checkout .auth .or
 {
-    font-size: 13px;
-    line-height: 100%;
+    font-size: 14px;
 
-    margin-top: 15px;
+    margin-top: 24px;
 
     text-align: center;
 
-    opacity: .6;
+    color: #2b3338;
 }
 
 
 .checkout .auth .continue_btn
 {
-    font-size: 13px;
     font-weight: 800;
-    line-height: 18px;
+    line-height: 17px;
 
-    display: block;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 
     height: 44px;
-    margin-top: 15px;
-    padding: 13px;
+    margin-top: 24px;
+    padding: 8px;
 
     transition: background .2s linear;
     text-align: center;
