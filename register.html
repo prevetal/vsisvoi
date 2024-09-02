@@ -4882,61 +4882,48 @@
 				<section class="register block">
 					<div class="cont">
 						<form action="" class="form">
-							<div class="columns">
-								<div class="line">
-									<div class="label">Ім’я</div>
+							<div class="type">
+								<div class="label">Оберіть спосіб реєстрації</div>
 
-									<div class="field">
-										<input type="text" name="" value="" class="input">
-									</div>
+								<div class="field">
+									<label class="checkbox" data-type="by_phone">
+										<input type="radio" name="type" checked>
+
+										<div class="check"></div>
+
+										<div>За номером телефону</div>
+									</label>
 								</div>
 
-								<div class="line">
-									<div class="label">Прізвище</div>
+								<div class="field">
+									<label class="checkbox" data-type="by_email">
+										<input type="radio" name="type">
 
-									<div class="field">
-										<input type="text" name="" value="" class="input">
-									</div>
-								</div>
+										<div class="check"></div>
 
-								<div class="line">
-									<div class="label">Номер телефону</div>
-
-									<div class="field">
-										<input type="tel" name="" value="" class="input">
-									</div>
-								</div>
-
-								<div class="line">
-									<div class="label">Email</div>
-
-									<div class="field">
-										<input type="email" name="" value="" class="input">
-									</div>
-								</div>
-
-								<div class="line hide">
-									<div class="label">Додатковий телефон</div>
-
-									<div class="field">
-										<input type="tel" name="" value="" class="input">
-									</div>
-								</div>
-
-								<div class="line">
-									<button type="button" class="add_btn">
-										<svg class="icon"><use xlink:href="images/sprite.svg#ic_plus"></use></svg>
-										<span>Додати інший номер телефону</span>
-									</button>
+										<div>По e-mail</div>
+									</label>
 								</div>
 							</div>
 
-							<div class="columns">
+							<div class="by_phone">
 								<div class="line">
-									<div class="label">Пароль</div>
-
 									<div class="field">
-										<input type="password" name="" value="" class="input">
+										<input type="tel" name="" value="" class="input" placeholder="38 (___) ___ - __ - __">
+									</div>
+								</div>
+							</div>
+
+							<div class="by_email">
+								<div class="line">
+									<div class="field">
+										<input type="email" name="" value="" class="input" placeholder="Email">
+									</div>
+								</div>
+
+								<div class="line">
+									<div class="field">
+										<input type="password" name="" value="" class="input" placeholder="Пароль">
 
 										<button type="button" class="type_toggle_btn">
 											<svg class="icon"><use xlink:href="images/sprite.svg#ic_eye"></use></svg>
@@ -4945,16 +4932,18 @@
 								</div>
 
 								<div class="line">
-									<div class="label">Підтвердження паролю</div>
-
 									<div class="field">
-										<input type="password" name="" value="" class="input">
+										<input type="password" name="" value="" class="input" placeholder="Підтвердити пароль">
 
 										<button type="button" class="type_toggle_btn">
 											<svg class="icon"><use xlink:href="images/sprite.svg#ic_eye"></use></svg>
 										</button>
 									</div>
 								</div>
+							</div>
+
+							<div class="line btns">
+								<button class="btn modal_btn" data-modal="login_modal">У мене вже є акаунт</button>
 							</div>
 
 							<div class="line checkboxes">
@@ -4982,29 +4971,7 @@
 							</div>
 
 							<div class="submit">
-								<button type="submit" class="submit_btn">Реєстрація</button>
-							</div>
-
-							<div class="socials">
-								<div class="title">Увійти за допомогою профілю</div>
-
-								<div class="btns">
-									<a href="/" type="button" class="btn">
-										<img src="images/google_logo.svg" alt="" loading="lazy">
-										<span>google</span>
-									</a>
-
-									<a href="/" type="button" class="btn">
-										<img src="images/facebook_logo.svg" alt="" loading="lazy">
-										<span>facebook</span>
-									</a>
-								</div>
-							</div>
-
-							<div class="login">
-								<div class="title">У мене вже є акаунт</div>
-
-								<button class="btn modal_btn" data-modal="login_modal">Увійти</button>
+								<button type="submit" class="submit_btn">Підтвердити</button>
 							</div>
 						</form>
 					</div>
@@ -5685,7 +5652,7 @@
 
 
 		<section class="modal auth_modal" id="login_modal">
-			<div class="modal_title">Авторизація</div>
+			<div class="modal_title">вхід</div>
 
 			<div class="desc">Увійти за допомогою профілю</div>
 
@@ -5701,31 +5668,57 @@
 				</a>
 			</div>
 
-			<div class="desc">або увійти до свого акаунту за допомогою електронної пошти</div>
-
 			<form action="" class="form">
-				<div class="line">
-					<div class="field">
-						<input type="text" name="" value="" class="input" placeholder="Ім’я">
+				<div class="by_phone">
+					<div class="desc">За номером телефону</div>
+
+					<div class="line">
+						<div class="field">
+							<input type="tel" name="" value="" class="input" placeholder="38 (___) ___ - __ - __">
+						</div>
+					</div>
+
+					<div class="line btns">
+						<button type="button" class="btn toggle_btn">Або увійти через пошту</button>
+
+						<a href="/" class="btn">Я ще не маю акаунта</a>
 					</div>
 				</div>
 
-				<div class="line">
-					<div class="field">
-						<input type="email" name="" value="" class="input" placeholder="Email">
+				<div class="by_email">
+					<div class="desc">За допомогою електронної пошти</div>
+
+					<div class="line">
+						<div class="field">
+							<input type="email" name="" value="" class="input" placeholder="Email">
+						</div>
+					</div>
+
+					<div class="line">
+						<div class="field">
+							<input type="password" name="" value="" class="input" placeholder="Пароль">
+
+							<button type="button" class="type_toggle_btn">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_eye"></use></svg>
+							</button>
+						</div>
+					</div>
+
+					<div class="line btns">
+						<button type="button" class="btn modal_btn" data-modal="recovery_modal">Не пам'ятаю пароль</button>
+
+						<a href="/" class="btn">Я ще не маю акаунта</a>
+
+						<div>
+							<button type="button" class="btn toggle_btn">Увійти за номером телефону</button>
+						</div>
 					</div>
 				</div>
 
 				<div class="submit">
-					<button type="submit" class="submit_btn">Увійти</button>
+					<button type="submit" class="submit_btn">продовжити</button>
 				</div>
 			</form>
-
-			<div class="btns">
-				<button class="btn modal_btn" data-modal="recovery_modal">Не пам'ятаю пароль</button>
-
-				<a href="/" class="btn">У мене ще немає акаунта</a>
-			</div>
 		</section>
 
 

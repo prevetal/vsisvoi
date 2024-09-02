@@ -5801,7 +5801,7 @@
 
 
 		<section class="modal auth_modal" id="login_modal">
-			<div class="modal_title">Авторизація</div>
+			<div class="modal_title">вхід</div>
 
 			<div class="desc">Увійти за допомогою профілю</div>
 
@@ -5817,31 +5817,57 @@
 				</a>
 			</div>
 
-			<div class="desc">або увійти до свого акаунту за допомогою електронної пошти</div>
-
 			<form action="" class="form">
-				<div class="line">
-					<div class="field">
-						<input type="text" name="" value="" class="input" placeholder="Ім’я">
+				<div class="by_phone">
+					<div class="desc">За номером телефону</div>
+
+					<div class="line">
+						<div class="field">
+							<input type="tel" name="" value="" class="input" placeholder="38 (___) ___ - __ - __">
+						</div>
+					</div>
+
+					<div class="line btns">
+						<button type="button" class="btn toggle_btn">Або увійти через пошту</button>
+
+						<a href="/" class="btn">Я ще не маю акаунта</a>
 					</div>
 				</div>
 
-				<div class="line">
-					<div class="field">
-						<input type="email" name="" value="" class="input" placeholder="Email">
+				<div class="by_email">
+					<div class="desc">За допомогою електронної пошти</div>
+
+					<div class="line">
+						<div class="field">
+							<input type="email" name="" value="" class="input" placeholder="Email">
+						</div>
+					</div>
+
+					<div class="line">
+						<div class="field">
+							<input type="password" name="" value="" class="input" placeholder="Пароль">
+
+							<button type="button" class="type_toggle_btn">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_eye"></use></svg>
+							</button>
+						</div>
+					</div>
+
+					<div class="line btns">
+						<button type="button" class="btn modal_btn" data-modal="recovery_modal">Не пам'ятаю пароль</button>
+
+						<a href="/" class="btn">Я ще не маю акаунта</a>
+
+						<div>
+							<button type="button" class="btn toggle_btn">Увійти за номером телефону</button>
+						</div>
 					</div>
 				</div>
 
 				<div class="submit">
-					<button type="submit" class="submit_btn">Увійти</button>
+					<button type="submit" class="submit_btn">продовжити</button>
 				</div>
 			</form>
-
-			<div class="btns">
-				<button class="btn modal_btn" data-modal="recovery_modal">Не пам'ятаю пароль</button>
-
-				<a href="/" class="btn">У мене ще немає акаунта</a>
-			</div>
 		</section>
 
 

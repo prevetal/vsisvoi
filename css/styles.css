@@ -6224,6 +6224,8 @@ aside
 {
     font-size: 14px;
 
+    margin-bottom: 16px;
+
     text-align: center;
 
     color: #2b3338;
@@ -6238,7 +6240,6 @@ aside
     flex-wrap: wrap;
     justify-content: flex-start;
 
-    margin-top: 16px;
     margin-bottom: -20px;
     margin-left: -20px;
 }
@@ -6289,23 +6290,21 @@ aside
 }
 
 
-.checkout .auth .by_phone
-{
-    margin-top: 16px;
-}
-
-
 .checkout .auth .by_email
 {
     display: none;
-
-    margin-top: 16px;
 }
 
 
 .checkout .auth .form
 {
     margin-top: 16px;
+}
+
+
+.checkout .auth .form .line
+{
+    margin-bottom: 16px;
 }
 
 
@@ -6328,6 +6327,13 @@ aside
     padding-top: 4px;
 
     color: #c18c43;
+}
+
+
+.checkout .auth .form .btns div
+{
+    width: 100%;
+    margin-top: 24px;
 }
 
 
@@ -14292,181 +14298,112 @@ aside
 --------------*/
 .register .form
 {
-    width: 728px;
+    width: 460px;
     max-width: 100%;
     margin: 0 auto;
-    padding-top: 20px;
+    padding-top: 32px;
 }
 
 
-.register .form .columns
+.register .form .type
 {
-    --form_columns_offset: 40px;
-}
-
-
-.register .form .hide
-{
-    display: none;
-}
-
-
-.register .form .add_btn
-{
-    line-height: 22px;
-
     display: flex;
     align-content: center;
     align-items: center;
     flex-wrap: wrap;
     justify-content: flex-start;
 
-    transition: .2s linear;
-    text-align: left;
-
-    color: #515151;
+    margin-bottom: 24px;
 }
 
 
-.register .form .add_btn .icon
+.register .form .type .label
+{
+    font-size: var(--font_size);
+    font-weight: 400;
+    line-height: 22px;
+
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 0;
+
+    color: #000;
+}
+
+
+.register .form .type .field + .field
+{
+    margin-top: 0;
+    margin-left: 24px;
+}
+
+
+.register .form .type .checkbox > *
+{
+    pointer-events: none;
+}
+
+
+.register .form .by_email
+{
+    display: none;
+}
+
+
+.register .form .line
+{
+    margin-bottom: 16px;
+}
+
+
+.register .form .input
+{
+    height: 44px;
+}
+
+
+.register .form .type_toggle_btn
+{
+    width: 44px;
+    height: 44px;
+}
+
+
+.register .form .btns
+{
+    font-size: 14px;
+
+    padding-top: 9px;
+
+    color: #c18c43;
+}
+
+
+.register .form .btns .btn
 {
     display: block;
 
-    width: 16px;
-    height: 16px;
-    margin-right: 20px;
+    width: 100%;
 
-    color: #c18c43;
+    text-align: center;
+    text-decoration: none;
+
+    color: currentColor;
 }
 
 
-.register .form .add_btn span
+.register .form .btns .btn:hover
 {
-    width: calc(100% - 36px);
-}
+    text-decoration: underline;
 
-
-.register .form .add_btn:hover
-{
-    color: #c18c43;
+    text-decoration-thickness: 1px;
 }
 
 
 .register .form .checkboxes,
 .register .form .submit
 {
-    padding-top: 10px;
-}
-
-
-.register .form .socials .title
-{
-    font-size: 12px;
-    line-height: 15px;
-
-    margin-top: 30px;
-
-    text-align: center;
-
-    color: #797f83;
-}
-
-
-.register .form .socials .btns
-{
-    display: flex;
-    align-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    width: 50%;
-    margin: 20px auto -10px;
-}
-
-.register .form .socials .btns > *
-{
-    width: calc(50% - 10px);
-    margin-bottom: 20px;
-}
-
-
-.register .form .socials .btn
-{
-    font-size: 12px;
-
-    display: flex;
-    align-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    padding: 9px 19px;
-
-    transition: border-color .2s linear;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-
-    color: currentColor;
-    border: 1px solid #d6d6d6;
-}
-
-
-.register .form .socials .btn img
-{
-    display: block;
-
-    width: 24px;
-    height: 24px;
-    margin-right: 12px;
-}
-
-
-.register .form .socials .btn:hover
-{
-    border-color: #c18c43;
-}
-
-
-.register .form .login .title
-{
-    font-size: 12px;
-    line-height: 15px;
-
-    margin-top: 30px;
-    margin-bottom: 20px;
-
-    text-align: center;
-
-    color: #797f83;
-}
-
-
-.register .form .login .btn
-{
-    font-size: 13px;
-    font-weight: 800;
-    line-height: 17px;
-
-    display: block;
-
-    width: 50%;
-    height: 44px;
-    margin: 0 auto;
-
-    transition: background .2s linear;
-    text-align: center;
-    text-transform: uppercase;
-
-    color: #333;
-    border: 1px solid #000;
-}
-
-
-.register .form .login .btn:hover
-{
-    background: #eee;
+    padding-top: 8px;
 }
 
 
@@ -16696,14 +16633,14 @@ footer .creator span
 
 .auth_modal .desc
 {
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 14px;
 
-    margin-top: 20px;
+    margin-top: 0;
+    margin-bottom: 16px;
 
     text-align: center;
 
-    color: #797f83;
+    color: #2b3338;
 }
 
 
@@ -16716,7 +16653,7 @@ footer .creator span
     justify-content: flex-start;
 
     margin-top: 20px;
-    margin-bottom: -10px;
+    margin-bottom: -20px;
     margin-left: -20px;
 }
 
@@ -16768,7 +16705,19 @@ footer .creator span
 
 .auth_modal .form
 {
-    margin-top: 30px;
+    margin-top: 25px;
+}
+
+
+.auth_modal .form .by_email
+{
+    display: none;
+}
+
+
+.auth_modal .form .line
+{
+    margin-bottom: 16px;
 }
 
 
@@ -16778,75 +16727,89 @@ footer .creator span
 }
 
 
-.auth_modal .form .links
+.auth_modal .form .type_toggle_btn
 {
-    font-size: 15px;
-    line-height: 22px;
+    width: 44px;
+    height: 44px;
+}
 
-    display: flex;
-    align-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
+
+.auth_modal .form .btns
+{
+    font-size: 14px;
+
+    padding-top: 9px;
 
     color: #c18c43;
 }
 
 
-.auth_modal .form .links a
+.auth_modal .form .btns div
 {
-    display: inline-block;
+    width: 100%;
+    margin-top: 24px;
+}
 
-    vertical-align: top;
+
+.auth_modal .form .btns .btn
+{
+    display: block;
+
+    width: 100%;
+
+    text-align: center;
     text-decoration: none;
 
     color: currentColor;
 }
 
-.auth_modal .form .links a:hover
+
+.auth_modal .form .btns .btn + .btn
+{
+    margin-top: 25px;
+}
+
+
+.auth_modal .form .btns .btn:hover
 {
     text-decoration: underline;
+
+    text-decoration-thickness: 1px;
+}
+
+
+.auth_modal .form .by_email .btns
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.auth_modal .form .by_email .btns .btn
+{
+    width: auto;
+}
+
+
+.auth_modal .form .by_email .btns .btn + .btn
+{
+    margin-top: 0;
+}
+
+
+.auth_modal .form .submit
+{
+    padding-top: 9px;
 }
 
 
 .auth_modal .form .submit_btn
 {
-    font-size: 13px;
     font-weight: 800;
     line-height: 17px;
-}
-
-
-.auth_modal .btns
-{
-    font-size: 13px;
-    line-height: 17px;
-
-    display: flex;
-    align-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    margin-top: 20px;
-
-    color: #c18c43;
-}
-
-
-.auth_modal .btns .btn
-{
-    display: inline-block;
-
-    vertical-align: top;
-    text-decoration: none;
-
-    color: currentColor;
-}
-
-.auth_modal .btns .btn:hover
-{
-    text-decoration: underline;
 }
 
 

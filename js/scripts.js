@@ -644,13 +644,13 @@ document.addEventListener('DOMContentLoaded', function () {
 	$('.form .type_toggle_btn').click(function(e) {
 		e.preventDefault()
 
-		let parent = $(this).closest('.field')
+		let input = $(this).closest('.field').find('.input')
 
 		$(this).toggleClass('active')
 
 		$(this).hasClass('active')
-			? parent.find('.input').attr('type', 'text')
-			: parent.find('.input').attr('type', 'password')
+			? input.attr('type', 'text')
+			: input.attr('type', 'password')
 	})
 
 
@@ -780,6 +780,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		$('.checkout .auth .by_phone').hide()
 		$('.checkout .auth .by_email').fadeIn(200)
+	})
+
+	$('.checkout .auth .by_email .toggle_btn').click(function(e) {
+		e.preventDefault()
+
+		$('.checkout .auth .by_email').hide()
+		$('.checkout .auth .by_phone').fadeIn(200)
+	})
+
+
+	// Auth modal
+	$('.auth_modal .by_phone .toggle_btn').click(function(e) {
+		e.preventDefault()
+
+		$('.auth_modal .by_phone').hide()
+		$('.auth_modal .by_email').fadeIn(200)
+	})
+
+	$('.auth_modal .by_email .toggle_btn').click(function(e) {
+		e.preventDefault()
+
+		$('.auth_modal .by_email').hide()
+		$('.auth_modal .by_phone').fadeIn(200)
 	})
 
 
@@ -1476,11 +1499,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 	// Register
-	$('.register .form .add_btn').click(function(e) {
-		e.preventDefault()
+	$('.register .form .type .checkbox').click(function(e) {
+		if (e.target.nodeName === 'LABEL') {
+			let type = $(this).data('type')
 
-		$(this).hide()
-		$('.register .form .hide').fadeIn(300)
+			if (type === 'by_phone') {
+				$('.register .form .by_email').hide()
+				$('.register .form .by_phone').fadeIn(200)
+			}
+
+			if (type === 'by_email') {
+				$('.register .form .by_phone').hide()
+				$('.register .form .by_email').fadeIn(200)
+			}
+		}
 	})
 
 
@@ -1607,37 +1639,35 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 	// Confirm phone
-	if ($('#confirm_phone_modal').length) {
-		Fancybox.show([{
-			src: '#confirm_phone_modal',
-			type: 'inline'
-		}], {
-			on: {
-				reveal: () => $('#confirm_phone_modal .input:first').focus()
-			}
-		})
+	// if ($('#confirm_phone_modal').length) {
+	// 	Fancybox.show([{
+	// 		src: '#confirm_phone_modal',
+	// 		type: 'inline'
+	// 	}], {
+	// 		on: {
+	// 			reveal: () => $('#confirm_phone_modal .input:first').focus()
+	// 		}
+	// 	})
 
+	// 	// Confirm phone - timer
+	// 	startResendTimer()
 
-		// Confirm phone - timer
-		startResendTimer()
+	// 	// Confirm phone - resend
+	// 	$('.resend .btn').click(function(e) {
+	// 		e.preventDefault()
 
+	// 		// Send SMS
 
-		// Confirm phone - resend
-		$('.resend .btn').click(function(e) {
-			e.preventDefault()
+	// 		// Show message
+	// 		$('.resend .message').fadeIn(200)
 
-			// Send SMS
+	// 		// Start timer
+	// 		startResendTimer()
 
-			// Show message
-			$('.resend .message').fadeIn(200)
-
-			// Start timer
-			startResendTimer()
-
-			// Hide messahe after 3 sec
-			setTimeout(() => $('.resend .message').fadeOut(100), 3000)
-		})
-	}
+	// 		// Hide messahe after 3 sec
+	// 		setTimeout(() => $('.resend .message').fadeOut(100), 3000)
+	// 	})
+	// }
 })
 
 
