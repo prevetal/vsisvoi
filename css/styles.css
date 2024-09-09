@@ -6896,10 +6896,13 @@ aside
 
 .checkout .order_form .payment_for_delivery_exp
 {
-    font-size: 10px;
-    font-weight: 500;
+    font-size: 13px;
+    line-height: 21px;
 
-    color: #999;
+    padding: 8px 12px;
+
+    color: #2b3338;
+    background: #f8f8d9;
 }
 
 

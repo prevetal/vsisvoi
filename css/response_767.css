@@ -608,6 +608,13 @@
     }
 
 
+    .checkout .order_form .payment_for_delivery_exp
+    {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+
 
     .checkout .cart_info
     {
