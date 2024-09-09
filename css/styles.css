@@ -6894,6 +6894,15 @@ aside
 }
 
 
+.checkout .order_form .payment_for_delivery_exp
+{
+    font-size: 10px;
+    font-weight: 500;
+
+    color: #999;
+}
+
+
 .checkout .order_form .cert
 {
     margin-top: 20px;
@@ -6975,38 +6984,6 @@ aside
 .checkout .order_form .promocode .status.red
 {
     color: #ce0c36;
-}
-
-
-.checkout .order_form .form .add_btn
-{
-    line-height: 22px;
-
-    display: flex;
-    align-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-
-    transition: .2s linear;
-
-    color: #515151;
-}
-
-.checkout .order_form .form .add_btn .icon
-{
-    display: block;
-
-    width: 16px;
-    height: 16px;
-    margin-right: 20px;
-
-    color: #c18c43;
-}
-
-.checkout .order_form .form .add_btn:hover
-{
-    color: #c18c43;
 }
 
 

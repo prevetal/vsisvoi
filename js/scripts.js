@@ -674,8 +674,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	$('select.select2').select2({
 		allowClear: true,
 		language: {
-			'noResults': () =>'Нічого не знайдено'
+			noResults: () => 'Нічого не знайдено'
 		}
+	}).on('select2:open', function(e) {
+		$('.select2-search__field').attr('placeholder', e.target.getAttribute('data-search-placeholder'))
 	})
 
 
@@ -693,13 +695,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			parent.find('.current_recipient').addClass('hide')
 			parent.find('.other_recipient').removeClass('hide')
 		}
-	})
-
-
-	$('.checkout .order_form .form .add_btn').click(function(e) {
-		e.preventDefault()
-
-		$(this).addClass('hide').next().removeClass('hide')
 	})
 
 
