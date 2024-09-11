@@ -331,6 +331,13 @@ button
 
 
 
+.modal_btn > *
+{
+    pointer-events: none;
+}
+
+
+
 /*--------------
     Fancybox
 --------------*/

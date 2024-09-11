@@ -456,87 +456,81 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 	// Modals
-	const modalBtns = document.querySelectorAll('.modal_btn')
+	$('body').on('click', '.modal_btn', function (e) {
+		e.preventDefault()
 
-	if (modalBtns) {
-		modalBtns.forEach(el => {
-			el.addEventListener('click', e => {
-				e.preventDefault()
+		Fancybox.close()
 
-				Fancybox.close()
+		Fancybox.show([{
+			src: document.getElementById(e.target.getAttribute('data-modal')),
+			type: 'inline'
+		}], {
+			on: {
+				reveal: () => {
+					// Cart modal - Products
+					const cartProductsSliders = [],
+						cartProducts = document.querySelectorAll('.fancybox__container #cart_modal .products .swiper:not(.swiper-initialized)')
 
-				Fancybox.show([{
-					src: document.getElementById(el.getAttribute('data-modal')),
-					type: 'inline'
-				}], {
-					on: {
-						reveal: () => {
-							// Cart modal - Products
-							const cartProductsSliders = [],
-								cartProducts = document.querySelectorAll('.fancybox__container #cart_modal .products .swiper:not(.swiper-initialized)')
+					cartProducts.forEach(function (el, i) {
+						el.classList.add('cart_products_s' + i)
 
-							cartProducts.forEach(function (el, i) {
-								el.classList.add('cart_products_s' + i)
-
-								let options = {
-									loop: false,
-									speed: 500,
-									watchSlidesProgress: true,
-									slideActiveClass: 'active',
-									slideVisibleClass: 'visible',
-									navigation: {
-										nextEl: '.swiper-button-next',
-										prevEl: '.swiper-button-prev'
-									},
-									lazy: true,
-									pagination: {
-										el: '.swiper-pagination',
-										dynamicBullets: true,
-										clickable: true,
-										renderBullet: (index, className) => {
-											return '<div class="' + className + '"><span>' + (index + 1) + '</span></div>'
-										}
-									},
-									breakpoints: {
-										0: {
-											spaceBetween: 20,
-											slidesPerView: 'auto'
-										},
-										768: {
-											spaceBetween: 20,
-											slidesPerView: 3
-										},
-										1024: {
-											spaceBetween: 20,
-											slidesPerView: 4
-										},
-										1280: {
-											slidesPerView: 5,
-											spaceBetween: 20
-										}
-									},
-									on: {
-										init: swiper => {
-											if(swiper.slides.length <= swiper.params.slidesPerView) {
-												$(swiper.el).find('.controls').addClass('hide')
-											}
-										},
-										resize: swiper => {
-											swiper.slides.length <= swiper.params.slidesPerView
-												? $(swiper.el).find('.controls').addClass('hide')
-												: $(swiper.el).find('.controls').removeClass('hide')
-										}
-									}
+						let options = {
+							loop: false,
+							speed: 500,
+							watchSlidesProgress: true,
+							slideActiveClass: 'active',
+							slideVisibleClass: 'visible',
+							navigation: {
+								nextEl: '.swiper-button-next',
+								prevEl: '.swiper-button-prev'
+							},
+							lazy: true,
+							pagination: {
+								el: '.swiper-pagination',
+								dynamicBullets: true,
+								clickable: true,
+								renderBullet: (index, className) => {
+									return '<div class="' + className + '"><span>' + (index + 1) + '</span></div>'
 								}
-
-								cartProductsSliders.push(new Swiper('.cart_products_s' + i, options))
-							})
+							},
+							breakpoints: {
+								0: {
+									spaceBetween: 20,
+									slidesPerView: 'auto'
+								},
+								768: {
+									spaceBetween: 20,
+									slidesPerView: 3
+								},
+								1024: {
+									spaceBetween: 20,
+									slidesPerView: 4
+								},
+								1280: {
+									slidesPerView: 5,
+									spaceBetween: 20
+								}
+							},
+							on: {
+								init: swiper => {
+									if(swiper.slides.length <= swiper.params.slidesPerView) {
+										$(swiper.el).find('.controls').addClass('hide')
+									}
+								},
+								resize: swiper => {
+									swiper.slides.length <= swiper.params.slidesPerView
+										? $(swiper.el).find('.controls').addClass('hide')
+										: $(swiper.el).find('.controls').removeClass('hide')
+								}
+							}
 						}
-					}
-				})
-			})
+
+						cartProductsSliders.push(new Swiper('.cart_products_s' + i, options))
+					})
+				}
+			}
 		})
-	}
+	})
 
 
 	$('.modal .close_btn').click(function(e) {
