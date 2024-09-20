@@ -199,7 +199,6 @@ button
     overflow: clip;
     flex-direction: column;
 
-    min-width: 375px;
     min-height: 100%;
 
     background: var(--bg);
@@ -10340,6 +10339,67 @@ aside
 {
     color: #c18c43;
     background: none;
+}
+
+
+
+.product_info .credit
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    margin-top: 20px;
+
+    color: #2b3338;
+
+    gap: 12px;
+}
+
+
+.product_info .credit .label
+{
+    font-size: 10px;
+    font-weight: 500;
+
+    white-space: nowrap;
+}
+
+
+.product_info .credit .banks
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    gap: 12px;
+}
+
+
+.product_info .credit .banks > *
+{
+    font-size: 10px;
+    font-weight: 600;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    gap: 10px;
+}
+
+
+.product_info .credit .banks img
+{
+    display: block;
+
+    height: 16px;
 }
 
 

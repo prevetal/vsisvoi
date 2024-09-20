@@ -915,6 +915,20 @@
     }
 
 
+    .product_info .credit .label,
+    .product_info .credit .banks > *
+    {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .product_info .credit,
+    .product_info .credit .banks
+    {
+        gap: 16px;
+    }
+
+
 
     .product_info .products
     {
