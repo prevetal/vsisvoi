@@ -916,18 +916,16 @@
 
 
 
-    .product_info .credit .label,
-    .product_info .credit .banks > *
+    .product_info .credit
     {
-        font-size: 14px;
-        font-weight: 400;
+        gap: 16px;
     }
 
 
-    .product_info .credit,
-    .product_info .credit .banks
+    .product_info .credit .label
     {
-        gap: 16px;
+        font-size: 14px;
+        font-weight: 400;
     }
 
 
