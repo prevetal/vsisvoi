@@ -553,11 +553,13 @@
     }
 
 
+
     .product_info .credit,
     .product_info .credit .banks
     {
         gap: 10px;
     }
+
 
     .product_info .credit .label,
     .product_info .credit .banks
@@ -565,10 +567,12 @@
         width: 100%;
     }
 
+
     .product_info .credit .banks > *
     {
         width: calc(50% - 5px);
     }
+
 
     .product_info .credit .banks img
     {

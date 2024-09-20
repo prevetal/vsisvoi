@@ -930,6 +930,20 @@
 
 
 
+    .product_info .credit
+    {
+        gap: 16px;
+    }
+
+
+    .product_info .credit .label
+    {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+
+
     .product_info .products
     {
         order: 3;
