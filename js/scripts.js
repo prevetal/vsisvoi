@@ -467,66 +467,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		}], {
 			on: {
 				reveal: () => {
-					// Cart modal - Products
-					const cartProductsSliders = [],
-						cartProducts = document.querySelectorAll('.fancybox__container #cart_modal .products .swiper:not(.swiper-initialized)')
-
-					cartProducts.forEach(function (el, i) {
-						el.classList.add('cart_products_s' + i)
-
-						let options = {
-							loop: false,
-							speed: 500,
-							watchSlidesProgress: true,
-							slideActiveClass: 'active',
-							slideVisibleClass: 'visible',
-							navigation: {
-								nextEl: '.swiper-button-next',
-								prevEl: '.swiper-button-prev'
-							},
-							lazy: true,
-							pagination: {
-								el: '.swiper-pagination',
-								dynamicBullets: true,
-								clickable: true,
-								renderBullet: (index, className) => {
-									return '<div class="' + className + '"><span>' + (index + 1) + '</span></div>'
-								}
-							},
-							breakpoints: {
-								0: {
-									spaceBetween: 20,
-									slidesPerView: 'auto'
-								},
-								768: {
-									spaceBetween: 20,
-									slidesPerView: 3
-								},
-								1024: {
-									spaceBetween: 20,
-									slidesPerView: 4
-								},
-								1280: {
-									slidesPerView: 5,
-									spaceBetween: 20
-								}
-							},
-							on: {
-								init: swiper => {
-									if(swiper.slides.length <= swiper.params.slidesPerView) {
-										$(swiper.el).find('.controls').addClass('hide')
-									}
-								},
-								resize: swiper => {
-									swiper.slides.length <= swiper.params.slidesPerView
-										? $(swiper.el).find('.controls').addClass('hide')
-										: $(swiper.el).find('.controls').removeClass('hide')
-								}
-							}
-						}
-
-						cartProductsSliders.push(new Swiper('.cart_products_s' + i, options))
-					})
+					// Cart modal - Products slider
+					initCartModalProductsSlider()
 				}
 			}
 		})
@@ -1809,4 +1751,63 @@ function startResendTimer() {
 		$('.resend .btn').removeAttr('disabled')
 		$('.resend_timer').hide()
 	})
+}
+
+
+// Cart modal - Products
+function initCartModalProductsSlider() {
+	const cartModalProducts = document.querySelector('.fancybox__container #cart_modal .products .swiper:not(.swiper-initialized)')
+
+	if (cartModalProducts) {
+		new Swiper('.fancybox__container #cart_modal .products .swiper:not(.swiper-initialized)', {
+			loop: false,
+			speed: 500,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			},
+			lazy: true,
+			pagination: {
+				el: '.swiper-pagination',
+				dynamicBullets: true,
+				clickable: true,
+				renderBullet: (index, className) => {
+					return '<div class="' + className + '"><span>' + (index + 1) + '</span></div>'
+				}
+			},
+			breakpoints: {
+				0: {
+					spaceBetween: 20,
+					slidesPerView: 'auto'
+				},
+				768: {
+					spaceBetween: 20,
+					slidesPerView: 3
+				},
+				1024: {
+					spaceBetween: 20,
+					slidesPerView: 4
+				},
+				1280: {
+					slidesPerView: 5,
+					spaceBetween: 20
+				}
+			},
+			on: {
+				init: swiper => {
+					if(swiper.slides.length <= swiper.params.slidesPerView) {
+						$(swiper.el).find('.controls').addClass('hide')
+					}
+				},
+				resize: swiper => {
+					swiper.slides.length <= swiper.params.slidesPerView
+						? $(swiper.el).find('.controls').addClass('hide')
+						: $(swiper.el).find('.controls').removeClass('hide')
+				}
+			}
+		})
+	}
 }
