@@ -750,6 +750,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
+	// Mob. products head
+	$('.mob_products_head').css('top', $('header').outerHeight())
+
+
 	// Filter
 	$('.mob_products_head .filter_btn, .mob_filter_btn').click(function(e) {
 		e.preventDefault()
@@ -1618,6 +1622,10 @@ window.addEventListener('resize', function () {
 
 		// Reviews
 		initReviewsSliders()
+
+
+		// Mob. products head
+		$('.mob_products_head').css('top', $('header').outerHeight())
 
 
 		// Mob. version

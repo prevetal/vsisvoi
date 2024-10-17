@@ -8201,7 +8201,7 @@ aside
 {
     position: sticky;
     z-index: 9;
-    top: 46px;
+    top: 0;
 
     display: none;
 
