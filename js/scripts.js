@@ -1430,6 +1430,10 @@ document.addEventListener('DOMContentLoaded', function () {
 		$('.search_tips').fadeOut(200)
 
 		$('body').removeClass('menu_open')
+
+		$('.mini_modal, .mini_modal_btn').removeClass('active')
+
+		if (is_touch_device()) $('body').css('cursor', 'default')
 	})
 
 

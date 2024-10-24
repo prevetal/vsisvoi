@@ -1619,7 +1619,7 @@ header .categories .banners .banner:hover .thumb img
 -----------------*/
 .search_tips
 {
-    position: fixed;
+    position: absolute;
     z-index: 2;
     top: 0;
     left: 0;
