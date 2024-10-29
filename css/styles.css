@@ -10368,7 +10368,7 @@ aside
 
 .product_info .credit .label
 {
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 500;
 
     white-space: nowrap;
@@ -10389,7 +10389,7 @@ aside
 
 .product_info .credit .banks > *
 {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 600;
 
     display: flex;
