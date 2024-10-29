@@ -59,9 +59,18 @@
     /*----------------
         Top banner
     ----------------*/
-    .top_banner
+    .top_banner .close_btn
     {
-        display: none;
+        right: 8px;
+    }
+
+
+    .top_banner a
+    {
+        font-size: 12px;
+        line-height: 16px;
+
+        padding: 6px 32px;
     }
 
 

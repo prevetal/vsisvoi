@@ -4637,6 +4637,7 @@ aside
     list-style-type: none;
 }
 
+
 .text_block ol li:before
 {
     font-weight: 700;
@@ -10359,9 +10360,15 @@ aside
 }
 
 
+.product_info .credit + .credit
+{
+    margin-top: 12px;
+}
+
+
 .product_info .credit .label
 {
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 500;
 
     white-space: nowrap;
@@ -10391,7 +10398,9 @@ aside
     flex-wrap: wrap;
     justify-content: flex-start;
 
-    gap: 10px;
+    cursor: pointer;
+
+    gap: 4px;
 }
 
 
@@ -17793,4 +17802,151 @@ footer .creator span
     font-weight: 600;
 
     margin-top: 16px;
+}
+
+
+
+/*------------------
+    Credit modal
+------------------*/
+.credit_modal
+{
+    width: 392px;
+    padding: 30px;
+}
+
+
+.credit_modal > .title
+{
+    text-align: center;
+}
+
+
+.credit_modal .name
+{
+    font-size: 12px;
+    font-weight: 800;
+
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-top: 25px;
+
+    text-transform: uppercase;
+}
+
+
+.credit_modal .name .logo
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 52px;
+    height: 52px;
+}
+
+
+.credit_modal .name .logo img
+{
+    display: block;
+
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.credit_modal .name span
+{
+    align-self: center;
+
+    width: calc(100% - 80px);
+}
+
+
+.credit_modal .desc
+{
+    margin-top: 21px;
+}
+
+
+.credit_modal .desc .title
+{
+    font-size: 12px;
+    font-weight: 800;
+
+    margin-bottom: 16px;
+
+    text-transform: uppercase;
+}
+
+
+.credit_modal .desc .text > * + *
+{
+    margin-top: 8px;
+}
+
+
+.credit_modal .exp
+{
+    font-size: 10px;
+    font-weight: 500;
+
+    margin-top: 25px;
+
+    color: #2b3338;
+}
+
+
+.credit_modal .exp a
+{
+    transition: color .2s linear;
+
+    color: currentColor;
+}
+
+
+.credit_modal .exp a:hover
+{
+    color: #c18c43;
+}
+
+
+.credit_modal .link
+{
+    margin-top: 25px;
+}
+
+
+.credit_modal .link a
+{
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 17px;
+
+    display: block;
+
+    width: 100%;
+    padding: 9px;
+
+    transition: .2s linear;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: #2b3338;
+    border: 1px solid #2b3338;
+    background: #fff;
+}
+
+
+.credit_modal .link a:hover
+{
+    color: #fff;
+    background: #2b3338;
 }

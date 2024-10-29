@@ -688,4 +688,14 @@
     {
         padding-right: 44px;
     }
+
+
+
+    /*------------------
+        Credit modal
+    ------------------*/
+    .credit_modal
+    {
+        padding: 30px 24px;
+    }
 }
