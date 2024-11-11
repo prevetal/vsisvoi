@@ -1619,7 +1619,7 @@ header .categories .banners .banner:hover .thumb img
 -----------------*/
 .search_tips
 {
-    position: absolute;
+    position: fixed;
     z-index: 2;
     top: 0;
     left: 0;
@@ -1628,11 +1628,12 @@ header .categories .banners .banner:hover .thumb img
     overflow: auto;
 
     width: 100%;
-    padding-top: 46px;
+    padding-top: var(--top_offset);
 
     background: #fff;
     box-shadow: 0 10px 19px 0 rgba(100, 86, 68, .20);
 
+    --top_offset: 0;
     overscroll-behavior-y: contain;
 }
 
@@ -1640,7 +1641,7 @@ header .categories .banners .banner:hover .thumb img
 .search_tips .close_btn
 {
     position: absolute;
-    top: 46px;
+    top: var(--top_offset);
     right: 0;
 
     display: flex;

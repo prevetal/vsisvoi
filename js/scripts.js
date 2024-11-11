@@ -1268,6 +1268,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
 			// Search modal
 			if (modalId == '#search_modal') {
+				// Search tips
+				let headerData = document.querySelector('header .data'),
+					topBanner = document.querySelector('.top_banner'),
+					headerDataHeight = 0,
+					topBannerHeight = 0
+
+				if (headerData) {
+					headerDataHeight = headerData.getBoundingClientRect().height
+				}
+
+				if (topBanner) {
+					topBannerHeight = topBanner.getBoundingClientRect().height
+				}
+
+				$(window).scrollTop() < topBannerHeight
+					? document.querySelector('.search_tips').style.setProperty('--top_offset', (headerDataHeight + topBannerHeight) + 'px')
+					: document.querySelector('.search_tips').style.setProperty('--top_offset', headerDataHeight + 'px')
+
 				$('.search_tips').fadeIn(300)
 
 				$('body').addClass('menu_open')

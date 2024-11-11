@@ -166,8 +166,6 @@
     -----------------*/
     .search_tips
     {
-        position: fixed;
-
         height: 100%;
         min-height: -moz-available;
         min-height: -webkit-fill-available;
