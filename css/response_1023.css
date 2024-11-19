@@ -1923,6 +1923,8 @@
         flex-direction: column;
 
         margin-top: 20px;
+
+        gap: 20px;
     }
 
 
@@ -1941,8 +1943,6 @@
     {
         display: flex;
         order: 1;
-
-        margin-bottom: 20px;
     }
 
 
