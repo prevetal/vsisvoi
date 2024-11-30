@@ -2122,7 +2122,7 @@ header .categories .banners .banner:hover .thumb img
 .mob_menu
 {
     position: fixed;
-    z-index: 90;
+    z-index: 91;
     top: 0;
     right: 100%;
 
