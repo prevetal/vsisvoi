@@ -164,6 +164,11 @@
         padding: 20px 0;
     }
 
+    .page_head.mob_no_pad
+    {
+        padding: 0;
+    }
+
     .page_head.mob_hide
     {
         display: none;
@@ -173,6 +178,11 @@
     .breadcrumbs
     {
         display: none;
+    }
+
+    .breadcrumbs.show
+    {
+        display: block;
     }
 
 
