@@ -1845,7 +1845,7 @@ function initCartModalProductsSlider() {
 
 // Scroll to error field
 function scrollToError() {
-	let anchor = document.querySelector('.error_field')
+	let anchor = document.querySelector('.field.has-error')
 
 	if (anchor) {
 		anchor.scrollIntoView({
