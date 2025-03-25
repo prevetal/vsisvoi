@@ -1841,3 +1841,16 @@ function initCartModalProductsSlider() {
 		})
 	}
 }
+
+
+// Scroll to error field
+function scrollToError() {
+	let anchor = document.querySelector('.field.has-error')
+
+	if (anchor) {
+		anchor.scrollIntoView({
+			behavior: 'smooth',
+			block: 'start'
+		}, 500)
+	}
+}
